@@ -1,0 +1,49 @@
+.hero
+  //min-height: calc(100vh - 92px)
+  min-height: 90vh
+  height: 100%
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  @media (max-width: $width-mobile)
+    min-height: 100vh
+
+  &__container
+    padding-top: 10%
+    display: flex
+    flex-direction: column
+    @media (max-width: $width-mobile)
+      padding-top: 30%
+
+  &__title
+    @include fontSize(24, 48)
+    font-weight: 500
+    margin-bottom: 24px
+    max-width: 70%
+    @media (max-width: $width-tablet)
+      max-width: 80%
+    @media (max-width: $width-mobile)
+      max-width: 95%
+      margin-bottom: 16px
+
+  &__subtitle
+    @include fontSize(16, 24)
+    margin-bottom: 48px
+    @media (max-width: $width-mobile)
+      margin-bottom: 32px
+
+  &__button
+    min-height: 64px
+    @include fontSize(16, 20)
+    padding: 12px 75px
+    display: flex
+    align-items: center
+    border-radius: 56px
+    font-weight: 600
+    @media (max-width: $width-tablet)
+      min-height: 56px
+      padding: 12px 48px
+    @media (max-width: $width-mobile)
+      min-height: 44px
+      padding: 8px 32px
+      border-radius: 24px

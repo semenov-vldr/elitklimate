@@ -1,0 +1,37 @@
+// box-shadow: 0px 0px 11px 1px rgba(187, 187, 187, 0.4)
+
+.catalog
+
+  &__group
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+    justify-content: center
+    @media (max-width: $width-mobile)
+      gap: 12px
+      grid-template-columns: repeat(2, 1fr)
+
+  &__item
+    padding: 24px
+    border-radius: 16px
+    box-shadow: 0 0 10px 1px rgba(#BBBBBB, 0.4)
+    transition: $transition
+    max-width: 450px
+    @media (max-width: $width-mobile)
+      border-radius: 8px
+      padding: 8px
+    &:hover
+      box-shadow: 0 0 10px 5px rgba(#BBBBBB, 0.4)
+      transform: translateY(-3px)
+
+  &__item-title
+    margin-bottom: 24px
+    @include fontSize(16, 24)
+    @media (max-width: $width-mobile)
+      margin-bottom: 8px
+
+  &__item-img
+    max-width: 300px
+    width: 90%
+    @media (max-width: $width-mobile)
+      width: 80%

@@ -1,19 +1,25 @@
 .header
   position: relative
-  z-index: 1
   box-shadow: 0 0 20px 10px rgba(#BBBBBB, 0.4)
   padding: 30px 0
   min-height: 92px
   background-color: white
+  margin-bottom: 32px
   @media (max-width: $width-mobile)
     min-height: 56px
     padding: 16px 0
-    position: absolute
+    z-index: 2
     top: 0
     left: 0
     width: 100%
     box-shadow: none
-    background-color: transparent
+    margin-bottom: 20px
+    &.header--index
+      position: absolute
+      background-color: transparent
+  &.header--index
+    margin-bottom: 0
+
 
   &__container
     display: flex

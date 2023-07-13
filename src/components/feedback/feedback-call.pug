@@ -1,0 +1,14 @@
+section.feedback
+  .feedback__container.container
+    h2.title-section.feedback__title Заказать звонок
+    p.feedback__info Мы ответим на все ваши вопросы, поможем с выбором модели
+
+    form.feedback__form(action="")
+
+      label.visually-hidden(for="name") Ваше имя
+      label.visually-hidden(for="tel") Ваш телефон
+
+      input.feedback__field(type="text" id="name" name="name" placeholder="Введите имя" required)
+      input.feedback__field(type="tel" id="tel" name="tel" placeholder="Введите номер" required)
+
+      button.button.button--accent.feedback__button(type="submit") Отправить заявку

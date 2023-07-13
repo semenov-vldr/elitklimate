@@ -66,25 +66,15 @@ main
   justify-content: center
 
 
-//.tablet-hidden
-//  @media (max-width: $width-mobile)
-//    display: none
-//
-//.desctop-hidden
-//  @media (min-width: $width-mobile)
-//    display: none
-
-
 .button
   font-weight: 600
   border-radius: 30px
   width: fit-content
-  @media (min-width: $width-mobile)
-    min-height: 40px
-    padding: 8px 32px
+  padding: 8px 32px
+  min-height: 40px
   &.button--accent
     background-color: $accent
-    color: $white
+    color: white
 
 button
   cursor: pointer
@@ -111,31 +101,34 @@ button
     background-color: $grey
 
 // стрелки навигации
-//.slider-nav__prev,
-//.slider-nav__next
-//  position: absolute
-//  display: inline-flex
-//  align-items: center
-//  justify-content: center
-//  width: 32px
-//  aspect-ratio: 1 / 1
-//  border-radius: 4px
-//  cursor: pointer
-//  z-index: 1
-//  background: rgba(106, 106, 106, 0.1) no-repeat center / 7px 12px
-//  top: 50%
-//  transform: translateY(-50%)
-//  &:hover
-//    background-color: rgba(106, 106, 106, 0.3)
-//.slider-nav__prev
-//  background-image: url('../img/icons/arrow-left.svg')
-//  transform: translateX(-100%)
-//.slider-nav__next
-//  background-image: url('../img/icons/arrow-right.svg')
-//  transform: translateX(100%)
+.swiper-button-next,
+.swiper-button-prev
+  width: 32px
+  height: 32px
+  cursor: pointer
+  z-index: 1
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  top: -50px
+  right: 0
+  left: initial
+  margin-top: 0
+  &::after
+    display: none
+  @media (max-width: $width-mobile)
+    display: none
+.swiper-button-prev
+  background-image: url('../img/icons/arrow-right.svg')
+  transform: rotate(180deg) translateX(100%)
+  right: 20px
+.swiper-button-next
+  background-image: url('../img/icons/arrow-right.svg')
 
 .swiper-pagination
-  margin-top: 30px
+  margin-top: 16px
+  @media (min-width: $width-tablet)
+    display: none
 
 
 

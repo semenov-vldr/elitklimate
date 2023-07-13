@@ -1,0 +1,48 @@
+.feedback
+
+  &__container
+    //background-image: url("../img/feedback-background.jpg")
+    //background-image: url("https://img.freepik.com/free-vector/abstract-flowing-lines-background-2803_1048-7818.jpg?w=1380&t=st=1689203109~exp=1689203709~hmac=308d34cde6b77e22e239f72025b3df3392de4fb293cf8e9285aeabcf46d8e2cd")
+    //background-position: center
+    //background-size: cover
+    //background-repeat: no-repeat
+    //border-radius: 24px
+    //padding-top: 24px
+    //padding-bottom: 24px
+
+  &__title
+    margin-bottom: 16px
+
+  &__info
+    @include fontSize(14, 20)
+
+  &__form
+    margin-top: 24px
+    display: inline-flex
+    flex-direction: column
+    max-width: 380px
+    width: 100%
+
+
+  &__field
+    @include fontSize(16, 20)
+    padding: 12px
+    border-radius: 8px
+    line-height: 1
+    border-color: $black
+    width: 100%
+    & + &
+      margin-top: 16px
+
+  &__field::placeholder
+    @include fontSize(16, 20)
+    color: rgba($black, 0.7)
+    line-height: 1
+
+  &__button
+    width: 100%
+    margin-top: 32px
+    @media (min-width: $width-mobile)
+      min-height: 56px
+
+

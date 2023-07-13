@@ -1,32 +1,48 @@
+-
+  const CATALOG = [
+    {
+      link: "##",
+      title: "Бытовые сплит-системы",
+      imgSrc: "./assets/img/catalog/01.jpg",
+    },
+
+    {
+      link: "##",
+      title: "Напольно-потолочные",
+      imgSrc: "./assets/img/catalog/02.png",
+    },
+
+    {
+      link: "##",
+      title: "Канальные",
+      imgSrc: "./assets/img/catalog/03.png",
+    },
+
+    {
+      link: "##",
+      title: "Кассетные",
+      imgSrc: "./assets/img/catalog/04.png",
+    },
+
+    {
+      link: "##",
+      title: "Колонные",
+      imgSrc: "./assets/img/catalog/05.png",
+    },
+
+    {
+      link: "##",
+      title: "Мульти сплит-системы",
+      imgSrc: "./assets/img/catalog/06.jpg",
+    },
+  ]
+
+
 section.catalog
   .catalog__container.container
     h1.catalog__title.title-section Каталог
+    +catalog(CATALOG)
 
-    .catalog__group
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Бытовые сплит-системы
-        img.catalog__item-img(src="./assets/img/catalog/01.jpg")
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Напольно-потолочные
-        img.catalog__item-img(src="./assets/img/catalog/02.png")
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Канальные
-        img.catalog__item-img(src="./assets/img/catalog/03.png")
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Кассетные
-        img.catalog__item-img(src="./assets/img/catalog/04.png")
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Колонные
-        img.catalog__item-img(src="./assets/img/catalog/05.png")
-
-      a.catalog__item(href="##")
-        h2.catalog__item-title Мульти сплит-системы
-        img.catalog__item-img(src="./assets/img/catalog/06.jpg")
 
 
 

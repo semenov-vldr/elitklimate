@@ -22,11 +22,12 @@
     // Ширина экрана
     breakpoints: {
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 1.2,
         spaceBetween: 16,
       },
       380: {
-        slidesPerView: 1.4,
+        //slidesPerView: 1.4,
+        slidesPerView: "auto",
         spaceBetween: 16,
       },
       480: {

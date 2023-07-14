@@ -9,6 +9,7 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+          types: "bullets",
         },
 
         // Откл функционала, если слайдов меньше, чем нужно
@@ -76,11 +77,6 @@ menuClose.addEventListener('click', () => {
       clickable: true,
     },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
     // Откл функционала, если слайдов меньше, чем нужно
     watchOverflow: true,
 
@@ -115,6 +111,34 @@ menuClose.addEventListener('click', () => {
   });
 
 }
+
+const products = document.querySelector(".products");
+
+if (products) {
+
+  const filter = products.querySelector('.products__filter');
+  const filterItems = filter.querySelectorAll('.products__filter-item-title');
+
+  filterItems.forEach(filterItem => {
+    filterItem.addEventListener('click', () => {
+      filterItem.classList.toggle('js-filter-open');
+    })
+  });
+
+
+  // document.addEventListener("click", function (evt) {
+  //   filterItems.forEach(filterItem => {
+  //     if ( !filterItem.contains(evt.target) ) {
+  //       filterItem.classList.remove('js-filter-open');
+  //     };
+  //   })
+  // })
+
+
+
+}
+
+
 
 
 const html = document.querySelector('html');

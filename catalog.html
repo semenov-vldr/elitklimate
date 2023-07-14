@@ -48,21 +48,61 @@
         </div>
       </header>
       <main>
-        <section>
-          <section class="catalog">
-            <div class="catalog__container container">
-              <h1 class="catalog__title title-section">Каталог</h1>
-              <div class="catalog__group"><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Бытовые сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/01.jpg"/></a><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Напольно-потолочные</h2><img class="catalog__item-img" src="./assets/img/catalog/02.png"/></a><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Канальные</h2><img class="catalog__item-img" src="./assets/img/catalog/03.png"/></a><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Кассетные</h2><img class="catalog__item-img" src="./assets/img/catalog/04.png"/></a><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Колонные</h2><img class="catalog__item-img" src="./assets/img/catalog/05.png"/></a><a class="catalog__item" href="##">
-                  <h2 class="catalog__item-title">Мульти сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/06.jpg"/></a>
-              </div>
+        <section class="catalog">
+          <div class="catalog__container container">
+            <h1 class="catalog__title title-section">Каталог</h1>
+            <div class="catalog__group"><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Бытовые сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/01.jpg"/></a><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Напольно-потолочные</h2><img class="catalog__item-img" src="./assets/img/catalog/02.png"/></a><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Канальные</h2><img class="catalog__item-img" src="./assets/img/catalog/03.png"/></a><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Кассетные</h2><img class="catalog__item-img" src="./assets/img/catalog/04.png"/></a><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Колонные</h2><img class="catalog__item-img" src="./assets/img/catalog/05.png"/></a><a class="catalog__item" href="##">
+                <h2 class="catalog__item-title">Мульти сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/06.jpg"/></a>
             </div>
-          </section>
+          </div>
         </section>
+        <div class="products">
+          <div class="products__container container">
+            <div class="products__filter">
+              <ul class="products__filter-list">
+                <li class="products__filter-item products__filter-item--price"><span class="products__filter-item-title">Цена</span>
+                  <div class="products__filter-item-content">
+                    <input class="products__filter-price-min" type="number" placeholder="0">
+                    <input class="products__filter-price-max" type="number" placeholder="999 000">
+                  </div>
+                </li>
+                <li class="products__filter-item products__filter-item--area"><span class="products__filter-item-title">Площадь помещения</span>
+                  <div class="products__filter-item-content">
+                    <select>
+                      <option>До 25 м2</option>
+                      <option>До 35 м2</option>
+                      <option>До 55 м2</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="products__filter-item products__filter-item--company"><span class="products__filter-item-title">Производитель</span>
+                  <div class="products__filter-item-content">
+                    <select>
+                      <option>Dahatsu</option>
+                      <option>Denko</option>
+                      <option>Eurohoff</option>
+                      <option>LG</option>
+                      <option>Hisense</option>
+                      <option>Kentatsu</option>
+                      <option>Midea</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="products__filter-item products__filter-item--inverter"><span class="products__filter-item-title">Инвертор</span>
+                  <div class="products__filter-item-content">
+                    <input class="products__filter-item-checkbox" type="checkbox" id="inverter" name="Инвертор" value="Инвертор">
+                    <label for="inverter"></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer__container container">

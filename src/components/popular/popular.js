@@ -10,11 +10,6 @@
       clickable: true,
     },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
     // Откл функционала, если слайдов меньше, чем нужно
     watchOverflow: true,
 

@@ -8,6 +8,7 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+          types: "bullets",
         },
 
         // Откл функционала, если слайдов меньше, чем нужно

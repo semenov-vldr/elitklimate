@@ -1,0 +1,126 @@
+.products
+
+  &__filter
+    max-width: 950px
+    width: 100%
+
+  &__filter-list
+    display: flex
+    gap: 32px
+    justify-content: space-between
+
+  &__filter-item
+    position: relative
+    display: flex
+    flex-direction: column
+    &.js-filter-open .products__filter-item-content
+      display: flex
+    &.js-filter-open .products__filter-item-title::after
+      transform: scale(-1, -1)
+
+  &__filter-item-title
+    position: relative
+    font-weight: 500
+    @include fontSize(16, 18)
+    cursor: pointer
+    display: flex
+    align-items: center
+    //justify-content: space-between
+    gap: 18px
+    white-space: nowrap
+    transition: $transition
+    user-select: none
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/arrow-filter.svg')
+      width: 18px
+      height: 10px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      transition: $transition
+      @media (max-width: $width-mobile)
+        width: 15px
+        height: 8px
+    &:hover
+      opacity: 0.7
+    &.js-filter-open ~ .products__filter-item-content
+      display: flex
+    &.js-filter-open::after
+      transform: scale(-1, -1)
+
+
+  &__filter-item-content
+    display: none
+    margin-top: 16px
+    // select, input
+    select,
+    input
+      width: 100%
+      max-width: 170px
+      border-color: rgba($black, 0.5)
+      border-radius: 4px
+      min-height: 40px
+      font-size: 18px
+      padding: 8px
+      @media (max-width: $width-mobile)
+        font-size: 16px
+
+    // checkbox (inverter)
+    input[type="checkbox"].products__filter-item-checkbox
+      position: absolute
+      opacity: 0
+      z-index: -1
+      & + label
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+      & + label::before
+        content: ""
+        display: inline-block
+        width: 30px
+        height: 30px
+        border-radius: 4px
+        border: 2px solid rgba($black, 0.3)
+        flex-shrink: 0
+        flex-grow: 0
+        background-repeat: no-repeat
+        background-size: 80%
+        background-position: center
+      &:checked + label::before
+        background-color: rgba($black, 0.8)
+        background-image: url("../img/icons/check.svg")
+
+
+
+
+
+  &__filter-price-min,
+  &__filter-price-max
+    position: relative
+    &::placeholder
+      text-align: right
+      font-size: 18px
+      @media (max-width: $width-mobile)
+        font-size: 16px
+
+  &__filter-item--price .products__filter-item-content
+    position: relative
+    gap: 32px
+    &::after
+      position: absolute
+      content: ""
+      width: 16px
+      height: 1px
+      background-color: rgba($black, 0.3)
+      right: 50%
+      top: 50%
+      transform: translateX(50%)
+
+
+
+
+
+

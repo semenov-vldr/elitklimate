@@ -47,6 +47,36 @@
 
 }
 
+const filter = document.querySelector('.filter');
+
+if (filter) {
+
+  const filterItems = filter.querySelectorAll('.filter__item-title');
+
+  filterItems.forEach(filterItem => {
+    filterItem.addEventListener('click', () => {
+      filterItem.classList.toggle('js-filter-open');
+    })
+  });
+
+
+  const filterBtn = filter.querySelector('.filter__icon');
+  const closeFilter = filter.querySelector('.filter__close');
+
+  filterBtn.addEventListener('click', () => {
+    filterBtn.classList.add('js-filter-open')
+  });
+
+  closeFilter.addEventListener('click', () => {
+    filterBtn.classList.remove('js-filter-open');
+  })
+
+
+
+}
+
+
+
 const header = document.querySelector('header.header');
 const menu = header.querySelector('.header__nav');
 const burger = header.querySelector('.header__burger');
@@ -111,33 +141,6 @@ menuClose.addEventListener('click', () => {
   });
 
 }
-
-const products = document.querySelector(".products");
-
-if (products) {
-
-  const filter = products.querySelector('.products__filter');
-  const filterItems = filter.querySelectorAll('.products__filter-item-title');
-
-  filterItems.forEach(filterItem => {
-    filterItem.addEventListener('click', () => {
-      filterItem.classList.toggle('js-filter-open');
-    })
-  });
-
-
-  // document.addEventListener("click", function (evt) {
-  //   filterItems.forEach(filterItem => {
-  //     if ( !filterItem.contains(evt.target) ) {
-  //       filterItem.classList.remove('js-filter-open');
-  //     };
-  //   })
-  // })
-
-
-
-}
-
 
 
 

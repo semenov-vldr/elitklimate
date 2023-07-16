@@ -63,43 +63,61 @@
         </section>
         <div class="products">
           <div class="products__container container">
-            <div class="products__filter">
-              <ul class="products__filter-list">
-                <li class="products__filter-item products__filter-item--price"><span class="products__filter-item-title">Цена</span>
-                  <div class="products__filter-item-content">
-                    <input class="products__filter-price-min" type="number" placeholder="0">
-                    <input class="products__filter-price-max" type="number" placeholder="999 000">
-                  </div>
-                </li>
-                <li class="products__filter-item products__filter-item--area"><span class="products__filter-item-title">Площадь помещения</span>
-                  <div class="products__filter-item-content">
-                    <select>
-                      <option>До 25 м2</option>
-                      <option>До 35 м2</option>
-                      <option>До 55 м2</option>
-                    </select>
-                  </div>
-                </li>
-                <li class="products__filter-item products__filter-item--company"><span class="products__filter-item-title">Производитель</span>
-                  <div class="products__filter-item-content">
-                    <select>
-                      <option>Dahatsu</option>
-                      <option>Denko</option>
-                      <option>Eurohoff</option>
-                      <option>LG</option>
-                      <option>Hisense</option>
-                      <option>Kentatsu</option>
-                      <option>Midea</option>
-                    </select>
-                  </div>
-                </li>
-                <li class="products__filter-item products__filter-item--inverter"><span class="products__filter-item-title">Инвертор</span>
-                  <div class="products__filter-item-content">
-                    <input class="products__filter-item-checkbox" type="checkbox" id="inverter" name="Инвертор" value="Инвертор">
-                    <label for="inverter"></label>
-                  </div>
-                </li>
-              </ul>
+            <div class="filter">
+              <button class="filter__icon"><img src="./assets/img/icons/settings.svg"></button>
+              <form class="filter__form">
+                <ul class="filter__list">
+                  <li class="filter__item filter__item--header"><span class="filter__item-title filter__item-title--header">Фильтры</span>
+                    <button class="filter__close" type="button">
+                      <svg fill="1C1B1F" width="14" height="14">
+                        <use href="./assets/img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="filter__item filter__item--price"><span class="filter__item-title">Цена</span>
+                    <div class="filter__item-content">
+                      <input class="filter__price-min" type="number" placeholder="0">
+                      <input class="filter__price-max" type="number" placeholder="999 000">
+                    </div>
+                  </li>
+                  <li class="filter__item filter__item--area"><span class="filter__item-title">Площадь помещения</span>
+                    <div class="filter__item-content">
+                      <select>
+                        <option>До 25 м2</option>
+                        <option>До 35 м2</option>
+                        <option>До 55 м2</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="filter__item filter__item--company"><span class="filter__item-title">Производитель</span>
+                    <div class="filter__item-content">
+                      <select>
+                        <option>Dahatsu</option>
+                        <option>Denko</option>
+                        <option>Eurohoff</option>
+                        <option>LG</option>
+                        <option>Hisense</option>
+                        <option>Kentatsu</option>
+                        <option>Midea</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="filter__item filter__item--inverter"><span class="filter__item-title">Инвертор</span>
+                    <div class="filter__item-content">
+                      <input class="filter__item-checkbox" type="checkbox" id="inverter" name="Инвертор" value="Инвертор">
+                      <label for="inverter"></label>
+                    </div>
+                  </li>
+                </ul>
+                <button class="button button--accent filter__form-submit" type="submit">Применить</button>
+              </form>
+              <div class="filter__sorting"><span>Соритровать по:</span>
+                <select>
+                  <option>Популярности</option>
+                  <option>Цене дороже</option>
+                  <option>Цене дешевле</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

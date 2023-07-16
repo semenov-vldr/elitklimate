@@ -1,37 +1,4 @@
 .products
   .products__container.container
 
-    .products__filter
-      ul.products__filter-list
-        li.products__filter-item.products__filter-item--price
-          span.products__filter-item-title Цена
-          .products__filter-item-content
-            input.products__filter-price-min(type="number" placeholder="0")
-            input.products__filter-price-max(type="number" placeholder="999 000")
-
-        li.products__filter-item.products__filter-item--area
-          span.products__filter-item-title Площадь помещения
-          .products__filter-item-content
-            select
-              option До 25 м2
-              option До 35 м2
-              option До 55 м2
-
-        li.products__filter-item.products__filter-item--company
-          span.products__filter-item-title Производитель
-          .products__filter-item-content
-            select
-              option Dahatsu
-              option Denko
-              option Eurohoff
-              option LG
-              option Hisense
-              option Kentatsu
-              option Midea
-
-        li.products__filter-item.products__filter-item--inverter
-          span.products__filter-item-title Инвертор
-          .products__filter-item-content
-            input.products__filter-item-checkbox(type="checkbox" id="inverter" name="Инвертор" value="Инвертор")
-            label(for="inverter")
-
+    include ../filter/filter

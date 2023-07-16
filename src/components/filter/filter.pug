@@ -1,0 +1,54 @@
+.filter
+
+  button.filter__icon
+    img(src="./assets/img/icons/settings.svg")
+
+  form.filter__form
+    ul.filter__list
+
+      li.filter__item.filter__item--header
+        span.filter__item-title.filter__item-title--header Фильтры
+        button.filter__close(type="button")
+          svg(fill="1C1B1F" width="14" height="14")
+            use(href="./assets/img/sprite.svg#close")
+
+      li.filter__item.filter__item--price
+        span.filter__item-title Цена
+        .filter__item-content
+          input.filter__price-min(type="number" placeholder="0")
+          input.filter__price-max(type="number" placeholder="999 000")
+
+      li.filter__item.filter__item--area
+        span.filter__item-title Площадь помещения
+        .filter__item-content
+          select
+            option До 25 м2
+            option До 35 м2
+            option До 55 м2
+
+      li.filter__item.filter__item--company
+        span.filter__item-title Производитель
+        .filter__item-content
+          select
+            option Dahatsu
+            option Denko
+            option Eurohoff
+            option LG
+            option Hisense
+            option Kentatsu
+            option Midea
+
+      li.filter__item.filter__item--inverter
+        span.filter__item-title Инвертор
+        .filter__item-content
+          input.filter__item-checkbox(type="checkbox" id="inverter" name="Инвертор" value="Инвертор")
+          label(for="inverter")
+
+    button.button.button--accent.filter__form-submit(type="submit") Применить
+
+  .filter__sorting
+    span Соритровать по:
+    select
+      option Популярности
+      option Цене дороже
+      option Цене дешевле

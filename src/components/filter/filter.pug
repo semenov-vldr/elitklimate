@@ -15,13 +15,14 @@
       li.filter__item.filter__item--price
         span.filter__item-title Цена
         .filter__item-content
-          input.filter__price-min(type="number" placeholder="0")
-          input.filter__price-max(type="number" placeholder="999 000")
+          input.filter__price-min(type="number" placeholder="От 0")
+          input.filter__price-max(type="number" placeholder="До 999 000")
 
       li.filter__item.filter__item--area
         span.filter__item-title Площадь помещения
         .filter__item-content
-          select
+          select(name="Площадь помещения")
+            option(value="") Не выбрано
             option До 25 м2
             option До 35 м2
             option До 55 м2
@@ -29,20 +30,51 @@
       li.filter__item.filter__item--company
         span.filter__item-title Производитель
         .filter__item-content
-          select
-            option Dahatsu
-            option Denko
-            option Eurohoff
-            option LG
-            option Hisense
-            option Kentatsu
-            option Midea
+          fieldset
+            label.filter__item-checkbox Dahatsu
+              input(type="checkbox" name="Производитель" value="Dahatsu")
+              span
+
+            label.filter__item-checkbox Denko
+              input(type="checkbox" name="Производитель" value="Denko")
+              span
+
+            label.filter__item-checkbox Eurohoff
+              input(type="checkbox" name="Производитель" value="Eurohoff")
+              span
+
+            label.filter__item-checkbox LG
+              input(type="checkbox" name="Производитель" value="LG")
+              span
+
+            label.filter__item-checkbox Hisense
+              input(type="checkbox" name="Производитель" value="Hisense")
+              span
+
+            label.filter__item-checkbox Kentatsu
+              input(type="checkbox" name="Производитель" value="Kentatsu")
+              span
+
+            label.filter__item-checkbox Midea
+              input(type="checkbox" name="Производитель" value="Midea")
+              span
+
 
       li.filter__item.filter__item--inverter
         span.filter__item-title Инвертор
         .filter__item-content
-          input.filter__item-checkbox(type="checkbox" id="inverter" name="Инвертор" value="Инвертор")
-          label(for="inverter")
+          fieldset
+            label.filter__item-checkbox Любой
+              input(type="radio" name="Инвертор" value="Любой")
+              span
+
+            label.filter__item-checkbox Да
+              input(type="radio" name="Инвертор" value="Да")
+              span
+
+            label.filter__item-checkbox Нет
+              input(type="radio" name="Инвертор" value="Нет")
+              span
 
     button.button.button--accent.filter__form-submit(type="submit") Применить
 

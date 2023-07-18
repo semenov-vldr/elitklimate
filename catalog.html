@@ -76,13 +76,14 @@
                   </li>
                   <li class="filter__item filter__item--price"><span class="filter__item-title">Цена</span>
                     <div class="filter__item-content">
-                      <input class="filter__price-min" type="number" placeholder="0">
-                      <input class="filter__price-max" type="number" placeholder="999 000">
+                      <input class="filter__price-min" type="number" placeholder="От 0">
+                      <input class="filter__price-max" type="number" placeholder="До 999 000">
                     </div>
                   </li>
                   <li class="filter__item filter__item--area"><span class="filter__item-title">Площадь помещения</span>
                     <div class="filter__item-content">
-                      <select>
+                      <select name="Площадь помещения">
+                        <option value="">Не выбрано</option>
                         <option>До 25 м2</option>
                         <option>До 35 м2</option>
                         <option>До 55 м2</option>
@@ -91,21 +92,44 @@
                   </li>
                   <li class="filter__item filter__item--company"><span class="filter__item-title">Производитель</span>
                     <div class="filter__item-content">
-                      <select>
-                        <option>Dahatsu</option>
-                        <option>Denko</option>
-                        <option>Eurohoff</option>
-                        <option>LG</option>
-                        <option>Hisense</option>
-                        <option>Kentatsu</option>
-                        <option>Midea</option>
-                      </select>
+                      <fieldset>
+                        <label class="filter__item-checkbox">Dahatsu
+                          <input type="checkbox" name="Производитель" value="Dahatsu"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Denko
+                          <input type="checkbox" name="Производитель" value="Denko"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Eurohoff
+                          <input type="checkbox" name="Производитель" value="Eurohoff"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">LG
+                          <input type="checkbox" name="Производитель" value="LG"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Hisense
+                          <input type="checkbox" name="Производитель" value="Hisense"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Kentatsu
+                          <input type="checkbox" name="Производитель" value="Kentatsu"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Midea
+                          <input type="checkbox" name="Производитель" value="Midea"><span></span>
+                        </label>
+                      </fieldset>
                     </div>
                   </li>
                   <li class="filter__item filter__item--inverter"><span class="filter__item-title">Инвертор</span>
                     <div class="filter__item-content">
-                      <input class="filter__item-checkbox" type="checkbox" id="inverter" name="Инвертор" value="Инвертор">
-                      <label for="inverter"></label>
+                      <fieldset>
+                        <label class="filter__item-checkbox">Любой
+                          <input type="radio" name="Инвертор" value="Любой"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Да
+                          <input type="radio" name="Инвертор" value="Да"><span></span>
+                        </label>
+                        <label class="filter__item-checkbox">Нет
+                          <input type="radio" name="Инвертор" value="Нет"><span></span>
+                        </label>
+                      </fieldset>
                     </div>
                   </li>
                 </ul>

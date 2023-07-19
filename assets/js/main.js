@@ -98,14 +98,14 @@ if (filter) {
     return Array.from(selects).some(select => select.selectedIndex !== 0);
   };
 
-  // Inputs price
+  // Inputs price-----------------
   const inputsNumberForm = form.querySelectorAll('input[type="number"]');
 
   function isEnteredPrice (inputsNumber) {
     return Array.from(inputsNumber).some(inputNumber => inputNumber.value !== "");
   };
 
-  // Radio
+  // Radio-----------------
   const radiosForm = form.querySelectorAll('input[type="radio"]');
 
   function isSelectedRadio (radioBtns) {

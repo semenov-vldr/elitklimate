@@ -6,3 +6,24 @@ mixin catalog(data)
       a.catalog__item(href=item.link)
         h2.catalog__item-title=item.title
         img.catalog__item-img(src=item.imgSrc)
+
+
+// Карточка товара в каталоге
+mixin cardList(cards)
+  each card in cards
+    a.card(href=card.link)
+      img.card__img(src=card.imgSrc)
+      h3.card__title=card.title
+      span.card__price=`${card.price} ₽`
+
+    ul.card__data
+      li.card__data-item Мощность охлаждения:
+        span.card__data-item-value=card.power
+      li.card__data-item На площадь:
+        span.card__data-item-value=card.area
+      li.card__data-item Уровень шума:
+        span.card__data-item-value=card.noise
+      li.card__data-item Инвертор:
+        span.card__data-item-value=card.inverter
+
+    button.button.button--accent.card__button Купить

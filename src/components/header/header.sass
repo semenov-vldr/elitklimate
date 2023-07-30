@@ -27,6 +27,13 @@
     justify-content: space-between
     gap: 24px
 
+  &__logo img
+    width: 200px
+    @media (max-width: $width-tablet)
+      width: 150px
+    @media (max-width: 900px)
+      width: 120px
+
   &__nav
     @media (max-width: $width-mobile)
       position: fixed
@@ -57,6 +64,7 @@
   &__nav-item
     font-size: 20px
     white-space: nowrap
+    transition: $transition
     @media (max-width: $width-tablet)
       font-size: 16px
     &:hover

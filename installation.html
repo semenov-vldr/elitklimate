@@ -4,7 +4,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Что-то пошло не так</title><!--[if IE]>
+    <title>Заказать установку</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content=""><!--favicon-->
@@ -45,13 +45,19 @@
         </div>
       </header>
       <main>
-        <div class="page404">
-          <div class="page404__container container">
-            <h1 class="page404__title">404</h1>
-            <h2 class="page404__subtitle">Страница не найдена</h2>
-            <p class="page404__text">Страница, на которую Вы пытаетесь попасть, не существует или была удалена. Перейдите на<a href="index.html">главную страницу.</a></p>
+        <section class="feedback feedback--installation">
+          <div class="feedback__container container">
+            <h1 class="title-section feedback__title">Установка, Ремонт, Чистка, Заправка кондиционеров</h1>
+            <p class="feedback__info">Установку, Ремонт, Чистку, Заправку кондиционеров выполняют наши профессионалы с&nbsp;опытом&nbsp;от&nbsp;3&nbsp;до&nbsp;15&nbsp;лет</p>
+            <form class="form" action="">
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <label class="visually-hidden" for="tel">Ваш телефон</label>
+              <input class="form__field" type="text" id="name" name="name" placeholder="Введите имя" required>
+              <input class="form__field" type="tel" id="tel" name="tel" placeholder="Введите номер" required>
+              <button class="button button--accent form__button" type="submit">Отправить заявку</button>
+            </form><img class="feedback__img" src="../assets/img/installation.jpg">
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container container">

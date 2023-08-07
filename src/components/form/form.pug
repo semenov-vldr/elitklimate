@@ -1,0 +1,9 @@
+form.form(action="")
+
+  label.visually-hidden(for="name") Ваше имя
+  label.visually-hidden(for="tel") Ваш телефон
+
+  input.form__field(type="text" id="name" name="name" placeholder="Введите имя" required)
+  input.form__field(type="tel" id="tel" name="tel" placeholder="Введите номер" required)
+
+  button.button.button--accent.form__button(type="submit") Отправить заявку

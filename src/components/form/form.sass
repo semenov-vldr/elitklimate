@@ -1,0 +1,29 @@
+.form
+  margin-top: 24px
+  display: inline-flex
+  flex-direction: column
+  max-width: 380px
+  width: 100%
+
+  &__field
+    @include fontSize(16, 20)
+    padding: 12px
+    border-radius: 8px
+    line-height: 1
+    border-color: $black
+    width: 100%
+    & + &
+      margin-top: 16px
+    @media (max-width: $width-mobile)
+      padding: 8px
+
+  &__field::placeholder
+    @include fontSize(16, 20)
+    color: rgba($black, 0.7)
+    line-height: 1
+
+  &__button
+    width: 100%
+    margin-top: 32px
+    @media (min-width: $width-mobile)
+      min-height: 56px

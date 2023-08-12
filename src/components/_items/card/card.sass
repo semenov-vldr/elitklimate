@@ -15,10 +15,13 @@
     max-width: 260px
     margin: 0 auto
 
+  &__link:hover &__title
+    text-decoration: underline
+
   &__img
     display: block
     margin: 0 auto 16px
-    height: 250px
+    height: 270px
     @media (max-width: $width-tablet)
       height: 200px
     @media (max-width: $width-mobile)
@@ -28,6 +31,8 @@
   &__title
     @include fontSize(16, 24)
     font-weight: 500
+    transition: $transition
+    //text-transform: uppercase
 
   &__price
     @include fontSize(18, 32)
@@ -41,7 +46,7 @@
     @include fontSize(12, 20)
     display: flex
     flex-direction: column
-    gap: 12px
+    gap: 8px
     @media (max-width: $width-mobile)
       margin-bottom: 16px
       gap: 6px

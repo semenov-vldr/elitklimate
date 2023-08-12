@@ -5,9 +5,7 @@ if (mainProducts) {
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
   const productsGrid = mainProducts.querySelector(".products__grid");
 
-
   function createCard (products) {
-
     products.forEach(product => {
 
       const cardItem = cardTemplate.cloneNode(true);
@@ -22,11 +20,53 @@ if (mainProducts) {
       cardItem.querySelector('.card__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
 
       productsGrid.appendChild(cardItem);
-
     });
   };
 
-  createCard (productsArr)
+
+
+  const startProductsArr = productsArr.slice(0, 6);
+
+  // Отрисовка первичных картчоек при загрузке страницы
+  window.addEventListener("load", () => createCard (startProductsArr));
+
+  let loadedCards = 6; // С номерка какой карточки в массиве начать "ленивую" загрузку
+  let cardsPerPage = 6; // Сколько карточек будет прибавляться при "ленивой" загрузке
+
+  function lazyLoadingCards (products) {
+    const windowsHeight = window.innerHeight;
+    const documentHeight = document.body.offsetHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (windowsHeight + scrollTop >= documentHeight - 500) {
+      const renderedCards = products.slice(loadedCards, loadedCards+cardsPerPage);
+      loadedCards += renderedCards.length;
+
+        createCard (renderedCards);
+
+      //createCard (renderedCards);
+
+      // console.log("products.length", products.length);
+      // console.log("loadedCards", loadedCards);
+    }
+
+    if (loadedCards === products.length) {
+      console.log('stop')
+      return true;
+    }
+
+  };
+
+  window.addEventListener("scroll", () => {
+    lazyLoadingCards(productsArr);
+
+    if (lazyLoadingCards(productsArr)) {
+      console.log('stop stop stop')
+    }
+  });
+
+
+
 
 }
 

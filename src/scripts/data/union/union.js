@@ -5,13 +5,14 @@ const dataDahatsu = [
 
 const dataDenko = [
   DENKO_KR,
+  DENKO_DCS_A,
 ];
 
-let productsArr = [
+const productsArr = [
   dataDahatsu,
   dataDenko,
 
-].flat();
+].flat().flat();
 
-productsArr = productsArr.flat()
+//productsArr = productsArr.flat()
 

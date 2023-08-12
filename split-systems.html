@@ -1,6 +1,7 @@
 
 <!-- Плитки каталога-->
-<!-- Карточка товара в каталоге--><!DOCTYPE html>
+<!-- Карточка товара в каталоге-->
+<!-- Хлебные крошки--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -45,6 +46,10 @@
         </div>
       </header>
       <main>
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html">Каталог</a><span class="breadcrumbs__item">Бытовые сплит-системы</span>
+          </div>
+        </div>
         <div class="products products--split-systems">
           <div class="products__container container">
             <div class="filter">
@@ -128,16 +133,35 @@
               </div>
             </div>
             <div class="products__grid">
-              <article class="card"><a href="##"><img class="card__img" src="./assets/img/catalog/01.jpg">
-                  <h3 class="card__title">DAHATSU DHP-07/DHV-07</h3></a><span class="card__price">25 000 ₽</span>
-                <ul class="card__data">
-                  <li class="card__data-item">Мощность охлаждения:<span class="card__data-item-value">2.8 кВт</span></li>
-                  <li class="card__data-item">На площадь:<span class="card__data-item-value">22 м²</span></li>
-                  <li class="card__data-item">Уровень шума:<span class="card__data-item-value">22 дБ</span></li>
-                  <li class="card__data-item">Инвертор:<span class="card__data-item-value">есть</span></li>
-                </ul>
-                <button class="button button--accent card__button">Купить</button>
-              </article>
+              <!--article.card-->
+              <!--  a(href="##")-->
+              <!--    img.card__img(src="./assets/img/catalog/01.jpg")-->
+              <!--    h3.card__title Dahatsu DHP-07/DHV-07-->
+              <!--  span.card__price 25 000 ₽-->
+              <!---->
+              <!--  ul.card__data-->
+              <!--    li.card__data-item На площадь:-->
+              <!--      span.card__data-item-value 22 м²-->
+              <!--    li.card__data-item Мощность охлаждения:-->
+              <!--      span.card__data-item-value 2.8 кВт-->
+              <!--    li.card__data-item Уровень шума:-->
+              <!--      span.card__data-item-value 22 дБ-->
+              <!--    li.card__data-item Инвертор:-->
+              <!--      span.card__data-item-value есть-->
+              <!---->
+              <!--  button.button.button--accent.card__button Купить-->
+              <template id="card-template">
+                <article class="card"><a class="card__link" href="##"><img class="card__img" src="">
+                    <h3 class="card__title"></h3></a><span class="card__price"></span>
+                  <ul class="card__data">
+                    <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area"></span></li>
+                    <li class="card__data-item">Мощность охлаждения:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
+                    <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
+                    <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
+                  </ul>
+                  <button class="button button--accent card__button">Купить</button>
+                </article>
+              </template>
             </div>
           </div>
         </div>
@@ -146,7 +170,7 @@
         <div class="footer__container container">
           <div class="footer__top"><a class="footer__logo" href="index.html">Элит климат
               <!--img(src="./assets/img/logo.png")--></a>
-            <p class="footer__sublogo">Официальный представитель ТМ Dahatsu, Denko в г. Сочи и Москве</p>
+            <p class="footer__sublogo">Официальный представитель ТМ Dahatsu, Denko в г. Сочи</p>
           </div>
           <div class="footer__contacts">
             <h3 class="footer__title">Контакты</h3>
@@ -157,11 +181,13 @@
                 <li class="footer__contacts-item"><span class="footer__contacts-address">пгт. Красная поляна, с. Эсто-Садок, с. Галицыно</span><a class="footer__contacts-tel" href="tel:+79891631354">+7 (989) 163-13-54</a></li>
               </ul>
             </div>
-            <div class="footer__contacts-section"><span class="footer__contacts-section-title">Московская область</span>
-              <ul class="footer__contacts-list">
-                <li class="footer__contacts-item"><span class="footer__contacts-address">г. Щёлково, Фруктовый проезд, д. 2</span><a class="footer__contacts-tel" href="tel:+79885077837">+7 (988) 507-78-37</a></li>
-              </ul>
-            </div>
+            <!--.footer__contacts-section-->
+            <!--  span.footer__contacts-section-title Московская область-->
+            <!---->
+            <!--  ul.footer__contacts-list-->
+            <!--    li.footer__contacts-item-->
+            <!--      span.footer__contacts-address г. Щёлково, Фруктовый проезд, д. 2-->
+            <!--      a.footer__contacts-tel(href="tel:+79885077837") +7 (988) 507-78-37-->
           </div>
           <nav class="footer__nav">
             <h3 class="footer__title">Кондиционеры</h3>
@@ -186,6 +212,14 @@
           <div class="footer__copyright"><a class="footer__politics" href="##">Политика конфиденциальности</a><span>© 2023 ЭЛИТ КЛИМАТ</span></div>
         </div>
       </footer>
+      <div class="loader">
+        <div class="loader__container">
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+        </div>
+      </div>
     </div>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js" type="module"></script>

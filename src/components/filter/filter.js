@@ -4,22 +4,36 @@ if (filter) {
 
   const filterItems = filter.querySelectorAll('.filter__item-title');
 
+  const filterOpen = (filter) => filter.classList.add('js-filter-open');
+  const filterHide = (filter) => filter.classList.remove('js-filter-open');
+
   filterItems.forEach(filterItem => {
     filterItem.addEventListener('click', () => {
       filterItem.classList.toggle('js-filter-open');
-    })
+
+      // Скрыть все, кроме активного
+      const inactiveFilters = Array.from(filterItems).filter(el => el !== filterItem);
+      inactiveFilters.forEach(filterHide);
+
+      // Скрыть по клику вне блока фильтра
+      document.addEventListener('click', function (evt) {
+        if (!evt.target.closest('.filter__item')) {
+          filterItems.forEach(filterHide);
+        }
+      });
+    });
   });
 
   const filterBtn = filter.querySelector('.filter__icon');
   const closeFilter = filter.querySelector('.filter__close');
 
   filterBtn.addEventListener('click', () => {
-    filterBtn.classList.add('js-filter-open');
+    filterOpen(filterBtn)
     blockScrollBody();
   });
 
   closeFilter.addEventListener('click', () => {
-    filterBtn.classList.remove('js-filter-open');
+    filterHide(filterBtn)
     unblockScrollBody();
   });
 
@@ -29,7 +43,6 @@ if (filter) {
 
   const form = filter.querySelector('.filter__form');
   const btnForm = form.querySelector('.filter__form-submit');
-
 
   const visibleBtn = () => btnForm.classList.add('js-visible');
   const hiddenBtn = () => btnForm.classList.remove('js-visible');

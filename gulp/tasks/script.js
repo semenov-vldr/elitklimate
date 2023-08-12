@@ -14,9 +14,10 @@ module.exports = function () {
   $.gulp.task("script:dev", function () {
     return $.gulp
       .src([
+        $.path.src + "/scripts/**/*.js",
         $.path.src + "/components/index.js",
         $.path.src + "/components/**/*.js",
-        $.path.src + "/scripts/**/*.js",
+
       ])
       .pipe($.concat("main.js"))
       .pipe($.gulp.dest($.path.assets + "/js/"))

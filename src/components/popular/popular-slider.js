@@ -1,19 +1,20 @@
-{
+const swiperPopular = document.querySelector('.popular__slider');
 
-  let mySwiper;
+if (swiperPopular) {
+setTimeout(createPopularSlider, 0);
+}
 
-  const swiperPopular = document.querySelector('.popular__slider');
 
-  mySwiper = new Swiper(swiperPopular, {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+function createPopularSlider () {
+  const mySwiper = new Swiper(swiperPopular, {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     // Откл функционала, если слайдов меньше, чем нужно
     watchOverflow: true,
 
-    // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {
       320: {
@@ -21,7 +22,6 @@
         spaceBetween: 16,
       },
       380: {
-        //slidesPerView: 1.4,
         slidesPerView: "auto",
         spaceBetween: 16,
       },
@@ -40,7 +40,6 @@
         spaceBetween: 32,
       },
     }
-
   });
-
 }
+

@@ -1,0 +1,26 @@
+.breadcrumbs
+
+  &__container
+    display: flex
+    flex-wrap: wrap
+    row-gap: 8px
+
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+    @include fontSize(16, 20)
+    white-space: nowrap
+  &__item:not(:last-child)
+    color: $grey
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/breadcrumbs-icon.svg')
+      width: 8px
+      height: 15px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      margin: 0 16px
+

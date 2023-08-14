@@ -22,10 +22,13 @@
         span.filter__item-title Площадь помещения
         .filter__item-content
           select(name="Площадь помещения")
-            option(value="") Не выбрано
-            option До 25 м2
-            option До 35 м2
-            option До 55 м2
+            option(value="all") Не выбрано
+            option(value="20") От 20 до 35 м2
+            option(value="35") От 35 до 50 м2
+            option(value="50") От 50 до 70 м2
+            option(value="70") От 70 до 100 м2
+            option(value="100") От 100 до 140 м2
+            option(value="140") От 140 м2 и более
 
       li.filter__item.filter__item--company
         span.filter__item-title Производитель
@@ -64,8 +67,8 @@
         span.filter__item-title Инвертор
         .filter__item-content
           fieldset
-            label.filter__item-checkbox Любой
-              input(type="radio" name="Инвертор" value="Любой")
+            label.filter__item-checkbox Все
+              input(type="radio" name="Инвертор" value="Все")
               span
 
             label.filter__item-checkbox Да
@@ -81,6 +84,6 @@
   .filter__sorting
     span Соритровать по:
     select(name="Соритровка")
-      option(value="Популярности") Популярности
+      option(value="Исходная") Исходная
       option(value="Дороже") Цене дороже
       option(value="Дешевле") Цене дешевле

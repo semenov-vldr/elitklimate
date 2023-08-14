@@ -181,6 +181,13 @@
       font-size: 18px
       @media (max-width: $width-mobile)
         font-size: 16px
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+    &
+      -moz-appearance: textfield
+
 
   &__item--price .filter__item-content
     position: absolute

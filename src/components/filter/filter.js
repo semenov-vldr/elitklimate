@@ -7,6 +7,7 @@ if (filter) {
   const filterOpen = (filter) => filter.classList.add('js-filter-open');
   const filterHide = (filter) => filter.classList.remove('js-filter-open');
 
+  // Показ/скрытие элементов фильтра
   filterItems.forEach(filterItem => {
     filterItem.addEventListener('click', () => {
       filterItem.classList.toggle('js-filter-open');
@@ -28,12 +29,12 @@ if (filter) {
   const closeFilter = filter.querySelector('.filter__close');
 
   filterBtn.addEventListener('click', () => {
-    filterOpen(filterBtn)
+    filterOpen(filterBtn);
     blockScrollBody();
   });
 
   closeFilter.addEventListener('click', () => {
-    filterHide(filterBtn)
+    filterHide(filterBtn);
     unblockScrollBody();
   });
 
@@ -83,6 +84,59 @@ if (filter) {
       || isEnteredPrice(inputsNumberForm)
       || isSelectedRadio(radiosForm) ) ? visibleBtn() : hiddenBtn();
   });
+
+
+
+
+
+  // ------- Фильтрация ---
+
+  const productsGrid = document.querySelector(".products__grid");
+
+  const filterPrice = form.querySelector(".filter__item--price");
+  const filterArea = form.querySelector(".filter__item--area");
+
+  const filterInverter = form.querySelector(".filter__item--inverter");
+
+  // -- filter price --
+
+  const minPriceInput = filterPrice.querySelector(".filter__price-min");
+  const maxPriceInput = filterPrice.querySelector(".filter__price-max");
+
+  //minPriceInput.addEventListener("input", filterPriceCards);
+  //maxPriceInput.addEventListener("input", filterPriceCards);
+
+  // function filterPriceCards () {
+  //   const minPriceValue = parseFloat(minPriceInput.value); // Введенное значение
+  //   const maxPriceValue = parseFloat(maxPriceInput.value);
+  // }
+
+
+  // -- filter company --
+    const filterCompany = form.querySelector(".filter__item--company");
+    if (filterCompany) {
+      const companyCheckboxes = filterCompany.querySelectorAll("input[type='checkbox']");
+      let selectedCompanies = [];
+      companyCheckboxes.forEach(companyCheckbox => {
+        companyCheckbox.addEventListener('change', function () {
+          if (this.checked) {
+            selectedCompanies.push(this.value);
+          } else {
+            selectedCompanies = selectedCompanies.filter(el => el !== this.value);
+          }
+          const filteredCompanyArray = new Set(selectedCompanies)
+        });
+      });
+    }
+
+
+
+  form.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    productsGrid.replaceChildren();
+    renderCard(productsArr.slice(0, 3))
+  });
+
 
 
 

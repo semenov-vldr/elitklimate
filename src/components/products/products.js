@@ -1,13 +1,11 @@
-const mainProducts = document.querySelector(".products.products--main");
-
-if (mainProducts) {
-
+// Создание массива карточек товара в соответствии с данными из массива объектов
+function renderCard (products) {
+  const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
-  const productsGrid = mainProducts.querySelector(".products__grid");
 
-  function createCard (products) {
+  if (productsGrid && cardTemplate) {
+
     products.forEach(product => {
-
       const cardItem = cardTemplate.cloneNode(true);
 
       cardItem.querySelector('.card__link').href = product.link;
@@ -21,53 +19,62 @@ if (mainProducts) {
 
       productsGrid.appendChild(cardItem);
     });
-  };
+  }
+};
+//---------------
+
+const productsMain = document.querySelector(".products.products--main");
+if (productsMain) renderCard(productsArr);
 
 
+// Отрисовка карточек на странице выбранной категории в соответствии с категорией
+function addProductsOfCategory (blockCategory, category) {
+  if (blockCategory) {
+    const categoryArray = productsArr.filter(card => card.type === category);
+    renderCard(categoryArray);
+  }
+};
 
-  const startProductsArr = productsArr.slice(0, 6);
+const BlockSplitSystems = document.querySelector(".products.products--split-systems");
+const blockCassette = document.querySelector(".products.products--cassette");
+const blockDucted = document.querySelector(".products.products--ducted");
+const blockColumn = document.querySelector(".products.products--column");
+const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
+const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
 
-  // Отрисовка первичных картчоек при загрузке страницы
-  window.addEventListener("load", () => createCard (startProductsArr));
-
-  let loadedCards = 6; // С номерка какой карточки в массиве начать "ленивую" загрузку
-  let cardsPerPage = 6; // Сколько карточек будет прибавляться при "ленивой" загрузке
-
-  function lazyLoadingCards (products) {
-    const windowsHeight = window.innerHeight;
-    const documentHeight = document.body.offsetHeight;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (windowsHeight + scrollTop >= documentHeight - 500) {
-      const renderedCards = products.slice(loadedCards, loadedCards+cardsPerPage);
-      loadedCards += renderedCards.length;
-
-        createCard (renderedCards);
-
-      //createCard (renderedCards);
-
-      // console.log("products.length", products.length);
-      // console.log("loadedCards", loadedCards);
-    }
-
-    if (loadedCards === products.length) {
-      console.log('stop')
-      return true;
-    }
-
-  };
-
-  window.addEventListener("scroll", () => {
-    lazyLoadingCards(productsArr);
-
-    if (lazyLoadingCards(productsArr)) {
-      console.log('stop stop stop')
-    }
-  });
+addProductsOfCategory(BlockSplitSystems, "split-system");
+addProductsOfCategory(blockCassette, "cassette");
 
 
 
 
-}
+
+  // // Первично загружаются первые 6 карточек
+  // const startProductsArr = productsArr.slice(0, 6);
+  //
+  // // Отрисовка первичных картчоек при загрузке страницы
+  // window.addEventListener("load", () => createCard (startProductsArr));
+  //
+  // let loadedCards = 6; // С номерка какой карточки в массиве начать "ленивую" загрузку
+  // let cardsPerPage = 6; // Сколько карточек будет прибавляться при "ленивой" загрузке
+  //
+  // function lazyLoadingCards (products) {
+  //   const windowsHeight = window.innerHeight;
+  //   const documentHeight = document.body.offsetHeight;
+  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //
+  //   if (windowsHeight + scrollTop >= documentHeight - 500) {
+  //     const renderedCards = products.slice(loadedCards, loadedCards+cardsPerPage);
+  //     loadedCards += renderedCards.length;
+  //       createCard (renderedCards);
+  //   }
+  // };
+  //
+  // window.addEventListener("scroll", () => lazyLoadingCards(productsArr));
+
+
+
+
+
 
 

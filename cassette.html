@@ -50,7 +50,7 @@
           <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html">Каталог</a><span class="breadcrumbs__item">Кассетные</span>
           </div>
         </div>
-        <div class="products products--split-systems">
+        <div class="products products--cassette">
           <div class="products__container container">
             <div class="filter">
               <button class="filter__icon"><img src="./assets/img/icons/settings.svg"></button>
@@ -72,10 +72,13 @@
                   <li class="filter__item filter__item--area"><span class="filter__item-title">Площадь помещения</span>
                     <div class="filter__item-content">
                       <select name="Площадь помещения">
-                        <option value="">Не выбрано</option>
-                        <option>До 25 м2</option>
-                        <option>До 35 м2</option>
-                        <option>До 55 м2</option>
+                        <option value="all">Не выбрано</option>
+                        <option value="20">От 20 до 35 м2</option>
+                        <option value="35">От 35 до 50 м2</option>
+                        <option value="50">От 50 до 70 м2</option>
+                        <option value="70">От 70 до 100 м2</option>
+                        <option value="100">От 100 до 140 м2</option>
+                        <option value="140">От 140 м2 и более</option>
                       </select>
                     </div>
                   </li>
@@ -109,8 +112,8 @@
                   <li class="filter__item filter__item--inverter"><span class="filter__item-title">Инвертор</span>
                     <div class="filter__item-content">
                       <fieldset>
-                        <label class="filter__item-checkbox">Любой
-                          <input type="radio" name="Инвертор" value="Любой"><span></span>
+                        <label class="filter__item-checkbox">Все
+                          <input type="radio" name="Инвертор" value="Все"><span></span>
                         </label>
                         <label class="filter__item-checkbox">Да
                           <input type="radio" name="Инвертор" value="Да"><span></span>
@@ -126,42 +129,14 @@
               </form>
               <div class="filter__sorting"><span>Соритровать по:</span>
                 <select name="Соритровка">
-                  <option value="Популярности">Популярности</option>
+                  <option value="Исходная">Исходная</option>
                   <option value="Дороже">Цене дороже</option>
                   <option value="Дешевле">Цене дешевле</option>
                 </select>
               </div>
             </div>
             <div class="products__grid">
-              <!--article.card-->
-              <!--  a(href="##")-->
-              <!--    img.card__img(src="./assets/img/catalog/01.jpg")-->
-              <!--    h3.card__title Dahatsu DHP-07/DHV-07-->
-              <!--  span.card__price 25 000 ₽-->
-              <!---->
-              <!--  ul.card__data-->
-              <!--    li.card__data-item На площадь:-->
-              <!--      span.card__data-item-value 22 м²-->
-              <!--    li.card__data-item Мощность охлаждения:-->
-              <!--      span.card__data-item-value 2.8 кВт-->
-              <!--    li.card__data-item Уровень шума:-->
-              <!--      span.card__data-item-value 22 дБ-->
-              <!--    li.card__data-item Инвертор:-->
-              <!--      span.card__data-item-value есть-->
-              <!---->
-              <!--  button.button.button--accent.card__button Купить-->
-              <template id="card-template">
-                <article class="card"><a class="card__link" href="##"><img class="card__img" src="">
-                    <h3 class="card__title"></h3></a><span class="card__price"></span>
-                  <ul class="card__data">
-                    <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area"></span></li>
-                    <li class="card__data-item">Мощность охлаждения:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
-                    <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
-                    <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
-                  </ul>
-                  <button class="button button--accent card__button">Купить</button>
-                </article>
-              </template>
+              <!-- Сюда отрисовываются карточки из объекта-->
             </div>
           </div>
         </div>
@@ -220,6 +195,35 @@
           <div class="loader__ball"></div>
         </div>
       </div>
+      <!--article.card-->
+      <!--  a(href="##")-->
+      <!--    img.card__img(src="./assets/img/catalog/01.jpg")-->
+      <!--    h3.card__title Dahatsu DHP-07/DHV-07-->
+      <!--  span.card__price 25 000 ₽-->
+      <!---->
+      <!--  ul.card__data-->
+      <!--    li.card__data-item На площадь:-->
+      <!--      span.card__data-item-value 22 м²-->
+      <!--    li.card__data-item Мощность охлаждения:-->
+      <!--      span.card__data-item-value 2.8 кВт-->
+      <!--    li.card__data-item Уровень шума:-->
+      <!--      span.card__data-item-value 22 дБ-->
+      <!--    li.card__data-item Инвертор:-->
+      <!--      span.card__data-item-value есть-->
+      <!---->
+      <!--  button.button.button--accent.card__button Купить-->
+      <template id="card-template">
+        <article class="card"><a class="card__link" href="##"><img class="card__img" src="">
+            <h3 class="card__title"></h3></a><span class="card__price"></span>
+          <ul class="card__data">
+            <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area"></span></li>
+            <li class="card__data-item">Охлаждение:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
+            <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
+            <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
+          </ul>
+          <button class="button button--accent card__button">Купить</button>
+        </article>
+      </template>
     </div>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js" type="module"></script>

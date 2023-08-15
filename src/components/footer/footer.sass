@@ -107,6 +107,12 @@
   &__nav-item
     @include fontSize(14, 18)
 
+  &__nav-link
+    transition: $transition
+    @media (min-width: $width-tablet)
+      &:hover
+        color: #cccccc
+
 
   &__copyright
     display: flex

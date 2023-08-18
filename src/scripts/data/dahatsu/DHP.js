@@ -22,7 +22,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "dahatsu-DHP-07.html",
+    link: "dahatsu-dhp-07.html",
     imgSrc: imagesDahatsuDragon,
     price: 25500, // Цена
     area: 22, // На площадь, м²

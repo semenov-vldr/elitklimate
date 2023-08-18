@@ -6,10 +6,10 @@ const functionsDahatsuBrilliant = ["Компрессор GMCC Toshiba", "Golden 
   "Запоминание положения жалюзи", "Уровень шума 21dB", "Компактный дизайн"];
 
 const imagesDahatsuBrilliant =
-  ["./assets/img/catalog/dahatsu/ds-i/01.png",
-    "./assets/img/catalog/dahatsu/ds-i/02.png",
-    "./assets/img/catalog/dahatsu/ds-i/03.png",
-    "./assets/img/catalog/dahatsu/ds-i/04.png"
+  ["./assets/img/catalog/dahatsu/DS-I/01.png",
+    "./assets/img/catalog/dahatsu/DS-I/02.png",
+    "./assets/img/catalog/dahatsu/DS-I/03.png",
+    "./assets/img/catalog/dahatsu/DS-I/04.png"
   ];
 
 

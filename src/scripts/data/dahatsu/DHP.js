@@ -5,10 +5,10 @@ const functionsDahatsuDragon = ["Компрессор GMCC Toshiba", "Golden fin
   "Режим Turbo производительности", "Таймер", "Запоминание положения жалюзи", "Автоматический перезапуск"];
 
 const imagesDahatsuDragon =
-  ["./assets/img/catalog/dahatsu/dhp/01.jpg",
-    "./assets/img/catalog/dahatsu/dhp/02.png",
-    "./assets/img/catalog/dahatsu/dhp/03.jpg",
-    "./assets/img/catalog/dahatsu/dhp/04.jpg"
+  ["./assets/img/catalog/dahatsu/DHP/01.jpg",
+    "./assets/img/catalog/dahatsu/DHP/02.png",
+    "./assets/img/catalog/dahatsu/DHP/03.jpg",
+    "./assets/img/catalog/dahatsu/DHP/04.jpg"
   ];
 
 const descriptionDahatsuDragon = "Сплит-системы Dahatsu серии Dragon выполнены в современном, лаконичном дизайне и имеют обтекаемые формы, что позволит разместить данные сплит-системы в помещениях с высококлассными требованиями к решением интерьера. Помимо быстрого обогрева и охлаждения, устройство гарантирует тщательную очистку воздуха от загрязнений и аллергенов при помощи моющегося фильтра высокой плотности. В кондиционере предусмотрены такие функции, как: спящий режим, обнаружение утечки хладагента, горизонтальный автоповорот жалюзи, 2 способа подключения трубопровода, Н-образная установочная пластина, функция short cut- устанавливает и активирует ваши предварительные настройки, и прочие сверхтехнологичные функции."
@@ -17,12 +17,12 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-07/DHV-07 ------
   {
-    article: "dahatsu-dhp-07",
+    article: "dahatsu-DHP-07",
     title: "Dahatsu DHP-07/DHV-07",
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "dahatsu-dhp-07.html",
+    link: "dahatsu-DHP-07.html",
     imgSrc: imagesDahatsuDragon,
     price: 25500, // Цена
     area: 22, // На площадь, м²
@@ -65,7 +65,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-09/DHV-09 ------
   {
-    article: "dahatsu-dhp-09",
+    article: "dahatsu-DHP-09",
     title: "Dahatsu DHP-09/DHV-09",
     type: "split-system",
     company: "Dahatsu",
@@ -113,7 +113,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-12/DHV-12 ------
   {
-    article: "dahatsu-dhp-12",
+    article: "dahatsu-DHP-12",
     title: "Dahatsu DHP-12/DHV-12",
     type: "split-system",
     company: "Dahatsu",
@@ -161,7 +161,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-18/DHV-18 ------
   {
-    article: "dahatsu-dhp-18",
+    article: "dahatsu-DHP-18",
     title: "Dahatsu DHP-18/DHV-18",
     type: "split-system",
     company: "Dahatsu",
@@ -209,7 +209,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-24/DHV-24 ------
   {
-    article: "dahatsu-dhp-24",
+    article: "dahatsu-DHP-24",
     title: "Dahatsu DHP-24/DHV-24",
     type: "split-system",
     company: "Dahatsu",

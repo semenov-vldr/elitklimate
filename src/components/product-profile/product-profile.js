@@ -1,14 +1,22 @@
-const swiperProductProfile = document.querySelector('.product-profile .product-profile__images');
+const productProfile = document.querySelector('.product-profile');
 
-if (swiperProductProfile) {
+if (productProfile) {
   setTimeout(createProductProfileSlider, 0);
+
+const descText = productProfile.querySelector(".product-profile__desc-text");
+const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
+
+  showMoreBtn.addEventListener("click", () => {
+    descText.classList.add("js-show-more");
+  });
+
 }
 
 
 function createProductProfileSlider () {
 
-  const swiperTop = swiperProductProfile.querySelector('.swiper-top');
-  const swiperThumbs = swiperProductProfile.querySelector('.swiper-thumbs');
+  const swiperTop = productProfile.querySelector('.swiper-top');
+  const swiperThumbs = productProfile.querySelector('.swiper-thumbs');
 
   let swiper__thumbs = new Swiper(swiperThumbs, {
     spaceBetween: 28,
@@ -37,7 +45,6 @@ function createProductProfileSlider () {
       crossFade: true,
     }
   });
-
 
 
 }

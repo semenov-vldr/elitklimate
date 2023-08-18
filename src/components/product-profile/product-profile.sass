@@ -1,0 +1,97 @@
+.product-profile
+
+  &__title
+    @include fontSize(24, 48)
+    font-weight: 500
+
+  &__columns
+    display: grid
+    grid-template-columns: 1.45fr 1fr
+    gap: 32px
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+
+  &__images
+    overflow: hidden
+
+    .swiper-top
+      padding: 32px
+      @media (min-width: $width-mobile)
+        height: 80%
+        padding: 32px 16px
+        margin-bottom: 16px
+      img
+        width: 100%
+        object-fit: cover
+        aspect-ratio: 1 / 1
+
+    .swiper-thumbs
+      height: 20%
+      img
+        width: 100px
+        height: 100px
+        object-fit: cover
+        border-radius: 8px
+        border: 1px solid transparent
+        padding: 5px
+      .swiper-slide-thumb-active
+        border-color: rgba(#CC3333, 0.5)
+      @media (max-width: $width-mobile)
+        display: none
+
+
+  &__properties
+    grid-column: 1/2
+
+  &__properties-heading
+    margin-bottom: 20px
+    @include fontSize(18, 24)
+    font-weight: 500
+    &:not(:first-child)
+      margin-top: 32px
+
+  &__property-list
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+  &__property-item
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid rgba(#000, 0.1)
+    padding-bottom: 8px
+    gap: 16px
+    @include fontSize(16, 20)
+
+  &__property-value
+    text-align: right
+
+  &__price
+    @include fontSize(24, 48)
+    font-weight: 500
+    margin-bottom: 24px
+
+  &__button
+    width: 100%
+    margin-bottom: 32px
+
+
+  &__desc
+    grid-column: 2/3
+    grid-row: 1/2
+    display: flex
+    flex-direction: column
+    @media (max-width: $width-mobile)
+      grid-column: 1/-1
+      grid-row: 2/3
+
+  &__desc-heading
+    @include fontSize(18, 32)
+    font-weight: 500
+    margin-bottom: 16px
+
+  &__desc-text
+    @include fontSize(16, 24)
+    line-height: 1.3
+

@@ -2,6 +2,7 @@ const dataDahatsu = [
   DAHATSU_DHP,
   DAHATSU_DS_I,
   DAHATSU_DA_H,
+  DAHATSU_GW_H,
   DAHATSU_DH_CS_A,
 ];
 

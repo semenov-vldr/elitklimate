@@ -82,6 +82,14 @@ main
 button
   cursor: pointer
 
+.desktop-hidden
+  @media (min-width: $width-mobile)
+    display: none
+
+.mobile-hidden
+  @media (max-width: $width-mobile)
+    display: none
+
 
 
 // -------- Swiper -----------

@@ -26,10 +26,10 @@ const functionsDahatsuLegend = ["Компрессор GMCC Toshiba", "Режим
   "Запоминание положения жалюзи", "Таймер"];
 
 const imagesDahatsuLegend =
-  ["./assets/img/catalog/dahatsu/da-h/01.png",
-    "./assets/img/catalog/dahatsu/da-h/02.png",
-    "./assets/img/catalog/dahatsu/da-h/03.png",
-    "./assets/img/catalog/dahatsu/da-h/04.png"
+  ["./assets/img/catalog/dahatsu/DA-H/01.png",
+    "./assets/img/catalog/dahatsu/DA-H/02.png",
+    "./assets/img/catalog/dahatsu/DA-H/03.png",
+    "./assets/img/catalog/dahatsu/DA-H/04.png"
   ];
 
 const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера.Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
@@ -669,10 +669,10 @@ const functionsDahatsuDragon = ["Компрессор GMCC Toshiba", "Golden fin
   "Режим Turbo производительности", "Таймер", "Запоминание положения жалюзи", "Автоматический перезапуск"];
 
 const imagesDahatsuDragon =
-  ["./assets/img/catalog/dahatsu/dhp/01.jpg",
-    "./assets/img/catalog/dahatsu/dhp/02.png",
-    "./assets/img/catalog/dahatsu/dhp/03.jpg",
-    "./assets/img/catalog/dahatsu/dhp/04.jpg"
+  ["./assets/img/catalog/dahatsu/DHP/01.jpg",
+    "./assets/img/catalog/dahatsu/DHP/02.png",
+    "./assets/img/catalog/dahatsu/DHP/03.jpg",
+    "./assets/img/catalog/dahatsu/DHP/04.jpg"
   ];
 
 const descriptionDahatsuDragon = "Сплит-системы Dahatsu серии Dragon выполнены в современном, лаконичном дизайне и имеют обтекаемые формы, что позволит разместить данные сплит-системы в помещениях с высококлассными требованиями к решением интерьера. Помимо быстрого обогрева и охлаждения, устройство гарантирует тщательную очистку воздуха от загрязнений и аллергенов при помощи моющегося фильтра высокой плотности. В кондиционере предусмотрены такие функции, как: спящий режим, обнаружение утечки хладагента, горизонтальный автоповорот жалюзи, 2 способа подключения трубопровода, Н-образная установочная пластина, функция short cut- устанавливает и активирует ваши предварительные настройки, и прочие сверхтехнологичные функции."
@@ -681,12 +681,12 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-07/DHV-07 ------
   {
-    article: "dahatsu-dhp-07",
+    article: "dahatsu-DHP-07",
     title: "Dahatsu DHP-07/DHV-07",
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "dahatsu-dhp-07.html",
+    link: "dahatsu-DHP-07.html",
     imgSrc: imagesDahatsuDragon,
     price: 25500, // Цена
     area: 22, // На площадь, м²
@@ -729,7 +729,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-09/DHV-09 ------
   {
-    article: "dahatsu-dhp-09",
+    article: "dahatsu-DHP-09",
     title: "Dahatsu DHP-09/DHV-09",
     type: "split-system",
     company: "Dahatsu",
@@ -777,7 +777,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-12/DHV-12 ------
   {
-    article: "dahatsu-dhp-12",
+    article: "dahatsu-DHP-12",
     title: "Dahatsu DHP-12/DHV-12",
     type: "split-system",
     company: "Dahatsu",
@@ -825,7 +825,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-18/DHV-18 ------
   {
-    article: "dahatsu-dhp-18",
+    article: "dahatsu-DHP-18",
     title: "Dahatsu DHP-18/DHV-18",
     type: "split-system",
     company: "Dahatsu",
@@ -873,7 +873,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-24/DHV-24 ------
   {
-    article: "dahatsu-dhp-24",
+    article: "dahatsu-DHP-24",
     title: "Dahatsu DHP-24/DHV-24",
     type: "split-system",
     company: "Dahatsu",
@@ -928,10 +928,10 @@ const functionsDahatsuBrilliant = ["Компрессор GMCC Toshiba", "Golden 
   "Запоминание положения жалюзи", "Уровень шума 21dB", "Компактный дизайн"];
 
 const imagesDahatsuBrilliant =
-  ["./assets/img/catalog/dahatsu/ds-i/01.png",
-    "./assets/img/catalog/dahatsu/ds-i/02.png",
-    "./assets/img/catalog/dahatsu/ds-i/03.png",
-    "./assets/img/catalog/dahatsu/ds-i/04.png"
+  ["./assets/img/catalog/dahatsu/DS-I/01.png",
+    "./assets/img/catalog/dahatsu/DS-I/02.png",
+    "./assets/img/catalog/dahatsu/DS-I/03.png",
+    "./assets/img/catalog/dahatsu/DS-I/04.png"
   ];
 
 
@@ -1193,10 +1193,10 @@ const functionsDahatsuClassicInverter = ["Компрессор GMCC Toshiba", "�
   "Golden fin", "Автоматический перезапуск", "Запоминание положения жалюзи", "Защитная крышка патрубов"];
 
 const imagesDahatsuClassicInverter =
-  ["./assets/img/catalog/dahatsu/gw-h/01.png",
-    "./assets/img/catalog/dahatsu/gw-h/02.png",
-    "./assets/img/catalog/dahatsu/gw-h/03.png",
-    "./assets/img/catalog/dahatsu/gw-h/04.png"
+  ["./assets/img/catalog/dahatsu/GW-H/01.png",
+    "./assets/img/catalog/dahatsu/GW-H/02.png",
+    "./assets/img/catalog/dahatsu/GW-H/03.png",
+    "./assets/img/catalog/dahatsu/GW-H/04.png"
   ];
 
 const descriptionDahatsuClassicInverter = "Сплит-системы Dahatsu серии Classic DC Inverter - надежная классическая инверторная модель, выполненная из высококачественных материалов. Благодаря компактному дизайну, режиму комфортного сна и низкому уровню шума данную модель можно установить в любом помещении, даже в детской комнате. Модель снабжена всеми стандартными функциями сплит-системы: теплообменник Golden fin, скрытый дисплей, два направления воздушного потока, режим ECO. Дизайн в классическом стиле станет украшением любого интерьера, а новейшие технологии позволят наслаждаться идеальным микроклиматом в любое время года."
@@ -2045,7 +2045,7 @@ if (popular) {
   const cardPopularTemplate = document.querySelector('#template-card-popular').content.querySelector('.card-popular.swiper-slide');
   const swiperWrapperPopular = document.querySelector('.popular__slider .swiper-wrapper');
 
-  const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09"];
+  const articlesPopularCards = ["dahatsu-DHP-07", "denko-kr-09"];
 
   // Создание карточек товара для блока "Популярное", используется общий массив данных товара.
   // Для выбора карточек в функцию передается массив с артикулами товара
@@ -2078,17 +2078,25 @@ if (popular) {
 
 
 
-const swiperProductProfile = document.querySelector('.product-profile .product-profile__images');
+const productProfile = document.querySelector('.product-profile');
 
-if (swiperProductProfile) {
+if (productProfile) {
   setTimeout(createProductProfileSlider, 0);
+
+const descText = productProfile.querySelector(".product-profile__desc-text");
+const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
+
+  showMoreBtn.addEventListener("click", () => {
+    descText.classList.add("js-show-more");
+  });
+
 }
 
 
 function createProductProfileSlider () {
 
-  const swiperTop = swiperProductProfile.querySelector('.swiper-top');
-  const swiperThumbs = swiperProductProfile.querySelector('.swiper-thumbs');
+  const swiperTop = productProfile.querySelector('.swiper-top');
+  const swiperThumbs = productProfile.querySelector('.swiper-thumbs');
 
   let swiper__thumbs = new Swiper(swiperThumbs, {
     spaceBetween: 28,
@@ -2117,7 +2125,6 @@ function createProductProfileSlider () {
       crossFade: true,
     }
   });
-
 
 
 }

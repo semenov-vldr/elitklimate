@@ -662,6 +662,279 @@ const DAHATSU_DH_CS_A = [
 
 ]
 
+// -----Dahatsu Напольно-потолочный тип (DH-NP-A) -----
+
+const functionsDahatsu_DH_NP_A = ["ON/OFF", "Инфракрасный пульт (в комплекте)", "Режим энергосбережения",
+  "Самоочистка ICLEAN", "Объемное воздухо-распределение", "Турборежим", "Спящий режим", "Движение жалюзи по горизонтали и вертикали",
+  "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -15°C",
+  "Работа в режиме обогрева до -15°C", "Самодиагностика", "Низкотемпературный комплект",
+  "HEALTH", "Анти-F. Предотвращение образования неприятного запаха"];
+
+
+const imagesDahatsu_DH_NP_A =
+  ["./assets/img/catalog/dahatsu/DH-NP-A/01.png",
+    "./assets/img/catalog/dahatsu/DH-NP-A/02.png",
+    "./assets/img/catalog/dahatsu/DH-NP-A/03.png",
+    "./assets/img/catalog/dahatsu/DH-NP-A/04.png"
+  ];
+
+const descriptionDahatsu_DH_NP_A = "Напольно-потолочная сплит-система DH-NP-A идеально подходит для \n создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта. \n Универсальный монтаж.Внутренний блок может быть установлен горизонтально у потолка или вертикально на стене. \n Функция iClean благодаря которой устройство автоматически сушится и очищается от пыли, что повышает эффективность охлаждения и нагрева."
+
+
+const DAHATSU_DH_NP_A = [
+
+  // Dahatsu DH-NP-18A
+  {
+    article: "dahatsu-dh-np-18a",
+    title: "Dahatsu DH-NP-18A",
+    type: "floor-ceiling",
+    company: "Dahatsu",
+    series: "DH-NP-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsu_DH_NP_A,
+    price: 72000, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.2, // Мощность охлаждения, кВт
+    noise: 43, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDahatsu_DH_NP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5280, // Производительность, Вт
+      powerConsumption: 1700, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5600, // Производительность, Вт
+      powerConsumption: 1550, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "15м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 43, // Уровень шума, дБ (A)
+      weight: 28, // Вес, кг
+      size: "1000x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-NP-24A
+  {
+    article: "dahatsu-dh-np-24a",
+    title: "Dahatsu DH-NP-24A",
+    type: "floor-ceiling",
+    company: "Dahatsu",
+    series: "DH-NP-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsu_DH_NP_A,
+    price: 90900, // Цена
+    area: 75, // На площадь, м²
+    coolingCapacity: 7, // Мощность охлаждения, кВт
+    noise: 49, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDahatsu_DH_NP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7030, // Производительность, Вт
+      powerConsumption: 2150, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 7600, // Производительность, Вт
+      powerConsumption: 1920, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "15м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 49, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "1280x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 57, // Уровень шума, дБ (A)
+      weight: 48, // Вес, кг
+      size: "825x310x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-NP-36A
+  {
+    article: "dahatsu-dh-np-36a",
+    title: "Dahatsu DH-NP-36A",
+    type: "floor-ceiling",
+    company: "Dahatsu",
+    series: "DH-NP-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsu_DH_NP_A,
+    price: 123000, // Цена
+    area: 110, // На площадь, м²
+    coolingCapacity: 10.5, // Мощность охлаждения, кВт
+    noise: 50, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDahatsu_DH_NP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 10550, // Производительность, Вт
+      powerConsumption: 3500, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 11700, // Производительность, Вт
+      powerConsumption: 3240, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "30м", // Макс. длина трассы, м
+    maxHeightDifference: "20м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "1280x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 64, // Вес, кг
+      size: "970x395x805", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-NP-48A
+  {
+    article: "dahatsu-dh-np-48a",
+    title: "Dahatsu DH-NP-48A",
+    type: "floor-ceiling",
+    company: "Dahatsu",
+    series: "DH-NP-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsu_DH_NP_A,
+    price: 148900, // Цена
+    area: 150, // На площадь, м²
+    coolingCapacity: 14, // Мощность охлаждения, кВт
+    noise: 51, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDahatsu_DH_NP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 14070, // Производительность, Вт
+      powerConsumption: 4680, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 15240, // Производительность, Вт
+      powerConsumption: 4420, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "50м", // Макс. длина трассы, м
+    maxHeightDifference: "30м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 51, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1600x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 95, // Вес, кг
+      size: "940x370x1325", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-NP-60A
+  {
+    article: "dahatsu-dh-np-60a",
+    title: "Dahatsu DH-NP-60A",
+    type: "floor-ceiling",
+    company: "Dahatsu",
+    series: "DH-NP-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsu_DH_NP_A,
+    price: 157000, // Цена
+    area: 180, // На площадь, м²
+    coolingCapacity: 16.1, // Мощность охлаждения, кВт
+    noise: 51, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDahatsu_DH_NP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 16120, // Производительность, Вт
+      powerConsumption: 5550, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 17600, // Производительность, Вт
+      powerConsumption: 5010, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "50м", // Макс. длина трассы, м
+    maxHeightDifference: "30м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 51, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1600x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 60, // Уровень шума, дБ (A)
+      weight: 99, // Вес, кг
+      size: "940x370x1325", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+]
+
 // ----- Dahatsu Dragon (DHP) -----
 
 const functionsDahatsuDragon = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A",
@@ -1744,12 +2017,225 @@ const DENKO_KR = [
 
 ]
 
+// ----- LG Mega DUAL Inverter (PSP) -----
+
+const functionsLGDual = ["Мониторинг энергопотребления", "Двойной инверторный компрессор", "Умная диагностика", "Низкий уровень шума",
+  "Технология Dual Inverter", "Тихий режим", "Автоочистка", "Фреон R410A", "Покрытие Gold Fin", "Быстрый нагрев",
+"Простой и быстрый монтаж", "Быстрое охлаждение Jet Cool", "Энергосбережение до 70%"];
+
+const imagesLGDual =
+  ["./assets/img/catalog/lg/psp/01.jpg",
+    "./assets/img/catalog/lg/psp/02.webp",
+    "./assets/img/catalog/lg/psp/03.webp",
+    "./assets/img/catalog/lg/psp/04.webp"
+  ];
+
+const descriptionLGDual = "Серия кондиционеров LG Mega Dual Inverter с двойным инвертором. Кондиционер оснащен последними новейшими технологиями прогрессивной работы в плане использования двойного инвертора еще больше снижающего затраты на электроэнергию, а так же функционирование в большем интервале температур охлаждения и обогрева. Применение технологии Jet Cool для максимально быстрого охлаждения помещения. Мощная и эффективная подача подготовленного воздуха в помещение."
+
+
+const LG_Dual = [
+
+  // ------ LG P07SP2 ------
+  {
+    article: "lg-p07sp2",
+    title: "LG P07SP2",
+    type: "split-system",
+    company: "LG",
+    series: "Mega Dual Inverter",
+    link: "",
+    imgSrc: imagesLGDual,
+    price: 62700, // Цена
+    area: 22, // На площадь, м²
+    coolingCapacity: 2.1, // Мощность охлаждения, кВт
+    noise: 21, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsLGDual,
+    description: descriptionLGDual, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2140, // Производительность, Вт
+      powerConsumption: 600, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2500, // Производительность, Вт
+      powerConsumption: 670, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: "15м", // Макс. длина трассы, м
+    maxHeightDifference: "7м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 21, // Уровень шума, дБ (A)
+      weight: 7.8, // Вес, кг
+      size: "756x184x265", // Размеры д*ш*в
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 25.7, // Вес, кг
+      size: "717x230x495", // Размеры д*ш*в
+      freon: "R410A", // Фреон
+    }
+  },
+
+  // ------ LG P09SP2 ------
+  {
+    article: "lg-p09sp2",
+    title: "LG P09SP2",
+    type: "split-system",
+    company: "LG",
+    series: "Mega Dual Inverter",
+    link: "",
+    imgSrc: imagesLGDual,
+    price: 69500, // Цена
+    area: 28, // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 21, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsLGDual,
+    description: descriptionLGDual, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2640, // Производительность, Вт
+      powerConsumption: 765, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 730, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: "15м", // Макс. длина трассы, м
+    maxHeightDifference: "7м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 21, // Уровень шума, дБ (A)
+      weight: 7.8, // Вес, кг
+      size: "754x189x308", // Размеры д*ш*в
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 25.7, // Вес, кг
+      size: "717x230x495", // Размеры д*ш*в
+      freon: "R410A", // Фреон
+    }
+  },
+
+  // ------ LG P12SP ------
+  {
+    article: "lg-p12sp",
+    title: "LG P12SP",
+    type: "split-system",
+    company: "LG",
+    series: "Mega Dual Inverter",
+    link: "",
+    imgSrc: imagesLGDual,
+    price: 78400, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 21, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsLGDual,
+    description: descriptionLGDual, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3520, // Производительность, Вт
+      powerConsumption: 1085, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3520, // Производительность, Вт
+      powerConsumption: 975, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: "15м", // Макс. длина трассы, м
+    maxHeightDifference: "7м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 21, // Уровень шума, дБ (A)
+      weight: 8.5, // Вес, кг
+      size: "837x189x308", // Размеры д*ш*в
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 51, // Уровень шума, дБ (A)
+      weight: 26.4, // Вес, кг
+      size: "717x230x495", // Размеры д*ш*в
+      freon: "R410A", // Фреон
+    }
+  },
+
+  // ------ LG P18SP ------
+  {
+    article: "lg-p18sp",
+    title: "LG P18SP",
+    type: "split-system",
+    company: "LG",
+    series: "Mega Dual Inverter",
+    link: "",
+    imgSrc: imagesLGDual,
+    price: 110000, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.2, // Мощность охлаждения, кВт
+    noise: 32, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsLGDual,
+    description: descriptionLGDual, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5280, // Производительность, Вт
+      powerConsumption: 1640, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5420, // Производительность, Вт
+      powerConsumption: 1500, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "10м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 32, // Уровень шума, дБ (A)
+      weight: 11.4, // Вес, кг
+      size: "998x210x345", // Размеры д*ш*в
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 54, // Уровень шума, дБ (A)
+      weight: 34, // Вес, кг
+      size: "770x288x545", // Размеры д*ш*в
+      freon: "R410A", // Фреон
+    }
+  },
+
+]
+
 const dataDahatsu = [
   DAHATSU_DHP,
   DAHATSU_DS_I,
   DAHATSU_DA_H,
   DAHATSU_GW_H,
   DAHATSU_DH_CS_A,
+  DAHATSU_DH_NP_A
 ];
 
 const dataDenko = [
@@ -1757,10 +2243,15 @@ const dataDenko = [
   DENKO_DCS_A,
 ];
 
+const dataLG = [
+  LG_Dual,
+]
+
 // Общий массив всех товаров
 const productsArr = [
   dataDahatsu,
   dataDenko,
+  dataLG,
 
 ].flat().flat();
 
@@ -1858,7 +2349,7 @@ if (filter) {
 
 
 
-  // Добавление кнопки на моб.версии---------------
+  // --------------- Добавление кнопки на моб.версии ---------------
 
   const form = filter.querySelector('.filter__form');
   const btnForm = form.querySelector('.filter__form-submit');
@@ -1872,7 +2363,6 @@ if (filter) {
   function isSelectedCheckbox (checkboxes) {
     return Array.from(checkboxes).some(checkbox => checkbox.checked);
   };
-
 
   // Selects-----------------
   const selectsForm = form.querySelectorAll('select');
@@ -1895,7 +2385,6 @@ if (filter) {
     return Array.from(radioBtns).some(radioBtn => radioBtn.checked);
   };
 
-
   form.addEventListener('change', () => {
     ( isSelectedCheckbox(checkboxesForm)
       || isSelectedOption(selectsForm)
@@ -1907,30 +2396,29 @@ if (filter) {
 
 
 
-  // ------- Фильтрация ---
+  // ------- Фильтрация ---------
 
   const productsGrid = document.querySelector(".products__grid");
 
   const filterPrice = form.querySelector(".filter__item--price");
   const filterArea = form.querySelector(".filter__item--area");
-
   const filterInverter = form.querySelector(".filter__item--inverter");
 
   // -- filter price --
 
-  const minPriceInput = filterPrice.querySelector(".filter__price-min");
-  const maxPriceInput = filterPrice.querySelector(".filter__price-max");
-
-  //minPriceInput.addEventListener("input", filterPriceCards);
-  //maxPriceInput.addEventListener("input", filterPriceCards);
-
+  // const minPriceInput = filterPrice.querySelector(".filter__price-min");
+  // const maxPriceInput = filterPrice.querySelector(".filter__price-max");
+  //
+  // minPriceInput.addEventListener("input", filterPriceCards);
+  // maxPriceInput.addEventListener("input", filterPriceCards);
+  //
   // function filterPriceCards () {
   //   const minPriceValue = parseFloat(minPriceInput.value); // Введенное значение
   //   const maxPriceValue = parseFloat(maxPriceInput.value);
   // }
 
 
-  // -- filter company --
+  // -- <filter company> --
     const filterCompany = form.querySelector(".filter__item--company");
     if (filterCompany) {
       const companyCheckboxes = filterCompany.querySelectorAll("input[type='checkbox']");
@@ -1942,18 +2430,63 @@ if (filter) {
           } else {
             selectedCompanies = selectedCompanies.filter(el => el !== this.value);
           }
-          const filteredCompanyArray = new Set(selectedCompanies)
+          const filteredCompanyArray = new Set(selectedCompanies); // Массив с выбранными производителями (компаниями)
+          console.log(filteredCompanyArray);
+
+          function filterCompany (companyArray) {
+            if (companyArray) {
+              companyArray.forEach(company => {
+                const filteredCardsByCompanies = productsArr.filter(card => card.company === company);
+                renderCard(filteredCardsByCompanies);
+              })
+            }
+          };
+
+          filterCompany(filteredCompanyArray)
         });
       });
+    };
+  // -- </filter company> --
+
+
+
+  // -- <sorting cards> --
+
+  const filterSortingSelect = filter.querySelector(".filter__sorting select");
+
+  filterSortingSelect.addEventListener("change", function ()  {
+    let sortingProducts = [];
+
+    switch (this.value) {
+      case "initial":
+        renderCard(productsArr);
+        break;
+      case "cheaper":
+        sortingProducts = [...productsArr].sort((a, b) => a.price - b.price);
+        renderCard(sortingProducts);
+        break;
+      case "expensive":
+        sortingProducts = [...productsArr].sort((a, b) => b.price - a.price);
+        renderCard(sortingProducts);
+        break;
+      default:
+        renderCard(productsArr);
     }
-
-
-
-  form.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    productsGrid.replaceChildren();
-    renderCard(productsArr.slice(0, 3))
   });
+
+
+
+
+
+  // -- </sorting cards> --
+
+
+
+  // form.addEventListener("submit", (evt) => {
+  //   evt.preventDefault();
+  //   productsGrid.replaceChildren();
+  //   renderCard(productsArr.slice(0, 3))
+  // });
 
 
 
@@ -2045,7 +2578,8 @@ if (popular) {
   const cardPopularTemplate = document.querySelector('#template-card-popular').content.querySelector('.card-popular.swiper-slide');
   const swiperWrapperPopular = document.querySelector('.popular__slider .swiper-wrapper');
 
-  const articlesPopularCards = ["dahatsu-DHP-07", "denko-kr-09"];
+  // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
+  const articlesPopularCards = ["dahatsu-DHP-07", "denko-kr-09", "lg-p07sp2"];
 
   // Создание карточек товара для блока "Популярное", используется общий массив данных товара.
   // Для выбора карточек в функцию передается массив с артикулами товара
@@ -2086,13 +2620,14 @@ if (productProfile) {
 const descText = productProfile.querySelector(".product-profile__desc-text");
 const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
 
+// Кнопка "Показать больше" для описания
   showMoreBtn.addEventListener("click", () => {
     descText.classList.add("js-show-more");
   });
 
 }
 
-
+// Слайдер с миниатюрами
 function createProductProfileSlider () {
 
   const swiperTop = productProfile.querySelector('.swiper-top');
@@ -2137,6 +2672,8 @@ function renderCard (products) {
 
   if (productsGrid && cardTemplate) {
 
+    productsGrid.replaceChildren();
+
     products.forEach(product => {
       const cardItem = cardTemplate.cloneNode(true);
 
@@ -2155,6 +2692,7 @@ function renderCard (products) {
 };
 //---------------
 
+// Отрисовать все карточки товара на главной странице каталога
 const productsMain = document.querySelector(".products.products--main");
 if (productsMain) renderCard(productsArr);
 
@@ -2164,18 +2702,29 @@ function addProductsOfCategory (blockCategory, category) {
   if (blockCategory) {
     const categoryArray = productsArr.filter(card => card.type === category);
     renderCard(categoryArray);
+    return categoryArray;
   }
 };
 
-const BlockSplitSystems = document.querySelector(".products.products--split-systems");
-const blockCassette = document.querySelector(".products.products--cassette");
-const blockDucted = document.querySelector(".products.products--ducted");
-const blockColumn = document.querySelector(".products.products--column");
+
+const blockSplitSystems = document.querySelector(".products.products--split-systems");
 const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
+const blockDucted = document.querySelector(".products.products--ducted");
+const blockCassette = document.querySelector(".products.products--cassette");
+const blockColumn = document.querySelector(".products.products--column");
 const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
 
-addProductsOfCategory(BlockSplitSystems, "split-system");
-addProductsOfCategory(blockCassette, "cassette");
+// Массивы товаров (объектов) по соответствующим категорям
+const splitSystems_Products = addProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
+const floorCeiling_Products = addProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
+const ducted_Products = addProductsOfCategory(blockDucted, "ducted"); // Канальные
+const cassettes_Products = addProductsOfCategory(blockCassette, "cassette"); // Кассетные
+const column_Products = addProductsOfCategory(blockColumn, "column"); // Колонные
+const multiSplitSystems_Products = addProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
+
+
+
+
 
 
 
@@ -2203,10 +2752,3 @@ addProductsOfCategory(blockCassette, "cassette");
   // };
   //
   // window.addEventListener("scroll", () => lazyLoadingCards(productsArr));
-
-
-
-
-
-
-

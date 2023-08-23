@@ -102,6 +102,11 @@ button
 
 .swiper-pagination
   position: relative
+  z-index: 4
+  margin-top: 16px
+  @media (min-width: $width-tablet)
+    display: none
+
 
 .swiper-pagination-bullet
   width: 12px
@@ -135,11 +140,6 @@ button
   right: 20px
 .swiper-button-next
   background-image: url('../img/icons/arrow-right.svg')
-
-.swiper-pagination
-  margin-top: 16px
-  @media (min-width: $width-tablet)
-    display: none
 
 
 

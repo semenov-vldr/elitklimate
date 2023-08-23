@@ -6,13 +6,14 @@ if (productProfile) {
 const descText = productProfile.querySelector(".product-profile__desc-text");
 const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
 
+// Кнопка "Показать больше" для описания
   showMoreBtn.addEventListener("click", () => {
     descText.classList.add("js-show-more");
   });
 
 }
 
-
+// Слайдер с миниатюрами
 function createProductProfileSlider () {
 
   const swiperTop = productProfile.querySelector('.swiper-top');

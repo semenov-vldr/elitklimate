@@ -29,7 +29,6 @@
         width: 100%
 
     .swiper-thumbs
-      height: 20%
       img
         width: 100px
         height: 100px
@@ -78,6 +77,12 @@
   &__button
     width: 100%
     margin-bottom: 32px
+    min-height: 64px
+    @include fontSize(16, 24)
+    @media (max-width: $width-tablet)
+      min-height: 54px
+    @media (max-width: $width-mobile)
+      min-height: 44px
 
 
   &__desc

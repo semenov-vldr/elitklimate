@@ -40,7 +40,7 @@ if (filter) {
 
 
 
-  // Добавление кнопки на моб.версии---------------
+  // --------------- Добавление кнопки на моб.версии ---------------
 
   const form = filter.querySelector('.filter__form');
   const btnForm = form.querySelector('.filter__form-submit');
@@ -54,7 +54,6 @@ if (filter) {
   function isSelectedCheckbox (checkboxes) {
     return Array.from(checkboxes).some(checkbox => checkbox.checked);
   };
-
 
   // Selects-----------------
   const selectsForm = form.querySelectorAll('select');
@@ -77,7 +76,6 @@ if (filter) {
     return Array.from(radioBtns).some(radioBtn => radioBtn.checked);
   };
 
-
   form.addEventListener('change', () => {
     ( isSelectedCheckbox(checkboxesForm)
       || isSelectedOption(selectsForm)
@@ -89,30 +87,29 @@ if (filter) {
 
 
 
-  // ------- Фильтрация ---
+  // ------- Фильтрация ---------
 
   const productsGrid = document.querySelector(".products__grid");
 
   const filterPrice = form.querySelector(".filter__item--price");
   const filterArea = form.querySelector(".filter__item--area");
-
   const filterInverter = form.querySelector(".filter__item--inverter");
 
   // -- filter price --
 
-  const minPriceInput = filterPrice.querySelector(".filter__price-min");
-  const maxPriceInput = filterPrice.querySelector(".filter__price-max");
-
-  //minPriceInput.addEventListener("input", filterPriceCards);
-  //maxPriceInput.addEventListener("input", filterPriceCards);
-
+  // const minPriceInput = filterPrice.querySelector(".filter__price-min");
+  // const maxPriceInput = filterPrice.querySelector(".filter__price-max");
+  //
+  // minPriceInput.addEventListener("input", filterPriceCards);
+  // maxPriceInput.addEventListener("input", filterPriceCards);
+  //
   // function filterPriceCards () {
   //   const minPriceValue = parseFloat(minPriceInput.value); // Введенное значение
   //   const maxPriceValue = parseFloat(maxPriceInput.value);
   // }
 
 
-  // -- filter company --
+  // -- <filter company> --
     const filterCompany = form.querySelector(".filter__item--company");
     if (filterCompany) {
       const companyCheckboxes = filterCompany.querySelectorAll("input[type='checkbox']");
@@ -124,18 +121,63 @@ if (filter) {
           } else {
             selectedCompanies = selectedCompanies.filter(el => el !== this.value);
           }
-          const filteredCompanyArray = new Set(selectedCompanies)
+          const filteredCompanyArray = new Set(selectedCompanies); // Массив с выбранными производителями (компаниями)
+          console.log(filteredCompanyArray);
+
+          function filterCompany (companyArray) {
+            if (companyArray) {
+              companyArray.forEach(company => {
+                const filteredCardsByCompanies = productsArr.filter(card => card.company === company);
+                renderCard(filteredCardsByCompanies);
+              })
+            }
+          };
+
+          filterCompany(filteredCompanyArray)
         });
       });
+    };
+  // -- </filter company> --
+
+
+
+  // -- <sorting cards> --
+
+  const filterSortingSelect = filter.querySelector(".filter__sorting select");
+
+  filterSortingSelect.addEventListener("change", function ()  {
+    let sortingProducts = [];
+
+    switch (this.value) {
+      case "initial":
+        renderCard(productsArr);
+        break;
+      case "cheaper":
+        sortingProducts = [...productsArr].sort((a, b) => a.price - b.price);
+        renderCard(sortingProducts);
+        break;
+      case "expensive":
+        sortingProducts = [...productsArr].sort((a, b) => b.price - a.price);
+        renderCard(sortingProducts);
+        break;
+      default:
+        renderCard(productsArr);
     }
-
-
-
-  form.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    productsGrid.replaceChildren();
-    renderCard(productsArr.slice(0, 3))
   });
+
+
+
+
+
+  // -- </sorting cards> --
+
+
+
+  // form.addEventListener("submit", (evt) => {
+  //   evt.preventDefault();
+  //   productsGrid.replaceChildren();
+  //   renderCard(productsArr.slice(0, 3))
+  // });
 
 
 

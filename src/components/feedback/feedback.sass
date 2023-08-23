@@ -10,16 +10,17 @@
     @media (max-width: $width-tablet)
       grid-template-columns: 1fr
 
-
   &__title
     margin-bottom: 16px
+    @media (max-width: $width-mobile)
+      margin-bottom: 8px
 
   &__info
     @include fontSize(14, 20)
-    @media (max-width: $width-tablet)
-      margin-top: 24px
 
   &__img
+    grid-column: 2/3
+    grid-row: 1/4
     width: 100%
     max-height: 480px
     object-fit: cover
@@ -34,6 +35,3 @@
     max-height: 300px
     @media (max-width: $width-tablet)
       display: none
-
-
-

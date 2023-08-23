@@ -4,6 +4,7 @@ const dataDahatsu = [
   DAHATSU_DA_H,
   DAHATSU_GW_H,
   DAHATSU_DH_CS_A,
+  DAHATSU_DH_NP_A
 ];
 
 const dataDenko = [
@@ -11,10 +12,15 @@ const dataDenko = [
   DENKO_DCS_A,
 ];
 
+const dataLG = [
+  LG_Dual,
+]
+
 // Общий массив всех товаров
 const productsArr = [
   dataDahatsu,
   dataDenko,
+  dataLG,
 
 ].flat().flat();
 

@@ -19,7 +19,7 @@
 
 
 template#card-template
-  article.card
+  article.card(data-article="")
     a.card__link(href="##")
       img.card__img(src="")
       h3.card__title
@@ -35,6 +35,6 @@ template#card-template
       li.card__data-item Инвертор:
         span.card__data-item-value.card__data-item-value--inverter
 
-    button.button.button--accent.card__button В корзину
+    button.button.button--accent.card__button.cart-btn В корзину
 
 

@@ -10,6 +10,7 @@ function renderCard (products) {
     products.forEach(product => {
       const cardItem = cardTemplate.cloneNode(true);
 
+      cardItem.dataset.article = product.article;
       cardItem.querySelector('.card__link').href = product.link;
       cardItem.querySelector('.card__img').src = product.imgSrc[0];
       cardItem.querySelector('.card__title').textContent = product.title;
@@ -18,9 +19,9 @@ function renderCard (products) {
       cardItem.querySelector('.card__data-item-value--coolingCapacity').textContent = `${product.coolingCapacity} кВт`;
       cardItem.querySelector('.card__data-item-value--noise').textContent = `${product.noise} дБ`;
       cardItem.querySelector('.card__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
-
       productsGrid.appendChild(cardItem);
     });
+    handlerCart();
   }
 };
 //---------------

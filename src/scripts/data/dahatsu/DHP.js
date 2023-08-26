@@ -17,7 +17,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-07/DHV-07 ------
   {
-    article: "dahatsu-DHP-07",
+    article: "dahatsu-dhp-07",
     title: "Dahatsu DHP-07/DHV-07",
     type: "split-system",
     company: "Dahatsu",
@@ -65,7 +65,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-09/DHV-09 ------
   {
-    article: "dahatsu-DHP-09",
+    article: "dahatsu-dhp-09",
     title: "Dahatsu DHP-09/DHV-09",
     type: "split-system",
     company: "Dahatsu",
@@ -113,7 +113,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-12/DHV-12 ------
   {
-    article: "dahatsu-DHP-12",
+    article: "dahatsu-dhp-12",
     title: "Dahatsu DHP-12/DHV-12",
     type: "split-system",
     company: "Dahatsu",
@@ -161,7 +161,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-18/DHV-18 ------
   {
-    article: "dahatsu-DHP-18",
+    article: "dahatsu-dhp-18",
     title: "Dahatsu DHP-18/DHV-18",
     type: "split-system",
     company: "Dahatsu",
@@ -209,7 +209,7 @@ const DAHATSU_DHP = [
 
   // ------ Dahatsu DHP-24/DHV-24 ------
   {
-    article: "dahatsu-DHP-24",
+    article: "dahatsu-dhp-24",
     title: "Dahatsu DHP-24/DHV-24",
     type: "split-system",
     company: "Dahatsu",

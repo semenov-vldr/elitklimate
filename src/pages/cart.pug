@@ -1,0 +1,17 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Корзина"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: title}])
+
+  include ../components/cart/cart
+
+
+
+
+

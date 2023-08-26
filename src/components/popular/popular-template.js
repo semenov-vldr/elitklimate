@@ -18,6 +18,8 @@ if (popular) {
         if (product.article === article) {
           const popularItem = cardPopularTemplate.cloneNode(true);
 
+          popularItem.dataset.article = article;
+
           popularItem.querySelector('.card-popular__link').href = product.link;
           popularItem.querySelector('.card-popular__img').src = product.imgSrc[0];
           popularItem.querySelector('.card-popular__title').textContent = product.title;

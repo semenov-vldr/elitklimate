@@ -12,10 +12,8 @@
       svg(fill="1C1B1F" width="14" height="14")
         use(href="./assets/img/sprite.svg#close")
     ul.header__nav-list
-
       li.header__nav-item.header__nav-item--desktop-hidden
         a.header__nav-link(href="index.html") Главная
-
       li.header__nav-item
         a.header__nav-link(href="catalog.html") Каталог
 
@@ -28,6 +26,6 @@
       li.header__nav-item
         a.header__nav-link(href="##") Контакты
 
-  button.header__basket
-    img(src="./assets/img/icons/basket.svg")
+  a.header__cart(href="cart.html")
+    include ../../img/icons/basket.svg
 

@@ -90,9 +90,15 @@
       @media (max-width: 900px)
         display: none
 
-  &__basket
+  &__cart
+    display: flex
+    align-items: center
     @media (max-width: $width-mobile)
       display: none
+    & svg
+      transition: $transition
+    &:hover svg
+      fill: $accent
 
   &__burger
     display: none

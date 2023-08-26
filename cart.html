@@ -5,7 +5,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title><!--[if IE]>
+    <title>Корзина</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content=""><!--favicon-->
@@ -48,106 +48,23 @@
         </div>
       </header>
       <main>
-        <section class="catalog">
-          <div class="catalog__container container">
-            <h1 class="catalog__title title-section">Каталог</h1>
-            <div class="catalog__group"><a class="catalog__item" href="split-systems.html">
-                <h2 class="catalog__item-title">Бытовые сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/01.jpg"/></a><a class="catalog__item" href="floor-ceiling.html">
-                <h2 class="catalog__item-title">Напольно-потолочные</h2><img class="catalog__item-img" src="./assets/img/catalog/02.png"/></a><a class="catalog__item" href="ducted.html">
-                <h2 class="catalog__item-title">Канальные</h2><img class="catalog__item-img" src="./assets/img/catalog/03.png"/></a><a class="catalog__item" href="cassette.html">
-                <h2 class="catalog__item-title">Кассетные</h2><img class="catalog__item-img" src="./assets/img/catalog/04.png"/></a><a class="catalog__item" href="column.html">
-                <h2 class="catalog__item-title">Колонные</h2><img class="catalog__item-img" src="./assets/img/catalog/05.png"/></a><a class="catalog__item" href="multi-split-systems.html">
-                <h2 class="catalog__item-title">Мульти сплит-системы</h2><img class="catalog__item-img" src="./assets/img/catalog/06.jpg"/></a>
-            </div>
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html">Каталог</a><span class="breadcrumbs__item">Корзина</span>
           </div>
-        </section>
-        <div class="products products--main">
-          <div class="products__container container">
-            <div class="filter">
-              <button class="filter__icon"><img src="./assets/img/icons/settings.svg"></button>
-              <form class="filter__form">
-                <ul class="filter__list">
-                  <li class="filter__item filter__item--header"><span class="filter__item-title filter__item-title--header">Фильтры</span>
-                    <button class="filter__close" type="button">
-                      <svg fill="1C1B1F" width="14" height="14">
-                        <use href="./assets/img/sprite.svg#close"></use>
-                      </svg>
-                    </button>
-                  </li>
-                  <li class="filter__item filter__item--price"><span class="filter__item-title">Цена</span>
-                    <div class="filter__item-content">
-                      <input class="filter__price-min" type="number" placeholder="От 0">
-                      <input class="filter__price-max" type="number" placeholder="До 999 000">
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--area"><span class="filter__item-title">Площадь помещения</span>
-                    <div class="filter__item-content">
-                      <select name="Площадь помещения">
-                        <option value="all">Не выбрано</option>
-                        <option value="20">От 20 до 35 м2</option>
-                        <option value="35">От 35 до 50 м2</option>
-                        <option value="50">От 50 до 70 м2</option>
-                        <option value="70">От 70 до 100 м2</option>
-                        <option value="100">От 100 до 140 м2</option>
-                        <option value="140">От 140 м2 и более</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--company"><span class="filter__item-title">Производитель</span>
-                    <div class="filter__item-content">
-                      <fieldset>
-                        <label class="filter__item-checkbox">Dahatsu
-                          <input type="checkbox" name="Производитель" value="Dahatsu"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Denko
-                          <input type="checkbox" name="Производитель" value="Denko"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Eurohoff
-                          <input type="checkbox" name="Производитель" value="Eurohoff"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">LG
-                          <input type="checkbox" name="Производитель" value="LG"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Hisense
-                          <input type="checkbox" name="Производитель" value="Hisense"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Kentatsu
-                          <input type="checkbox" name="Производитель" value="Kentatsu"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Midea
-                          <input type="checkbox" name="Производитель" value="Midea"><span></span>
-                        </label>
-                      </fieldset>
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--inverter"><span class="filter__item-title">Инвертор</span>
-                    <div class="filter__item-content">
-                      <fieldset>
-                        <label class="filter__item-checkbox">Все
-                          <input type="radio" name="Инвертор" value="Все"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Да
-                          <input type="radio" name="Инвертор" value="Да"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Нет
-                          <input type="radio" name="Инвертор" value="Нет"><span></span>
-                        </label>
-                      </fieldset>
-                    </div>
-                  </li>
-                </ul>
-                <button class="button button--accent filter__form-submit" type="submit">Применить</button>
-              </form>
-              <div class="filter__sorting"><span>Соритровать по:</span>
-                <select name="Соритровка">
-                  <option value="initial">Исходная</option>
-                  <option value="expensive">Сначала дороже</option>
-                  <option value="cheaper">Сначала дешевле</option>
-                </select>
-              </div>
-            </div>
-            <div class="products__grid">
-              <!-- Сюда отрисовываются карточки из объекта-->
+        </div>
+        <div class="cart">
+          <div class="cart__container container">
+            <h1 class="cart__title">Корзина</h1>
+            <div class="cart__orders">
+              <ul class="cart__list">
+                <li class="cart__item cart-item"><img class="cart-item__img" src="">
+                  <div class="cart-item__data">
+                    <h3 class="cart-item__name">Dahatsu DHP-07/DHV-07</h3><span class="cart-item__price">25 000 ₽</span>
+                    <button class="cart-item__delete">Удалить</button>
+                  </div>
+                </li>
+              </ul>
+              <div class="cart__sidebar"></div>
             </div>
           </div>
         </div>

@@ -48,24 +48,30 @@
         </div>
       </header>
       <main>
-        <div class="breadcrumbs">
-          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html">Каталог</a><span class="breadcrumbs__item">Корзина</span>
-          </div>
-        </div>
+        <!--+breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: title}])-->
         <div class="cart">
           <div class="cart__container container">
-            <h1 class="cart__title">Корзина</h1>
+            <button class="cart__back-btn">Назад</button>
+            <h1 class="cart__title">Корзина<span class="cart__count">1</span></h1>
             <div class="cart__orders">
               <ul class="cart__list">
-                <li class="cart__item cart-item"><img class="cart-item__img" src="">
+                <template id="cart-template"></template>
+                <li class="cart__item cart-item"><img class="cart-item__img" src="./assets/img/catalog/dahatsu/DHP/01.jpg">
                   <div class="cart-item__data">
-                    <h3 class="cart-item__name">Dahatsu DHP-07/DHV-07</h3><span class="cart-item__price">25 000 ₽</span>
-                    <button class="cart-item__delete">Удалить</button>
+                    <h3 class="cart-item__name">Dahatsu DHP-07/DHV-07</h3>
+                    <div class="cart-item__data-bottom"><span class="cart-item__price">25 000 ₽</span>
+                      <div class="cart-item__quantity">
+                        <button class="cart-item__quantity-decrement"></button>
+                        <input class="cart-item__quantity-input" type="number" value="1">
+                        <button class="cart-item__quantity-increment"></button>
+                      </div>
+                      <button class="cart-item__delete"></button>
+                    </div>
                   </div>
                 </li>
               </ul>
-              <div class="cart__sidebar"></div>
             </div>
+            <div class="cart__sidebar"></div>
           </div>
         </div>
       </main>
@@ -141,8 +147,8 @@
       <!---->
       <!--  button.button.button--accent.card__button Купить-->
       <template id="card-template">
-        <article class="card" data-article=""><a class="card__link" href="##"><img class="card__img" src="">
-            <h3 class="card__title"></h3></a><span class="card__price"></span>
+        <article class="card" data-article=""><a class="card__link" href="##"><img class="card__img product-img" src="">
+            <h3 class="card__title product-title"></h3></a><span class="card__price product-price"></span>
           <ul class="card__data">
             <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area"></span></li>
             <li class="card__data-item">Охлаждение:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>

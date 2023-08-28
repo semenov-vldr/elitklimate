@@ -72,12 +72,20 @@ main
   width: fit-content
   padding: 8px 32px
   min-height: 40px
+  border: 1px solid transparent
   &.button--accent
     background-color: $accent
     color: white
     &:hover
       background-color: $accent-hover
       transition: 0.3s
+  &.js-add-cart
+    background-color: transparent
+    border-color: $accent
+    color: $accent
+    &:hover
+      background-color: transparent
+
 
 button
   cursor: pointer

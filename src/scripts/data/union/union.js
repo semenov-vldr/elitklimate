@@ -9,7 +9,7 @@ const dataDahatsu = [
 ];
 
 const dataDenko = [
-  DENKO_KR,
+    DENKO_KR,
   DENKO_DCS_A,
 ];
 

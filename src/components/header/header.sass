@@ -1,5 +1,7 @@
 .header
-  position: relative
+  position: sticky
+  top: 0
+  z-index: 5
   box-shadow: 0 0 20px 10px rgba(#BBBBBB, 0.4)
   padding: 30px 0
   min-height: 92px
@@ -9,9 +11,6 @@
     min-height: 56px
     padding: 16px 0
     z-index: 5
-    top: 0
-    left: 0
-    width: 100%
     box-shadow: none
     margin-bottom: 20px
     &.header--index
@@ -91,14 +90,43 @@
         display: none
 
   &__cart
+    position: relative
     display: flex
     align-items: center
     @media (max-width: $width-mobile)
-      display: none
+      position: fixed
+      right: 31px
+      bottom: 80px
+      & svg
+        fill: #fff
+
     & svg
+      position: relative
       transition: $transition
-    &:hover svg
-      fill: $accent
+      z-index: 1
+    &:hover svg,
+    &.js-add-cart svg
+      fill: #fff
+    &::after
+      content: ""
+      position: absolute
+      width: 40px
+      height: 40px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 50%
+      transition: $transition
+      @media (max-width: $width-mobile)
+        background-color: #656565
+        width: 50px
+        height: 50px
+    &:hover::after,
+    &.js-add-cart::after
+      background-color: $accent
+
+
+
 
   &__burger
     display: none

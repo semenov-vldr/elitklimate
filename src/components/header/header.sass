@@ -11,11 +11,15 @@
     min-height: 56px
     padding: 16px 0
     z-index: 5
-    box-shadow: none
+    //box-shadow: none
     margin-bottom: 20px
+    //border-bottom: 1px solid #0000000d
+    box-shadow: 0 0 10px 5px rgba(#BBBBBB, 0.2)
     &.header--index
       position: absolute
       background-color: transparent
+      width: 100%
+      border-bottom: none
   &.header--index
     margin-bottom: 0
 
@@ -48,6 +52,7 @@
       padding: 52px 16px
       transform: translateY(-100%)
       transition: $transition
+      z-index: 1
       &.js-menu-open
         transform: translateY(0)
       &.js-menu-open .header__nav-close
@@ -60,7 +65,6 @@
       gap: 24px
     @media (max-width: $width-mobile)
       flex-direction: column
-      gap: 24px
       align-items: flex-start
 
   &__nav-item
@@ -124,6 +128,29 @@
     &:hover::after,
     &.js-add-cart::after
       background-color: $accent
+
+    &-count
+      position: absolute
+      z-index: 1
+      color: $accent
+      background-color: #fff
+      border: 1px solid $accent
+      line-height: 1
+      left: 50%
+      top: -15px
+      padding: 3px
+      font-weight: 600
+      min-width: 22px
+      height: 22px
+      border-radius: 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 14px
+      @media (max-width: $width-mobile)
+        top: -22px
+      &.js-cart-count-hidden
+        display: none
 
 
 

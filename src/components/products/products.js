@@ -4,7 +4,6 @@ function renderCard (products) {
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
 
   if (productsGrid && cardTemplate) {
-
     productsGrid.replaceChildren();
 
     products.forEach(product => {

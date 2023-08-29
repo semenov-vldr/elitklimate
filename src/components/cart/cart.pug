@@ -3,23 +3,11 @@
     button.cart__back-btn Назад
 
     h1.cart__title Корзина
-      span.cart__count 1
+      span.cart__count ??
 
     .cart__orders
 
       ul.cart__list
+        include cart-template
 
-        template#cart-template
-        li.cart__item.cart-item
-          img.cart-item__img(src="./assets/img/catalog/dahatsu/DHP/01.jpg")
-          .cart-item__data
-            h3.cart-item__name Dahatsu DHP-07/DHV-07
-            .cart-item__data-bottom
-              span.cart-item__price 25 000 ₽
-              .cart-item__quantity
-                button.cart-item__quantity-decrement
-                input.cart-item__quantity-input(type="number" value="1")
-                button.cart-item__quantity-increment
-              button.cart-item__delete
-
-    .cart__sidebar
+      .cart__sidebar

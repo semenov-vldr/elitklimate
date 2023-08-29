@@ -40,6 +40,13 @@
     @media (max-width: $width-mobile)
       margin-top: 16px
 
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 32px
+    @media (max-width: $width-mobile)
+      gap: 16px
+
   &-item
     display: flex
     gap: 32px
@@ -158,18 +165,21 @@
     color: #31708f
     background-color: #d9edf7
     border: 1px solid #bce8f1
-    @include fontSize(16, 20)
+    @include fontSize(14, 20)
     top: 5px
     right: 16px
     max-width: 320px
     width: 100%
     border-radius: 4px
     padding: 8px
-    @media (max-width: 360px)
+    @media (max-width: 480px)
+      min-height: 56px
       max-width: initial
       right: 0
       left: 0
+      top: 0
       margin: 0 auto
+      padding: 16px
 
 
 

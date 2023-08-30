@@ -118,7 +118,7 @@ function handlerCart () {
         if (formPopup) {
           const formPopupImg = formPopup.querySelector(".form-popup-orders__img");
           const formPopupTitle = formPopup.querySelector(".form-popup-orders__name");
-          const formPopupPrice = formPopup.querySelector(".form-popup-orders__price");
+          const formPopupPrice = formPopup.querySelector(".form-popup-orders__price-value");
           const formPopupArea = formPopup.querySelector(".form-popup-orders__area-value");
 
           formPopupImg.src = cardSrcImg;
@@ -126,12 +126,19 @@ function handlerCart () {
           formPopupPrice.textContent = cardPriceString;
           formPopupArea.textContent = cardArea;
           formPopup.classList.add("js-popup-active");
+          blockScrollBody();
 
           const closePopup = formPopup.querySelector(".form-popup__close");
-          closePopup.addEventListener("click", () => formPopup.classList.remove("js-popup-active"));
+          closePopup.addEventListener("click", () => {
+            formPopup.classList.remove("js-popup-active");
+            unblockScrollBody();
+          });
 
           document.body.addEventListener("click", (evt) => {
-            if (evt.target === formPopup) formPopup.classList.remove("js-popup-active");
+            if (evt.target === formPopup) {
+              formPopup.classList.remove("js-popup-active");
+              unblockScrollBody();
+            }
           });
         }
       };

@@ -2405,7 +2405,7 @@ const LG_Dual = [
 ]
 
 const dataDahatsu = [
-  DAHATSU_DHP,
+    DAHATSU_DHP,
   DAHATSU_DS_I,
   DAHATSU_DA_H,
   DAHATSU_GW_H,
@@ -2627,7 +2627,7 @@ function handlerCart () {
         if (formPopup) {
           const formPopupImg = formPopup.querySelector(".form-popup-orders__img");
           const formPopupTitle = formPopup.querySelector(".form-popup-orders__name");
-          const formPopupPrice = formPopup.querySelector(".form-popup-orders__price");
+          const formPopupPrice = formPopup.querySelector(".form-popup-orders__price-value");
           const formPopupArea = formPopup.querySelector(".form-popup-orders__area-value");
 
           formPopupImg.src = cardSrcImg;
@@ -2635,12 +2635,19 @@ function handlerCart () {
           formPopupPrice.textContent = cardPriceString;
           formPopupArea.textContent = cardArea;
           formPopup.classList.add("js-popup-active");
+          blockScrollBody();
 
           const closePopup = formPopup.querySelector(".form-popup__close");
-          closePopup.addEventListener("click", () => formPopup.classList.remove("js-popup-active"));
+          closePopup.addEventListener("click", () => {
+            formPopup.classList.remove("js-popup-active");
+            unblockScrollBody();
+          });
 
           document.body.addEventListener("click", (evt) => {
-            if (evt.target === formPopup) formPopup.classList.remove("js-popup-active");
+            if (evt.target === formPopup) {
+              formPopup.classList.remove("js-popup-active");
+              unblockScrollBody();
+            }
           });
         }
       };
@@ -2917,19 +2924,37 @@ if (filter) {
 
 
 const header = document.querySelector('header.header');
-const menu = header.querySelector('.header__nav');
-const burger = header.querySelector('.header__burger');
-const menuClose = header.querySelector('.header__nav-close');
 
-burger.addEventListener('click', () => {
-  menu.classList.add('js-menu-open');
-  blockScrollBody();
-});
+if (header) {
 
-menuClose.addEventListener('click', () => {
-  menu.classList.remove('js-menu-open');
-  unblockScrollBody();
-});
+  const menu = header.querySelector('.header__nav');
+  const burger = header.querySelector('.header__burger');
+  const menuClose = header.querySelector('.header__nav-close');
+  const navLinks = header.querySelectorAll(".header__nav-link");
+
+
+  burger.addEventListener('click', () => {
+    menu.classList.add('js-menu-open');
+    blockScrollBody();
+  });
+
+  menuClose.addEventListener('click', () => {
+    menu.classList.remove('js-menu-open');
+    unblockScrollBody();
+  });
+
+  navLinks.forEach(navLink => {
+    navLink.addEventListener("click", () => {
+      menu.classList.remove('js-menu-open');
+      unblockScrollBody();
+    })
+  })
+
+}
+
+
+
+
 
 
 

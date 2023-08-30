@@ -2610,7 +2610,9 @@ function handlerCart () {
       const cardTitle = card.querySelector(".product-title").textContent;
       const cardPrice = getPriceValue( card.querySelector(".product-price") );
       const cardSrcImg = card.querySelector(".product-img").src;
+      const cardArea = card.querySelector(".area-value").textContent;
 
+      const cardPriceString = card.querySelector(".product-price").textContent;
 
 
       // cartBtn.addEventListener("click", () => {
@@ -2620,15 +2622,42 @@ function handlerCart () {
       //   localStorage.setItem("cart", JSON.stringify([...cart, card]));
       // });
 
+      function formPopupActive () {
+        const formPopup = document.querySelector(".form-popup");
+        if (formPopup) {
+          const formPopupImg = formPopup.querySelector(".form-popup-orders__img");
+          const formPopupTitle = formPopup.querySelector(".form-popup-orders__name");
+          const formPopupPrice = formPopup.querySelector(".form-popup-orders__price");
+          const formPopupArea = formPopup.querySelector(".form-popup-orders__area-value");
+
+          formPopupImg.src = cardSrcImg;
+          formPopupTitle.textContent = cardTitle;
+          formPopupPrice.textContent = cardPriceString;
+          formPopupArea.textContent = cardArea;
+          formPopup.classList.add("js-popup-active");
+
+          const closePopup = formPopup.querySelector(".form-popup__close");
+          closePopup.addEventListener("click", () => formPopup.classList.remove("js-popup-active"));
+
+          document.body.addEventListener("click", (evt) => {
+            if (evt.target === formPopup) formPopup.classList.remove("js-popup-active");
+          });
+        }
+      };
+
+
+
       // Добавление товара в корзину
       function addProductToCart () {
         addToCart();
         alertSuccessAdd(cardTitle);
         addCartItemToPage ( getDataCartFromLocalStorage() );
+        //formPopupActive();
       };
 
 
-      cartBtn.addEventListener("click", addProductToCart);
+
+      cartBtn.addEventListener("click", formPopupActive);
 
 
       // // Рендер карточки, добавленной в корзину на страницы корзины
@@ -2696,8 +2725,7 @@ function addCartItemToPage (addedProducts) {
 
 window.addEventListener("storage", (evt) => {
   addCartItemToPage ( getDataCartFromLocalStorage() );
-  console.log(evt);
-})
+});
 
 const filter = document.querySelector('.filter');
 
@@ -2884,6 +2912,7 @@ if (filter) {
 
 
 }
+
 
 
 

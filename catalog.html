@@ -36,15 +36,15 @@
             <ul class="header__nav-list">
               <li class="header__nav-item header__nav-item--desktop-hidden"><a class="header__nav-link" href="index.html">Главная</a></li>
               <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#feedback--call">Заказать звонок</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#feedback--call">Заказать звонок</a></li>
               <li class="header__nav-item"><a class="header__nav-link" href="installation.html">Заказать установку</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">О нас</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="##">Контакты</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#about">О нас</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#footer">Контакты</a></li>
             </ul>
-          </nav><a class="header__cart" href="cart.html"><svg width="20" height="20" viewBox="0 0 20 20" fill="#1C1B1F" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.1538 19.5577C5.66792 19.5577 5.25478 19.3875 4.9144 19.0471C4.57402 18.7067 4.40383 18.2936 4.40383 17.8077C4.40383 17.3218 4.57402 16.9087 4.9144 16.5683C5.25478 16.2279 5.66792 16.0577 6.1538 16.0577C6.6397 16.0577 7.05284 16.2279 7.39323 16.5683C7.73361 16.9087 7.9038 17.3218 7.9038 17.8077C7.9038 18.2936 7.73361 18.7067 7.39323 19.0471C7.05284 19.3875 6.6397 19.5577 6.1538 19.5577ZM15.8461 19.5577C15.3602 19.5577 14.9471 19.3875 14.6067 19.0471C14.2663 18.7067 14.0961 18.2936 14.0961 17.8077C14.0961 17.3218 14.2663 16.9087 14.6067 16.5683C14.9471 16.2279 15.3602 16.0577 15.8461 16.0577C16.332 16.0577 16.7451 16.2279 17.0855 16.5683C17.4259 16.9087 17.5961 17.3218 17.5961 17.8077C17.5961 18.2936 17.4259 18.7067 17.0855 19.0471C16.7451 19.3875 16.332 19.5577 15.8461 19.5577ZM5.01533 3.75001L7.54995 9.05771H14.5499L17.3192 4.01923C17.3576 3.94871 17.3608 3.88621 17.3288 3.83173C17.2968 3.77723 17.2423 3.74998 17.1653 3.74998L5.01533 3.75001ZM6.1538 14.5577C5.48715 14.5577 4.98619 14.2702 4.65093 13.6952C4.31568 13.1202 4.30382 12.5462 4.61535 11.9731L6.0423 9.40771L2.40383 1.75001H1.22498C1.01856 1.75001 0.846125 1.67821 0.707675 1.53463C0.569225 1.39105 0.5 1.21284 0.5 1.00001C0.5 0.787189 0.571792 0.60899 0.715375 0.465407C0.858958 0.321823 1.03715 0.250031 1.24995 0.250031H2.77877C2.94929 0.250031 3.10827 0.295223 3.2557 0.385606C3.40313 0.47599 3.51532 0.603231 3.59225 0.767331L4.29608 2.25003H18.1807C18.6435 2.25003 18.9694 2.4199 19.1585 2.75963C19.3476 3.09938 19.3409 3.459 19.1383 3.83848L15.9345 9.64228C15.7704 9.93717 15.556 10.1634 15.2913 10.3211C15.0265 10.4788 14.7282 10.5577 14.3961 10.5577H7.09995L5.94225 12.6731C5.89097 12.75 5.88937 12.8333 5.93745 12.9231C5.98553 13.0128 6.05765 13.0577 6.1538 13.0577H16.8711C17.0775 13.0577 17.2499 13.1295 17.3884 13.2731C17.5268 13.4167 17.5961 13.5949 17.5961 13.8077C17.5961 14.0205 17.5243 14.1987 17.3807 14.3423C17.2371 14.4859 17.0589 14.5577 16.8461 14.5577L6.1538 14.5577Z"/>
-</svg>
-<span class="header__cart-count"></span></a>
+          </nav>
+          <!--a.header__cart(href="cart.html")-->
+          <!--  include ../../img/icons/basket.svg-->
+          <!--  span.header__cart-count-->
         </div>
       </header>
       <main>
@@ -152,7 +152,7 @@
           </div>
         </div>
       </main>
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="footer__container container">
           <div class="footer__top"><a class="footer__logo" href="index.html">Элит климат
               <!--img(src="./assets/img/logo.png")--></a>
@@ -227,7 +227,7 @@
         <article class="card" data-article=""><a class="card__link" href="##"><img class="card__img product-img" src="">
             <h3 class="card__title product-title"></h3></a><span class="card__price product-price"></span>
           <ul class="card__data">
-            <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area"></span></li>
+            <li class="card__data-item">На площадь:<span class="card__data-item-value card__data-item-value--area area-value"></span></li>
             <li class="card__data-item">Охлаждение:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
             <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
             <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
@@ -235,6 +235,32 @@
           <button class="button button--accent card__button cart-btn">В корзину</button>
         </article>
       </template>
+      <div class="form-popup">
+        <div class="form-popup__container">
+          <button class="form-popup__close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00005 8.39999L2.10005 13.3C1.91672 13.4833 1.68338 13.575 1.40005 13.575C1.11672 13.575 0.883382 13.4833 0.700049 13.3C0.516715 13.1167 0.425049 12.8833 0.425049 12.6C0.425049 12.3167 0.516715 12.0833 0.700049 11.9L5.60005 6.99999L0.700049 2.09999C0.516715 1.91665 0.425049 1.68332 0.425049 1.39999C0.425049 1.11665 0.516715 0.883321 0.700049 0.699988C0.883382 0.516654 1.11672 0.424988 1.40005 0.424988C1.68338 0.424988 1.91672 0.516654 2.10005 0.699988L7.00005 5.59999L11.9 0.699988C12.0834 0.516654 12.3167 0.424988 12.6 0.424988C12.8834 0.424988 13.1167 0.516654 13.3 0.699988C13.4834 0.883321 13.575 1.11665 13.575 1.39999C13.575 1.68332 13.4834 1.91665 13.3 2.09999L8.40005 6.99999L13.3 11.9C13.4834 12.0833 13.575 12.3167 13.575 12.6C13.575 12.8833 13.4834 13.1167 13.3 13.3C13.1167 13.4833 12.8834 13.575 12.6 13.575C12.3167 13.575 12.0834 13.4833 11.9 13.3L7.00005 8.39999Z" fill="#1C1B1F"/>
+</svg>
+
+          </button>
+          <h3 class="form-popup__title">Ваш заказ</h3>
+          <ul class="form-popup__orders form-popup-orders">
+            <li class="form-popup-orders__item"><img class="form-popup-orders__img" src="">
+              <div class="form-popup-orders__info">
+                <h4 class="form-popup-orders__name"></h4>
+                <div class="form-popup-orders__area">На площадь:&nbsp;<span class="form-popup-orders__area-value"></span></div><span class="form-popup-orders__price"></span>
+              </div>
+            </li>
+          </ul>
+          <form class="form form-popup__form" action="">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <label class="visually-hidden" for="tel">Ваш телефон</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Введите имя" required>
+            <input class="form__field" type="tel" id="tel" name="tel" placeholder="Введите номер" required>
+            <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения"></textarea>
+            <button class="button button--accent form__button" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js" type="module"></script>

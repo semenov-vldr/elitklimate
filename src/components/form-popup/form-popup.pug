@@ -1,0 +1,27 @@
+.form-popup
+  .form-popup__container
+
+    button.form-popup__close
+      include ../../img/icons/close.svg
+
+    h3.form-popup__title Ваш заказ
+
+    ul.form-popup__orders.form-popup-orders
+      li.form-popup-orders__item
+        img.form-popup-orders__img(src="")
+        .form-popup-orders__info
+          h4.form-popup-orders__name
+          .form-popup-orders__area На площадь:&nbsp;
+            span.form-popup-orders__area-value
+          span.form-popup-orders__price
+
+    form.form.form-popup__form(action="")
+
+      label.visually-hidden(for="name") Ваше имя
+      label.visually-hidden(for="tel") Ваш телефон
+
+      input.form__field(type="text" id="name" name="name" placeholder="Введите имя" required)
+      input.form__field(type="tel" id="tel" name="tel" placeholder="Введите номер" required)
+      textarea.form__field(id="text" name="text" placeholder="Укажите квадратные метры вашего помещения")
+
+      button.button.button--accent.form__button(type="submit") Отправить заявку

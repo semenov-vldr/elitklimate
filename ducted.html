@@ -224,10 +224,25 @@
             <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
             <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
           </ul>
-          <button class="button button--accent card__button cart-btn">В корзину</button>
+          <button class="button button--accent card__button cart-btn">Купить</button>
         </article>
       </template>
       <div class="form-popup">
+        <template id="input-plus-minus-template">
+          <div id="container">
+            <button id="minus"><svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.33301 1.99993C1.04967 1.99993 0.812174 1.90407 0.620508 1.71233C0.428841 1.52058 0.333008 1.28298 0.333008 0.999533C0.333008 0.716066 0.428841 0.478611 0.620508 0.287166C0.812174 0.0957219 1.04967 0 1.33301 0H16.6663C16.9496 0 17.1871 0.0958664 17.3788 0.2876C17.5704 0.479355 17.6663 0.716955 17.6663 1.0004C17.6663 1.28387 17.5704 1.52132 17.3788 1.71277C17.1871 1.90421 16.9496 1.99993 16.6663 1.99993H1.33301Z" fill="#1C1B1F"/>
+</svg>
+
+            </button>
+            <input id="countInput" value="1" readonly>
+            <button id="plus"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99967 10.0001H1.33301C1.04967 10.0001 0.812174 9.90423 0.620508 9.7125C0.428841 9.52074 0.333008 9.28314 0.333008 8.9997C0.333008 8.71623 0.428841 8.47878 0.620508 8.28733C0.812174 8.09589 1.04967 8.00016 1.33301 8.00016H7.99967V1.3335C7.99967 1.05016 8.09554 0.812663 8.28727 0.620996C8.47903 0.429329 8.71663 0.333496 9.00007 0.333496C9.28354 0.333496 9.521 0.429329 9.71244 0.620996C9.90389 0.812663 9.99961 1.05016 9.99961 1.3335V8.00016H16.6663C16.9496 8.00016 17.1871 8.09603 17.3788 8.28776C17.5704 8.47952 17.6663 8.71712 17.6663 9.00056C17.6663 9.28403 17.5704 9.52149 17.3788 9.71293C17.1871 9.90438 16.9496 10.0001 16.6663 10.0001H9.99961V16.6668C9.99961 16.9501 9.90374 17.1876 9.71201 17.3793C9.52025 17.5709 9.28265 17.6668 8.99921 17.6668C8.71574 17.6668 8.47829 17.5709 8.28684 17.3793C8.0954 17.1876 7.99967 16.9501 7.99967 16.6668V10.0001Z" fill="#1C1B1F"/>
+</svg>
+
+            </button>
+          </div>
+        </template>
         <div class="form-popup__container">
           <button class="form-popup__close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.00005 8.39999L2.10005 13.3C1.91672 13.4833 1.68338 13.575 1.40005 13.575C1.11672 13.575 0.883382 13.4833 0.700049 13.3C0.516715 13.1167 0.425049 12.8833 0.425049 12.6C0.425049 12.3167 0.516715 12.0833 0.700049 11.9L5.60005 6.99999L0.700049 2.09999C0.516715 1.91665 0.425049 1.68332 0.425049 1.39999C0.425049 1.11665 0.516715 0.883321 0.700049 0.699988C0.883382 0.516654 1.11672 0.424988 1.40005 0.424988C1.68338 0.424988 1.91672 0.516654 2.10005 0.699988L7.00005 5.59999L11.9 0.699988C12.0834 0.516654 12.3167 0.424988 12.6 0.424988C12.8834 0.424988 13.1167 0.516654 13.3 0.699988C13.4834 0.883321 13.575 1.11665 13.575 1.39999C13.575 1.68332 13.4834 1.91665 13.3 2.09999L8.40005 6.99999L13.3 11.9C13.4834 12.0833 13.575 12.3167 13.575 12.6C13.575 12.8833 13.4834 13.1167 13.3 13.3C13.1167 13.4833 12.8834 13.575 12.6 13.575C12.3167 13.575 12.0834 13.4833 11.9 13.3L7.00005 8.39999Z" fill="#1C1B1F"/>
@@ -240,17 +255,21 @@
               <div class="form-popup-orders__info">
                 <h4 class="form-popup-orders__name"></h4>
                 <p class="form-popup-orders__area">На площадь:&nbsp;<span class="form-popup-orders__area-value"></span></p>
-                <p class="form-popup-orders__price">Сумма:&nbsp;<span class="form-popup-orders__price-value"></span></p>
+                <p class="form-popup-orders__price">Цена:&nbsp;<span class="form-popup-orders__price-value"></span></p>
               </div>
             </li>
           </ul>
+          <div class="form-popup__quantity"><span class="form-popup__quantity-label">Количество:</span>
+            <input-plus-minus class="form-popup__quantity-input"></input-plus-minus>
+          </div>
+          <div class="form-popup__sum">Сумма заказа:&nbsp;<span class="form-popup__sum-value"></span></div>
           <form class="form form-popup__form" action="">
             <label class="visually-hidden" for="name">Ваше имя</label>
-            <label class="visually-hidden" for="tel">Ваш телефон</label>
-            <input class="form__field" type="text" id="name" name="name" placeholder="Введите имя" required>
-            <input class="form__field" type="tel" id="tel" name="tel" placeholder="Введите номер" required>
+            <label class="visually-hidden" for="tel">Телефон</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
+            <input class="form__field" type="tel" id="tel" name="tel" placeholder="Телефон*" required>
             <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения"></textarea>
-            <button class="button button--accent form__button" type="submit">Отправить заявку</button>
+            <button class="button button--accent form__button form-popup__button" type="submit">Отправить заявку</button>
           </form>
         </div>
       </div>

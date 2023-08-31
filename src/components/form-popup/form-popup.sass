@@ -31,7 +31,7 @@
     flex-direction: column
     background-color: #fff
     padding: 32px
-    border-radius: 16px
+    border-radius: 8px
     overflow: auto
     margin: 65px 0
     @media (max-width: $width-mobile)
@@ -80,6 +80,32 @@
     flex-direction: column
     gap: 8px
     @include fontSize(18, 22)
+
+  &__sum
+    color: #31708f
+    background-color: #d9edf7
+    border: 1px solid #bce8f1
+    padding: 8px
+    width: 100%
+    margin-top: 24px
+    border-radius: 4px
+    @include fontSize(16, 18)
+
+  &__button
+    border-radius: 8px
+
+  &__quantity
+    margin-right: auto
+    margin-top: 16px
+    width: fit-content
+    display: flex
+    flex-direction: column
+    gap: 8px
+    color: #31708f
+    text-align: center
+
+
+
 
 
 

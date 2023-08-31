@@ -1,4 +1,5 @@
 .form-popup
+  include ../input-plus-minus/input-plus-minus
   .form-popup__container
 
     button.form-popup__close
@@ -13,16 +14,26 @@
           h4.form-popup-orders__name
           p.form-popup-orders__area На площадь:&nbsp;
             span.form-popup-orders__area-value
-          p.form-popup-orders__price Сумма:&nbsp;
+          p.form-popup-orders__price Цена:&nbsp;
             span.form-popup-orders__price-value
+
+
+    .form-popup__quantity
+      span.form-popup__quantity-label Количество:
+      input-plus-minus.form-popup__quantity-input
+
+    .form-popup__sum Сумма заказа:&nbsp;
+      span.form-popup__sum-value
 
     form.form.form-popup__form(action="")
 
       label.visually-hidden(for="name") Ваше имя
-      label.visually-hidden(for="tel") Ваш телефон
+      label.visually-hidden(for="tel") Телефон
 
-      input.form__field(type="text" id="name" name="name" placeholder="Введите имя" required)
-      input.form__field(type="tel" id="tel" name="tel" placeholder="Введите номер" required)
+      input.form__field(type="text" id="name" name="name" placeholder="Ваше имя*" required)
+      input.form__field(type="tel" id="tel" name="tel" placeholder="Телефон*" required)
       textarea.form__field(id="text" name="text" placeholder="Укажите квадратные метры вашего помещения")
 
-      button.button.button--accent.form__button(type="submit") Отправить заявку
+      button.button.button--accent.form__button.form-popup__button(type="submit") Отправить заявку
+
+

@@ -49,17 +49,21 @@
         </div>
       </header>
       <main>
+        <div class="breadcrumbs">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html">Каталог</a><span class="breadcrumbs__item">Заказать установку</span>
+          </div>
+        </div>
         <section class="feedback feedback--installation">
           <div class="feedback__container container">
-            <h1 class="title-section feedback__title">Установка, Ремонт, Чистка, Заправка кондиционеров</h1>
-            <p class="feedback__info">Установку, Ремонт, Чистку, Заправку кондиционеров выполняют наши профессионалы с&nbsp;опытом&nbsp;от&nbsp;3&nbsp;до&nbsp;15&nbsp;лет</p>
+            <h1 class="title-section feedback__title">Установка, ремонт, чистка, заправка кондиционеров</h1><img class="feedback__img feedback__img--tablet" src="../assets/img/installation.jpg">
+            <p class="feedback__info">Установку, ремонт, чистку, заправку кондиционеров выполняют наши профессионалы с&nbsp;опытом&nbsp;от&nbsp;3&nbsp;до&nbsp;15&nbsp;лет.</p>
             <form class="form" action="">
               <label class="visually-hidden" for="name">Ваше имя</label>
               <label class="visually-hidden" for="tel">Ваш телефон</label>
               <input class="form__field" type="text" id="name" name="name" placeholder="Введите имя" required>
               <input class="form__field" type="tel" id="tel" name="tel" placeholder="Введите номер" required>
               <button class="button button--accent form__button" type="submit">Отправить заявку</button>
-            </form><img class="feedback__img" src="../assets/img/installation.jpg">
+            </form><img class="feedback__img feedback__img--desktop" src="../assets/img/installation.jpg">
           </div>
         </section>
       </main>
@@ -149,18 +153,11 @@
       <div class="form-popup">
         <template id="input-plus-minus-template">
           <div id="container">
-            <button id="minus"><svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.33301 1.99993C1.04967 1.99993 0.812174 1.90407 0.620508 1.71233C0.428841 1.52058 0.333008 1.28298 0.333008 0.999533C0.333008 0.716066 0.428841 0.478611 0.620508 0.287166C0.812174 0.0957219 1.04967 0 1.33301 0H16.6663C16.9496 0 17.1871 0.0958664 17.3788 0.2876C17.5704 0.479355 17.6663 0.716955 17.6663 1.0004C17.6663 1.28387 17.5704 1.52132 17.3788 1.71277C17.1871 1.90421 16.9496 1.99993 16.6663 1.99993H1.33301Z" fill="#1C1B1F"/>
-</svg>
-
-            </button>
+            <button id="minus"><img src="./assets/img/icons/minus.svg"></button>
             <input id="countInput" value="1" readonly>
-            <button id="plus"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99967 10.0001H1.33301C1.04967 10.0001 0.812174 9.90423 0.620508 9.7125C0.428841 9.52074 0.333008 9.28314 0.333008 8.9997C0.333008 8.71623 0.428841 8.47878 0.620508 8.28733C0.812174 8.09589 1.04967 8.00016 1.33301 8.00016H7.99967V1.3335C7.99967 1.05016 8.09554 0.812663 8.28727 0.620996C8.47903 0.429329 8.71663 0.333496 9.00007 0.333496C9.28354 0.333496 9.521 0.429329 9.71244 0.620996C9.90389 0.812663 9.99961 1.05016 9.99961 1.3335V8.00016H16.6663C16.9496 8.00016 17.1871 8.09603 17.3788 8.28776C17.5704 8.47952 17.6663 8.71712 17.6663 9.00056C17.6663 9.28403 17.5704 9.52149 17.3788 9.71293C17.1871 9.90438 16.9496 10.0001 16.6663 10.0001H9.99961V16.6668C9.99961 16.9501 9.90374 17.1876 9.71201 17.3793C9.52025 17.5709 9.28265 17.6668 8.99921 17.6668C8.71574 17.6668 8.47829 17.5709 8.28684 17.3793C8.0954 17.1876 7.99967 16.9501 7.99967 16.6668V10.0001Z" fill="#1C1B1F"/>
-</svg>
-
-            </button>
-          </div>
+            <button id="plus"><img src="./assets/img/icons/plus.svg"></button>
+          </div><style> #container img { width: 70% };
+</style>
         </template>
         <div class="form-popup__container">
           <button class="form-popup__close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,6 +189,63 @@
           </form>
         </div>
       </div>
+      <template id="product-profile-template">
+        <section class="product-profile">
+          <div class="product-profile__container container">
+            <h1 class="product-profile__title product-title mobile-hidden"></h1>
+            <div class="product-profile__columns">
+              <div class="product-profile__images">
+                <div class="swiper-top">
+                  <div class="swiper-wrapper"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-thumbs">
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+              <div class="product-profile__properties">
+                <h2 class="product-profile__properties-heading">Технические характеристики</h2>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">На площадь, м²</span><span class="product-profile__property-value area-value"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Инвертер</span><span class="product-profile__property-value inverter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (охлаждение), Вт</span><span class="product-profile__property-value cooling-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (охлаждение), Вт</span><span class="product-profile__property-value cooling-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (обогрев), Вт</span><span class="product-profile__property-value heating-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (обогрев), Вт</span><span class="product-profile__property-value heating-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Электропитание, V/PH/HZ</span><span class="product-profile__property-value powerSupply"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. длина трассы, м</span><span class="product-profile__property-value maxTrackLength"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. перепад высот, м</span><span class="product-profile__property-value maxHeightDifference"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр жидкостной трубы, мм</span><span class="product-profile__property-value liquidPipeDiameter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр газовой трубы, мм</span><span class="product-profile__property-value gasPipeDiameter"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading">Внутренний блок</h3>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value indoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value indoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value indoorUnit-size"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading">Внешний блок</h3>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value outdoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value outdoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value outdoorUnit-size"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Модель компрессора</span><span class="product-profile__property-value"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Фреон</span><span class="product-profile__property-value outdoorUnit-freon"></span></li>
+                </ul>
+              </div>
+              <div class="product-profile__desc">
+                <h1 class="product-profile__title desktop-hidden">Модель</h1><span class="product-profile__price product-price">Цена</span>
+                <button class="product-profile__button button button--accent cart-btn">Купить</button>
+                <div class="product-profile__desc-content">
+                  <h2 class="product-profile__desc-heading">Описание</h2>
+                  <p class="product-profile__desc-text">Описание</p>
+                  <button class="product-profile__desc-show-more-btn">Показать еще</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
     </div>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js" type="module"></script>

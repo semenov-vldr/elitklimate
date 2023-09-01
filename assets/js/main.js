@@ -1182,7 +1182,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-09.html",
     imgSrc: imagesDahatsuDragon,
     price: 27700, // Цена
     area: 28 , // На площадь, м²
@@ -1230,7 +1230,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-12.html",
     imgSrc: imagesDahatsuDragon,
     price: 38500, // Цена
     area: 35 , // На площадь, м²
@@ -1278,7 +1278,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-18.html",
     imgSrc: imagesDahatsuDragon,
     price: 59900, // Цена
     area: 55 , // На площадь, м²
@@ -1326,7 +1326,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-24.html",
     imgSrc: imagesDahatsuDragon,
     price: 77800, // Цена
     area: 75 , // На площадь, м²
@@ -2520,13 +2520,13 @@ if (cart) {
   backBtn.addEventListener("click", () => history.back());
 
   // Рендер добавленных в корзину товаров на страницы Корзины
-  addCartItemToPage ( getDataCartFromLocalStorage() );
+  //addCartItemToPage ( getDataCartFromLocalStorage() );
 
   const cartItems = cart.querySelectorAll(".cart__item");
-  const getCountCartItems = () => cart.querySelectorAll(".cart__item").length;
+  //const getCountCartItems = () => cart.querySelectorAll(".cart__item").length;
 
   // Назначаем количество товаров в корзине на странице корзины
-  cart.querySelector(".cart__count").textContent = getCountCartItems();
+  //cart.querySelector(".cart__count").textContent = getCountCartItems();
 
   cartItems.forEach(cartItem => {
     const cartItemPrice = cartItem.querySelector(".cart-item__price");
@@ -2535,7 +2535,7 @@ if (cart) {
     const deleteCartItemBtn = cartItem.querySelector(".cart-item__delete");
     deleteCartItemBtn.addEventListener("click", () => {
       cartItem.remove();
-      cart.querySelector(".cart__count").textContent = getCountCartItems();
+      //cart.querySelector(".cart__count").textContent = getCountCartItems();
     });
     //--------------
 
@@ -2579,8 +2579,7 @@ if (cart) {
     //--------------
   });
 
-
-} // if (cart)
+}; // if (cart)
 
 // Получить данные корзины из LocalStorage
 function getDataCartFromLocalStorage () { return JSON.parse( localStorage.getItem("cart") || '[]' ); }
@@ -2596,7 +2595,7 @@ function changeCartIcon () {
   headerCartCount.textContent = localStorageLength || "";
 };
 
-window.addEventListener("load", changeCartIcon);
+//window.addEventListener("load", changeCartIcon);
 
 
 function handlerCart () {
@@ -2605,17 +2604,16 @@ function handlerCart () {
   if (cards) {
     cards.forEach(card => {
       const cartBtn = card.querySelector(".cart-btn");
-      //cartBtn.title = "Купить";
       cartBtn.addEventListener("click", formPopupActive);
 
       const cardTitle = card.querySelector(".product-title").textContent;
       const cardPrice = getPriceValue( card.querySelector(".product-price") );
       const cardSrcImg = card.querySelector(".product-img").src;
-      const cardArea = card.querySelector(".area-value").textContent;
+      const cardArea = card.querySelector(".area-value")?.textContent;
 
       const cardPriceString = card.querySelector(".product-price").textContent;
 
-
+      // Заполнение шаблона поп-ап данными товара (картинка, заголовок, цена, счетчик кол-ва)
       function formPopupActive () {
         const formPopup = document.querySelector(".form-popup");
         if (!formPopup) return;
@@ -2635,6 +2633,10 @@ function handlerCart () {
         sumValue.textContent = cardPriceString;
         formPopup.classList.add("js-popup-active");
         blockScrollBody();
+
+        // Добавление в поп-ап для карточки профиля (внутрення страница) ед.изм. "м²"
+        if (card.classList.contains("product-profile")) formPopupArea.textContent = `${cardArea} м²`;
+
 
         function closePopupForm () {
           formPopup.classList.remove("js-popup-active");
@@ -2661,7 +2663,6 @@ function handlerCart () {
         observer.observe(count, {
           attributes: true,
         });
-
 
       };
 
@@ -3019,13 +3020,25 @@ class InputPlusMinus extends HTMLElement {
 
     container.setAttribute("style", `
       display: flex;
-      border: none;
-      outline: none;
+      align-items: center;
       height: 30px;
       border: 2px solid #bce8f1;
       padding: 5px;
       border-radius: 22px;
       `);
+
+    const mQueryMobile = window.matchMedia('(max-width: 768px)');
+    if (mQueryMobile.matches) {
+
+      container.setAttribute("style", `
+      display: flex;
+      align-items: center;
+      height: 25px;
+      border: 2px solid #bce8f1;
+      padding: 5px;
+      border-radius: 22px;
+      `);
+    };
 
     count_textbox.setAttribute("style", `
       width: 35px;
@@ -3035,6 +3048,21 @@ class InputPlusMinus extends HTMLElement {
       height: 100%;
       font-size: 18px;
       `);
+
+
+    if (mQueryMobile.matches) {
+
+      count_textbox.setAttribute("style", `
+      width: 30px;
+      text-align: center;
+      border: none;
+      outline: none;
+      height: 100%;
+      font-size: 16px;
+      `);
+
+    }
+
 
     [plus_button, minus_button].forEach(button => {
       button.setAttribute("style", `
@@ -3047,6 +3075,15 @@ class InputPlusMinus extends HTMLElement {
       background-color: transparent;
       cursor: pointer;
       `);
+
+      button.addEventListener("mousedown", () => {
+        button.style.opacity = "0.5";
+      });
+
+      button.addEventListener("mouseup", () => {
+        button.style.opacity = "1";
+      });
+
     });
 
 
@@ -3114,6 +3151,9 @@ function createPopularSlider () {
 }
 
 
+// Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
+const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2"];
+
 const popular = document.querySelector('.popular');
 
 if (popular) {
@@ -3121,8 +3161,7 @@ if (popular) {
   const cardPopularTemplate = document.querySelector('#template-card-popular').content.querySelector('.card-popular.swiper-slide');
   const swiperWrapperPopular = document.querySelector('.popular__slider .swiper-wrapper');
 
-  // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
-  const articlesPopularCards = ["dahatsu-DHP-07", "denko-kr-09", "lg-p07sp2"];
+
 
   // Создание карточек товара для блока "Популярное", используется общий массив данных товара.
   // Для выбора карточек в функцию передается массив с артикулами товара
@@ -3156,23 +3195,107 @@ if (popular) {
 
 
 
-const productProfile = document.querySelector('.product-profile');
+window.addEventListener("load", () => {
+  createProductProfile(productsArr);
+});
 
-if (productProfile) {
-  setTimeout(createProductProfileSlider, 0);
 
-const descText = productProfile.querySelector(".product-profile__desc-text");
-const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
+function createProductProfile (products) {
 
-// Кнопка "Показать больше" для описания
-  showMoreBtn.addEventListener("click", () => {
-    descText.classList.add("js-show-more");
+  const breadcrumbs = document.querySelector(".breadcrumbs");
+  if (!breadcrumbs) return;
+
+  const breadcrumbsValue = breadcrumbs.querySelector("span.breadcrumbs__item")?.textContent;
+
+  const productProfileTemplate = document.querySelector('#product-profile-template')?.content.querySelector('.product-profile');
+
+  products.forEach(product => {
+
+    if (product.title !== breadcrumbsValue) return;
+
+    const profileItem = productProfileTemplate.cloneNode(true);
+    const swiperTopWrapper = profileItem.querySelector('.product-profile__images .swiper-top .swiper-wrapper');
+    const swiperThumbsWrapper = profileItem.querySelector('.product-profile__images .swiper-thumbs .swiper-wrapper');
+
+    profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
+
+    product.imgSrc.forEach((src, i) => {
+      const tagImg = document.createElement("img");
+      tagImg.classList.add("swiper-slide");
+      tagImg.src = src;
+      swiperTopWrapper.appendChild(tagImg);
+      if (i ===0) {
+        tagImg.classList.add("product-img");
+      }
+    });
+
+    product.imgSrc.forEach((src) => {
+      const tagImg = document.createElement("img");
+      tagImg.classList.add("swiper-slide");
+      tagImg.src = src;
+      swiperThumbsWrapper.appendChild(tagImg);
+    });
+
+    // Характеристики
+    const properties = profileItem.querySelector('.product-profile__properties');
+    properties.querySelector('.area-value').textContent = product.area;
+    properties.querySelector('.inverter').textContent = `${product.inverter ? "Да" : "Нет"}`;
+    properties.querySelector('.cooling-performance').textContent = product.cooling.performance;
+    properties.querySelector('.cooling-powerConsumption').textContent = product.cooling.powerConsumption;
+    properties.querySelector('.heating-performance').textContent = product.heating.performance;
+    properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption;
+    properties.querySelector('.powerSupply').textContent = product.powerSupply;
+    properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength;
+    properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference;
+    properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter;
+    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter;
+    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter;
+    // ---Вставить Модель компрессора---
+
+    // Внутренний блок
+    properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise;
+    properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight;
+    properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size;
+
+
+    // Внешний блок
+    properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise;
+    properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight;
+    properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size;
+    properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
+
+
+    profileItem.querySelector('.product-price').textContent = `${product.price.toLocaleString("ru")} ₽`
+    profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
+
+    breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
+
   });
 
-}
+  const productProfile = document.querySelector('.product-profile');
+
+  if (productProfile) {
+    setTimeout(() => {
+      createProductProfileSlider(productProfile)
+    }, 100);
+
+    const descText = productProfile.querySelector(".product-profile__desc-text");
+    const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
+
+// Кнопка "Показать больше" для описания
+    showMoreBtn.addEventListener("click", () => {
+      descText.classList.add("js-show-more");
+    });
+  }
+
+  handlerCart ();
+
+};
+
+
 
 // Слайдер с миниатюрами
-function createProductProfileSlider () {
+function createProductProfileSlider (productProfile) {
 
   const swiperTop = productProfile.querySelector('.swiper-top');
   const swiperThumbs = productProfile.querySelector('.swiper-thumbs');
@@ -3204,9 +3327,7 @@ function createProductProfileSlider () {
       crossFade: true,
     }
   });
-
-
-}
+};
 
 
 // Создание массива карточек товара в соответствии с данными из массива объектов

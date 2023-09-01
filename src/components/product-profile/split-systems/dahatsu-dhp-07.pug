@@ -21,69 +21,53 @@ section.product-profile
             img.swiper-slide(src="./assets/img/catalog/dahatsu/DHP/04.jpg")
 
 
-
       .product-profile__properties
         h2.product-profile__properties-heading Технические характеристики
         ul.product-profile__property-list
 
           li.product-profile__property-item
-            span.product-profile__property-title Производительность, Вт
-            span.product-profile__property-value 2100
+            span.product-profile__property-title На площадь, м²
+            span.product-profile__property-value.area-value 22
 
           li.product-profile__property-item
-            span.product-profile__property-title Потребляемая мощность, Вт
-            span.product-profile__property-value 655
+            span.product-profile__property-title Инвертер
+            span.product-profile__property-value.inverter Нет
+
+          li.product-profile__property-item
+            span.product-profile__property-title Производительность (охлаждение), Вт
+            span.product-profile__property-value.cooling-performance 2100
+
+          li.product-profile__property-item
+            span.product-profile__property-title Потребляемая мощность (охлаждение), Вт
+            span.product-profile__property-value.cooling-powerConsumption 655
+
+          li.product-profile__property-item
+            span.product-profile__property-title Производительность (обогрев), Вт
+            span.product-profile__property-value.heating-performance 2100
+
+          li.product-profile__property-item
+            span.product-profile__property-title Потребляемая мощность (обогрев), Вт
+            span.product-profile__property-value.heating-powerConsumption 655
 
           li.product-profile__property-item
             span.product-profile__property-title Электропитание, V/PH/HZ
-            span.product-profile__property-value 220-240V, 50HZ
+            span.product-profile__property-value.powerSupply 220-240V, 50HZ
 
           li.product-profile__property-item
             span.product-profile__property-title Макс. длина трассы, м
-            span.product-profile__property-value 5
+            span.product-profile__property-value.maxTrackLength 5
 
           li.product-profile__property-item
             span.product-profile__property-title Макс. перепад высот, м
-            span.product-profile__property-value 10
+            span.product-profile__property-value.maxHeightDifference 10
 
           li.product-profile__property-item
             span.product-profile__property-title Диаметр жидкостной трубы, мм
-            span.product-profile__property-value 6,35мм(1/4)
+            span.product-profile__property-value.liquidPipeDiameter 6,35мм(1/4)
 
           li.product-profile__property-item
             span.product-profile__property-title Диаметр газовой трубы, мм
-            span.product-profile__property-value 9,52мм(3/8)
-
-        h3.product-profile__properties-heading Внутренний блок
-        ul.product-profile__property-list
-
-          li.product-profile__property-item
-            span.product-profile__property-title Уровень шума, дБ (А)
-            span.product-profile__property-value 21
-
-          li.product-profile__property-item
-            span.product-profile__property-title Вес, кг
-            span.product-profile__property-value 7,4
-
-          li.product-profile__property-item
-            span.product-profile__property-title Размер, мм (д*ш*в)
-            span.product-profile__property-value 715x194x285
-
-
-        h3.product-profile__properties-heading Внешний блок
-        ul.product-profile__property-list
-
-          li.product-profile__property-item
-            span.product-profile__property-title Уровень шума, дБ (А)
-            span.product-profile__property-value 54
-
-          li.product-profile__property-item
-            span.product-profile__property-title Вес, кг
-            span.product-profile__property-value 20,6
-
-          li.product-profile__property-item
-            span.product-profile__property-title Размер, мм (д*ш*в)
-            span.product-profile__property-value 720x270x495
+            span.product-profile__property-value.gasPipeDiameter 9,52мм(3/8)
 
           li.product-profile__property-item
             span.product-profile__property-title Модель компрессора
@@ -91,7 +75,38 @@ section.product-profile
 
           li.product-profile__property-item
             span.product-profile__property-title Фреон
-            span.product-profile__property-value R410A
+            span.product-profile__property-value.outdoorUnit-freon R410A
+
+        h3.product-profile__properties-heading Внутренний блок
+        ul.product-profile__property-list
+
+          li.product-profile__property-item
+            span.product-profile__property-title Уровень шума, дБ (А)
+            span.product-profile__property-value.indoorUnit-noise 21
+
+          li.product-profile__property-item
+            span.product-profile__property-title Вес, кг
+            span.product-profile__property-value.indoorUnit-weight 7,4
+
+          li.product-profile__property-item
+            span.product-profile__property-title Размер, мм (д*ш*в)
+            span.product-profile__property-value.indoorUnit-size 715x194x285
+
+
+        h3.product-profile__properties-heading Внешний блок
+        ul.product-profile__property-list
+
+          li.product-profile__property-item
+            span.product-profile__property-title Уровень шума, дБ (А)
+            span.product-profile__property-value.outdoorUnit-noise 54
+
+          li.product-profile__property-item
+            span.product-profile__property-title Вес, кг
+            span.product-profile__property-value.outdoorUnit-noise 20,6
+
+          li.product-profile__property-item
+            span.product-profile__property-title Размер, мм (д*ш*в)
+            span.product-profile__property-value.outdoorUnit-noise 720x270x495
 
       .product-profile__desc
         h1.product-profile__title.desktop-hidden Dahatsu DHP-07/DHV-07

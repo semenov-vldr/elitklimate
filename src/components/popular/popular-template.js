@@ -1,3 +1,6 @@
+// Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
+const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2"];
+
 const popular = document.querySelector('.popular');
 
 if (popular) {
@@ -5,8 +8,7 @@ if (popular) {
   const cardPopularTemplate = document.querySelector('#template-card-popular').content.querySelector('.card-popular.swiper-slide');
   const swiperWrapperPopular = document.querySelector('.popular__slider .swiper-wrapper');
 
-  // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
-  const articlesPopularCards = ["dahatsu-DHP-07", "denko-kr-09", "lg-p07sp2"];
+
 
   // Создание карточек товара для блока "Популярное", используется общий массив данных товара.
   // Для выбора карточек в функцию передается массив с артикулами товара

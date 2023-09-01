@@ -11,13 +11,13 @@ if (cart) {
   backBtn.addEventListener("click", () => history.back());
 
   // Рендер добавленных в корзину товаров на страницы Корзины
-  addCartItemToPage ( getDataCartFromLocalStorage() );
+  //addCartItemToPage ( getDataCartFromLocalStorage() );
 
   const cartItems = cart.querySelectorAll(".cart__item");
-  const getCountCartItems = () => cart.querySelectorAll(".cart__item").length;
+  //const getCountCartItems = () => cart.querySelectorAll(".cart__item").length;
 
   // Назначаем количество товаров в корзине на странице корзины
-  cart.querySelector(".cart__count").textContent = getCountCartItems();
+  //cart.querySelector(".cart__count").textContent = getCountCartItems();
 
   cartItems.forEach(cartItem => {
     const cartItemPrice = cartItem.querySelector(".cart-item__price");
@@ -26,7 +26,7 @@ if (cart) {
     const deleteCartItemBtn = cartItem.querySelector(".cart-item__delete");
     deleteCartItemBtn.addEventListener("click", () => {
       cartItem.remove();
-      cart.querySelector(".cart__count").textContent = getCountCartItems();
+      //cart.querySelector(".cart__count").textContent = getCountCartItems();
     });
     //--------------
 
@@ -70,8 +70,7 @@ if (cart) {
     //--------------
   });
 
-
-} // if (cart)
+}; // if (cart)
 
 // Получить данные корзины из LocalStorage
 function getDataCartFromLocalStorage () { return JSON.parse( localStorage.getItem("cart") || '[]' ); }
@@ -87,7 +86,7 @@ function changeCartIcon () {
   headerCartCount.textContent = localStorageLength || "";
 };
 
-window.addEventListener("load", changeCartIcon);
+//window.addEventListener("load", changeCartIcon);
 
 
 function handlerCart () {
@@ -96,17 +95,16 @@ function handlerCart () {
   if (cards) {
     cards.forEach(card => {
       const cartBtn = card.querySelector(".cart-btn");
-      //cartBtn.title = "Купить";
       cartBtn.addEventListener("click", formPopupActive);
 
       const cardTitle = card.querySelector(".product-title").textContent;
       const cardPrice = getPriceValue( card.querySelector(".product-price") );
       const cardSrcImg = card.querySelector(".product-img").src;
-      const cardArea = card.querySelector(".area-value").textContent;
+      const cardArea = card.querySelector(".area-value")?.textContent;
 
       const cardPriceString = card.querySelector(".product-price").textContent;
 
-
+      // Заполнение шаблона поп-ап данными товара (картинка, заголовок, цена, счетчик кол-ва)
       function formPopupActive () {
         const formPopup = document.querySelector(".form-popup");
         if (!formPopup) return;
@@ -126,6 +124,10 @@ function handlerCart () {
         sumValue.textContent = cardPriceString;
         formPopup.classList.add("js-popup-active");
         blockScrollBody();
+
+        // Добавление в поп-ап для карточки профиля (внутрення страница) ед.изм. "м²"
+        if (card.classList.contains("product-profile")) formPopupArea.textContent = `${cardArea} м²`;
+
 
         function closePopupForm () {
           formPopup.classList.remove("js-popup-active");
@@ -152,7 +154,6 @@ function handlerCart () {
         observer.observe(count, {
           attributes: true,
         });
-
 
       };
 

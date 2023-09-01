@@ -70,7 +70,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-09.html",
     imgSrc: imagesDahatsuDragon,
     price: 27700, // Цена
     area: 28 , // На площадь, м²
@@ -118,7 +118,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-12.html",
     imgSrc: imagesDahatsuDragon,
     price: 38500, // Цена
     area: 35 , // На площадь, м²
@@ -166,7 +166,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-18.html",
     imgSrc: imagesDahatsuDragon,
     price: 59900, // Цена
     area: 55 , // На площадь, м²
@@ -214,7 +214,7 @@ const DAHATSU_DHP = [
     type: "split-system",
     company: "Dahatsu",
     series: "Dragon",
-    link: "##",
+    link: "dahatsu-dhp-24.html",
     imgSrc: imagesDahatsuDragon,
     price: 77800, // Цена
     area: 75 , // На площадь, м²

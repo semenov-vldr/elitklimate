@@ -1,7 +1,7 @@
-extends ../../layouts/main
+extends ../layouts/main
 
 block variables
-  - var title = "Dahatsu DHP-07/DHV-07"
+  - var title = "Dahatsu DHP-12/DHV-12"
   - var pageClass = ''
   - var activePage = 'index'
 
@@ -9,7 +9,7 @@ block content
 
   +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Бытовые сплит-системы", url: "split-systems.html"}, {text: title}])
 
-  //include ../../components/products/split-systems
+  include ../components/popular/popular
 
 
 

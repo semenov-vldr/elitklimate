@@ -46,13 +46,25 @@ class InputPlusMinus extends HTMLElement {
 
     container.setAttribute("style", `
       display: flex;
-      border: none;
-      outline: none;
+      align-items: center;
       height: 30px;
       border: 2px solid #bce8f1;
       padding: 5px;
       border-radius: 22px;
       `);
+
+    const mQueryMobile = window.matchMedia('(max-width: 768px)');
+    if (mQueryMobile.matches) {
+
+      container.setAttribute("style", `
+      display: flex;
+      align-items: center;
+      height: 25px;
+      border: 2px solid #bce8f1;
+      padding: 5px;
+      border-radius: 22px;
+      `);
+    };
 
     count_textbox.setAttribute("style", `
       width: 35px;
@@ -62,6 +74,21 @@ class InputPlusMinus extends HTMLElement {
       height: 100%;
       font-size: 18px;
       `);
+
+
+    if (mQueryMobile.matches) {
+
+      count_textbox.setAttribute("style", `
+      width: 30px;
+      text-align: center;
+      border: none;
+      outline: none;
+      height: 100%;
+      font-size: 16px;
+      `);
+
+    }
+
 
     [plus_button, minus_button].forEach(button => {
       button.setAttribute("style", `
@@ -74,6 +101,15 @@ class InputPlusMinus extends HTMLElement {
       background-color: transparent;
       cursor: pointer;
       `);
+
+      button.addEventListener("mousedown", () => {
+        button.style.opacity = "0.5";
+      });
+
+      button.addEventListener("mouseup", () => {
+        button.style.opacity = "1";
+      });
+
     });
 
 

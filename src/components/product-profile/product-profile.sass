@@ -61,10 +61,15 @@
   &__property-item
     display: flex
     justify-content: space-between
+    align-items: flex-end
     border-bottom: 1px solid rgba(#000, 0.1)
     padding-bottom: 8px
     gap: 16px
     @include fontSize(16, 20)
+
+  &__property-title
+    @media (max-width: 480px)
+      max-width: 250px
 
   &__property-value
     text-align: right

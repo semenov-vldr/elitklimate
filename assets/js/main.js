@@ -1106,76 +1106,276 @@ const DAHATSU_DH_KL_A = [
 // -----Dahatsu Кассетный (DH-KN-CH) -----
 
 
-const functionsDahatsu_DH_KN_CH = ["ON/OFF", "Инфракрасный пульт (в комплекте)", "Режим энергосбережения",
+const functionsDahatsu_DH_KN_CH = ["ON/OFF", "Проводной пульт (в комплекте)", "Инфракрасный пульт (опция)", "Режим энергосбережения",
   "Самоочистка внутреннего блока", "Объемное воздухо-распределение", "Турборежим", "Тихий режим", "Горячий запуск",
-  "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -15°C",
-  "Работа в режиме обогрева до -15°C", "Дренажный насос", "Самодиагностика", "Низкотемпературный комплект",
-  "Панель с круговым распределением воздушного потока", "HEALTH", "Движение жалюзи по горизонтали и вертикали", "Анти-F. Предотвращение образования неприятного запаха"];
+  "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -20°C (опция)",
+  "Работа в режиме обогрева до -15°C (опция)", "Дренажный насос (опция)", "Самодиагностика", "Низкотемпературный комплект",
+  "Моющийся фильтр", "Индикатор загрязнения фильтра", "Режим комфортного сна", "Блокировка кнопок пульта"];
 
 const imagesDahatsu_DH_KN_CH =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/03.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
+  ["./assets/img/catalog/dahatsu/DH-KN-A/01.png",
+    "./assets/img/catalog/dahatsu/DH-KN-A/02.png",
+    //"./assets/img/catalog/dahatsu/DH-KN-A/03.png",
+    //"./assets/img/catalog/dahatsu/DH-KN-A/04.png"
   ];
 
 const imagesDahatsu_DH_KN_CH_2 =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/03-3.JPG",
-    "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
+  ["./assets/img/catalog/dahatsu/DH-KN-A/01-1.png",
+    "./assets/img/catalog/dahatsu/DH-KN-A/02-2.jpg",
+    //"./assets/img/catalog/dahatsu/DH-KN-A/03-3.JPG",
+    //"./assets/img/catalog/dahatsu/DH-KN-A/04.png"
   ];
 
-const descriptionDahatsu_DH_KN_CH = "Кассетная сплит-система DH-CS-A позволит быстро и равномерно создать и поддерживать комфортную температуру в помещении. Распределение воздуха на 360 градусов. Панель с круговым распределением воздушного потока обеспечивает эффективное охлаждение или нагрев. \n Данный вид кондиционеров интегрируется в подвесные потолки и осуществляет подачу воздуха в 4 потока. Новейшая модель DH-CS-A обладает привлекательным видом, компактными габаритами, множеством настроек и функций. \n Режим TURBO активирует максимальную производительность и позволяет быстрее достичь необходимой температуры."
+const descriptionDahatsu_DH_KN_CH = "Не всегда в дизайн интерьера хорошо вписывается внутренний блок классической сплит-системы. Идеальным решением в таких ситуациях станут канальные кондиционеры DH-KN-CH. \n Кондиционер самостоятельно выполняет диагностику неполадок. Сигналы о возникших неисправностях отображаются на световых индикаторах внутреннего блока сплит-системы. \n От состояния фильтра зависит бесперебойность и качество функционирования кондиционера. Но, как и в любом другом механизме, фильтры со временем загрязняются, поэтому нужно внимательно следить за их чистотой. Индикатор загрязнения фильтра своевременно оповестит Вас о необходимости проведения технического обслуживания."
 
 
 const DAHATSU_DH_KN_CH = [
 
-  // Dahatsu DH-CS-12A
+  // Dahatsu DH-KN-18CH
   {
-    article: "dahatsu-dh-cs-12a",
-    title: "Dahatsu DH-CS-12A",
-    type: "cassette",
+    article: "dahatsu-dh-kn-18ch",
+    title: "Dahatsu DH-KN-18CH",
+    type: "ducted",
     company: "Dahatsu",
-    series: "DH-CS-A",
+    series: "DH-KN-CH",
     factory: "AUX",
-    link: "##",
-    imgSrc: imagesDahatsuDH_CS_A,
-    price: 57000, // Цена
-    area: 35, // На площадь, м²
-    coolingCapacity: 3.5, // Мощность охлаждения, кВт
-    noise: 39, // Уровень шума, дБ (A)
+    link: "dahatsu-dh-kn-18ch.html",
+    imgSrc: imagesDahatsu_DH_KN_CH,
+    price: 72900, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.3, // Мощность охлаждения, кВт
+    noise: 35, // Уровень шума, дБ (A)
     inverter: false, // Наличие инвертора (да/нет)
 
-    functions: functionsDahatsuDH_CS_A,
-    description: descriptionDahatsuDH_CS_A, // Описание
+    functions: functionsDahatsu_DH_KN_CH,
+    description: descriptionDahatsu_DH_KN_CH, // Описание
 
     // Охлаждение
     cooling: {
-      performance: 3520, // Производительность, Вт
-      powerConsumption: 1300, // Потребл. мощность, Вт
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1760, // Потребл. мощность, Вт
     },
     // Обогрев
     heating: {
-      performance: 3960, // Производительность, Вт
-      powerConsumption: 1280, // Потребл. мощность, Вт
+      performance: 5800, // Производительность, Вт
+      powerConsumption: 1800, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
     indoorUnit: {
-      noise: 39, // Уровень шума, дБ (A)
-      weight: 16, // Вес, кг
-      size: "570x570x260", // Размеры
+      noise: 35, // Уровень шума, дБ (A)
+      weight: 32, // Вес, кг
+      size: "1189x260x643", // Размеры
     },
     // Внешний блок
     outdoorUnit: {
-      noise: 53, // Уровень шума, дБ (A)
-      weight: 28, // Вес, кг
-      size: "780x285x545", // Размеры
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "850x555x345", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-KN-24CH
+  {
+    article: "dahatsu-dh-kn-24ch",
+    title: "Dahatsu DH-KN-24CH",
+    type: "ducted",
+    company: "Dahatsu",
+    series: "DH-KN-CH",
+    factory: "AUX",
+    link: "dahatsu-dh-kn-24ch.html",
+    imgSrc: imagesDahatsu_DH_KN_CH,
+    price: 84600, // Цена
+    area: 75, // На площадь, м²
+    coolingCapacity: 7.2, // Мощность охлаждения, кВт
+    noise: 38, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_KN_CH,
+    description: descriptionDahatsu_DH_KN_CH, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7200, // Производительность, Вт
+      powerConsumption: 2390, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 8080, // Производительность, Вт
+      powerConsumption: 2500, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 38, // Уровень шума, дБ (A)
+      weight: 33, // Вес, кг
+      size: "1189x260x643", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 52, // Вес, кг
+      size: "914x702x382", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-KN-36CH
+  {
+    article: "dahatsu-dh-kn-36ch",
+    title: "Dahatsu DH-KN-36CH",
+    type: "ducted",
+    company: "Dahatsu",
+    series: "DH-KN-CH",
+    factory: "AUX",
+    link: "dahatsu-dh-kn-36ch.html",
+    imgSrc: imagesDahatsu_DH_KN_CH_2,
+    price: 113000, // Цена
+    area: 110, // На площадь, м²
+    coolingCapacity: 10.6, // Мощность охлаждения, кВт
+    noise: 41, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_KN_CH,
+    description: descriptionDahatsu_DH_KN_CH, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 10600, // Производительность, Вт
+      powerConsumption: 3500, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 11700, // Производительность, Вт
+      powerConsumption: 3500, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 25, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 41, // Уровень шума, дБ (A)
+      weight: 33, // Вес, кг
+      size: "1189x260x643", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 67, // Вес, кг
+      size: "1015x810x445", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-KN-48CH
+  {
+    article: "dahatsu-dh-kn-48ch",
+    title: "Dahatsu DH-KN-48CH",
+    type: "ducted",
+    company: "Dahatsu",
+    series: "DH-KN-CH",
+    factory: "AUX",
+    link: "dahatsu-dh-kn-48ch.html",
+    imgSrc: imagesDahatsu_DH_KN_CH_2,
+    price: 159900, // Цена
+    area: 150, // На площадь, м²
+    coolingCapacity: 14.2, // Мощность охлаждения, кВт
+    noise: 44, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_KN_CH,
+    description: descriptionDahatsu_DH_KN_CH, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 14200, // Производительность, Вт
+      powerConsumption: 4710, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 15700, // Производительность, Вт
+      powerConsumption: 4890, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 25, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 44, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1425x260x643", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 83, // Вес, кг
+      size: "1015x810x445", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Dahatsu DH-KN-60CH
+  {
+    article: "dahatsu-dh-kn-60ch",
+    title: "Dahatsu DH-KN-60CH",
+    type: "ducted",
+    company: "Dahatsu",
+    series: "DH-KN-CH",
+    factory: "AUX",
+    link: "dahatsu-dh-kn-60ch.html",
+    imgSrc: imagesDahatsu_DH_KN_CH_2,
+    price: 164700, // Цена
+    area: 190, // На площадь, м²
+    coolingCapacity: 17.6, // Мощность охлаждения, кВт
+    noise: 44, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_KN_CH,
+    description: descriptionDahatsu_DH_KN_CH, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 17600, // Производительность, Вт
+      powerConsumption: 5710, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 18700, // Производительность, Вт
+      powerConsumption: 5820, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 25, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 44, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1425x260x643", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 60, // Уровень шума, дБ (A)
+      weight: 91, // Вес, кг
+      size: "911x1330x400", // Размеры
       freon: "R410A", // Фреон
       compressorModel: "GMCC",
     }
@@ -2751,6 +2951,72 @@ const LG_Dual = [
 
 ]
 
+// ----- Midea Paramount (MSAG1) -----
+
+const functionsMideaParamount = [""];
+
+const imagesMideaParamount =
+  ["./assets/img/catalog/dahatsu/DA-H/01.png",
+    "./assets/img/catalog/dahatsu/DA-H/02.png",
+    "./assets/img/catalog/dahatsu/DA-H/03.png",
+    "./assets/img/catalog/dahatsu/DA-H/04.png"
+  ];
+
+const descriptionMideaParamount = ""
+
+
+const MIDEA_MSAG1 = [
+
+  // ------ Dahatsu DA-07H ------
+  {
+    article: "dahatsu-da-07h",
+    title: "Dahatsu DA-07H",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend",
+    link: "##",
+    imgSrc: imagesDahatsuLegend,
+    price: 0, // Цена
+    area: 22 , // На площадь, м²
+    coolingCapacity: 2.1, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegend,
+    description: descriptionDahatsuLegend, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2100, // Производительность, Вт
+      powerConsumption: 650, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 610, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "10м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "690x199x283", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 48, // Уровень шума, дБ (A)
+      weight: 20, // Вес, кг
+      size: "665x280x420", // Размеры
+      freon: "R410A", // Фреон
+    }
+  },
+
+];
+
 const dataDahatsu = [
   DAHATSU_DHP,
   DAHATSU_DS_I,
@@ -2760,6 +3026,7 @@ const dataDahatsu = [
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
+  DAHATSU_DH_KN_CH,
 ];
 
 const dataDenko = [
@@ -3477,21 +3744,26 @@ function createPopularSlider () {
         spaceBetween: 16,
       },
       380: {
-        slidesPerView: "auto",
+        slidesPerView: 1.5,
         spaceBetween: 16,
       },
       480: {
-        slidesPerView: "auto",
+        slidesPerView: 2.2,
         spaceBetween: 16,
       },
 
       640: {
-        slidesPerView: "auto",
-        spaceBetween: 32,
+        slidesPerView: 2.8,
+        spaceBetween: 16,
+      },
+
+      768: {
+        slidesPerView: 3.3,
+        spaceBetween: 16,
       },
 
       1100: {
-        slidesPerView: "auto",
+        slidesPerView: 4,
         spaceBetween: 32,
       },
     }
@@ -3500,7 +3772,7 @@ function createPopularSlider () {
 
 
 // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
-const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2"];
+const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2", "dahatsu-dhp-09", "dahatsu-dh-cs-18a", "denko-dcs-12a"];
 
 const popular = document.querySelector('.popular');
 

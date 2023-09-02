@@ -68,7 +68,7 @@ function createProductProfile (products) {
     properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
 
 
-    profileItem.querySelector('.product-price').textContent = `${product.price.toLocaleString("ru")} ₽`
+    profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);

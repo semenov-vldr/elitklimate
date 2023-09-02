@@ -23,7 +23,7 @@
       padding: 0 32px
       @media (min-width: $width-mobile)
         height: 80%
-        padding: 32px 16px
+        padding: 16px
         margin-bottom: 16px
       img
         width: 100%
@@ -74,10 +74,36 @@
   &__property-value
     text-align: right
 
+  &__actions
+    @media (max-width: $width-mobile)
+      position: fixed
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: #fff
+      border-top: 1px solid rgba(#000, 0.2)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 8px 16px
+      z-index: 2
+
+    .product-profile__price
+      @media (max-width: $width-mobile)
+        @include fontSize(20, 40)
+
   &__price
+    display: inline-block
     @include fontSize(24, 48)
     font-weight: 500
     margin-bottom: 24px
+    white-space: nowrap
+    @media (max-width: $width-mobile)
+      margin-bottom: 0
+    &.product-price--desktop-hidden
+      @media (min-width: $width-mobile)
+        display: none
 
   &__button
     width: 100%
@@ -88,6 +114,9 @@
       min-height: 54px
     @media (max-width: $width-mobile)
       min-height: 44px
+      margin-bottom: 0
+      width: fit-content
+      border-radius: 4px
 
 
   &__desc
@@ -98,6 +127,10 @@
     @media (max-width: $width-mobile)
       grid-column: 1/-1
       grid-row: 2/3
+
+  &__desc-content
+    @media (max-width: $width-mobile)
+      margin-top: 24px
 
 
   &__desc-heading

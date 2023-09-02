@@ -331,6 +331,272 @@ const DAHATSU_DA_H = [
   },
 ];
 
+// ----- Dahatsu Legend DC Inverter (DA-I) -----
+
+const functionsDahatsuLegendInverter = ["Компрессор GMCC Toshiba", "Режим Turbo производительности", "Автоматическое качание заслонок", "Режим комфортного сна",
+  "Режим 'Антиплесень'", "Компактный дизайн", "HEALTH - режим здоровье", "Самоочистка внутреннего блока", "Режим I Feel", "Автоматический перезапуск",
+  "Запоминание положения жалюзи", "Таймер"];
+
+const imagesDahatsuLegendInverter =
+  ["./assets/img/catalog/dahatsu/DA-I/01.jpg",
+    "./assets/img/catalog/dahatsu/DA-I/02.jpg",
+    "./assets/img/catalog/dahatsu/DA-I/03.jpg",
+    "./assets/img/catalog/dahatsu/DA-I/04.jpg"
+  ];
+
+const descriptionDahatsuLegendInverter = "Сплит-системы Dahatsu серии Legend DC INVERTER - лаконичная модель с дизайном в классическом стиле. Данная модель станет дополнением любого интерьера, а новейшие технологии и инверторные технологии позволят наслаждаться идеальным микроклиматом в любое время года. Легендарная модель, соответствующая всем стандартам современного качества, включает в себя такие функции как: тихий и турбо режим, авторестарт, самоочистка, режим i feel, режим здоровья, защищающий от вредных бактерий и вирусов, антиплесень, горизонтальный автоповорот жалюзи, удобный 24-часовой таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и прочие функции."
+
+
+const DAHATSU_DA_I = [
+
+  // ------ Dahatsu DA-07i ------
+  {
+    article: "dahatsu-da-07i",
+    title: "Dahatsu DA-07i",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend DC Inverter",
+    link: "dahatsu-da-07i.html",
+    imgSrc: imagesDahatsuLegendInverter,
+    price: 31800, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.2, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegendInverter,
+    description: descriptionDahatsuLegendInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 685, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2350, // Производительность, Вт
+      powerConsumption: 650, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.5, // Вес, кг
+      size: "690x199x283", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 21, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "HIGHLY",
+    }
+  },
+
+  // ------ Dahatsu DA-09i ------
+  {
+    article: "dahatsu-da-09i",
+    title: "Dahatsu DA-09i",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend DC Inverter",
+    link: "dahatsu-da-09i.html",
+    imgSrc: imagesDahatsuLegendInverter,
+    price: 34400, // Цена
+    area: 30 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegendInverter,
+    description: descriptionDahatsuLegendInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2650, // Производительность, Вт
+      powerConsumption: 825, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 747, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.7, // Вес, кг
+      size: "690x199x283", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 22, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "HIGHLY",
+    }
+  },
+
+  // ------ Dahatsu DA-12i ------
+  {
+    article: "dahatsu-da-12i",
+    title: "Dahatsu DA-12i",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend DC Inverter",
+    link: "dahatsu-da-12i.html",
+    imgSrc: imagesDahatsuLegendInverter,
+    price: 37300, // Цена
+    area: 40 , // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegendInverter,
+    description: descriptionDahatsuLegendInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 1090, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3650, // Производительность, Вт
+      powerConsumption: 1010, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x200x285", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 22.5, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "HIGHLY",
+    }
+  },
+
+  // ------ Dahatsu DA-18i ------
+  {
+    article: "dahatsu-da-18i",
+    title: "Dahatsu DA-18i",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend DC Inverter",
+    link: "dahatsu-da-18i.html",
+    imgSrc: imagesDahatsuLegendInverter,
+    price: 63500, // Цена
+    area: 55 , // На площадь, м²
+    coolingCapacity: 5.1, // Мощность охлаждения, кВт
+    noise: 29, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegendInverter,
+    description: descriptionDahatsuLegendInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5100, // Производительность, Вт
+      powerConsumption: 1590, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1470, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 29, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x225x310", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 25, // Вес, кг
+      size: "709x281x537", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Dahatsu DA-24i ------
+  {
+    article: "dahatsu-da-24i",
+    title: "Dahatsu DA-24i",
+    type: "split-system",
+    company: "Dahatsu",
+    series: "Legend DC Inverter",
+    link: "dahatsu-da-24i.html",
+    imgSrc: imagesDahatsuLegendInverter,
+    price: 78300, // Цена
+    area: 75 , // На площадь, м²
+    coolingCapacity: 6.7, // Мощность охлаждения, кВт
+    noise: 31, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuLegendInverter,
+    description: descriptionDahatsuLegendInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6700, // Производительность, Вт
+      powerConsumption: 2090, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6800, // Производительность, Вт
+      powerConsumption: 1880, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x225x310", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 38.5, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "HIGHLY",
+    }
+  },
+
+
+];
+
 // -----Dahatsu Кассетный (DH-CS-A) -----
 
 
@@ -831,6 +1097,87 @@ const DAHATSU_DH_KL_A = [
       size: "1120x400x1510", // Размеры
       freon: "R410A", // Фреон
       compressorModel: "Gree",
+    }
+  },
+
+
+]
+
+// -----Dahatsu Кассетный (DH-KN-CH) -----
+
+
+const functionsDahatsu_DH_KN_CH = ["ON/OFF", "Инфракрасный пульт (в комплекте)", "Режим энергосбережения",
+  "Самоочистка внутреннего блока", "Объемное воздухо-распределение", "Турборежим", "Тихий режим", "Горячий запуск",
+  "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -15°C",
+  "Работа в режиме обогрева до -15°C", "Дренажный насос", "Самодиагностика", "Низкотемпературный комплект",
+  "Панель с круговым распределением воздушного потока", "HEALTH", "Движение жалюзи по горизонтали и вертикали", "Анти-F. Предотвращение образования неприятного запаха"];
+
+const imagesDahatsu_DH_KN_CH =
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01.png",
+    "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
+    "./assets/img/catalog/dahatsu/dh-cs-a/03.png",
+    "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
+  ];
+
+const imagesDahatsu_DH_KN_CH_2 =
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.png",
+    "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
+    "./assets/img/catalog/dahatsu/dh-cs-a/03-3.JPG",
+    "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
+  ];
+
+const descriptionDahatsu_DH_KN_CH = "Кассетная сплит-система DH-CS-A позволит быстро и равномерно создать и поддерживать комфортную температуру в помещении. Распределение воздуха на 360 градусов. Панель с круговым распределением воздушного потока обеспечивает эффективное охлаждение или нагрев. \n Данный вид кондиционеров интегрируется в подвесные потолки и осуществляет подачу воздуха в 4 потока. Новейшая модель DH-CS-A обладает привлекательным видом, компактными габаритами, множеством настроек и функций. \n Режим TURBO активирует максимальную производительность и позволяет быстрее достичь необходимой температуры."
+
+
+const DAHATSU_DH_KN_CH = [
+
+  // Dahatsu DH-CS-12A
+  {
+    article: "dahatsu-dh-cs-12a",
+    title: "Dahatsu DH-CS-12A",
+    type: "cassette",
+    company: "Dahatsu",
+    series: "DH-CS-A",
+    factory: "AUX",
+    link: "##",
+    imgSrc: imagesDahatsuDH_CS_A,
+    price: 57000, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 39, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDH_CS_A,
+    description: descriptionDahatsuDH_CS_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3520, // Производительность, Вт
+      powerConsumption: 1300, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3960, // Производительность, Вт
+      powerConsumption: 1280, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "15м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 39, // Уровень шума, дБ (A)
+      weight: 16, // Вес, кг
+      size: "570x570x260", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 28, // Вес, кг
+      size: "780x285x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -2408,6 +2755,7 @@ const dataDahatsu = [
   DAHATSU_DHP,
   DAHATSU_DS_I,
   DAHATSU_DA_H,
+  DAHATSU_DA_I,
   DAHATSU_GW_H,
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
@@ -2415,7 +2763,7 @@ const dataDahatsu = [
 ];
 
 const dataDenko = [
-    DENKO_KR,
+  DENKO_KR,
   DENKO_DCS_A,
 ];
 
@@ -3265,7 +3613,7 @@ function createProductProfile (products) {
     properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
 
 
-    profileItem.querySelector('.product-price').textContent = `${product.price.toLocaleString("ru")} ₽`
+    profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);

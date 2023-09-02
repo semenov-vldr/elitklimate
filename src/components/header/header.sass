@@ -11,9 +11,7 @@
     min-height: 56px
     padding: 16px 0
     z-index: 5
-    //box-shadow: none
     margin-bottom: 20px
-    //border-bottom: 1px solid #0000000d
     box-shadow: 0 0 10px 5px rgba(#BBBBBB, 0.2)
     &.header--index
       position: absolute
@@ -23,7 +21,6 @@
       box-shadow: none
   &.header--index
     margin-bottom: 0
-
 
 
   &__container
@@ -48,6 +45,7 @@
       top: 0
       left: 0
       max-height: 100vh
+      min-height: 500px
       height: 100%
       width: 100%
       background-color: white
@@ -55,14 +53,28 @@
       transform: translateY(-100%)
       transition: $transition
       z-index: 1
+      background-image: url('../img/hero-desktop.jpg')
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(#fff, 0.8)
       &.js-menu-open
         transform: translateY(0)
       &.js-menu-open .header__nav-close
         display: block
   &__nav-list
+    position: relative
     display: flex
     align-items: center
     gap: 32px
+    z-index: 1
     @media (max-width: $width-tablet)
       gap: 24px
     @media (max-width: $width-mobile)
@@ -154,9 +166,6 @@
       &.js-cart-count-hidden
         display: none
 
-
-
-
   &__burger
     display: none
     @media (max-width: $width-mobile)
@@ -167,6 +176,4 @@
     position: absolute
     right: 16px
     top: 16px
-
-
-
+    z-index: 1

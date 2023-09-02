@@ -22,21 +22,26 @@ function createPopularSlider () {
         spaceBetween: 16,
       },
       380: {
-        slidesPerView: "auto",
+        slidesPerView: 1.5,
         spaceBetween: 16,
       },
       480: {
-        slidesPerView: "auto",
+        slidesPerView: 2.2,
         spaceBetween: 16,
       },
 
       640: {
-        slidesPerView: "auto",
-        spaceBetween: 32,
+        slidesPerView: 2.8,
+        spaceBetween: 16,
+      },
+
+      768: {
+        slidesPerView: 3.3,
+        spaceBetween: 16,
       },
 
       1100: {
-        slidesPerView: "auto",
+        slidesPerView: 4,
         spaceBetween: 32,
       },
     }

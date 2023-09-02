@@ -1,5 +1,5 @@
 // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
-const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2"];
+const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2", "dahatsu-dhp-09", "dahatsu-dh-cs-18a", "denko-dcs-12a"];
 
 const popular = document.querySelector('.popular');
 

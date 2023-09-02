@@ -7,6 +7,7 @@ const dataDahatsu = [
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
+  DAHATSU_DH_KN_CH,
 ];
 
 const dataDenko = [

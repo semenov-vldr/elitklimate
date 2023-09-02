@@ -1,12 +1,15 @@
 .card-popular
   display: flex
   flex-direction: column
-  width: 276px
-  min-width: 276px
+  //max-width: 276px
+  width: 100%
+  min-width: 220px
   padding: 12px
   border-radius: 20px
   box-shadow: 0 0 16px 1px rgba(#BBBBBB, 0.5)
   transition: $transition
+  @media (min-width: $width-tablet)
+    max-width: 276px
 
   &__img
     display: block

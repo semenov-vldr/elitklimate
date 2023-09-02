@@ -9,7 +9,7 @@
   margin-bottom: 32px
   @media (max-width: $width-mobile)
     min-height: 56px
-    padding: 16px 0
+    padding: 12px 0
     z-index: 5
     margin-bottom: 20px
     box-shadow: 0 0 10px 5px rgba(#BBBBBB, 0.2)
@@ -21,7 +21,10 @@
       box-shadow: none
   &.header--index
     margin-bottom: 0
-
+    .header__tel
+      //color: $black
+      background-color: #e8e8e8
+      //border: none
 
   &__container
     display: flex
@@ -69,6 +72,7 @@
         transform: translateY(0)
       &.js-menu-open .header__nav-close
         display: block
+
   &__nav-list
     position: relative
     display: flex
@@ -96,7 +100,6 @@
       display: none
       @media (max-width: $width-mobile)
         display: block
-
 
   &__nav-catalog
     display: flex
@@ -165,6 +168,25 @@
         top: -22px
       &.js-cart-count-hidden
         display: none
+
+  &__tel
+    display: none
+    @media (max-width: $width-mobile)
+      display: inline-block
+      margin-left: auto
+      font-weight: 500
+      white-space: nowrap
+      color: #31708f
+      background-color: #d9edf7
+      border: 1px solid #bce8f1
+      padding: 2px 5px
+      border-radius: 4px
+      //color: #8f3131
+      //background-color: #f7d9d9
+      //border: 1px solid #f1bcbc
+      @media (max-width: 400px)
+        font-size: 14px
+
 
   &__burger
     display: none

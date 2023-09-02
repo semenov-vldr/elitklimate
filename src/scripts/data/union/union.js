@@ -17,6 +17,10 @@ const dataDenko = [
 
 const dataLG = [
   LG_Dual,
+];
+
+const dataMidea = [
+  MIDEA_MSAG1,
 ]
 
 // Общий массив всех товаров
@@ -24,6 +28,7 @@ const productsArr = [
   dataDahatsu,
   dataDenko,
   dataLG,
+  dataMidea,
 
 ].flat().flat();
 

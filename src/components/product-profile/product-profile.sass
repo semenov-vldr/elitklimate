@@ -1,7 +1,7 @@
 .product-profile
 
   &__title
-    @include fontSize(24, 48)
+    @include fontSize(20, 48)
     font-weight: 500
 
   &__columns
@@ -56,7 +56,7 @@
     width: 100%
     display: flex
     flex-direction: column
-    gap: 16px
+    gap: 8px
 
   &__property-item
     display: flex
@@ -65,9 +65,10 @@
     border-bottom: 1px solid rgba(#000, 0.1)
     padding-bottom: 8px
     gap: 16px
-    @include fontSize(16, 20)
+    @include fontSize(14, 18)
 
   &__property-title
+    color: #8e8e93
     @media (max-width: 480px)
       max-width: 250px
 
@@ -82,7 +83,7 @@
       left: 0
       right: 0
       background-color: #fff
-      border-top: 1px solid rgba(#000, 0.2)
+      border-top: 1px solid rgba(#000, 0.1)
       display: flex
       align-items: center
       justify-content: space-between

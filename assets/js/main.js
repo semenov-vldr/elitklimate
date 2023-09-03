@@ -34,6 +34,14 @@ const imagesDahatsuLegend =
 
 const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера.Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
 
+const pricesDahatsuLegend = {
+  "dahatsu_da_07h": 22500,
+  "dahatsu_da_09h": 24500,
+  "dahatsu_da_12h": 32300,
+  "dahatsu_da_18h": 52700,
+  "dahatsu_da_24h": 68000,
+  "dahatsu_da_36h": 109000,
+}
 
 const DAHATSU_DA_H = [
 
@@ -46,7 +54,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_07h, // Цена
     area: 22 , // На площадь, м²
     coolingCapacity: 2.1, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -95,7 +103,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_09h, // Цена
     area: 28 , // На площадь, м²
     coolingCapacity: 2.6, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -144,7 +152,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_12h, // Цена
     area: 35 , // На площадь, м²
     coolingCapacity: 3.5, // Мощность охлаждения, кВт
     noise: 27, // Уровень шума, дБ (A)
@@ -193,7 +201,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_18h, // Цена
     area: 55 , // На площадь, м²
     coolingCapacity: 5.3, // Мощность охлаждения, кВт
     noise: 29, // Уровень шума, дБ (A)
@@ -242,7 +250,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_24h, // Цена
     area: 75 , // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 31, // Уровень шума, дБ (A)
@@ -291,7 +299,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_36h, // Цена
     area: 100 , // На площадь, м²
     coolingCapacity: 9.7, // Мощность охлаждения, кВт
     noise: 39, // Уровень шума, дБ (A)
@@ -3657,88 +3665,11 @@ if (filter) {
 
   // ------- Фильтрация ---------
 
-  const productsGrid = document.querySelector(".products__grid");
 
-  const filterPrice = form.querySelector(".filter__item--price");
-  const filterArea = form.querySelector(".filter__item--area");
+  const minPriceInput = form.querySelector(".filter__price-min");
+  const maxPriceInput = form.querySelector(".filter__price-max");
+  const selectArea = form.querySelector(".filter__item--area select")
   const filterInverter = form.querySelector(".filter__item--inverter");
-
-  // -- filter price --
-
-  // const minPriceInput = filterPrice.querySelector(".filter__price-min");
-  // const maxPriceInput = filterPrice.querySelector(".filter__price-max");
-  //
-  // minPriceInput.addEventListener("input", filterPriceCards);
-  // maxPriceInput.addEventListener("input", filterPriceCards);
-  //
-  // function filterPriceCards () {
-  //   const minPriceValue = parseFloat(minPriceInput.value); // Введенное значение
-  //   const maxPriceValue = parseFloat(maxPriceInput.value);
-  // }
-
-
-  // -- <filter company> --
-    const filterCompany = form.querySelector(".filter__item--company");
-    if (filterCompany) {
-      const companyCheckboxes = filterCompany.querySelectorAll("input[type='checkbox']");
-      let selectedCompanies = [];
-      companyCheckboxes.forEach(companyCheckbox => {
-        companyCheckbox.addEventListener('change', function () {
-          if (this.checked) {
-            selectedCompanies.push(this.value);
-          } else {
-            selectedCompanies = selectedCompanies.filter(el => el !== this.value);
-          }
-          const filteredCompanyArray = new Set(selectedCompanies); // Массив с выбранными производителями (компаниями)
-          console.log(filteredCompanyArray);
-
-          function filterCompany (companyArray) {
-            if (companyArray) {
-              companyArray.forEach(company => {
-                const filteredCardsByCompanies = productsArr.filter(card => card.company === company);
-                renderCard(filteredCardsByCompanies);
-              })
-            }
-          };
-
-          filterCompany(filteredCompanyArray)
-        });
-      });
-    };
-  // -- </filter company> --
-
-
-
-  // -- <sorting cards> --
-
-  const filterSortingSelect = filter.querySelector(".filter__sorting select");
-
-  filterSortingSelect.addEventListener("change", function ()  {
-    let sortingProducts = [];
-
-    switch (this.value) {
-      case "initial":
-        renderCard(productsArr);
-        break;
-      case "cheaper":
-        sortingProducts = [...productsArr].sort((a, b) => a.price - b.price);
-        renderCard(sortingProducts);
-        break;
-      case "expensive":
-        sortingProducts = [...productsArr].sort((a, b) => b.price - a.price);
-        renderCard(sortingProducts);
-        break;
-      default:
-        renderCard(productsArr);
-    }
-  });
-
-
-
-
-
-  // -- </sorting cards> --
-
 
 
   // form.addEventListener("submit", (evt) => {
@@ -3748,7 +3679,123 @@ if (filter) {
   // });
 
 
+  // -----------------------------------------------------------------------------------------------
+  {
+  const blockSplitSystems = document.querySelector(".products.products--split-systems");
+  const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
+  const blockDucted = document.querySelector(".products.products--ducted");
+  const blockCassette = document.querySelector(".products.products--cassette");
+  const blockColumn = document.querySelector(".products.products--column");
+  const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
 
+// Массивы товаров (объектов) по соответствующим категорям
+  const splitSystems_Products = renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
+  const floorCeiling_Products = renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
+  const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Канальные
+  const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
+  const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
+  const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
+
+  // const filteredProductsByCategory = [
+  //   splitSystems_Products,
+  //   floorCeiling_Products,
+  //   ducted_Products,
+  //   cassettes_Products,
+  //   column_Products,
+  //   multiSplitSystems_Products
+  // ];
+
+  const blockCategoryArray = [
+    blockSplitSystems,
+    blockFloorCeiling,
+    blockDucted,
+    blockCassette,
+    blockColumn,
+    blockMultiSplitSystems
+  ];
+
+    // -- <sorting cards> --
+    const filterSortingSelect = filter.querySelector(".filter__sorting select");
+    filterSortingSelect.addEventListener("change", sortingCards);
+
+    if (filterSortingSelect) window.addEventListener("load", sortingCards);
+
+    function sortingCards () {
+      const productsGrid = document.querySelector(".products__grid");
+      const productCards = Array.from(document.querySelectorAll(".products .card"));
+
+      // Сначала дешевле
+      const sortingCheaperProductCards = [...productCards].sort((a, b) => {
+        return +a.dataset.price - +b.dataset.price;
+      });
+      // Сначала дороже
+      const sortingExpensiveProductCards = [...productCards].sort((a, b) => {
+        return +b.dataset.price - +a.dataset.price;
+      });
+      // Алфавиту
+      const sortingAlphabetProductCards = [...productCards].sort((a, b) => {
+        return a.dataset.article.localeCompare(b.dataset.article);
+      });
+
+      productsGrid.replaceChildren();
+
+      switch (filterSortingSelect.value) {
+        // Алфавиту
+        case "initial":
+          sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
+          break;
+        // Дешевле
+        case "cheaper":
+          sortingCheaperProductCards.forEach(card => productsGrid.appendChild(card));
+          break;
+        // Дороже
+        case "expensive":
+          sortingExpensiveProductCards.forEach(card => productsGrid.appendChild(card));
+          break;
+        default:
+          sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
+      };
+    };
+    // -- </sorting cards> --
+
+
+    function applyFilters () {
+      const minPrice = +minPriceInput.value;
+      const maxPrice = +maxPriceInput.value;
+      const checkboxesCompany = Array.from(document.querySelectorAll(".filter__item--company input[type='checkbox']:checked"));
+      const selectedArea = selectArea.value;
+
+      console.log(checkboxesCompany)
+
+      const filteredData = productsArr.filter(productItem => {
+        let passesFilter = true;
+        if (minPrice && productItem.price < minPrice) passesFilter = false;
+        if (maxPrice && productItem.price > maxPrice) passesFilter = false;
+        if (checkboxesCompany.length && !checkboxesCompany.some(checkbox => checkbox.value === productItem.company)) {
+          passesFilter = false;
+        }
+        if (selectedArea && productItem.area !== selectedArea) passesFilter = false;
+        return passesFilter;
+      });
+
+      renderCard(filteredData);
+    };
+
+
+     minPriceInput.addEventListener("input", applyFilters);
+     maxPriceInput.addEventListener("input", applyFilters);
+     selectArea.addEventListener("change", applyFilters);
+
+    document.querySelectorAll(".filter__item--company input[type='checkbox']").forEach(el => {
+      el.addEventListener("change", () => {
+        let newArr = productsArr.filter(productItem => el.value === productItem.company );
+        renderCard(newArr);
+      })
+    })
+
+
+  }
+  // -----------------------------------------------------------------------------------------------
 
 }
 
@@ -4159,7 +4206,8 @@ function renderCard (products) {
   const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
 
-  if (productsGrid && cardTemplate) {
+  if (!productsGrid && !cardTemplate) return
+
     productsGrid.replaceChildren();
 
     products.forEach(product => {
@@ -4175,9 +4223,9 @@ function renderCard (products) {
       cardItem.querySelector('.card__data-item-value--noise').textContent = `${product.noise} дБ`;
       cardItem.querySelector('.card__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
       productsGrid.appendChild(cardItem);
+      cardItem.setAttribute("data-price", product.price);
     });
     handlerCart();
-  }
 };
 //---------------
 
@@ -4187,37 +4235,20 @@ if (productsMain) renderCard(productsArr);
 
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
-function addProductsOfCategory (blockCategory, category) {
+function renderProductsOfCategory (blockCategory, category) {
   if (blockCategory) {
     const categoryArray = productsArr.filter(card => card.type === category);
     renderCard(categoryArray);
+    blockCategory.setAttribute("data-category", category);
     return categoryArray;
   }
 };
 
 
-const blockSplitSystems = document.querySelector(".products.products--split-systems");
-const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
-const blockDucted = document.querySelector(".products.products--ducted");
-const blockCassette = document.querySelector(".products.products--cassette");
-const blockColumn = document.querySelector(".products.products--column");
-const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
-
-// Массивы товаров (объектов) по соответствующим категорям
-const splitSystems_Products = addProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
-const floorCeiling_Products = addProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
-const ducted_Products = addProductsOfCategory(blockDucted, "ducted"); // Канальные
-const cassettes_Products = addProductsOfCategory(blockCassette, "cassette"); // Кассетные
-const column_Products = addProductsOfCategory(blockColumn, "column"); // Колонные
-const multiSplitSystems_Products = addProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
 
 
 
-
-
-
-
-
+//-------------------------------------------------
 
   // // Первично загружаются первые 6 карточек
   // const startProductsArr = productsArr.slice(0, 6);

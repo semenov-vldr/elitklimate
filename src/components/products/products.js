@@ -3,7 +3,8 @@ function renderCard (products) {
   const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
 
-  if (productsGrid && cardTemplate) {
+  if (!productsGrid && !cardTemplate) return
+
     productsGrid.replaceChildren();
 
     products.forEach(product => {
@@ -19,9 +20,9 @@ function renderCard (products) {
       cardItem.querySelector('.card__data-item-value--noise').textContent = `${product.noise} дБ`;
       cardItem.querySelector('.card__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
       productsGrid.appendChild(cardItem);
+      cardItem.setAttribute("data-price", product.price);
     });
     handlerCart();
-  }
 };
 //---------------
 
@@ -31,37 +32,20 @@ if (productsMain) renderCard(productsArr);
 
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
-function addProductsOfCategory (blockCategory, category) {
+function renderProductsOfCategory (blockCategory, category) {
   if (blockCategory) {
     const categoryArray = productsArr.filter(card => card.type === category);
     renderCard(categoryArray);
+    blockCategory.setAttribute("data-category", category);
     return categoryArray;
   }
 };
 
 
-const blockSplitSystems = document.querySelector(".products.products--split-systems");
-const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
-const blockDucted = document.querySelector(".products.products--ducted");
-const blockCassette = document.querySelector(".products.products--cassette");
-const blockColumn = document.querySelector(".products.products--column");
-const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
-
-// Массивы товаров (объектов) по соответствующим категорям
-const splitSystems_Products = addProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
-const floorCeiling_Products = addProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
-const ducted_Products = addProductsOfCategory(blockDucted, "ducted"); // Канальные
-const cassettes_Products = addProductsOfCategory(blockCassette, "cassette"); // Кассетные
-const column_Products = addProductsOfCategory(blockColumn, "column"); // Колонные
-const multiSplitSystems_Products = addProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
 
 
 
-
-
-
-
-
+//-------------------------------------------------
 
   // // Первично загружаются первые 6 карточек
   // const startProductsArr = productsArr.slice(0, 6);

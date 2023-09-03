@@ -72,11 +72,11 @@
               span
 
             label.filter__item-checkbox Да
-              input(type="radio" name="Инвертор" value="Да")
+              input(type="radio" name="Инвертор" value=true)
               span
 
             label.filter__item-checkbox Нет
-              input(type="radio" name="Инвертор" value="Нет")
+              input(type="radio" name="Инвертор" value=false)
               span
 
     button.button.button--accent.filter__form-submit(type="submit") Применить
@@ -84,6 +84,7 @@
   .filter__sorting
     span Соритровать по:
     select(name="Соритровка")
-      option(value="initial") Исходная
-      option(value="expensive") Сначала дороже
+      option(value="initial" selected) Исходная
       option(value="cheaper") Сначала дешевле
+      option(value="expensive") Сначала дороже
+

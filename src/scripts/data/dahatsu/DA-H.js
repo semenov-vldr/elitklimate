@@ -13,6 +13,14 @@ const imagesDahatsuLegend =
 
 const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера.Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
 
+const pricesDahatsuLegend = {
+  "dahatsu_da_07h": 22500,
+  "dahatsu_da_09h": 24500,
+  "dahatsu_da_12h": 32300,
+  "dahatsu_da_18h": 52700,
+  "dahatsu_da_24h": 68000,
+  "dahatsu_da_36h": 109000,
+}
 
 const DAHATSU_DA_H = [
 
@@ -25,7 +33,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_07h, // Цена
     area: 22 , // На площадь, м²
     coolingCapacity: 2.1, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -74,7 +82,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_09h, // Цена
     area: 28 , // На площадь, м²
     coolingCapacity: 2.6, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -123,7 +131,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_12h, // Цена
     area: 35 , // На площадь, м²
     coolingCapacity: 3.5, // Мощность охлаждения, кВт
     noise: 27, // Уровень шума, дБ (A)
@@ -172,7 +180,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_18h, // Цена
     area: 55 , // На площадь, м²
     coolingCapacity: 5.3, // Мощность охлаждения, кВт
     noise: 29, // Уровень шума, дБ (A)
@@ -221,7 +229,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_24h, // Цена
     area: 75 , // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 31, // Уровень шума, дБ (A)
@@ -270,7 +278,7 @@ const DAHATSU_DA_H = [
     series: "Legend",
     link: "##",
     imgSrc: imagesDahatsuLegend,
-    price: 0, // Цена
+    price: pricesDahatsuLegend.dahatsu_da_36h, // Цена
     area: 100 , // На площадь, м²
     coolingCapacity: 9.7, // Мощность охлаждения, кВт
     noise: 39, // Уровень шума, дБ (A)

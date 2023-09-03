@@ -1,5 +1,12 @@
 .products
 
+  &__title
+    @include fontSize(24, 32)
+    line-height: 1.2
+    margin-bottom: 40px
+    @media (max-width: $width-mobile)
+      margin-bottom: 32px
+
   &__grid
     display: grid
     grid-template-columns: repeat(3, 1fr)

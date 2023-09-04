@@ -1,0 +1,31 @@
+.filter-tabs
+  .filter-tabs__container
+
+    h2.filter-tabs__title Выбор компании
+    ul.filter-tabs__list
+      li.filter-tabs__item(data-company="all") Все
+        span.filter-tabs__count
+      li.filter-tabs__item(data-company="Dahatsu") Dahatsu
+      li.filter-tabs__item(data-company="Denko") Denko
+      li.filter-tabs__item(data-company="Eurohoff") Eurohoff
+      li.filter-tabs__item(data-company="LG") LG
+      li.filter-tabs__item(data-company="Midea") Midea
+      li.filter-tabs__item(data-company="Kentatsu") Kentatsu
+      li.filter-tabs__item(data-company="Hisense") Hisense
+
+    h2.filter-tabs__title Тип кондиционера
+    ul.filter-tabs__list
+      li.filter-tabs__item(data-type="all") Все
+      li.filter-tabs__item(data-type="false") On/Off
+      li.filter-tabs__item(data-type="true") Inverter
+
+    .filter-tabs__sorting
+      span Соритровка:
+      select(name="Соритровка")
+        option(value="initial" selected) исходная
+        option(value="cheaper") сначала дешевле
+        option(value="expensive") сначала дороже
+
+
+
+

@@ -21,8 +21,11 @@ function renderCard (products) {
       cardItem.querySelector('.card__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
       productsGrid.appendChild(cardItem);
       cardItem.setAttribute("data-price", product.price);
+      cardItem.setAttribute("data-type", product.inverter);
+      cardItem.setAttribute("data-company", product.company);
     });
     handlerCart();
+    filterTabsCards();
 };
 //---------------
 

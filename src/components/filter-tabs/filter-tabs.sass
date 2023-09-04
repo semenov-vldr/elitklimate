@@ -1,0 +1,52 @@
+.filter-tabs
+
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 24px
+    @media (max-width: $width-mobile)
+      gap: 16px
+
+  &__title
+    font-weight: 500
+    @include fontSize(18, 24)
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 12px 16px
+    align-items: center
+    @media (max-width: $width-mobile)
+      gap: 12px
+
+  &__item
+    @include fontSize(14, 20)
+    white-space: nowrap
+    padding: 6px 12px
+    border: 1px solid $black
+    border-radius: 8px
+    cursor: pointer
+    transition: $transition
+    @media (max-width: $width-mobile)
+      padding: 2px 8px
+    &.js-filter-active,
+    &:hover
+      background-color: $black
+      color: #fff
+      border-color: $black
+
+      //background-color: #d9edf7
+      //color: #31708f
+      //border-color: #31708f
+
+  &__count
+    display: inline-block
+    margin-left: 6px
+
+  &__sorting
+    margin-top: 16px
+    select
+      border-radius: 6px
+
+
+

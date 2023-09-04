@@ -15,6 +15,89 @@ function unblockScrollBody () {
   }
 };
 
+const phoneInputs = document.querySelectorAll('input[data-tel-input]');
+
+const getInputNumbersValue = (input) => {
+  return input.value.replace(/\D/g,"");
+};
+
+const onPhoneInput = (evt) => {
+  const input = evt.target;
+  let inputNumbersValue = getInputNumbersValue(input);
+  let formattedInputValue = "";
+  let selectionStart = input.selectionStart;
+
+  if ( !inputNumbersValue ) input.value = "";
+
+
+  if ( input.value.length !== selectionStart ) {
+    if ( evt.data && /\D/g.test(evt.data) ) {
+      input.value = formattedInputValue;
+    }
+    return;
+  }
+
+  if ( ["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1 ) {
+    // Российские номера
+    if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+    let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
+    formattedInputValue = firstSymbols + " ";
+
+    if (inputNumbersValue[0] === "8") {
+      //phoneInputs[0].setAttribute("pattern", ".{17,}");
+      console.log(phoneInputs[0].getAttribute("pattern"));
+    }
+
+    if (inputNumbersValue.length > 1) {
+      formattedInputValue += "(" + inputNumbersValue.slice(1, 4);
+    }
+
+    if (inputNumbersValue.length >= 5) {
+      formattedInputValue += ") " + inputNumbersValue.slice(4, 7);
+    }
+
+    if (inputNumbersValue.length >= 8) {
+      formattedInputValue += "-" + inputNumbersValue.slice(7, 9);
+    }
+
+    if (inputNumbersValue.length >= 10) {
+      formattedInputValue += "-" + inputNumbersValue.slice(9, 11);
+    }
+
+// Не российские номера
+  } else formattedInputValue = "+" + inputNumbersValue;
+
+  input.value = formattedInputValue;
+};
+
+// Стирание первого символа
+const onPhoneKeyDown = (evt) => {
+  const input = evt.target;
+  if (evt.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+    input.value = "";
+  }
+};
+
+// Вставка цифр в любое место
+const onPhonePaste = (evt) => {
+  const pasted = evt.clipboardData || window.clipboardData;
+  const input = evt.target;
+  const inputNumbersValue = getInputNumbersValue(input);
+
+  if (pasted) {
+    const pastedText = pasted.getData("Text");
+    if ( /\D/g.test(pastedText) ) {
+      input.value = inputNumbersValue;
+    }
+  }
+};
+
+phoneInputs.forEach(input => {
+  input.addEventListener('input', onPhoneInput);
+  input.addEventListener("keydown", onPhoneKeyDown);
+  input.addEventListener("paste", onPhonePaste);
+});
+
 const powerSupply = "220-240V,50HZ";
 const powerSupplyOnePhase = "1 ФАЗА 220-240V,50HZ";
 const powerSupplyThreePhase = "3 ФАЗА 380-415V,50HZ";
@@ -3461,9 +3544,22 @@ function handlerCart () {
         formPopup.classList.add("js-popup-active");
         blockScrollBody();
 
+        if (formPopup.classList.contains('js-popup-active')) {
+          console.log('open popup')
+          let mc = new Hammer(formPopup);
+
+          mc.get('swipe').set({
+            direction: Hammer.DIRECTION_ALL,
+            // threshold: 10,
+            // velocity: 0.3
+          });
+
+          mc.on('swipedown', closePopupForm);
+        };
+
+
         // Добавление в поп-ап для карточки профиля (внутрення страница) ед.изм. "м²"
         if (card.classList.contains("product-profile")) formPopupArea.textContent = `${cardArea} м²`;
-
 
         function closePopupForm () {
           formPopup.classList.remove("js-popup-active");
@@ -3908,24 +4004,34 @@ if (header) {
   const burger = header.querySelector('.header__burger');
   const menuClose = header.querySelector('.header__nav-close');
   const navLinks = header.querySelectorAll(".header__nav-link");
+  const menuActiveClass = "js-menu-open";
 
+  function closeMobileMenu () {
+    menu.classList.remove(menuActiveClass);
+    unblockScrollBody();
+  };
 
   burger.addEventListener('click', () => {
-    menu.classList.add('js-menu-open');
+    menu.classList.add(menuActiveClass);
     blockScrollBody();
+
+    if (menu.classList.contains(menuActiveClass)) {
+      console.log('open menu')
+      let mc = new Hammer(menu);
+      mc.get('swipe').set({
+        direction: Hammer.DIRECTION_ALL,
+      });
+      mc.on('swipeup', closeMobileMenu);
+    }
   });
 
-  menuClose.addEventListener('click', () => {
-    menu.classList.remove('js-menu-open');
-    unblockScrollBody();
-  });
+  menuClose.addEventListener('click', closeMobileMenu);
 
   navLinks.forEach(navLink => {
-    navLink.addEventListener("click", () => {
-      menu.classList.remove('js-menu-open');
-      unblockScrollBody();
-    })
-  })
+    navLink.addEventListener("click", closeMobileMenu)
+  });
+
+
 
 }
 

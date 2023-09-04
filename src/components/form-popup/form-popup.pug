@@ -31,7 +31,7 @@
       label.visually-hidden(for="tel") Телефон
 
       input.form__field(type="text" id="name" name="name" placeholder="Ваше имя*" required)
-      input.form__field(type="tel" id="tel" name="tel" placeholder="Телефон*" required)
+      input.form__field(type="tel" id="tel" name="tel" data-tel-input maxlength='18' placeholder="Телефон*" required)
       textarea.form__field(id="text" name="text" placeholder="Укажите квадратные метры вашего помещения")
 
       button.button.button--accent.form__button.form-popup__button(type="submit") Отправить заявку

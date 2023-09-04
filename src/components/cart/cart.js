@@ -125,9 +125,22 @@ function handlerCart () {
         formPopup.classList.add("js-popup-active");
         blockScrollBody();
 
+        if (formPopup.classList.contains('js-popup-active')) {
+          console.log('open popup')
+          let mc = new Hammer(formPopup);
+
+          mc.get('swipe').set({
+            direction: Hammer.DIRECTION_ALL,
+            // threshold: 10,
+            // velocity: 0.3
+          });
+
+          mc.on('swipedown', closePopupForm);
+        };
+
+
         // Добавление в поп-ап для карточки профиля (внутрення страница) ед.изм. "м²"
         if (card.classList.contains("product-profile")) formPopupArea.textContent = `${cardArea} м²`;
-
 
         function closePopupForm () {
           formPopup.classList.remove("js-popup-active");

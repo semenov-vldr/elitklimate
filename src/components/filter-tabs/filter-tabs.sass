@@ -44,12 +44,23 @@
     margin-left: 6px
 
   &__sorting
+    display: flex
+    flex-direction: column
+    gap: 4px
     margin-top: 16px
-    margin-left: auto
+    //margin-left: auto
     select
+      outline: none
       border-radius: 6px
       padding: 4px
       cursor: pointer
-
-
-
+      background-color: transparent
+      border: 1px solid $black
+      color: $black
+      width: fit-content
+      &:focus
+        border: 1px solid $black
+    span
+      opacity: 0.6
+      @media (max-width: $width-mobile)
+        font-size: 14px

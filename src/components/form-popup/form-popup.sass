@@ -86,8 +86,6 @@
         margin: 0
 
 
-
-
   &-orders
     width: 100%
     display: flex
@@ -110,12 +108,32 @@
 
   &-orders__name
     font-weight: 500
+    margin-bottom: 8px
 
   &-orders__info
     display: flex
     flex-direction: column
     gap: 4px
     @include fontSize(16, 20)
+
+  &-orders__area,
+  &-orders__price
+    position: relative
+    display: flex
+    align-items: center
+    gap: 8px
+    &::before
+      content: ""
+      display: inline-block
+      width: 25px
+      height: 25px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+  &-orders__area::before
+    background-image: url('../img/icons/square-metr.svg')
+  &-orders__price::before
+    background-image: url('../img/icons/price.svg')
 
   &__sum
     color: #31708f

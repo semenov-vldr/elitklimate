@@ -52,6 +52,8 @@
       border: 1px solid rgba(#000, 0.1)
       border-radius: 24px 24px 0 0
       box-shadow: 0px -5px 20px 10px rgb(15 15 15 / 20%)
+      height: 85%
+      justify-content: flex-start
 
   &__header
     width: 100%
@@ -70,11 +72,20 @@
     opacity: 0.6
     &:hover
       opacity: 0.4
-
+    svg
+      width: 18px
+      height: 18px
 
   &__form
     max-width: initial
     margin-top: 32px
+    height: 100%
+    @media (max-width: $width-mobile)
+      gap: 16px
+      .form__field
+        margin: 0
+
+
 
 
   &-orders
@@ -118,6 +129,9 @@
 
   &__button
     border-radius: 8px
+    min-height: 48px
+    @media (max-width: $width-mobile)
+      margin-top: auto
 
   &__quantity
     margin-right: auto

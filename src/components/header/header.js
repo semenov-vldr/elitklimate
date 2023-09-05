@@ -33,8 +33,6 @@ if (header) {
     navLink.addEventListener("click", closeMobileMenu)
   });
 
-
-
 }
 
 

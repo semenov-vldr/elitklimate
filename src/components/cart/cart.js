@@ -126,15 +126,10 @@ function handlerCart () {
         blockScrollBody();
 
         if (formPopup.classList.contains('js-popup-active')) {
-          console.log('open popup')
           let mc = new Hammer(formPopup);
-
           mc.get('swipe').set({
             direction: Hammer.DIRECTION_ALL,
-            // threshold: 10,
-            // velocity: 0.3
           });
-
           mc.on('swipedown', closePopupForm);
         };
 

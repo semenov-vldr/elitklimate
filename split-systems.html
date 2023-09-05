@@ -56,87 +56,34 @@
         <div class="products products--split-systems">
           <div class="products__container container">
             <h1 class="products__title">Бытовые сплит-системы</h1>
-            <div class="filter">
-              <button class="filter__icon"><img src="./assets/img/icons/settings.svg"></button>
-              <form class="filter__form">
-                <ul class="filter__list">
-                  <li class="filter__item filter__item--header"><span class="filter__item-title filter__item-title--header">Фильтры</span>
-                    <button class="filter__close" type="button">
-                      <svg fill="1C1B1F" width="14" height="14">
-                        <use href="./assets/img/sprite.svg#close"></use>
-                      </svg>
-                    </button>
-                  </li>
-                  <li class="filter__item filter__item--price"><span class="filter__item-title">Цена</span>
-                    <div class="filter__item-content">
-                      <input class="filter__price-min" type="number" placeholder="От 0">
-                      <input class="filter__price-max" type="number" placeholder="До 999 000">
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--area"><span class="filter__item-title">Площадь помещения</span>
-                    <div class="filter__item-content">
-                      <select name="Площадь помещения">
-                        <option value="all">Не выбрано</option>
-                        <option value="20">От 20 до 35 м2</option>
-                        <option value="35">От 35 до 50 м2</option>
-                        <option value="50">От 50 до 70 м2</option>
-                        <option value="70">От 70 до 100 м2</option>
-                        <option value="100">От 100 до 140 м2</option>
-                        <option value="140">От 140 м2 и более</option>
-                      </select>
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--company"><span class="filter__item-title">Производитель</span>
-                    <div class="filter__item-content">
-                      <fieldset>
-                        <label class="filter__item-checkbox">Dahatsu
-                          <input type="checkbox" name="Производитель" value="Dahatsu"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Denko
-                          <input type="checkbox" name="Производитель" value="Denko"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Eurohoff
-                          <input type="checkbox" name="Производитель" value="Eurohoff"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">LG
-                          <input type="checkbox" name="Производитель" value="LG"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Hisense
-                          <input type="checkbox" name="Производитель" value="Hisense"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Kentatsu
-                          <input type="checkbox" name="Производитель" value="Kentatsu"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Midea
-                          <input type="checkbox" name="Производитель" value="Midea"><span></span>
-                        </label>
-                      </fieldset>
-                    </div>
-                  </li>
-                  <li class="filter__item filter__item--inverter"><span class="filter__item-title">Инвертор</span>
-                    <div class="filter__item-content">
-                      <fieldset>
-                        <label class="filter__item-checkbox">Все
-                          <input type="radio" name="Инвертор" value="Все"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Да
-                          <input type="radio" name="Инвертор" value="true"><span></span>
-                        </label>
-                        <label class="filter__item-checkbox">Нет
-                          <input type="radio" name="Инвертор" value="false"><span></span>
-                        </label>
-                      </fieldset>
-                    </div>
-                  </li>
+            <!--include ../filter/filter-->
+            <div class="filter-tabs">
+              <div class="filter-tabs__container">
+                <h2 class="filter-tabs__title">Выбор компании</h2>
+                <ul class="filter-tabs__list filter-tabs__list--company">
+                  <li class="filter-tabs__item" data-company="all">Все<span class="filter-tabs__count"></span></li>
+                  <!--li.filter-tabs__item(data-company="Dahatsu") Dahatsu-->
+                  <!--li.filter-tabs__item(data-company="Denko") Denko-->
+                  <!--li.filter-tabs__item(data-company="Eurohoff") Eurohoff-->
+                  <!--li.filter-tabs__item(data-company="LG") LG-->
+                  <!--li.filter-tabs__item(data-company="Midea") Midea-->
+                  <!--li.filter-tabs__item(data-company="Kentatsu") Kentatsu-->
+                  <!--li.filter-tabs__item(data-company="Hisense") Hisense-->
                 </ul>
-                <button class="button button--accent filter__form-submit" type="submit">Применить</button>
-              </form>
-              <div class="filter__sorting"><span>Соритровать по:</span>
-                <select name="Соритровка">
-                  <option value="initial" selected>Исходная</option>
-                  <option value="cheaper">Сначала дешевле</option>
-                  <option value="expensive">Сначала дороже</option>
-                </select>
+                <h2 class="filter-tabs__title">Тип кондиционера</h2>
+                <ul class="filter-tabs__list">
+                  <li class="filter-tabs__item" data-type="all">Все</li>
+                  <li class="filter-tabs__item" data-type="false">On/Off</li>
+                  <li class="filter-tabs__item" data-type="true">Inverter</li>
+                </ul>
+                <div class="filter-tabs__sorting">
+                  <!--span Соритровка:-->
+                  <select name="Соритровка">
+                    <option value="initial" selected>По алфавиту</option>
+                    <option value="cheaper">Сначала дешевле</option>
+                    <option value="expensive">Сначала дороже</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div class="products__grid">

@@ -135,7 +135,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-07h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_07h, // Цена
     area: 22 , // На площадь, м²
@@ -184,7 +184,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-09h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_09h, // Цена
     area: 28 , // На площадь, м²
@@ -233,7 +233,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-12h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_12h, // Цена
     area: 35 , // На площадь, м²
@@ -282,7 +282,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-18h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_18h, // Цена
     area: 55 , // На площадь, м²
@@ -331,7 +331,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-24h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_24h, // Цена
     area: 75 , // На площадь, м²
@@ -380,7 +380,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-36h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_36h, // Цена
     area: 100 , // На площадь, м²
@@ -2902,18 +2902,18 @@ const EUROHOFF_EV = [
     }
   },
 
-  // ------ Eurohoff EV-07 ------
+  // ------ Eurohoff EV-09 ------
   {
-    article: "eurohoff-ev-07",
-    title: "Eurohoff EV-07",
+    article: "eurohoff-ev-09",
+    title: "Eurohoff EV-09",
     type: "split-system",
     company: "Eurohoff",
     series: "ON/OFF",
     link: "eurohoff-ev-07.html",
     imgSrc: images_Eurohoff_EV,
-    price: prices_Eurohoff_EV.eurohoff_ev_07, // Цена
-    area: 22 , // На площадь, м²
-    coolingCapacity: 2, // Мощность охлаждения, кВт
+    price: prices_Eurohoff_EV.eurohoff_ev_09, // Цена
+    area: 28 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
     inverter: false, // Наличие инвертора (да/нет)
 
@@ -2922,13 +2922,13 @@ const EUROHOFF_EV = [
 
     // Охлаждение
     cooling: {
-      performance: 2050, // Производительность, Вт
-      powerConsumption: 639, // Потребл. мощность, Вт
+      performance: 2600, // Производительность, Вт
+      powerConsumption: 810, // Потребл. мощность, Вт
     },
     // Обогрев
     heating: {
-      performance: 2100, // Производительность, Вт
-      powerConsumption: 582, // Потребл. мощность, Вт
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 750, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
     maxTrackLength: 7, // Макс. длина трассы, м
@@ -2944,8 +2944,155 @@ const EUROHOFF_EV = [
     // Внешний блок
     outdoorUnit: {
       noise: 53, // Уровень шума, дБ (A)
-      weight: 20, // Вес, кг
+      weight: 20.8, // Вес, кг
       size: "696x256x432", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "RECHI",
+    }
+  },
+
+  // ------ Eurohoff EV-12 ------
+  {
+    article: "eurohoff-ev-12",
+    title: "Eurohoff EV-12",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "ON/OFF",
+    link: "eurohoff-ev-12.html",
+    imgSrc: images_Eurohoff_EV,
+    price: prices_Eurohoff_EV.eurohoff_ev_12, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 3.4, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EV,
+    description: description_Eurohoff_EV, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3400, // Производительность, Вт
+      powerConsumption: 1060, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3900, // Производительность, Вт
+      powerConsumption: 1055, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 7, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 8.7, // Вес, кг
+      size: "865x200x290", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 23.9, // Вес, кг
+      size: "700x245x544", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "RECHI",
+    }
+  },
+
+  // ------ Eurohoff EV-18 ------
+  {
+    article: "eurohoff-ev-18",
+    title: "Eurohoff EV-18",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "ON/OFF",
+    link: "eurohoff-ev-18.html",
+    imgSrc: images_Eurohoff_EV,
+    price: prices_Eurohoff_EV.eurohoff_ev_18, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 4.8, // Мощность охлаждения, кВт
+    noise: 28, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EV,
+    description: description_Eurohoff_EV, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1460, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1400, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 7, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 28, // Уровень шума, дБ (A)
+      weight: 8.7, // Вес, кг
+      size: "865x200x290", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 32.7, // Вес, кг
+      size: "800x275x533", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "RECHI",
+    }
+  },
+
+  // ------ Eurohoff EV-18 ------
+  {
+    article: "eurohoff-ev-24",
+    title: "Eurohoff EV-24",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "ON/OFF",
+    link: "eurohoff-ev-24.html",
+    imgSrc: images_Eurohoff_EV,
+    price: prices_Eurohoff_EV.eurohoff_ev_24, // Цена
+    area: 75, // На площадь, м²
+    coolingCapacity: 6.5, // Мощность охлаждения, кВт
+    noise: 30, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EV,
+    description: description_Eurohoff_EV, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6500, // Производительность, Вт
+      powerConsumption: 2160, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6800, // Производительность, Вт
+      powerConsumption: 2180, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 7, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 30, // Уровень шума, дБ (A)
+      weight: 11.6, // Вес, кг
+      size: "1008x225x318", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 47.3, // Вес, кг
+      size: "890x353x697", // Размеры
       freon: "R32", // Фреон
       compressorModel: "RECHI",
     }
@@ -2978,7 +3125,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p07sp2.html",
     imgSrc: imagesLGDual,
     price: 62700, // Цена
     area: 22, // На площадь, м²
@@ -3026,7 +3173,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p09sp2.html",
     imgSrc: imagesLGDual,
     price: 69500, // Цена
     area: 28, // На площадь, м²
@@ -3074,7 +3221,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p12sp",
     imgSrc: imagesLGDual,
     price: 78400, // Цена
     area: 35, // На площадь, м²
@@ -3122,7 +3269,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p18sp.html",
     imgSrc: imagesLGDual,
     price: 110000, // Цена
     area: 55, // На площадь, м²
@@ -3447,6 +3594,10 @@ const dataDenko = [
   DENKO_DCS_A,
 ];
 
+const dataEurohoff = [
+  EUROHOFF_EV,
+];
+
 const dataLG = [
   LG_Dual,
 ];
@@ -3459,6 +3610,7 @@ const dataMidea = [
 const productsArr = [
   dataDahatsu,
   dataDenko,
+  dataEurohoff,
   dataLG,
   dataMidea,
 
@@ -3880,7 +4032,6 @@ if (filter) {
 
   // ------- Фильтрация ---------
 
-
   const minPriceInput = form.querySelector(".filter__price-min");
   const maxPriceInput = form.querySelector(".filter__price-max");
   const selectArea = form.querySelector(".filter__item--area select")
@@ -3896,91 +4047,12 @@ if (filter) {
 
   // -----------------------------------------------------------------------------------------------
   {
-  const blockSplitSystems = document.querySelector(".products.products--split-systems");
-  const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
-  const blockDucted = document.querySelector(".products.products--ducted");
-  const blockCassette = document.querySelector(".products.products--cassette");
-  const blockColumn = document.querySelector(".products.products--column");
-  const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
-
-// Массивы товаров (объектов) по соответствующим категорям
-  const splitSystems_Products = renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
-  const floorCeiling_Products = renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
-  const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Канальные
-  const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
-  const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
-  const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
-
-  // const filteredProductsByCategory = [
-  //   splitSystems_Products,
-  //   floorCeiling_Products,
-  //   ducted_Products,
-  //   cassettes_Products,
-  //   column_Products,
-  //   multiSplitSystems_Products
-  // ];
-
-  const blockCategoryArray = [
-    blockSplitSystems,
-    blockFloorCeiling,
-    blockDucted,
-    blockCassette,
-    blockColumn,
-    blockMultiSplitSystems
-  ];
-
-    // -- <sorting cards> --
-    // const filterSortingSelect = filter.querySelector(".filter__sorting select");
-    // filterSortingSelect.addEventListener("change", sortingCards);
-    //
-    // if (filterSortingSelect) window.addEventListener("load", sortingCards);
-    //
-    // function sortingCards () {
-    //   const productsGrid = document.querySelector(".products__grid");
-    //   const productCards = Array.from(document.querySelectorAll(".products .card"));
-    //
-    //   // Сначала дешевле
-    //   const sortingCheaperProductCards = [...productCards].sort((a, b) => {
-    //     return +a.dataset.price - +b.dataset.price;
-    //   });
-    //   // Сначала дороже
-    //   const sortingExpensiveProductCards = [...productCards].sort((a, b) => {
-    //     return +b.dataset.price - +a.dataset.price;
-    //   });
-    //   // Алфавиту
-    //   const sortingAlphabetProductCards = [...productCards].sort((a, b) => {
-    //     return a.dataset.article.localeCompare(b.dataset.article);
-    //   });
-    //
-    //   productsGrid.replaceChildren();
-    //
-    //   switch (filterSortingSelect.value) {
-    //     // Алфавиту
-    //     case "initial":
-    //       sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
-    //       break;
-    //     // Дешевле
-    //     case "cheaper":
-    //       sortingCheaperProductCards.forEach(card => productsGrid.appendChild(card));
-    //       break;
-    //     // Дороже
-    //     case "expensive":
-    //       sortingExpensiveProductCards.forEach(card => productsGrid.appendChild(card));
-    //       break;
-    //     default:
-    //       sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
-    //   };
-    // };
-    // -- </sorting cards> --
-
 
     function applyFilters () {
       const minPrice = +minPriceInput.value;
       const maxPrice = +maxPriceInput.value;
       const checkboxesCompany = Array.from(document.querySelectorAll(".filter__item--company input[type='checkbox']:checked"));
       const selectedArea = selectArea.value;
-
-      console.log(checkboxesCompany)
 
       const filteredData = productsArr.filter(productItem => {
         let passesFilter = true;
@@ -3992,7 +4064,6 @@ if (filter) {
         if (selectedArea && productItem.area !== selectedArea) passesFilter = false;
         return passesFilter;
       });
-
       renderCard(filteredData);
     };
 
@@ -4005,13 +4076,10 @@ if (filter) {
       el.addEventListener("change", () => {
         let newArr = productsArr.filter(productItem => el.value === productItem.company );
         renderCard(newArr);
-      })
-    })
-
-
+      });
+    });
   }
   // -----------------------------------------------------------------------------------------------
-
 }
 
 
@@ -4022,7 +4090,21 @@ function filterTabsCards () {
   if (!filterTabsBlock) return;
 
   const filterTabsList = filterTabsBlock.querySelectorAll(".filter-tabs__list");
-  const listOfRenderedCards = document.querySelectorAll(".products__grid .card");
+  const listOfRenderedCards = Array.from( document.querySelectorAll(".products__grid .card") );
+  const tabsListCompany = filterTabsBlock.querySelector(".filter-tabs__list--company");
+
+  // Динамическое добавление табов компаний
+  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
+
+  uniqueCompanyNames.forEach(companyName => {
+    const tagLi = document.createElement("li");
+    tagLi.classList.add("filter-tabs__item");
+    tagLi.dataset.company = companyName;
+    tagLi.textContent = companyName;
+    tabsListCompany.appendChild(tagLi)
+  });
+
+
 
   filterTabsBlock.querySelector(".filter-tabs__count").textContent = listOfRenderedCards.length;
 
@@ -4049,19 +4131,15 @@ function filterTabsCards () {
       const tabCompanyTarget = companyTab.dataset.company;
       listOfRenderedCards.forEach(renderedCard => {
         if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
-          renderedCard.classList.remove(classCompanyHidden)
+          renderedCard.classList.remove(classCompanyHidden);
         } else {
-          renderedCard.classList.add(classCompanyHidden)
+          renderedCard.classList.add(classCompanyHidden);
         }
       });
     });
   });
 
-
-
   const visibleCards = document.querySelectorAll(`.products__grid .card:not(.${classCompanyHidden})`);
-
-
 
   // -- <sorting cards> --
   const filterSortingSelect = filterTabsBlock.querySelector(".filter-tabs__sorting select");
@@ -4107,12 +4185,7 @@ function filterTabsCards () {
   };
   // -- </sorting cards> --
 
-
-
-
 };
-
-
 
 
 const header = document.querySelector('header.header');
@@ -4344,7 +4417,7 @@ function createPopularSlider () {
 
 
 // Список артикулов товаров, которые выводятся в блоке (слайдере) "Популярное"
-const articlesPopularCards = ["dahatsu-dhp-07", "denko-kr-09", "lg-p07sp2", "dahatsu-dhp-09", "dahatsu-dh-cs-18a", "denko-dcs-12a"];
+const articlesPopularCards = ["dahatsu-dhp-07", "dahatsu-da-07h", "lg-p07sp2", "dahatsu-dhp-09", "eurohoff-ev-09", "dahatsu-dh-kn-18ch"];
 
 const popular = document.querySelector('.popular');
 
@@ -4398,7 +4471,6 @@ function createProductProfile (products) {
   if (!breadcrumbs) return;
 
   const breadcrumbsValue = breadcrumbs.querySelector("span.breadcrumbs__item")?.textContent;
-
   const productProfileTemplate = document.querySelector('#product-profile-template')?.content.querySelector('.product-profile');
 
   products.forEach(product => {
@@ -4415,8 +4487,10 @@ function createProductProfile (products) {
       const tagImg = document.createElement("img");
       tagImg.classList.add("swiper-slide");
       tagImg.src = src;
+      tagImg.setAttribute("data-src", tagImg.src);
+      tagImg.setAttribute('data-fancybox', "images-index");
       swiperTopWrapper.appendChild(tagImg);
-      if (i ===0) {
+      if (i === 0) {
         tagImg.classList.add("product-img");
       }
     });
@@ -4557,6 +4631,30 @@ function renderCard (products) {
 const productsMain = document.querySelector(".products.products--main");
 if (productsMain) renderCard(productsArr);
 
+
+const blockSplitSystems = document.querySelector(".products.products--split-systems");
+const blockFloorCeiling = document.querySelector(".products.products--floor-ceiling");
+const blockDucted = document.querySelector(".products.products--ducted");
+const blockCassette = document.querySelector(".products.products--cassette");
+const blockColumn = document.querySelector(".products.products--column");
+const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
+
+// Массивы товаров (объектов) по соответствующим категорям
+const splitSystems_Products = renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
+const floorCeiling_Products = renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
+const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Канальные
+const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
+const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
+const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
+
+const blockCategoryArray = [
+  blockSplitSystems,
+  blockFloorCeiling,
+  blockDucted,
+  blockCassette,
+  blockColumn,
+  blockMultiSplitSystems
+];
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {

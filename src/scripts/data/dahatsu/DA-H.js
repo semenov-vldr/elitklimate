@@ -31,7 +31,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-07h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_07h, // Цена
     area: 22 , // На площадь, м²
@@ -80,7 +80,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-09h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_09h, // Цена
     area: 28 , // На площадь, м²
@@ -129,7 +129,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-12h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_12h, // Цена
     area: 35 , // На площадь, м²
@@ -178,7 +178,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-18h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_18h, // Цена
     area: 55 , // На площадь, м²
@@ -227,7 +227,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-24h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_24h, // Цена
     area: 75 , // На площадь, м²
@@ -276,7 +276,7 @@ const DAHATSU_DA_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Legend",
-    link: "##",
+    link: "dahatsu-da-36h.html",
     imgSrc: imagesDahatsuLegend,
     price: pricesDahatsuLegend.dahatsu_da_36h, // Цена
     area: 100 , // На площадь, м²

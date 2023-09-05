@@ -23,7 +23,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p07sp2.html",
     imgSrc: imagesLGDual,
     price: 62700, // Цена
     area: 22, // На площадь, м²
@@ -71,7 +71,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p09sp2.html",
     imgSrc: imagesLGDual,
     price: 69500, // Цена
     area: 28, // На площадь, м²
@@ -119,7 +119,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p12sp",
     imgSrc: imagesLGDual,
     price: 78400, // Цена
     area: 35, // На площадь, м²
@@ -167,7 +167,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "",
+    link: "lg-p18sp.html",
     imgSrc: imagesLGDual,
     price: 110000, // Цена
     area: 55, // На площадь, м²

@@ -9,7 +9,6 @@ function createProductProfile (products) {
   if (!breadcrumbs) return;
 
   const breadcrumbsValue = breadcrumbs.querySelector("span.breadcrumbs__item")?.textContent;
-
   const productProfileTemplate = document.querySelector('#product-profile-template')?.content.querySelector('.product-profile');
 
   products.forEach(product => {
@@ -26,8 +25,10 @@ function createProductProfile (products) {
       const tagImg = document.createElement("img");
       tagImg.classList.add("swiper-slide");
       tagImg.src = src;
+      tagImg.setAttribute("data-src", tagImg.src);
+      tagImg.setAttribute('data-fancybox', "images-index");
       swiperTopWrapper.appendChild(tagImg);
-      if (i ===0) {
+      if (i === 0) {
         tagImg.classList.add("product-img");
       }
     });

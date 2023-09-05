@@ -15,6 +15,10 @@ const dataDenko = [
   DENKO_DCS_A,
 ];
 
+const dataEurohoff = [
+  EUROHOFF_EV,
+];
+
 const dataLG = [
   LG_Dual,
 ];
@@ -27,6 +31,7 @@ const dataMidea = [
 const productsArr = [
   dataDahatsu,
   dataDenko,
+  dataEurohoff,
   dataLG,
   dataMidea,
 

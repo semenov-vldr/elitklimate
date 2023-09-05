@@ -4,7 +4,21 @@ function filterTabsCards () {
   if (!filterTabsBlock) return;
 
   const filterTabsList = filterTabsBlock.querySelectorAll(".filter-tabs__list");
-  const listOfRenderedCards = document.querySelectorAll(".products__grid .card");
+  const listOfRenderedCards = Array.from( document.querySelectorAll(".products__grid .card") );
+  const tabsListCompany = filterTabsBlock.querySelector(".filter-tabs__list--company");
+
+  // Динамическое добавление табов компаний
+  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
+
+  uniqueCompanyNames.forEach(companyName => {
+    const tagLi = document.createElement("li");
+    tagLi.classList.add("filter-tabs__item");
+    tagLi.dataset.company = companyName;
+    tagLi.textContent = companyName;
+    tabsListCompany.appendChild(tagLi)
+  });
+
+
 
   filterTabsBlock.querySelector(".filter-tabs__count").textContent = listOfRenderedCards.length;
 
@@ -31,19 +45,15 @@ function filterTabsCards () {
       const tabCompanyTarget = companyTab.dataset.company;
       listOfRenderedCards.forEach(renderedCard => {
         if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
-          renderedCard.classList.remove(classCompanyHidden)
+          renderedCard.classList.remove(classCompanyHidden);
         } else {
-          renderedCard.classList.add(classCompanyHidden)
+          renderedCard.classList.add(classCompanyHidden);
         }
       });
     });
   });
 
-
-
   const visibleCards = document.querySelectorAll(`.products__grid .card:not(.${classCompanyHidden})`);
-
-
 
   // -- <sorting cards> --
   const filterSortingSelect = filterTabsBlock.querySelector(".filter-tabs__sorting select");
@@ -89,9 +99,4 @@ function filterTabsCards () {
   };
   // -- </sorting cards> --
 
-
-
-
 };
-
-

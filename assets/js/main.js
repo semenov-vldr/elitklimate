@@ -4163,9 +4163,12 @@ function filterTabsCards () {
       const spanEmptyCards = document.createElement("span");
       spanEmptyCards.classList.add("message-empty");
       spanEmptyCards.textContent = "Товар отсутствует.";
-      productGrid.appendChild(spanEmptyCards);
+      if (!productGrid.querySelector(".message-empty")) {
+        productGrid.appendChild(spanEmptyCards);
+      }
+
     } else {
-      productGrid.querySelector(".message-empty").remove();
+      productGrid.querySelectorAll(".message-empty").forEach(el => el.remove());
     }
   };
 

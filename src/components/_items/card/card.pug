@@ -1,40 +1,18 @@
-//article.card
-//  a(href="##")
-//    img.card__img(src="./assets/img/catalog/01.jpg")
-//    h3.card__title Dahatsu DHP-07/DHV-07
-//  span.card__price 25 000 ₽
-//
-//  ul.card__data
-//    li.card__data-item На площадь:
-//      span.card__data-item-value 22 м²
-//    li.card__data-item Мощность охлаждения:
-//      span.card__data-item-value 2.8 кВт
-//    li.card__data-item Уровень шума:
-//      span.card__data-item-value 22 дБ
-//    li.card__data-item Инвертор:
-//      span.card__data-item-value есть
-//
-//  button.button.button--accent.card__button Купить
-
-
-
 template#card-template
-  article.card(data-article="")
-    a.card__link(href="##")
-      img.card__img.product-img(src="")
-      h3.card__title.product-title
+  article.card(data-article="" itemscope itemtype="https://schema.org/Product")
+    a.card__link(href="" itemprop="url")
+      img.card__img.product-img(src="" itemprop="image")
+      h3.card__title.product-title(itemprop="name")
     span.card__price.product-price
 
-    ul.card__data
+    ul.card__data(itemprop="description")
       li.card__data-item На площадь:
         span.card__data-item-value.card__data-item-value--area.area-value
+      li.card__data-item Инвертор:
+        span.card__data-item-value.card__data-item-value--inverter
       li.card__data-item Охлаждение:
         span.card__data-item-value.card__data-item-value--coolingCapacity
       li.card__data-item Уровень шума:
         span.card__data-item-value.card__data-item-value--noise
-      li.card__data-item Инвертор:
-        span.card__data-item-value.card__data-item-value--inverter
 
     button.button.button--accent.card__button.cart-btn Купить
-
-

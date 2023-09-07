@@ -61,19 +61,17 @@ function createProductProfile (products) {
     properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight;
     properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size;
 
-
     // Внешний блок
     properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise;
     properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight;
     properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size;
     properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
 
-
     profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
+    profileItem.querySelector(".meta-price").content = product.price;
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
-
   });
 
   const productProfile = document.querySelector('.product-profile');
@@ -91,9 +89,7 @@ function createProductProfile (products) {
       descText.classList.add("js-show-more");
     });
   }
-
   handlerCart ();
-
 };
 
 

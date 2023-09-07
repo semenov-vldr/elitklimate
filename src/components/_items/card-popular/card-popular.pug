@@ -1,38 +1,18 @@
-//.card-popular.swiper-slide
-//  a(href="##")
-//    img.card-popular__img(src="./assets/img/catalog/dahatsu/DHP/01.jpg")
-//    h3.card-popular__title Dahatsu DHP-07/DHV-07 - 2
-//  span.card-popular__price 25 000 ₽
-//
-//  ul.card-popular__data
-//    li.card-popular__data-item На площадь:
-//      span.card-popular__data-item-value 22 м²
-//    li.card-popular__data-item Мощность охлаждения:
-//      span.card-popular__data-item-value 2.8 кВт
-//    li.card-popular__data-item Уровень шума:
-//      span.card-popular__data-item-value 22 дБ
-//    li.card-popular__data-item Инвертор:
-//      span.card-popular__data-item-value есть
-//
-//  button.button.button--accent.card-popular__button Купить
-
-
 template#template-card-popular
-  .card-popular.swiper-slide(data-article="")
-    a.card-popular__link(href="")
-      img.card-popular__img.product-img(src="")
-      h3.card-popular__title.product-title
+  .card-popular.swiper-slide(data-article="" itemscope itemtype="https://schema.org/Product")
+    a.card-popular__link(href="" itemprop="url")
+      img.card-popular__img.product-img(src="" itemprop="image")
+      h3.card-popular__title.product-title(itemprop="name")
     span.card-popular__price.product-price
 
-    ul.card-popular__data
+    ul.card-popular__data(itemprop="description")
       li.card-popular__data-item На площадь:
         span.card-popular__data-item-value.card-popular__data-item-value--area.area-value
+      li.card-popular__data-item Инвертор:
+        span.card-popular__data-item-value.card-popular__data-item-value--inverter
       li.card-popular__data-item Охлаждение:
         span.card-popular__data-item-value.card-popular__data-item-value--coolingCapacity
       li.card-popular__data-item Уровень шума:
         span.card-popular__data-item-value.card-popular__data-item-value--noise
-      li.card-popular__data-item Инвертор:
-        span.card-popular__data-item-value.card-popular__data-item-value--inverter
 
     button.button.button--accent.card-popular__button.cart-btn Купить
-

@@ -1,0 +1,37 @@
+.quiz
+  border: 1px solid black
+  border-radius: 8px
+
+  &__content
+    padding: 16px
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+  &-question
+    &__label
+
+    &__answers
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 16px
+      margin-top: 16px
+
+    &__btn
+
+  .btn
+    background-color: $black
+    padding: 8px
+    border-radius: 8px
+    color: #fff
+    margin-top: 16px
+    &.red
+      background-color: $accent
+    &.black
+      background-color: $black
+
+
+
+
+.error
+  outline: 3px solid red !important

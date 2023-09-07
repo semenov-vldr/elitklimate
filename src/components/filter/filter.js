@@ -104,7 +104,6 @@ if (filter) {
 
   // -----------------------------------------------------------------------------------------------
   {
-
     function applyFilters () {
       const minPrice = +minPriceInput.value;
       const maxPrice = +maxPriceInput.value;
@@ -125,14 +124,14 @@ if (filter) {
     };
 
 
-     minPriceInput.addEventListener("input", applyFilters);
-     maxPriceInput.addEventListener("input", applyFilters);
-     selectArea.addEventListener("change", applyFilters);
+     //minPriceInput.addEventListener("input", applyFilters);
+     //maxPriceInput.addEventListener("input", applyFilters);
+     //selectArea.addEventListener("change", applyFilters);
 
     document.querySelectorAll(".filter__item--company input[type='checkbox']").forEach(el => {
       el.addEventListener("change", () => {
         let newArr = productsArr.filter(productItem => el.value === productItem.company );
-        renderCard(newArr);
+        //renderCard(newArr);
       });
     });
   }

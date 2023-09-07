@@ -1,28 +1,27 @@
-footer.footer#footer
+footer.footer#footer(itemscope itemtype="http://schema.org/Organization")
   .footer__container.container
     .footer__top
-      a.footer__logo(href="index.html") Элит климат
+      a.footer__logo(href="index.html" itemprop="url") Элит Климат
         //img(src="./assets/img/logo.png")
       p.footer__sublogo Официальный представитель ТМ Dahatsu, Denko в&nbsp;г.&nbsp;Сочи
-
 
     .footer__contacts
       h3.footer__title Контакты
 
       .footer__contacts-section
         span.footer__contacts-section-title г. Сочи
+        <meta itemprop="location" content="Сочи">
 
         ul.footer__contacts-list
           li.footer__contacts-item
-            span.footer__contacts-address Центральный район, Дагомыс, Лоо
+            span.footer__contacts-address(itemprop="address" content="Центральный район Сочи, Дагомыс, Лоо") Центральный район, Дагомыс, Лоо
             a.footer__contacts-tel(href="tel:+79884093099") +7 (988) 409-30-99
           li.footer__contacts-item
-            span.footer__contacts-address р-н Адлер, пгт Сириус, с. Веселое
+            span.footer__contacts-address(itemprop="address" content="р-н Адлер, пгт Сириус, с. Веселое") р-н Адлер, пгт Сириус, с. Веселое
             a.footer__contacts-tel(href="tel:+79884092983") +7 (988) 409-29-83
           li.footer__contacts-item
-            span.footer__contacts-address пгт. Красная поляна, с. Эсто-Садок, с. Галицыно
-            a.footer__contacts-tel(href="tel:+79884092983") +7 (988) 409-29-83
-
+            span.footer__contacts-address(itemprop="address" content="пгт. Красная поляна, с. Эсто-Садок, с. Галицыно") пгт. Красная поляна, с. Эсто-Садок, с. Галицыно
+            a.footer__contacts-tel(href="tel:+79884092983" itemprop="telephone" content="+79884092983") +7 (988) 409-29-83
 
       .footer__social
         ul.footer__social-list
@@ -31,45 +30,33 @@ footer.footer#footer
           li.footer__social-item
             a.footer__social-link.footer__social-link--whatsapp(href="##") WhatsApp
 
-
-
-
-      //.footer__contacts-section
-      //  span.footer__contacts-section-title Московская область
-      //
-      //  ul.footer__contacts-list
-      //    li.footer__contacts-item
-      //      span.footer__contacts-address г. Щёлково, Фруктовый проезд, д. 2
-      //      a.footer__contacts-tel(href="tel:+79885077837") +7 (988) 507-78-37
-
-
     nav.footer__nav
       h3.footer__title Кондиционеры
-      ul.footer__nav-list
-        li.footer__nav-item
-          a.footer__nav-link(href="split-systems.html") Бытовые сплит-системы
-        li.footer__nav-item
-          a.footer__nav-link(href="floor-ceiling.html") Напольно-потолочные
-        li.footer__nav-item
-          a.footer__nav-link(href="ducted.html") Канальные
-        li.footer__nav-item
-          a.footer__nav-link(href="cassette.html") Кассетные
-        li.footer__nav-item
-          a.footer__nav-link(href="column.html") Колонные
-        li.footer__nav-item
-          a.footer__nav-link(href="multi-split-systems.html") Мульти сплит-системы
+      ul.footer__nav-list(itemscope itemtype="http://www.schema.org/SiteNavigationElement")
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="split-systems.html" itemprop="url") Бытовые сплит-системы
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="floor-ceiling.html" itemprop="url") Напольно-потолочные
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="ducted.html" itemprop="url") Канальные
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="cassette.html" itemprop="url") Кассетные
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="column.html" itemprop="url") Колонные
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="multi-split-systems.html" itemprop="url") Мульти сплит-системы
 
     nav.footer__nav
       h3.footer__title Услуги
-      ul.footer__nav-list
-        li.footer__nav-item
-          a.footer__nav-link(href="installation.html") Установка
-        li.footer__nav-item
-          a.footer__nav-link(href="installation.html") Ремонт
-        li.footer__nav-item
-          a.footer__nav-link(href="installation.html") Чистка
-        li.footer__nav-item
-          a.footer__nav-link(href="installation.html") Заправка
+      ul.footer__nav-list(itemscope itemtype="http://www.schema.org/SiteNavigationElement")
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="installation.html" itemprop="url") Установка
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="installation.html" itemprop="url") Ремонт
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="installation.html" itemprop="url") Чистка
+        li.footer__nav-item(itemprop="name")
+          a.footer__nav-link(href="installation.html" itemprop="url") Заправка
 
 
     .footer__copyright

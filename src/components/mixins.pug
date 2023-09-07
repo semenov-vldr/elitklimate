@@ -1,4 +1,3 @@
-
 // Плитки каталога
 mixin catalog(data)
   .catalog__group
@@ -8,34 +7,12 @@ mixin catalog(data)
         img.catalog__item-img(src=item.imgSrc)
 
 
-// Карточка товара в каталоге
-mixin cardList(cards)
-  each card in cards
-    a.card(href=card.link)
-      img.card__img(src=card.imgSrc)
-      h3.card__title=card.title
-      span.card__price=`${card.price} ₽`
-
-    ul.card__data
-      li.card__data-item Мощность охлаждения:
-        span.card__data-item-value=card.power
-      li.card__data-item На площадь:
-        span.card__data-item-value=card.area
-      li.card__data-item Уровень шума:
-        span.card__data-item-value=card.noise
-      li.card__data-item Инвертор:
-        span.card__data-item-value=card.inverter
-
-    button.button.button--accent.card__button Купить
-
-
-
 // Хлебные крошки
 mixin breadcrumbs(links)
-  .breadcrumbs
+  .breadcrumbs(itemscope itemtype="http://schema.org/BreadcrumbList")
     .container.breadcrumbs__container
       each link in links
         if link.url
-          a.breadcrumbs__item(href=link.url)= link.text
+          a.breadcrumbs__item(href=link.url itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")= link.text
         else
-          span.breadcrumbs__item= link.text
+          span.breadcrumbs__item(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")= link.text

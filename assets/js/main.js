@@ -4047,7 +4047,6 @@ if (filter) {
 
   // -----------------------------------------------------------------------------------------------
   {
-
     function applyFilters () {
       const minPrice = +minPriceInput.value;
       const maxPrice = +maxPriceInput.value;
@@ -4068,14 +4067,14 @@ if (filter) {
     };
 
 
-     minPriceInput.addEventListener("input", applyFilters);
-     maxPriceInput.addEventListener("input", applyFilters);
-     selectArea.addEventListener("change", applyFilters);
+     //minPriceInput.addEventListener("input", applyFilters);
+     //maxPriceInput.addEventListener("input", applyFilters);
+     //selectArea.addEventListener("change", applyFilters);
 
     document.querySelectorAll(".filter__item--company input[type='checkbox']").forEach(el => {
       el.addEventListener("change", () => {
         let newArr = productsArr.filter(productItem => el.value === productItem.company );
-        renderCard(newArr);
+        //renderCard(newArr);
       });
     });
   }
@@ -4090,7 +4089,8 @@ function filterTabsCards () {
   if (!filterTabsBlock) return;
 
   const filterTabsList = filterTabsBlock.querySelectorAll(".filter-tabs__list");
-  const listOfRenderedCards = Array.from( document.querySelectorAll(".products__grid .card") );
+  const productGrid = document.querySelector(".products__grid")
+  const listOfRenderedCards = Array.from( productGrid.querySelectorAll(".card") );
   const tabsListCompany = filterTabsBlock.querySelector(".filter-tabs__list--company");
 
   // Динамическое добавление табов компаний
@@ -4101,20 +4101,21 @@ function filterTabsCards () {
     tagLi.classList.add("filter-tabs__item");
     tagLi.dataset.company = companyName;
     tagLi.textContent = companyName;
-    tabsListCompany.appendChild(tagLi)
+    tabsListCompany.appendChild(tagLi);
   });
 
-
-
+  // Счетчик общего кол-ва карточек нак странице
   filterTabsBlock.querySelector(".filter-tabs__count").textContent = listOfRenderedCards.length;
+  const classFilterActive = "js-filter-active";
 
+  // Добавление активного класса к табам для их активации
   filterTabsList.forEach(tabList => {
     const filterTabs = tabList.querySelectorAll(".filter-tabs__item");
-    filterTabs[0].classList.add("js-filter-active");
+    filterTabs[0].classList.add(classFilterActive);
     filterTabs.forEach(filterTab => {
       filterTab.addEventListener("click", () => {
-        filterTabs.forEach(tab => tab.classList.remove("js-filter-active"));
-        filterTab.classList.toggle("js-filter-active");
+        filterTabs.forEach(tab => tab.classList.remove(classFilterActive));
+        filterTab.classList.toggle(classFilterActive);
       });
     });
   });
@@ -4125,7 +4126,7 @@ function filterTabsCards () {
   const typeTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
   const classTypeHidden = 'js-hidden-type';
 
-
+  // Фильтр по компаниям
   companyTabs.forEach(companyTab => {
     companyTab.addEventListener("click", () => {
       const tabCompanyTarget = companyTab.dataset.company;
@@ -4136,55 +4137,82 @@ function filterTabsCards () {
           renderedCard.classList.add(classCompanyHidden);
         }
       });
+      emptyCardCheck();
     });
   });
 
-  const visibleCards = document.querySelectorAll(`.products__grid .card:not(.${classCompanyHidden})`);
+
+  // Фильтр по типу компрессора
+  typeTabs.forEach(typeTab => {
+    typeTab.addEventListener("click", () => {
+      const tabTypeTarget = typeTab.dataset.type;
+      listOfRenderedCards.forEach(renderedCard => {
+        if (renderedCard.dataset.type === tabTypeTarget || tabTypeTarget === "all") {
+          renderedCard.classList.remove(classTypeHidden);
+        } else {
+          renderedCard.classList.add(classTypeHidden);
+        }
+      });
+      emptyCardCheck();
+    });
+  });
+
+  function emptyCardCheck () {
+    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classCompanyHidden) ||card.classList.contains(classTypeHidden) );
+    if (hasCards) {
+      const spanEmptyCards = document.createElement("span");
+      spanEmptyCards.classList.add("message-empty");
+      spanEmptyCards.textContent = "Товар отсутствует.";
+      productGrid.appendChild(spanEmptyCards);
+    } else {
+      productGrid.querySelector(".message-empty").remove();
+    }
+  };
 
   // -- <sorting cards> --
   const filterSortingSelect = filterTabsBlock.querySelector(".filter-tabs__sorting select");
-  filterSortingSelect.addEventListener("change", sortingCards);
+  filterSortingSelect.addEventListener("change", () => sortingCards(filterSortingSelect) );
 
-  if (filterSortingSelect) window.addEventListener("load", sortingCards);
-
-  function sortingCards () {
-    const productsGrid = document.querySelector(".products__grid");
-    const productCards = Array.from(document.querySelectorAll(".products .card"));
-
-    // Сначала дешевле
-    const sortingCheaperProductCards = [...productCards].sort((a, b) => {
-      return +a.dataset.price - +b.dataset.price;
-    });
-    // Сначала дороже
-    const sortingExpensiveProductCards = [...productCards].sort((a, b) => {
-      return +b.dataset.price - +a.dataset.price;
-    });
-    // Алфавиту
-    const sortingAlphabetProductCards = [...productCards].sort((a, b) => {
-      return a.dataset.article.localeCompare(b.dataset.article);
-    });
-
-    productsGrid.replaceChildren();
-
-    switch (filterSortingSelect.value) {
-      // Алфавиту
-      case "initial":
-        sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
-        break;
-      // Дешевле
-      case "cheaper":
-        sortingCheaperProductCards.forEach(card => productsGrid.appendChild(card));
-        break;
-      // Дороже
-      case "expensive":
-        sortingExpensiveProductCards.forEach(card => productsGrid.appendChild(card));
-        break;
-      default:
-        sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
-    };
-  };
+  if (filterSortingSelect) window.addEventListener("load", () => sortingCards(filterSortingSelect) );
   // -- </sorting cards> --
 
+};
+
+function sortingCards (filterSortingSelect) {
+  const productsGrid = document.querySelector(".products__grid");
+  const productCards = Array.from(document.querySelectorAll(".products .card"));
+
+  // Сначала дешевле
+  const sortingCheaperProductCards = [...productCards].sort((a, b) => {
+    return +a.dataset.price - +b.dataset.price;
+  });
+  // Сначала дороже
+  const sortingExpensiveProductCards = [...productCards].sort((a, b) => {
+    return +b.dataset.price - +a.dataset.price;
+  });
+  // Алфавиту
+  const sortingAlphabetProductCards = [...productCards].sort((a, b) => {
+    return a.dataset.article.localeCompare(b.dataset.article);
+  });
+
+  productsGrid.replaceChildren();
+
+  switch (filterSortingSelect.value) {
+    // Алфавиту
+    case "initial":
+      sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
+      break;
+    // Дешевле
+    case "cheaper":
+      sortingCheaperProductCards.forEach(card => productsGrid.appendChild(card));
+      break;
+    // Дороже
+    case "expensive":
+      sortingExpensiveProductCards.forEach(card => productsGrid.appendChild(card));
+      break;
+    default:
+      sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
+  };
 };
 
 
@@ -4523,19 +4551,17 @@ function createProductProfile (products) {
     properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight;
     properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size;
 
-
     // Внешний блок
     properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise;
     properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight;
     properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size;
     properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
 
-
     profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
+    profileItem.querySelector(".meta-price").content = product.price;
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
-
   });
 
   const productProfile = document.querySelector('.product-profile');
@@ -4553,9 +4579,7 @@ function createProductProfile (products) {
       descText.classList.add("js-show-more");
     });
   }
-
   handlerCart ();
-
 };
 
 
@@ -4694,3 +4718,203 @@ function renderProductsOfCategory (blockCategory, category) {
   // };
   //
   // window.addEventListener("scroll", () => lazyLoadingCards(productsArr));
+
+const quizData = [
+  {
+    number: 1,
+    title: "В какое помещение будет устанавливаться кондиционер?",
+    answer_alias: "room",
+    answers: [
+      {
+        answer_title: "Жилое помещение",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Нежилое помещение",
+        type: "checkbox"
+      },
+    ]
+  },
+
+  {
+    number: 2,
+    title: "Какой тип кондиционера вы хотели бы установить в помещении?",
+    answer_alias: "type",
+    answers: [
+      {
+        answer_title: "Настенный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Мульти сплит-система",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Потолочный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Напольнный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Канальный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Кассетный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Колонный",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Не знаю",
+        type: "checkbox"
+      },
+    ]
+  },
+
+  {
+    number: 3,
+    title: "Укажите площадь помещения в м2?",
+    answer_alias: "area",
+    answers: [
+      {
+        answer_title: "10-20",
+        type: "checkbox"
+      },
+      {
+        answer_title: "20-30",
+        type: "checkbox"
+      },
+      {
+        answer_title: "30-40",
+        type: "checkbox"
+      },
+      {
+        answer_title: "50-70",
+        type: "checkbox"
+      },
+      {
+        answer_title: "70-100",
+        type: "checkbox"
+      },
+      {
+        answer_title: "100-150",
+        type: "checkbox"
+      },
+      {
+        answer_title: "Свыше 150",
+        type: "checkbox"
+      },
+    ]
+  },
+
+  {
+    number: 4,
+    title: "Нужен ли монтаж?",
+    answer_alias: "installation",
+    answers: [
+      {
+        answer_title: "Да",
+        type: "radio"
+      },
+      {
+        answer_title: "Нет",
+        type: "radio"
+      },
+    ]
+  },
+
+];
+
+const quizTemplate = (data = [], dataLength, options) => {
+
+  const {number, title} = data;
+  const {nextBtnText} = options;
+  const answers = data.answers.map(item => {
+    return `
+
+    <label class="quiz-question__label">
+        <input type="${item.type}" data-valid="false" class="quiz-question__answer" name="${data.answer_alias}" ${item.type === "text" ? "placeholder='Введите ваш вариант'" : ''} value="${item.type !== 'text' ? item.answer_title : ''}">
+        <span>${item.answer_title}</span>
+    </label>
+    `;
+  });
+
+  return `
+  <div class="quiz__content">
+    <div class="quiz__questions">${number} из ${dataLength}</div>
+    <div class="quiz-question">
+        <h3 class="quiz-question__title">${title}</h3>
+        <div class="quiz-question__answers">
+        ${answers.join("")}
+        </div>
+        <button type="button" class="quiz-question__btn btn red" data-next-btn>${nextBtnText}</button>
+    </div>
+  </div>
+  `
+};
+
+//quizTemplate(quizData[0], quizData.length)
+//const quiz = document.querySelector(".quiz");
+//quiz.innerHTML = quizTemplate(quizData[0], quizData.length);
+
+class Quiz {
+  constructor(selector, data, options) {
+    this.$el = document.querySelector(selector);
+    this.options = options;
+    this.data = data;
+    this.counter = 0; // Номер вопроса
+    this.dataLength = this.data.length;
+    this.resultArray = [];
+    this.init();
+    this.events();
+  }
+
+  init() {
+    console.log("init!");
+    this.$el.innerHTML = quizTemplate(quizData[this.counter], this.dataLength, this.options);
+  }
+
+  events() {
+    this.$el.addEventListener("click", (evt) => {
+      if (evt.target === document.querySelector("[data-next-btn]")) {
+        this.nextQuestion();
+      }
+      if (evt.target === document.querySelector('[data-send]')) {
+        this.send();
+      }
+    });
+  }
+
+  nextQuestion() {
+    console.log("next question!");
+
+    if (this.counter + 1 < this.dataLength) {
+      this.counter++;
+      this.$el.innerHTML = quizTemplate(quizData[this.counter], this.dataLength, this.options);
+
+      if (this.counter + 1 === this.dataLength) {
+        this.$el.insertAdjacentHTML("beforeend", `<button class="btn black" type="submit" data-send>${this.options.sendBtnText}</button>`);
+        this.$el.querySelector("[data-next-btn]").remove();
+      }
+    }
+  }
+
+  send() {
+    console.log("send")
+  }
+
+};
+
+
+
+// window.quiz = new Quiz(".quiz", quizData, {
+//   nextBtnText: "Далее",
+//   sendBtnText: "Отправить",
+// });
+
+

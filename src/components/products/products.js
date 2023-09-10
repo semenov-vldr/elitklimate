@@ -1,11 +1,22 @@
+function createShowMoreBtn () {
+  const productsGrid = document.querySelector(".products__grid");
+  const showMoreBtn = document.createElement("button");
+  showMoreBtn.textContent = "Показать еще";
+  showMoreBtn.classList.add("show-more");
+  productsGrid.parentNode.appendChild(showMoreBtn);
+  return showMoreBtn;
+};
+
 // Создание массива карточек товара в соответствии с данными из массива объектов
 function renderCard (products) {
   const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
 
-  if (!productsGrid && !cardTemplate) return
+  if (!productsGrid && !cardTemplate) return;
 
     productsGrid.replaceChildren();
+
+    //const showMoreBtn =  createShowMoreBtn();
 
     products.forEach(product => {
       const cardItem = cardTemplate.cloneNode(true);
@@ -23,6 +34,7 @@ function renderCard (products) {
       cardItem.setAttribute("data-price", product.price);
       cardItem.setAttribute("data-type", product.inverter);
       cardItem.setAttribute("data-company", product.company);
+      cardItem.setAttribute("data-area", product.area);
     });
     handlerCart();
     filterTabsCards();
@@ -48,15 +60,6 @@ const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Ка
 const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
 const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
 const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
-
-const blockCategoryArray = [
-  blockSplitSystems,
-  blockFloorCeiling,
-  blockDucted,
-  blockCassette,
-  blockColumn,
-  blockMultiSplitSystems
-];
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {

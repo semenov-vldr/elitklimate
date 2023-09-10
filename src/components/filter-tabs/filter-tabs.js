@@ -7,6 +7,7 @@ function filterTabsCards () {
   const productGrid = document.querySelector(".products__grid")
   const listOfRenderedCards = Array.from( productGrid.querySelectorAll(".card") );
   const tabsListCompany = filterTabsBlock.querySelector(".filter-tabs__list--company");
+  const filterTabsTitle = filterTabsBlock.querySelectorAll(".filter-tabs__title");
 
   // Динамическое добавление табов компаний
   const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
@@ -36,20 +37,36 @@ function filterTabsCards () {
   });
 
 
+  // Показ/скрытие фильтров по клику на заголовок
+  filterTabsTitle.forEach(title => {
+    if (title.classList.contains("filter-tabs__title--company")) {
+      title.classList.add("filter-visible");
+    }
+    title.addEventListener("click", () => {
+      title.classList.toggle("filter-visible");
+    });
+  });
+
+
+
   const companyTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-company]");
-  const classCompanyHidden = 'js-hidden-company';
+  const classHiddenCompany = 'js-hidden-company';
   const typeTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
   const classTypeHidden = 'js-hidden-type';
+  const areaTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-area]");
+  const classAreaHidden = 'js-hidden-area';
+
+
 
   // Фильтр по компаниям
   companyTabs.forEach(companyTab => {
-    companyTab.addEventListener("click", () => {
+    companyTab.addEventListener("click",() => {
       const tabCompanyTarget = companyTab.dataset.company;
       listOfRenderedCards.forEach(renderedCard => {
         if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
-          renderedCard.classList.remove(classCompanyHidden);
+          renderedCard.classList.remove(classHiddenCompany);
         } else {
-          renderedCard.classList.add(classCompanyHidden);
+          renderedCard.classList.add(classHiddenCompany);
         }
       });
       emptyCardCheck();
@@ -72,16 +89,40 @@ function filterTabsCards () {
     });
   });
 
+
+  // Фильтр по площади помещения
+    areaTabs.forEach(areaTab => {
+      areaTab.addEventListener("click",() => {
+        const tabAreaMinTarget = +areaTab.dataset.areaMin;
+        const tabAreaMaxTarget = +areaTab.dataset.areaMax;
+        listOfRenderedCards.forEach(renderedCard => {
+          const dataAreaRenderedCard = +renderedCard.dataset.area;
+          if (dataAreaRenderedCard >= tabAreaMinTarget && dataAreaRenderedCard <= tabAreaMaxTarget
+            || areaTab.dataset.area === "all" ) {
+            renderedCard.classList.remove(classAreaHidden);
+          }
+          else {
+            renderedCard.classList.add(classAreaHidden);
+          }
+        });
+        emptyCardCheck();
+      });
+    });
+
+
+
+  // Проверка на пустой список карточек по причине несоответствия фильтру
   function emptyCardCheck () {
-    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classCompanyHidden) ||card.classList.contains(classTypeHidden) );
-    if (hasCards) {
+    const isHasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
+                                                      || card.classList.contains(classTypeHidden)
+                                                      || card.classList.contains(classAreaHidden) );
+    if (isHasCards) {
       const spanEmptyCards = document.createElement("span");
       spanEmptyCards.classList.add("message-empty");
-      spanEmptyCards.textContent = "Товар отсутствует.";
+      spanEmptyCards.textContent = "По указанным параметрам товар не найден.";
       if (!productGrid.querySelector(".message-empty")) {
         productGrid.appendChild(spanEmptyCards);
       }
-
     } else {
       productGrid.querySelectorAll(".message-empty").forEach(el => el.remove());
     }

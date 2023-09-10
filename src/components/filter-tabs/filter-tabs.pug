@@ -1,17 +1,31 @@
 .filter-tabs
   .filter-tabs__container
 
-    h2.filter-tabs__title Выбор компании
-    ul.filter-tabs__list.filter-tabs__list--company
-      li.filter-tabs__item(data-company="all") Все
-        span.filter-tabs__count
-      //li.filter-tabs__item(data-company="Dahatsu") Dahatsu
+    .filter-tabs__box
+      h2.filter-tabs__title.filter-tabs__title--company Выбор компании
+      ul.filter-tabs__list.filter-tabs__list--company
+        li.filter-tabs__item(data-company="all") Все
+          span.filter-tabs__count
+        //li.filter-tabs__item(data-company="Dahatsu") Dahatsu
 
-    h2.filter-tabs__title Тип кондиционера
-    ul.filter-tabs__list
-      li.filter-tabs__item(data-type="all") Все
-      li.filter-tabs__item(data-type="false") On/Off
-      li.filter-tabs__item(data-type="true") Inverter
+    .filter-tabs__box
+      h2.filter-tabs__title Площадь помещения
+      ul.filter-tabs__list.filter-tabs__list--area
+        li.filter-tabs__item(data-area="all") Все
+        li.filter-tabs__item(data-area-min="20" data-area-max="30" data-area) 20-30 м²
+        li.filter-tabs__item(data-area-min="30" data-area-max="50" data-area) 30-50 м²
+        li.filter-tabs__item(data-area-min="50" data-area-max="70" data-area) 50-70 м²
+        li.filter-tabs__item(data-area-min="70" data-area-max="90" data-area) 70-90 м²
+        li.filter-tabs__item(data-area-min="90" data-area-max="110" data-area) 90-110 м²
+        li.filter-tabs__item(data-area-min="110" data-area-max="150" data-area) 110-150 м²
+        li.filter-tabs__item(data-area-min="150" data-area-max="250" data-area) 150-250 м²
+
+    .filter-tabs__box
+      h2.filter-tabs__title Тип кондиционера
+      ul.filter-tabs__list
+        li.filter-tabs__item(data-type="all") Все
+        li.filter-tabs__item(data-type="false") On/Off
+        li.filter-tabs__item(data-type="true") Inverter
 
     .filter-tabs__sorting
       span Соритровка:

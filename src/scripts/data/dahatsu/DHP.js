@@ -11,6 +11,14 @@ const imagesDahatsuDragon =
     "./assets/img/catalog/dahatsu/DHP/04.jpg"
   ];
 
+const pricesDahatsuDragon = {
+  "dahatsu_dhp_07": 22500,
+  "dahatsu_dhp_09": 27700,
+  "dahatsu_dhp_12": 38500,
+  "dahatsu_dhp_18": 59900,
+  "dahatsu_dhp_24": 77800,
+}
+
 const descriptionDahatsuDragon = "Сплит-системы Dahatsu серии Dragon выполнены в современном, лаконичном дизайне и имеют обтекаемые формы, что позволит разместить данные сплит-системы в помещениях с высококлассными требованиями к решением интерьера. Помимо быстрого обогрева и охлаждения, устройство гарантирует тщательную очистку воздуха от загрязнений и аллергенов при помощи моющегося фильтра высокой плотности. В кондиционере предусмотрены такие функции, как: спящий режим, обнаружение утечки хладагента, горизонтальный автоповорот жалюзи, 2 способа подключения трубопровода, Н-образная установочная пластина, функция short cut- устанавливает и активирует ваши предварительные настройки, и прочие сверхтехнологичные функции."
 
 const DAHATSU_DHP = [
@@ -24,7 +32,7 @@ const DAHATSU_DHP = [
     series: "Dragon",
     link: "dahatsu-dhp-07.html",
     imgSrc: imagesDahatsuDragon,
-    price: 25500, // Цена
+    price: pricesDahatsuDragon.dahatsu_dhp_07, // Цена
     area: 22, // На площадь, м²
     coolingCapacity: 2.3, // Мощность охлаждения, кВт
     noise: 22, // Уровень шума, дБ (A)
@@ -60,6 +68,7 @@ const DAHATSU_DHP = [
       weight: 23.7, // Вес, кг
       size: "720x270x495", // Размеры
       freon: "R32", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -72,7 +81,7 @@ const DAHATSU_DHP = [
     series: "Dragon",
     link: "dahatsu-dhp-09.html",
     imgSrc: imagesDahatsuDragon,
-    price: 27700, // Цена
+    price: pricesDahatsuDragon.dahatsu_dhp_09, // Цена
     area: 28 , // На площадь, м²
     coolingCapacity: 2.5, // Мощность охлаждения, кВт
     noise: 22, // Уровень шума, дБ (A)
@@ -108,6 +117,7 @@ const DAHATSU_DHP = [
       weight: 23.7, // Вес, кг
       size: "720x270x495", // Размеры
       freon: "R32", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -120,7 +130,7 @@ const DAHATSU_DHP = [
     series: "Dragon",
     link: "dahatsu-dhp-12.html",
     imgSrc: imagesDahatsuDragon,
-    price: 38500, // Цена
+    price: pricesDahatsuDragon.dahatsu_dhp_12, // Цена
     area: 35 , // На площадь, м²
     coolingCapacity: 3.5, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -156,6 +166,7 @@ const DAHATSU_DHP = [
       weight: 25.6, // Вес, кг
       size: "720x270x495", // Размеры
       freon: "R32", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -168,7 +179,7 @@ const DAHATSU_DHP = [
     series: "Dragon",
     link: "dahatsu-dhp-18.html",
     imgSrc: imagesDahatsuDragon,
-    price: 59900, // Цена
+    price: pricesDahatsuDragon.dahatsu_dhp_18, // Цена
     area: 55 , // На площадь, м²
     coolingCapacity: 5.2, // Мощность охлаждения, кВт
     noise: 26, // Уровень шума, дБ (A)
@@ -204,6 +215,7 @@ const DAHATSU_DHP = [
       weight: 34.5, // Вес, кг
       size: "765x303x555", // Размеры
       freon: "R32", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -216,7 +228,7 @@ const DAHATSU_DHP = [
     series: "Dragon",
     link: "dahatsu-dhp-24.html",
     imgSrc: imagesDahatsuDragon,
-    price: 77800, // Цена
+    price: pricesDahatsuDragon.dahatsu_dhp_24, // Цена
     area: 75 , // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 28, // Уровень шума, дБ (A)
@@ -252,6 +264,7 @@ const DAHATSU_DHP = [
       weight: 47.9, // Вес, кг
       size: "890x342x673", // Размеры
       freon: "R32", // Фреон
+      compressorModel: "GMCC",
     }
   },
 ];

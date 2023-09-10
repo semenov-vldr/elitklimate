@@ -8,6 +8,7 @@ function filterTabsCards () {
   const listOfRenderedCards = Array.from( productGrid.querySelectorAll(".card") );
   const tabsListCompany = filterTabsBlock.querySelector(".filter-tabs__list--company");
   const filterTabsTitle = filterTabsBlock.querySelectorAll(".filter-tabs__title");
+  const tabsListArea = filterTabsBlock.querySelector(".filter-tabs__list--area");
 
   // Динамическое добавление табов компаний
   const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
@@ -19,6 +20,24 @@ function filterTabsCards () {
     tagLi.textContent = companyName;
     tabsListCompany.appendChild(tagLi);
   });
+
+
+  // Динамическое добавление табов площади помещения
+  const uniqueAreaValues = [...new Set(listOfRenderedCards.map(renderedCard => +renderedCard.dataset.area))].sort((a, b) => a - b);
+  const tabsListAreaMinMax = Array.from( tabsListArea.querySelectorAll(".filter-tabs__item[data-area-min]") );
+
+  let uniqueAreaTabs = new Set();
+  uniqueAreaValues.forEach(areaValue => {
+    tabsListAreaMinMax.forEach(tabAreaMinMax => {
+      const dataMinArea = +tabAreaMinMax.dataset.areaMin;
+      const dataMaxArea = +tabAreaMinMax.dataset.areaMax;
+      if (areaValue >= dataMinArea && areaValue <= dataMaxArea) {
+        uniqueAreaTabs.add(tabAreaMinMax);
+      }
+    });
+  });
+  uniqueAreaTabs.forEach(areaTab => areaTab.classList.add("filter-tab-current"));
+
 
   // Счетчик общего кол-ва карточек нак странице
   filterTabsBlock.querySelector(".filter-tabs__count").textContent = listOfRenderedCards.length;

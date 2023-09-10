@@ -1,9 +1,10 @@
 const dataDahatsu = [
-  DAHATSU_DHP,
-  DAHATSU_DS_I,
   DAHATSU_DA_H,
   DAHATSU_DA_I,
   DAHATSU_GW_H,
+  DAHATSU_DHP,
+  DAHATSU_DS_I,
+
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
@@ -12,6 +13,7 @@ const dataDahatsu = [
 
 const dataDenko = [
   DENKO_KR,
+  DENKO_DU,
   DENKO_DCS_A,
 ];
 

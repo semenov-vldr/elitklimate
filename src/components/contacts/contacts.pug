@@ -1,0 +1,25 @@
+section.contacts
+  .contacts__container.container
+    h1.title-section.contacts__title Контакты
+
+    ul.contacts__list
+
+      li.contacts__item
+        svg(width="30px" height="30px" fill="currentColor")
+          use(href="./assets/img/sprite.svg#location")
+        span 354340, г. Сочи, ул. Энергетиков 11 Б/1
+
+      li.contacts__item
+        a.contacts__link(href="tel:+79884093099")
+          svg(width="26px" height="20px" fill="none" stroke="currentColor")
+            use(href="./assets/img/sprite.svg#phone")
+          span +7 (988) 409-30-99
+
+      li.contacts__item
+        a.contacts__link(href="mailto:elitklimat-sochi@mail.ru")
+          svg(width="28px" height="28px" stroke="currentColor" fill="none")
+            use(href="./assets/img/sprite.svg#email")
+          span elitklimat-sochi@mail.ru
+
+    .map
+      .map__item#map-contacts

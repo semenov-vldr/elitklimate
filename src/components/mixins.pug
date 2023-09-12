@@ -15,4 +15,4 @@ mixin breadcrumbs(links)
         if link.url
           a.breadcrumbs__item(href=link.url itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")= link.text
         else
-          span.breadcrumbs__item(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")= link.text
+          span.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")= link.text

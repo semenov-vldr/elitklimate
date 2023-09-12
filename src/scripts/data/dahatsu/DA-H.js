@@ -6,12 +6,12 @@ const functionsDahatsuLegend = ["Компрессор GMCC Toshiba", "Режим
 
 const imagesDahatsuLegend =
   ["./assets/img/catalog/dahatsu/DA-H/01.png",
-    "./assets/img/catalog/dahatsu/DA-H/02.png",
+    "./assets/img/catalog/dahatsu/DA-H/02-2.png",
     "./assets/img/catalog/dahatsu/DA-H/03.png",
     "./assets/img/catalog/dahatsu/DA-H/04.png"
   ];
 
-const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера.Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
+const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера. Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
 
 const pricesDahatsuLegend = {
   "dahatsu_da_07h": 22500,
@@ -53,8 +53,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 610, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -69,6 +69,7 @@ const DAHATSU_DA_H = [
       weight: 20, // Вес, кг
       size: "665x280x420", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -102,8 +103,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 748, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -118,6 +119,7 @@ const DAHATSU_DA_H = [
       weight: 21, // Вес, кг
       size: "665x280x420", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -151,8 +153,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 1011, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -167,6 +169,7 @@ const DAHATSU_DA_H = [
       weight: 25, // Вес, кг
       size: "710x240x500", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -200,8 +203,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 1509, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -216,6 +219,7 @@ const DAHATSU_DA_H = [
       weight: 37, // Вес, кг
       size: "800x315x545", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -249,8 +253,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 2211, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -265,6 +269,7 @@ const DAHATSU_DA_H = [
       weight: 46, // Вес, кг
       size: "825x310x655", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -298,8 +303,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 3084, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -314,6 +319,7 @@ const DAHATSU_DA_H = [
       weight: 70, // Вес, кг
       size: "900x350x700", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 ];

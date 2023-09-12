@@ -21,13 +21,28 @@ function createProductProfile (products) {
 
     profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
 
+    // product.imgSrc.forEach((src, i) => {
+    //   const tagImg = document.createElement("img");
+    //   tagImg.classList.add("swiper-slide");
+    //   tagImg.src = src;
+    //   tagImg.setAttribute("data-src", tagImg.src);
+    //   tagImg.setAttribute('data-fancybox', "images-index");
+    //   swiperTopWrapper.appendChild(tagImg);
+    //   if (i === 0) {
+    //     tagImg.classList.add("product-img");
+    //   }
+    // });
+
+
     product.imgSrc.forEach((src, i) => {
       const tagImg = document.createElement("img");
-      tagImg.classList.add("swiper-slide");
+      const divSwiperSlide = document.createElement("div");
+      divSwiperSlide.classList.add("swiper-slide");
       tagImg.src = src;
       tagImg.setAttribute("data-src", tagImg.src);
       tagImg.setAttribute('data-fancybox', "images-index");
-      swiperTopWrapper.appendChild(tagImg);
+      swiperTopWrapper.appendChild(divSwiperSlide);
+      divSwiperSlide.appendChild(tagImg);
       if (i === 0) {
         tagImg.classList.add("product-img");
       }

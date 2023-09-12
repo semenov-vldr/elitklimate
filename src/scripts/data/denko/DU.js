@@ -33,7 +33,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_07.html",
+    link: "denko-du-07.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_07, // Цена
     area: 22, // На площадь, м²
@@ -83,7 +83,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_09.html",
+    link: "denko-du-09.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_09, // Цена
     area: 28, // На площадь, м²
@@ -133,7 +133,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_12.html",
+    link: "denko-du-12.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_12, // Цена
     area: 35, // На площадь, м²
@@ -183,7 +183,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_18.html",
+    link: "denko-du-18.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_18, // Цена
     area: 55, // На площадь, м²
@@ -233,7 +233,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_24.html",
+    link: "denko-du-24.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_24, // Цена
     area: 75, // На площадь, м²
@@ -283,7 +283,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_36.html",
+    link: "denko-du-36.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_36, // Цена
     area: 100, // На площадь, м²

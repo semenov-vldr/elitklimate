@@ -1,7 +1,7 @@
 extends ../layouts/main
 
 block variables
-  - var title = "Заказать установку"
+  - var title = "Контакты"
   - var pageClass = ''
   - var activePage = 'index'
 
@@ -9,4 +9,8 @@ block content
 
   +breadcrumbs([{text: "Главная", url: "index.html"}, {text: title}])
 
-  include ../components/feedback/feedback-installation
+  include ../components/contacts/contacts
+
+
+
+

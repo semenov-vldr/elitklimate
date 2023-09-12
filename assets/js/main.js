@@ -110,12 +110,12 @@ const functionsDahatsuLegend = ["Компрессор GMCC Toshiba", "Режим
 
 const imagesDahatsuLegend =
   ["./assets/img/catalog/dahatsu/DA-H/01.png",
-    "./assets/img/catalog/dahatsu/DA-H/02.png",
+    "./assets/img/catalog/dahatsu/DA-H/02-2.png",
     "./assets/img/catalog/dahatsu/DA-H/03.png",
     "./assets/img/catalog/dahatsu/DA-H/04.png"
   ];
 
-const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера.Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
+const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера. Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
 
 const pricesDahatsuLegend = {
   "dahatsu_da_07h": 22500,
@@ -157,8 +157,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 610, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -173,6 +173,7 @@ const DAHATSU_DA_H = [
       weight: 20, // Вес, кг
       size: "665x280x420", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -206,8 +207,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 748, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -222,6 +223,7 @@ const DAHATSU_DA_H = [
       weight: 21, // Вес, кг
       size: "665x280x420", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -255,8 +257,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 1011, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -271,6 +273,7 @@ const DAHATSU_DA_H = [
       weight: 25, // Вес, кг
       size: "710x240x500", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -304,8 +307,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 1509, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -320,6 +323,7 @@ const DAHATSU_DA_H = [
       weight: 37, // Вес, кг
       size: "800x315x545", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -353,8 +357,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 2211, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -369,6 +373,7 @@ const DAHATSU_DA_H = [
       weight: 46, // Вес, кг
       size: "825x310x655", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -402,8 +407,8 @@ const DAHATSU_DA_H = [
       powerConsumption: 3084, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -418,6 +423,7 @@ const DAHATSU_DA_H = [
       weight: 70, // Вес, кг
       size: "900x350x700", // Размеры
       freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 ];
@@ -2758,7 +2764,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_07.html",
+    link: "denko-du-07.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_07, // Цена
     area: 22, // На площадь, м²
@@ -2808,7 +2814,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_09.html",
+    link: "denko-du-09.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_09, // Цена
     area: 28, // На площадь, м²
@@ -2858,7 +2864,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_12.html",
+    link: "denko-du-12.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_12, // Цена
     area: 35, // На площадь, м²
@@ -2908,7 +2914,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_18.html",
+    link: "denko-du-18.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_18, // Цена
     area: 55, // На площадь, м²
@@ -2958,7 +2964,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_24.html",
+    link: "denko-du-24.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_24, // Цена
     area: 75, // На площадь, м²
@@ -3008,7 +3014,7 @@ const DENKO_DU = [
     company: "Denko",
     series: "Legend",
     factory: "AUX",
-    link: "denko_du_36.html",
+    link: "denko-du-36.html",
     imgSrc: imagesDenkoLegend,
     price: pricesDenkoLegend.denko_du_36, // Цена
     area: 100, // На площадь, м²
@@ -3060,10 +3066,18 @@ const functionsDenkoDragon = ["Компрессор GMCC Toshiba", "Класс �
 
 const imagesDenkoDragon =
   ["./assets/img/catalog/Denko/kr/01.jpg",
-    "./assets/img/catalog/Denko/kr/02.png",
+    "./assets/img/catalog/Denko/kr/02.jpg",
     "./assets/img/catalog/Denko/kr/03.jpg",
-    "./assets/img/catalog/Denko/kr/04.jpg"
+    "./assets/img/catalog/Denko/kr/04.jpg",
   ];
+
+const pricesDenkoDragon = {
+  "denko_kr_09": 23000,
+  "denko_kr_12": 31900,
+  "denko_kr_18": 49800,
+  "denko_kr_24": 61600,
+  "denko_kr_36": 92300,
+}
 
 const descriptionDenkoDragon = "Сплит-системы Denko серии Dragon - минималистичный, но в то же время элегантный дизайн внутреннего блока, эргономичный и удобный пульт ДУ и стильный внешний блок в комплекте создают идеальную, современную сплит-систему. Скрытый дисплей, зеленый фильтр высокой плотности, теплообменник Golden fin, два направления воздушного потока, экономичный режим ECO, самоочистка - все эти функции присутствуют в кондиционерах серии KR. Данная модель соответствует наивысшему классу энергоэффективности по российской классификации - классу A. При разработке были внедрены новейшие технологии, направленные на сокращение потребления электроэнергии. Комплекс классических режимов присутствует в данной серии: обогрев, охлаждение, осушение и вентиляция."
 
@@ -3078,9 +3092,9 @@ const DENKO_KR = [
     company: "Denko",
     series: "Dragon",
     factory: "Midea",
-    link: "##",
+    link: "denko-kr-09.html",
     imgSrc: imagesDenkoDragon,
-    price: 21000, // Цена
+    price: pricesDenkoDragon.denko_kr_09, // Цена
     area: 28, // На площадь, м²
     coolingCapacity: 2.6, // Мощность охлаждения, кВт
     noise: 23, // Уровень шума, дБ (A)
@@ -3116,7 +3130,7 @@ const DENKO_KR = [
       weight: 20, // Вес, кг
       size: "660x250x421", // Размеры
       freon: "R410A", // Фреон
-      compressorModel: "GREE",
+      compressorModel: "GMCC",
     }
   },
 
@@ -3128,9 +3142,9 @@ const DENKO_KR = [
     company: "Denko",
     series: "Dragon",
     factory: "Midea",
-    link: "##",
+    link: "denko-kr-12.html",
     imgSrc: imagesDenkoDragon,
-    price: 28900, // Цена
+    price: pricesDenkoDragon.denko_kr_12, // Цена
     area: 35, // На площадь, м²
     coolingCapacity: 3.5, // Мощность охлаждения, кВт
     noise: 25, // Уровень шума, дБ (A)
@@ -3150,8 +3164,8 @@ const DENKO_KR = [
       powerConsumption: 986, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "15м", // Макс. длина трассы, м
-    maxHeightDifference: "7м", // Макс. перепад высот, м
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 7, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3166,7 +3180,157 @@ const DENKO_KR = [
       weight: 23.5, // Вес, кг
       size: "660x240x530", // Размеры
       freon: "R410A", // Фреон
-      compressorModel: "GREE",
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko KR-18 ------
+  {
+    article: "denko-kr-18",
+    title: "Denko KR-18",
+    type: "split-system",
+    company: "Denko",
+    series: "Dragon",
+    factory: "Midea",
+    link: "denko-kr-18.html",
+    imgSrc: imagesDenkoDragon,
+    price: pricesDenkoDragon.denko_kr_18, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.2, // Мощность охлаждения, кВт
+    noise: 27, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDragon,
+    description: descriptionDenkoDragon, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5275, // Производительность, Вт
+      powerConsumption: 1638, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5334, // Производительность, Вт
+      powerConsumption: 1476, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 7, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 27, // Уровень шума, дБ (A)
+      weight: 10, // Вес, кг
+      size: "908x220x295", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 32, // Вес, кг
+      size: "780x270x560", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko KR-24 ------
+  {
+    article: "denko-kr-24",
+    title: "Denko KR-24",
+    type: "split-system",
+    company: "Denko",
+    series: "Dragon",
+    factory: "Midea",
+    link: "denko-kr-24.html",
+    imgSrc: imagesDenkoDragon,
+    price: pricesDenkoDragon.denko_kr_24, // Цена
+    area: 75, // На площадь, м²
+    coolingCapacity: 7, // Мощность охлаждения, кВт
+    noise: 29, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDragon,
+    description: descriptionDenkoDragon, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7030, // Производительность, Вт
+      powerConsumption: 2190, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 7090, // Производительность, Вт
+      powerConsumption: 1959, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 29, // Уровень шума, дБ (A)
+      weight: 10, // Вес, кг
+      size: "908x220x295", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 36.5, // Вес, кг
+      size: "820x310x635", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko KR-36 ------
+  {
+    article: "denko-kr-36",
+    title: "Denko KR-36",
+    type: "split-system",
+    company: "Denko",
+    series: "Dragon",
+    factory: "Midea",
+    link: "denko-kr-36.html",
+    imgSrc: imagesDenkoDragon,
+    price: pricesDenkoDragon.denko_kr_36, // Цена
+    area: 100, // На площадь, м²
+    coolingCapacity: 9.9, // Мощность охлаждения, кВт
+    noise: 31, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDragon,
+    description: descriptionDenkoDragon, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 9960, // Производительность, Вт
+      powerConsumption: 3103, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 10050, // Производительность, Вт
+      powerConsumption: 2776, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31, // Уровень шума, дБ (A)
+      weight: 16.5, // Вес, кг
+      size: "1100x245x325", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 59, // Уровень шума, дБ (A)
+      weight: 52.5, // Вес, кг
+      size: "860x320x720", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -4285,6 +4449,30 @@ function handlerCart () {
 //   addCartItemToPage ( getDataCartFromLocalStorage() );
 // });
 
+const mapContacts = document.querySelector('#map-contacts');
+
+if (mapContacts) ymaps.ready(init);
+
+
+function init() {
+  const pointAddress = [43.422676, 39.937175];
+  let myMap = new ymaps.Map('map-contacts', {
+
+    center: pointAddress,
+    zoom: 17,
+    controls: [],
+  });
+
+  const placemarkAddress = new ymaps.Placemark(pointAddress, {}, {
+    iconLayout: 'default#image',
+    iconImageHref: './assets/img/icons/map-baloon.svg',
+    iconImageSize: [144, 68],
+    iconImageOffset: [-70, -68]
+  });
+
+  myMap.geoObjects.add(placemarkAddress);
+};
+
 const filter = document.querySelector('.filter');
 
 if (filter) {
@@ -4918,13 +5106,28 @@ function createProductProfile (products) {
 
     profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
 
+    // product.imgSrc.forEach((src, i) => {
+    //   const tagImg = document.createElement("img");
+    //   tagImg.classList.add("swiper-slide");
+    //   tagImg.src = src;
+    //   tagImg.setAttribute("data-src", tagImg.src);
+    //   tagImg.setAttribute('data-fancybox', "images-index");
+    //   swiperTopWrapper.appendChild(tagImg);
+    //   if (i === 0) {
+    //     tagImg.classList.add("product-img");
+    //   }
+    // });
+
+
     product.imgSrc.forEach((src, i) => {
       const tagImg = document.createElement("img");
-      tagImg.classList.add("swiper-slide");
+      const divSwiperSlide = document.createElement("div");
+      divSwiperSlide.classList.add("swiper-slide");
       tagImg.src = src;
       tagImg.setAttribute("data-src", tagImg.src);
       tagImg.setAttribute('data-fancybox', "images-index");
-      swiperTopWrapper.appendChild(tagImg);
+      swiperTopWrapper.appendChild(divSwiperSlide);
+      divSwiperSlide.appendChild(tagImg);
       if (i === 0) {
         tagImg.classList.add("product-img");
       }

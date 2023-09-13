@@ -2555,6 +2555,475 @@ const DAHATSU_GW_H = [
 
 ]
 
+// ----- DAICHI AIR (AIR-AVQ1/AIR-FV1) -----
+
+const functionsDaichiAir = ["Автоматический режим", "Функция «Комфортный сон»", "Многоступенчатое регулирование скорости вентилятора", "Угольный фильтр CARBON",
+                          "Противоплесневая обработка", "Самодиагностика", "Бесшумный режим работы", "Коррозионная стойкость", "Фильтр с ионами серебра",
+                            "Wi-Fi, онлайн управление (опция)", "Информационный LED дисплей"];
+
+const imagesDaichiAir =
+  ["./assets/img/catalog/daichi/air/01.jpg",
+    "./assets/img/catalog/daichi/air/02.jpg",
+    "./assets/img/catalog/daichi/air/03.jpg",
+    "./assets/img/catalog/daichi/air/04.jpg"
+  ];
+
+const descriptionDaichiAir = "Ультрафиолетовая лампа. Встроенная УФ-лампа предотвращает развитие бактерий на узлах внутреннего блока и обеззараживает воздух. Биполярный ионизатор. Циклически генерирует ионы, создавая ионизированную среду в помещении, благотворно влияющую на самочувствие. Эффект бриза - запатентованная технология для достижения эффекта бриза благодаря оригинальной перфорированной форме вертикальных жалюзи. Протяженный воздушный поток по принципу эффекта Коанда. Широкие горизонтальные жалюзи создают воздушный поток, направленный вдоль потолка в режиме охлаждения или вдоль пола в режиме нагрева. Wi-Fi, удаленное онлайн-управление через «облако Даичи» (опция)."
+
+const pricesDaichiAir = {
+  "daichi_AIR20AVQ1": 22500,
+  "daichi_AIR25AVQ1": 23900,
+}
+
+const DAICHI_AIR20AVQ1 = [
+
+  // ------ Daichi AIR20AVQ1/AIR20FV1 ------
+  {
+    article: "daichi_air20avq1",
+    title: "Daichi AIR AIR20AVQ1/AIR20FV1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Air",
+    link: "daichi-air20avq1.html",
+    imgSrc: imagesDaichiAir,
+    price: pricesDaichiAir.daichi_AIR20AVQ1, // Цена
+    area: 20 , // На площадь, м²
+    coolingCapacity: 2.2, // Мощность охлаждения, кВт
+    noise: 25, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiAir,
+    description: descriptionDaichiAir, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 690, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 610, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 25, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "790x192x275", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 48, // Уровень шума, дБ (A)
+      weight: 20, // Вес, кг
+      size: "712x276x459", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi AIR20AVQ1/AIR20FV1 ------
+  {
+    article: "daichi_air25avq1",
+    title: "Daichi AIR AIR25AVQ1/AIR25FV1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Air",
+    link: "daichi-air25avq1.html",
+    imgSrc: imagesDaichiAir,
+    price: pricesDaichiAir.daichi_AIR25AVQ1, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 25, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiAir,
+    description: descriptionDaichiAir, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2640, // Производительность, Вт
+      powerConsumption: 820, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2780, // Производительность, Вт
+      powerConsumption: 770, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 25, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "790x192x275", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 22, // Вес, кг
+      size: "712x276x459", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+];
+
+// ----- DAICHI AIR INVERTER (AIR20AVQ1/AIR20FV1) -----
+
+const functionsDaichiAirInverter = ["Full DC Inverter", "Функция «Комфортный сон»", "Многоступенчатое регулирование скорости вентилятора",
+                          "Противоплесневая обработка", "Самодиагностика", "Бесшумный режим работы", "Коррозионная стойкость", "Фильтр предварительной очистки",
+                            "Wi-Fi, онлайн управление (опция)", "Информационный LED дисплей", "Высокий показатель SEER"];
+
+const imagesDaichiAirInverter =
+  ["./assets/img/catalog/daichi/air-inverter/01.jpg",
+    "./assets/img/catalog/daichi/air-inverter/02.jpg",
+    "./assets/img/catalog/daichi/air-inverter/03.jpg",
+    "./assets/img/catalog/daichi/air-inverter/04.jpg"
+  ];
+
+const descriptionDaichiAirInverter = "Ультрафиолетовая лампа. Встроенная УФ-лампа предотвращает развитие бактерий на узлах внутреннего блока и обеззараживает воздух. Биполярный ионизатор. Циклически генерирует ионы, создавая ионизированную среду в помещении, благотворно влияющую на самочувствие. Эффект бриза - запатентованная технология для достижения эффекта бриза благодаря оригинальной перфорированной форме вертикальных жалюзи. Протяженный воздушный поток по принципу эффекта Коанда. Широкие горизонтальные жалюзи создают воздушный поток, направленный вдоль потолка в режиме охлаждения или вдоль пола в режиме нагрева. Хладагент R32. Наиболее озонобезопасный и энергоэффективный хладагент с низким потенциалом глобального потепления. Full DC Inveter. Передовые инверторные технологии, которые позволяют не только создать максимально тихий и комфорный кондиционер, но и сделать его максимально эффективным. Wi-Fi, удаленное онлайн-управление через «облако Даичи» (опция)."
+
+const pricesDaichiAirInverter = {
+  "daichi_AIR25AVQS1R_1": 46500,
+}
+
+const DAICHI_AIR25AVQS1R_1 = [
+
+  // ------ Daichi AIR20AVQ1/AIR20FV1 ------
+  {
+    article: "daichi_air25avqs1r_1",
+    title: "Daichi AIR Inverter AIR25AVQS1R-1/AIR25FVS1R-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Air Inverter",
+    link: "daichi-air25avqs1r-1.html",
+    imgSrc: imagesDaichiAirInverter,
+    price: pricesDaichiAirInverter.daichi_AIR25AVQS1R_1, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiAirInverter,
+    description: descriptionDaichiAir, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2600, // Производительность, Вт
+      powerConsumption: 830, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2630, // Производительность, Вт
+      powerConsumption: 770, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "790x192x275", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 22, // Вес, кг
+      size: "712x276x459", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+];
+
+// ----- Daichi ICE (ICE-AVQ1-1/ICE-FV1-1) -----
+
+const functionsDaichiIce = ["Турбо", "Фильтр предварительной очистки", "Самодиагностика", "Режим осушения воздуха", "Коррозионная стойкость", "Wi-Fi, онлайн управление (опция)",
+                            "Функция «Комфортный сон»", "Бесшумный режим работы", "Фотокаталитический фильтр", "Противоплесневая обработка", "Информационный LED дисплей"];
+
+const imagesDaichiIce =
+  ["./assets/img/catalog/daichi/ice/01.jpg",
+    "./assets/img/catalog/daichi/ice/02.jpg",
+    "./assets/img/catalog/daichi/ice/03.jpg",
+  ];
+
+const descriptionDaichiIce = "Информационный LED-дисплей. Функция «комфортный сон» позволяет создать приятные условия для отдыха, также снижается потребление электроэнергии. Подготовка к теплому старту. В режиме обогрева вентилятор внутреннего блока включается только после прогрева теплообменника внутреннего блока. Режим «Standby» корректирует поддерживаемую в помещении температуру на 2 °С, снижая тем самым энергопотребление. Функция отключения/включения дисплея внутреннего блока режим локального комфорта IFeel - желаемые параметры микроклимата устанавливаются в месте расположения пульта дистанционного управления. Автоматический перезапуск, Wi-Fi, удаленное онлайн-управление через «облако Даичи» (опция)."
+
+const pricesDaichiIce = {
+  "daichi_ice20avq1_1": 29500,
+  "daichi_ice25avq1_1": 29500,
+  "daichi_ice35avq1_1": 36900,
+  "daichi_ice50avq1": 63500,
+  "daichi_ice60avq1": 79500,
+}
+
+const DAICHI_ICE20AVQ1_1 = [
+
+  // ------ Daichi ICE ICE20AVQ1-1/ICE20FV1-1 ------
+  {
+    article: "daichi_ice20avq1_1",
+    title: "Daichi ICE ICE20AVQ1-1/ICE20FV1-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ace",
+    link: "daichi-ice20avq1-1.html",
+    imgSrc: imagesDaichiIce,
+    price: pricesDaichiIce.daichi_ice20avq1_1, // Цена
+    area: 20 , // На площадь, м²
+    coolingCapacity: 2.3, // Мощность охлаждения, кВт
+    noise: 26, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIce,
+    description: descriptionDaichiIce, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2300, // Производительность, Вт
+      powerConsumption: 700, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2250, // Производительность, Вт
+      powerConsumption: 700, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 26, // Уровень шума, дБ (A)
+      weight: 7.5, // Вес, кг
+      size: "698x185x250", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 48, // Уровень шума, дБ (A)
+      weight: 22.3, // Вес, кг
+      size: "710x293x450", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE ICE25AVQ1-1/ICE25FV1-1 ------
+  {
+    article: "daichi_ice25avq1_1",
+    title: "Daichi ICE ICE25AVQ1-1/ICE25FV1-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ace",
+    link: "daichi-ice25avq1-1.html",
+    imgSrc: imagesDaichiIce,
+    price: pricesDaichiIce.daichi_ice25avq1_1, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.5, // Мощность охлаждения, кВт
+    noise: 26, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIce,
+    description: descriptionDaichiIce, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2550, // Производительность, Вт
+      powerConsumption: 790, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2650, // Производительность, Вт
+      powerConsumption: 730, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 26, // Уровень шума, дБ (A)
+      weight: 7.7, // Вес, кг
+      size: "698x185x250", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 24.7, // Вес, кг
+      size: "710x293x450", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE ICE35AVQ1-1/ICE35FV1-1 ------
+  {
+    article: "daichi_ice35avq1_1",
+    title: "Daichi ICE ICE35AVQ1-1/ICE35FV1-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ace",
+    link: "daichi-ice35avq1-1.html",
+    imgSrc: imagesDaichiIce,
+    price: pricesDaichiIce.daichi_ice35avq1_1, // Цена
+    area: 35 , // На площадь, м²
+    coolingCapacity: 3.4, // Мощность охлаждения, кВт
+    noise: 28, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIce,
+    description: descriptionDaichiIce, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3400, // Производительность, Вт
+      powerConsumption: 1010, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3250, // Производительность, Вт
+      powerConsumption: 940, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 28, // Уровень шума, дБ (A)
+      weight: 8.5, // Вес, кг
+      size: "773x185x250", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 28, // Вес, кг
+      size: "732x330x555", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE ICE50AVQ1/ICE50FV1 ------
+  {
+    article: "daichi_ice50avq1",
+    title: "Daichi ICE ICE50AVQ1/ICE50FV1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ace",
+    link: "daichi-ice50avq1.html",
+    imgSrc: imagesDaichiIce,
+    price: pricesDaichiIce.daichi_ice50avq1, // Цена
+    area: 50 , // На площадь, м²
+    coolingCapacity: 4.8, // Мощность охлаждения, кВт
+    noise: 31, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIce,
+    description: descriptionDaichiIce, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1500, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1470, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "849x215x289", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 39, // Вес, кг
+      size: "848x320x540", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE ICE60AVQ1/ICE60FV1 ------
+  {
+    article: "daichi_ice60avq1",
+    title: "Daichi ICE ICE60AVQ1/ICE60FV1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ace",
+    link: "daichi-ice60avq1.html",
+    imgSrc: imagesDaichiIce,
+    price: pricesDaichiIce.daichi_ice60avq1, // Цена
+    area: 60 , // На площадь, м²
+    coolingCapacity: 6.2, // Мощность охлаждения, кВт
+    noise: 37, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIce,
+    description: descriptionDaichiIce, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6200, // Производительность, Вт
+      powerConsumption: 1920, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6700, // Производительность, Вт
+      powerConsumption: 1860, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 37, // Уровень шума, дБ (A)
+      weight: 13.5, // Вес, кг
+      size: "970x225x300", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 54, // Уровень шума, дБ (A)
+      weight: 50, // Вес, кг
+      size: "913x378x680", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+
+
+];
+
 // -----Denko Кассетный (DCS-A) -----
 
 const functionsDenkoDCS_A = ["ON/OFF", "Инфракрасный пульт (в комплекте)", "Режим энергосбережения",
@@ -4114,6 +4583,12 @@ const dataMidea = [
   MIDEA_MSAG1,
 ]
 
+const dataDaichi = [
+  DAICHI_AIR20AVQ1,
+  DAICHI_AIR25AVQS1R_1,
+  DAICHI_ICE20AVQ1_1,
+]
+
 // Общий массив всех товаров
 const productsArr = [
   dataDahatsu,
@@ -4121,6 +4596,7 @@ const productsArr = [
   dataEurohoff,
   dataLG,
   dataMidea,
+  dataDaichi,
 
 ].flat().flat();
 
@@ -4462,7 +4938,6 @@ function init() {
     zoom: 17,
     controls: [],
   });
-
   const placemarkAddress = new ymaps.Placemark(pointAddress, {}, {
     iconLayout: 'default#image',
     iconImageHref: './assets/img/icons/map-baloon.svg',
@@ -4472,6 +4947,49 @@ function init() {
 
   myMap.geoObjects.add(placemarkAddress);
 };
+
+
+
+
+// function init() {
+//   const point = [55.76, 37.64];
+//   let myMap = new ymaps.Map("map-contacts", {
+//     center: point,
+//     zoom: 10
+//   });
+//
+//   ymaps.route([
+//     'Москва',
+//     'Химки'
+//   ]).then((route) => {
+//     myMap.geoObjects.add(route);
+//   });
+//
+//   let marker = new ymaps.Placemark(point);
+//   myMap.geoObjects.add(marker);
+
+
+
+  // let animation = ymaps.animation.animate(
+  //   'point',
+  //   function (fraction) {
+  //     return ymaps.coordSystem.geo.solveDirectProblem(
+  //       route.getWayPoints().get(0).geometry.getCoordinates(),
+  //       route.getWayPoints().get(1).geometry.getCoordinates(),
+  //       fraction
+  //     )
+  //   },
+  //   {
+  //     duration: 2000
+  //   }
+  // );
+  //
+  // marker.addAnimation(animation);
+
+
+//}
+
+
 
 const filter = document.querySelector('.filter');
 
@@ -5531,3 +6049,26 @@ class Quiz {
 // });
 
 
+
+const gotTopButton = document.querySelector('.go-top');
+
+if (gotTopButton) {
+
+  gotTopButton.addEventListener('click', goTop);
+  window.addEventListener('scroll', trackScroll);
+
+  function goTop () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  };
+
+  function trackScroll () {
+    const offset = window.scrollY;
+    const coords = document.documentElement.clientHeight;
+    gotTopButton.classList.toggle('js-scroll-show', offset > 2 * coords);
+  };
+
+}

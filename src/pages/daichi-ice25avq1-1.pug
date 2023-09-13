@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Daichi ICE ICE25AVQ1-1/ICE25FV1-1"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Бытовые сплит-системы", url: "split-systems.html"}, {text: title}])
+
+  include ../components/popular/popular
+
+
+
+

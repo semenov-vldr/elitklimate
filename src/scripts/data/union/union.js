@@ -29,6 +29,12 @@ const dataMidea = [
   MIDEA_MSAG1,
 ]
 
+const dataDaichi = [
+  DAICHI_AIR20AVQ1,
+  DAICHI_AIR25AVQS1R_1,
+  DAICHI_ICE20AVQ1_1,
+]
+
 // Общий массив всех товаров
 const productsArr = [
   dataDahatsu,
@@ -36,6 +42,7 @@ const productsArr = [
   dataEurohoff,
   dataLG,
   dataMidea,
+  dataDaichi,
 
 ].flat().flat();
 

@@ -29,11 +29,15 @@
     margin: 0 auto 16px
     height: 270px
     user-select: none
+    object-fit: cover
+    max-width: 270px
     @media (max-width: $width-tablet)
       height: 200px
+      max-width: 200px
     @media (max-width: $width-mobile)
       margin: 0 auto 8px
       height: 150px
+      max-width: 150px
 
   &__title
     @include fontSize(16, 24)

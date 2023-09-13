@@ -5,6 +5,8 @@
     grid-template-columns: repeat(3, 1fr)
     gap: 32px
     justify-content: center
+    @media (max-width: $width-tablet)
+      gap: 16px
     @media (max-width: $width-mobile)
       gap: 12px
       grid-template-columns: repeat(2, 1fr)
@@ -29,11 +31,28 @@
       margin: 0 auto
 
   &__item-title
+    position: relative
     margin-bottom: 24px
     @include fontSize(16, 24)
     font-weight: 500
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 8px
     @media (max-width: $width-mobile)
       margin-bottom: 8px
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url("../img/icons/arrow-filter.svg")
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      width: 19px
+      height: 11px
+      min-height: 11px
+      min-width: 19px
+      transform: rotate(-90deg)
 
   &__item-img
     max-width: 300px

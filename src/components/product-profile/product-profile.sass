@@ -18,11 +18,10 @@
 
   &__images
     overflow: hidden
-    max-height: 800px
+    max-height: 700px
     img
       object-fit: cover
       display: block
-      aspect-ratio: 1 / 1
 
     .swiper-top
       padding: 0 32px
@@ -37,8 +36,6 @@
           height: 80%
           width: auto
 
-
-
     .swiper-thumbs
       img
         width: 100px
@@ -47,6 +44,7 @@
         border: 1px solid transparent
         padding: 5px
         cursor: pointer
+        object-fit: contain
       .swiper-wrapper
         justify-content: center
       .swiper-slide-thumb-active
@@ -89,6 +87,11 @@
     text-align: right
 
   &__actions
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 32px 0
+    gap: 16px
     @media (max-width: $width-tablet)
       position: fixed
       width: 100%
@@ -102,6 +105,7 @@
       justify-content: space-between
       padding: 8px 16px
       z-index: 2
+      margin: 0
 
     .product-profile__price
       @media (max-width: $width-mobile)
@@ -111,7 +115,6 @@
     display: inline-block
     @include fontSize(24, 48)
     font-weight: 500
-    margin-bottom: 24px
     white-space: nowrap
     @media (max-width: $width-tablet)
       margin-bottom: 0
@@ -121,8 +124,7 @@
 
   &__button
     width: 100%
-    margin-bottom: 32px
-    min-height: 64px
+    max-width: 200px
     @include fontSize(16, 24)
     @media (max-width: $width-tablet)
       min-height: 54px

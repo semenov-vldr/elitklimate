@@ -1,0 +1,38 @@
+.alert
+  position: fixed
+  max-width: 400px
+  background-color: #d9edf7
+  border: 1px solid #bce8f1
+  color: #31708f
+  border-radius: 4px
+  padding: 16px
+  opacity: 0
+  z-index: 10
+  visibility: hidden
+  top: 0
+  right: 0
+  transition: $transition
+  text-align: center
+  @include fontSize(14, 16)
+  h2
+    @include fontSize(16, 20)
+  @media (max-width: $width-mobile)
+    padding: 8px
+    width: 100%
+    max-width: initial
+  &.js-alert-active
+    opacity: 1
+    visibility: visible
+
+  &.alert--success
+    background-color: #d9edf7
+    border: 1px solid #bce8f1
+    color: #31708f
+
+  &.alert--error
+    background-color: #f7d9d9
+    border: 1px solid #f1bcbc
+    color: #8f3131
+    a
+      text-decoration: underline
+

@@ -53,13 +53,12 @@ const blockCassette = document.querySelector(".products.products--cassette");
 const blockColumn = document.querySelector(".products.products--column");
 const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
 
-// Массивы товаров (объектов) по соответствующим категорям
-const splitSystems_Products = renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
-const floorCeiling_Products = renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
-const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Канальные
-const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
-const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
-const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
+renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
+renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
+renderProductsOfCategory(blockDucted, "ducted"); // Канальные
+renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
+renderProductsOfCategory(blockColumn, "column"); // Колонные
+renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {

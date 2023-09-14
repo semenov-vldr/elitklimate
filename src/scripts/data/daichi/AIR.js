@@ -18,7 +18,7 @@ const pricesDaichiAir = {
   "daichi_AIR25AVQ1": 23900,
 }
 
-const DAICHI_AIR20AVQ1 = [
+const DAICHI_AIR = [
 
   // ------ Daichi AIR20AVQ1/AIR20FV1 ------
   {

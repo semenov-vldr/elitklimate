@@ -11,7 +11,9 @@ function filterTabsCards () {
   const tabsListArea = filterTabsBlock.querySelector(".filter-tabs__list--area");
 
   // Динамическое добавление табов компаний
-  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
+  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))].sort((a, b) => {
+    return a.localeCompare(b);
+  });
 
   uniqueCompanyNames.forEach(companyName => {
     const tagLi = document.createElement("li");

@@ -43,13 +43,20 @@
     @include fontSize(16, 24)
     font-weight: 500
     transition: $transition
+    -webkit-line-clamp: 2
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    overflow: hidden
+    margin-bottom: 8px
+    @media (max-width: $width-mobile)
+      margin-bottom: 4px
 
   &__price
     @include fontSize(18, 32)
     font-weight: 500
-    margin: 8px 0 16px
+    margin: auto 0 16px
     @media (max-width: $width-mobile)
-      margin: 4px 0 8px
+      margin: auto 0 8px
 
   &__data
     margin-bottom: 24px

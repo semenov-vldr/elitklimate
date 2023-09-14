@@ -26,13 +26,15 @@ const dataLG = [
 ];
 
 const dataMidea = [
-  MIDEA_MSAG1,
+  MIDEA_PARAMOUNT,
+  MIDEA_PARAMOUNT_INVERTER,
 ]
 
 const dataDaichi = [
-  DAICHI_AIR20AVQ1,
-  DAICHI_AIR25AVQS1R_1,
-  DAICHI_ICE20AVQ1_1,
+  DAICHI_ICE,
+  DAICHI_ICE_INVERTER,
+  DAICHI_AIR,
+  DAICHI_AIR_INVERTER,
 ]
 
 // Общий массив всех товаров

@@ -19,7 +19,7 @@ const pricesDaichiIce = {
   "daichi_ice60avq1": 79500,
 }
 
-const DAICHI_ICE20AVQ1_1 = [
+const DAICHI_ICE = [
 
   // ------ Daichi ICE ICE20AVQ1-1/ICE20FV1-1 ------
   {

@@ -4,29 +4,41 @@ const functionsMideaParamount = ["Фильтр высокой плотности
 "Самоочистка", "Тихий внутренний блок", "Таймер", "Авторестарт", "Контроль влажности", "Ночной режим", "Обнаружение утечки хладагента", "Локальный комфорт Follow Me", "Самодиагностика",
 "i-Remote", "Wi-Fi Control (опция)"];
 
+
+const srcToFolderMideaParamount = "./assets/img/catalog/midea/MSAG1";
+
 const imagesMideaParamount =
-  ["./assets/img/catalog/midea/MSAG1/01.jpg",
-    "./assets/img/catalog/midea/MSAG1/02.png",
-    "./assets/img/catalog/midea/MSAG1/03.jpg",
-    "./assets/img/catalog/midea/MSAG1/04.jpg"
+  [ `${srcToFolderMideaParamount}/01.jpg`,
+    `${srcToFolderMideaParamount}/02.jpg`,
+    `${srcToFolderMideaParamount}/03.jpg`,
+    `${srcToFolderMideaParamount}/04.jpg`,
   ];
 
-const descriptionMideaParamount = ""
+const pricesMideaParamount = {
+  "midea_msag1_07hrn1": 29900,
+  "midea_msag1_09hrn1": 32690,
+  "midea_msag1_12hrn1": 37190,
+  "midea_msag1_18hrn1": 57990,
+  "midea_msag1_24hrn1": 74890,
+}
 
 
-const MIDEA_MSAG1 = [
+const descriptionMideaParamount = "Сплит-система Midea серии Paramount заправляется озонобезопасным хладагентом R410a, который способствует повышению сезонной энергоэффективности техники. Помимо основного фильтра высокой плотности, здесь установлен фотокаталитический фильтр, который активно уничтожает любые органические соединения и устраняет неприятные запахи. Благодаря функции «Любимые настройки» кондиционер можно запустить в удобном для себя режиме работы нажатием одной кнопки. Заслонки двигаются в автоматическом режиме, обеспечивая равномерное распределение воздушных потоков по всему внутреннему пространству. При этом предусмотрено запоминание положения жалюзи. Тёплый запуск, самоочистка и самодиагностика гарантируют длительную и безаварийную работу техники, независимо от условий эксплуатации."
+
+
+const MIDEA_PARAMOUNT = [
 
   // ------ Midea MSAG1-07HRN1-I / MSAG1-07HRN1-O ------
   {
     article: "midea-msag1-07hrn1",
-    title: "Midea MSAG1-07HRN1-I / MSAG1-07HRN1-O",
+    title: "Midea Paramount MSAG1-07HRN1-I / MSAG1-07HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-07hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 29900, // Цена
-    area: 23 , // На площадь, м²
+    price: pricesMideaParamount.midea_msag1_07hrn1, // Цена
+    area: 22 , // На площадь, м²
     coolingCapacity: 2.34, // Мощность охлаждения, кВт
     noise: 26.5, // Уровень шума, дБ (A)
     inverter: false, // Наличие инвертора (да/нет)
@@ -68,13 +80,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-09HRN1-I / MSAG1-09HRN1-O ------
   {
     article: "midea-msag1-09hrn1",
-    title: "Midea MSAG1-09HRN1-I / MSAG1-09HRN1-O",
+    title: "Midea Paramount MSAG1-09HRN1-I / MSAG1-09HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-09hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 32690, // Цена
+    price: pricesMideaParamount.midea_msag1_09hrn1, // Цена
     area: 28 , // На площадь, м²
     coolingCapacity: 2.64, // Мощность охлаждения, кВт
     noise: 29.5, // Уровень шума, дБ (A)
@@ -117,13 +129,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-12HRN1-I / MSAG1-12HRN1-O ------
   {
     article: "midea-msag1-12hrn1",
-    title: "Midea MSAG1-12HRN1-I / MSAG1-12HRN1-O",
+    title: "Midea Paramount MSAG1-12HRN1-I / MSAG1-12HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-12hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 37190, // Цена
+    price: pricesMideaParamount.midea_msag1_12hrn1, // Цена
     area: 35 , // На площадь, м²
     coolingCapacity: 3.52, // Мощность охлаждения, кВт
     noise: 28.5, // Уровень шума, дБ (A)
@@ -166,13 +178,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-18HRN1-I / MSAG1-18HRN1-O ------
   {
     article: "midea-msag1-18hrn1",
-    title: "Midea MSAG1-18HRN1-I / MSAG1-18HRN1-O",
+    title: "Midea Paramount MSAG1-18HRN1-I / MSAG1-18HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-18hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 57990, // Цена
+    price: pricesMideaParamount.midea_msag1_18hrn1, // Цена
     area: 55 , // На площадь, м²
     coolingCapacity: 5.28, // Мощность охлаждения, кВт
     noise: 30, // Уровень шума, дБ (A)
@@ -215,13 +227,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-24HRN1-I / MSAG1-24HRN1-O ------
   {
     article: "midea-msag1-24hrn1",
-    title: "Midea MSAG1-24HRN1-I / MSAG1-24HRN1-O",
+    title: "Midea Paramount MSAG1-24HRN1-I / MSAG1-24HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-24hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 74890, // Цена
+    price: pricesMideaParamount.midea_msag1_24hrn1, // Цена
     area: 75 , // На площадь, м²
     coolingCapacity: 7.03, // Мощность охлаждения, кВт
     noise: 39, // Уровень шума, дБ (A)

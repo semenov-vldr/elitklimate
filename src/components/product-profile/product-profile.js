@@ -92,9 +92,7 @@ function createProductProfile (products) {
   const productProfile = document.querySelector('.product-profile');
 
   if (productProfile) {
-    setTimeout(() => {
-      createProductProfileSlider(productProfile)
-    }, 100);
+    setTimeout(() => createProductProfileSlider(productProfile), 100);
 
     const descText = productProfile.querySelector(".product-profile__desc-text");
     const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
@@ -104,7 +102,7 @@ function createProductProfile (products) {
       descText.classList.add("js-show-more");
     });
   }
-  handlerCart ();
+  handlerCart();
 };
 
 

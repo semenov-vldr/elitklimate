@@ -1,4 +1,4 @@
-// ----- DAICHI AIR INVERTER (AIR20AVQ1/AIR20FV1) -----
+// ----- DAICHI AIR INVERTER (AIR-AVQ1/AIR-FV1) -----
 
 const functionsDaichiAirInverter = ["Full DC Inverter", "Функция «Комфортный сон»", "Многоступенчатое регулирование скорости вентилятора",
                           "Противоплесневая обработка", "Самодиагностика", "Бесшумный режим работы", "Коррозионная стойкость", "Фильтр предварительной очистки",
@@ -17,7 +17,7 @@ const pricesDaichiAirInverter = {
   "daichi_AIR25AVQS1R_1": 46500,
 }
 
-const DAICHI_AIR25AVQS1R_1 = [
+const DAICHI_AIR_INVERTER = [
 
   // ------ Daichi AIR20AVQ1/AIR20FV1 ------
   {
@@ -35,7 +35,7 @@ const DAICHI_AIR25AVQS1R_1 = [
     inverter: true, // Наличие инвертора (да/нет)
 
     functions: functionsDaichiAirInverter,
-    description: descriptionDaichiAir, // Описание
+    description: descriptionDaichiAirInverter, // Описание
 
     // Охлаждение
     cooling: {

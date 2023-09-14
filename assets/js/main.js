@@ -162,8 +162,6 @@ if (forms) {
     this.reset();
   };
 
-
-
 const powerSupply = "220-240V,50HZ";
 const powerSupplyOnePhase = "1 ФАЗА 220-240V,50HZ";
 const powerSupplyThreePhase = "3 ФАЗА 380-415V,50HZ";
@@ -2641,7 +2639,7 @@ const pricesDaichiAir = {
   "daichi_AIR25AVQ1": 23900,
 }
 
-const DAICHI_AIR20AVQ1 = [
+const DAICHI_AIR = [
 
   // ------ Daichi AIR20AVQ1/AIR20FV1 ------
   {
@@ -2744,7 +2742,7 @@ const DAICHI_AIR20AVQ1 = [
 
 ];
 
-// ----- DAICHI AIR INVERTER (AIR20AVQ1/AIR20FV1) -----
+// ----- DAICHI AIR INVERTER (AIR-AVQ1/AIR-FV1) -----
 
 const functionsDaichiAirInverter = ["Full DC Inverter", "Функция «Комфортный сон»", "Многоступенчатое регулирование скорости вентилятора",
                           "Противоплесневая обработка", "Самодиагностика", "Бесшумный режим работы", "Коррозионная стойкость", "Фильтр предварительной очистки",
@@ -2763,7 +2761,7 @@ const pricesDaichiAirInverter = {
   "daichi_AIR25AVQS1R_1": 46500,
 }
 
-const DAICHI_AIR25AVQS1R_1 = [
+const DAICHI_AIR_INVERTER = [
 
   // ------ Daichi AIR20AVQ1/AIR20FV1 ------
   {
@@ -2781,7 +2779,7 @@ const DAICHI_AIR25AVQS1R_1 = [
     inverter: true, // Наличие инвертора (да/нет)
 
     functions: functionsDaichiAirInverter,
-    description: descriptionDaichiAir, // Описание
+    description: descriptionDaichiAirInverter, // Описание
 
     // Охлаждение
     cooling: {
@@ -2838,7 +2836,7 @@ const pricesDaichiIce = {
   "daichi_ice60avq1": 79500,
 }
 
-const DAICHI_ICE20AVQ1_1 = [
+const DAICHI_ICE = [
 
   // ------ Daichi ICE ICE20AVQ1-1/ICE20FV1-1 ------
   {
@@ -3086,6 +3084,180 @@ const DAICHI_ICE20AVQ1_1 = [
   },
 
 
+
+
+];
+
+// ----- Daichi ICE Inverter (ICE-AVQS1R-1/ICE-FVS1R-1) -----
+
+const functionsDaichiIceInverter = ["DC Inverter", "Функция «Комфортный сон»", "Многоступенчатое регулирование скорости вентилятора",
+  "Противоплесневая обработка", "Самодиагностика", "Бесшумный режим работы", "Коррозионная стойкость", "Фильтр предварительной очистки",
+  "Wi-Fi, онлайн управление (опция)", "Информационный LED дисплей", "Устойчивость к перепадам напряжения"];
+
+const srcToFolderDaichiIceInverter = "./assets/img/catalog/daichi/ice-inverter";
+
+const imagesDaichiIceInverter =
+  [ `${srcToFolderDaichiIceInverter}/01.jpg`,
+    `${srcToFolderDaichiIceInverter}/02.jpg`,
+    `${srcToFolderDaichiIceInverter}/03.jpg`,
+  ];
+
+const descriptionDaichiIceInverter = "Информационный LED-дисплей. Функция «комфортный сон» позволяет создать приятные условия для отдыха, также снижается потребление электроэнергии. Подготовка к теплому старту. В режиме обогрева вентилятор внутреннего блока включается только после прогрева теплообменника внутреннего блока. Режим «Standby» корректирует поддерживаемую в помещении температуру на 2 °С, снижая тем самым энергопотребление. Функция отключения/включения дисплея внутреннего блока. Режим локального комфорта IFeel - желаемые параметры микроклимата устанавливаются в месте расположения пульта дистанционного управления. Автоматический перезапуск. Wi-Fi, удаленное онлайн-управление через «облако Даичи» (опция)."
+
+const pricesDaichiIceInverter = {
+  "daichi_ICE25AVQS1R_1": 46500,
+  "daichi_ICE35AVQS1R_1": 51500,
+  "daichi_ICE50AVQS1R_1": 82500,
+}
+
+const DAICHI_ICE_INVERTER = [
+
+  // ------ Daichi ICE Inverter ICE25AVQS1R-1/ICE25FVS1R-1 ------
+  {
+    article: "daichi_ice25avqs1r-1",
+    title: "Daichi ICE Inverter ICE25AVQS1R-1/ICE25FVS1R-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ice Inverter",
+    link: "daichi-ice25avqs1r-1.html",
+    imgSrc: imagesDaichiIceInverter,
+    price: pricesDaichiIceInverter.daichi_ICE25AVQS1R_1, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.5, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIceInverter,
+    description: descriptionDaichiIceInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2500, // Производительность, Вт
+      powerConsumption: 680, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2800, // Производительность, Вт
+      powerConsumption: 730, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 7.5, // Вес, кг
+      size: "698x185x250", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 24.5, // Вес, кг
+      size: "732x330x550", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE Inverter ICE35AVQS1R-1/ICE35FVS1R-1 ------
+  {
+    article: "daichi_ice35avqs1r-1",
+    title: "Daichi ICE Inverter ICE35AVQS1R-1/ICE35FVS1R-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ice Inverter",
+    link: "daichi-ice35avqs1r-1.html",
+    imgSrc: imagesDaichiIceInverter,
+    price: pricesDaichiIceInverter.daichi_ICE35AVQS1R_1, // Цена
+    area: 35 , // На площадь, м²
+    coolingCapacity: 3.2, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIceInverter,
+    description: descriptionDaichiIceInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3200, // Производительность, Вт
+      powerConsumption: 990, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3400, // Производительность, Вт
+      powerConsumption: 920, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 8.5, // Вес, кг
+      size: "773x185x250", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 25, // Вес, кг
+      size: "732x330x555", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Daichi ICE Inverter ICE50AVQS1R-1/ICE50FVS1R-1 ------
+  {
+    article: "daichi_ice50avqs1r-1",
+    title: "Daichi ICE Inverter ICE50AVQS1R-1/ICE50FVS1R-1",
+    type: "split-system",
+    company: "Daichi",
+    series: "Ice Inverter",
+    link: "daichi-ice50avqs1r-1.html",
+    imgSrc: imagesDaichiIceInverter,
+    price: pricesDaichiIceInverter.daichi_ICE50AVQS1R_1, // Цена
+    area: 50 , // На площадь, м²
+    coolingCapacity: 4.6, // Мощность охлаждения, кВт
+    noise: 31, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDaichiIceInverter,
+    description: descriptionDaichiIceInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4600, // Производительность, Вт
+      powerConsumption: 1350, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5200, // Производительность, Вт
+      powerConsumption: 1340, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31, // Уровень шума, дБ (A)
+      weight: 13.5, // Вес, кг
+      size: "970x225x300", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 26.5, // Вес, кг
+      size: "732x330x555", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
 
 
 ];
@@ -4359,29 +4531,41 @@ const functionsMideaParamount = ["Фильтр высокой плотности
 "Самоочистка", "Тихий внутренний блок", "Таймер", "Авторестарт", "Контроль влажности", "Ночной режим", "Обнаружение утечки хладагента", "Локальный комфорт Follow Me", "Самодиагностика",
 "i-Remote", "Wi-Fi Control (опция)"];
 
+
+const srcToFolderMideaParamount = "./assets/img/catalog/midea/MSAG1";
+
 const imagesMideaParamount =
-  ["./assets/img/catalog/midea/MSAG1/01.jpg",
-    "./assets/img/catalog/midea/MSAG1/02.png",
-    "./assets/img/catalog/midea/MSAG1/03.jpg",
-    "./assets/img/catalog/midea/MSAG1/04.jpg"
+  [ `${srcToFolderMideaParamount}/01.jpg`,
+    `${srcToFolderMideaParamount}/02.jpg`,
+    `${srcToFolderMideaParamount}/03.jpg`,
+    `${srcToFolderMideaParamount}/04.jpg`,
   ];
 
-const descriptionMideaParamount = ""
+const pricesMideaParamount = {
+  "midea_msag1_07hrn1": 29900,
+  "midea_msag1_09hrn1": 32690,
+  "midea_msag1_12hrn1": 37190,
+  "midea_msag1_18hrn1": 57990,
+  "midea_msag1_24hrn1": 74890,
+}
 
 
-const MIDEA_MSAG1 = [
+const descriptionMideaParamount = "Сплит-система Midea серии Paramount заправляется озонобезопасным хладагентом R410a, который способствует повышению сезонной энергоэффективности техники. Помимо основного фильтра высокой плотности, здесь установлен фотокаталитический фильтр, который активно уничтожает любые органические соединения и устраняет неприятные запахи. Благодаря функции «Любимые настройки» кондиционер можно запустить в удобном для себя режиме работы нажатием одной кнопки. Заслонки двигаются в автоматическом режиме, обеспечивая равномерное распределение воздушных потоков по всему внутреннему пространству. При этом предусмотрено запоминание положения жалюзи. Тёплый запуск, самоочистка и самодиагностика гарантируют длительную и безаварийную работу техники, независимо от условий эксплуатации."
+
+
+const MIDEA_PARAMOUNT = [
 
   // ------ Midea MSAG1-07HRN1-I / MSAG1-07HRN1-O ------
   {
     article: "midea-msag1-07hrn1",
-    title: "Midea MSAG1-07HRN1-I / MSAG1-07HRN1-O",
+    title: "Midea Paramount MSAG1-07HRN1-I / MSAG1-07HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-07hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 29900, // Цена
-    area: 23 , // На площадь, м²
+    price: pricesMideaParamount.midea_msag1_07hrn1, // Цена
+    area: 22 , // На площадь, м²
     coolingCapacity: 2.34, // Мощность охлаждения, кВт
     noise: 26.5, // Уровень шума, дБ (A)
     inverter: false, // Наличие инвертора (да/нет)
@@ -4423,13 +4607,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-09HRN1-I / MSAG1-09HRN1-O ------
   {
     article: "midea-msag1-09hrn1",
-    title: "Midea MSAG1-09HRN1-I / MSAG1-09HRN1-O",
+    title: "Midea Paramount MSAG1-09HRN1-I / MSAG1-09HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-09hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 32690, // Цена
+    price: pricesMideaParamount.midea_msag1_09hrn1, // Цена
     area: 28 , // На площадь, м²
     coolingCapacity: 2.64, // Мощность охлаждения, кВт
     noise: 29.5, // Уровень шума, дБ (A)
@@ -4472,13 +4656,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-12HRN1-I / MSAG1-12HRN1-O ------
   {
     article: "midea-msag1-12hrn1",
-    title: "Midea MSAG1-12HRN1-I / MSAG1-12HRN1-O",
+    title: "Midea Paramount MSAG1-12HRN1-I / MSAG1-12HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-12hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 37190, // Цена
+    price: pricesMideaParamount.midea_msag1_12hrn1, // Цена
     area: 35 , // На площадь, м²
     coolingCapacity: 3.52, // Мощность охлаждения, кВт
     noise: 28.5, // Уровень шума, дБ (A)
@@ -4521,13 +4705,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-18HRN1-I / MSAG1-18HRN1-O ------
   {
     article: "midea-msag1-18hrn1",
-    title: "Midea MSAG1-18HRN1-I / MSAG1-18HRN1-O",
+    title: "Midea Paramount MSAG1-18HRN1-I / MSAG1-18HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-18hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 57990, // Цена
+    price: pricesMideaParamount.midea_msag1_18hrn1, // Цена
     area: 55 , // На площадь, м²
     coolingCapacity: 5.28, // Мощность охлаждения, кВт
     noise: 30, // Уровень шума, дБ (A)
@@ -4570,13 +4754,13 @@ const MIDEA_MSAG1 = [
   // ------ Midea MSAG1-24HRN1-I / MSAG1-24HRN1-O ------
   {
     article: "midea-msag1-24hrn1",
-    title: "Midea MSAG1-24HRN1-I / MSAG1-24HRN1-O",
+    title: "Midea Paramount MSAG1-24HRN1-I / MSAG1-24HRN1-O",
     type: "split-system",
     company: "Midea",
     series: "Paramount",
-    link: "##",
+    link: "midea-msag1-24hrn1.html",
     imgSrc: imagesMideaParamount,
-    price: 74890, // Цена
+    price: pricesMideaParamount.midea_msag1_24hrn1, // Цена
     area: 75 , // На площадь, м²
     coolingCapacity: 7.03, // Мощность охлаждения, кВт
     noise: 39, // Уровень шума, дБ (A)
@@ -4618,6 +4802,134 @@ const MIDEA_MSAG1 = [
 
 ];
 
+// ----- Midea Paramount Inverter (MSAG1-I) -----
+
+const functionsMideaParamountInverter = ["Фильтр высокой плотности", "Фотокаталитический фильтр", "Автоматическое качание заслонки", "Нагрев до 8°C", "Турбо охлаждение", "2 варианта включения",
+  "Самоочистка", "Тихий внутренний блок", "Таймер", "Авторестарт", "Контроль влажности", "Ночной режим", "Обнаружение утечки хладагента", "Локальный комфорт Follow Me", "Самодиагностика",
+  "i-Remote", "Wi-Fi Control (опция)"];
+
+
+const srcToFolderMideaParamountInverter = "./assets/img/catalog/midea/paramount-inverter";
+
+const imagesMideaParamountInverter =
+  [ `${srcToFolderMideaParamountInverter}/01.jpg`,
+    `${srcToFolderMideaParamountInverter}/02.jpg`,
+    //`${srcToFolderMideaParamountInverter}/03.jpg`,
+    `${srcToFolderMideaParamountInverter}/04.jpg`,
+  ];
+
+const pricesMideaParamountInverter = {
+  "midea_msag1_07n8c2u_i": 44500,
+  "midea_msag1_09n8c2u_i": 46500,
+}
+
+
+const descriptionMideaParamountInverter = "Сплит-система Midea серии Paramount заправляется озонобезопасным хладагентом R410a, который способствует повышению сезонной энергоэффективности техники. Минимальное энергопотребление обеспечивается за счёт инверторной схемы управления, которая позволяет компрессору работать без отключения. Помимо основного фильтра высокой плотности, здесь установлен фотокаталитический фильтр, который активно уничтожает любые органические соединения и устраняет неприятные запахи. Благодаря функции «Любимые настройки» кондиционер можно запустить в удобном для себя режиме работы нажатием одной кнопки. Заслонки двигаются в автоматическом режиме, обеспечивая равномерное распределение воздушных потоков по всему внутреннему пространству. При этом предусмотрено запоминание положения жалюзи. Тёплый запуск, самоочистка и самодиагностика гарантируют длительную и безаварийную работу техники, независимо от условий эксплуатации."
+
+
+const MIDEA_PARAMOUNT_INVERTER = [
+
+  // ------ Midea MSAG1-07N8C2U-I / MSAG1-07N8C2U-O ------
+  {
+    article: "midea-msag1-07n8c2u-i",
+    title: "Midea Paramount MSAG1-07N8C2U-I/MSAG1-07N8C2U-O",
+    type: "split-system",
+    company: "Midea",
+    series: "Paramount",
+    link: "midea-msag1-07n8c2u-i.html",
+    imgSrc: imagesMideaParamountInverter,
+    price: pricesMideaParamountInverter.midea_msag1_07n8c2u_i, // Цена
+    area: 20 , // На площадь, м²
+    coolingCapacity: 2.05, // Мощность охлаждения, кВт
+    noise: 23.5, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsMideaParamountInverter,
+    description: descriptionMideaParamountInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2050, // Производительность, Вт
+      powerConsumption: 650, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2340, // Производительность, Вт
+      powerConsumption: 650, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 8, // Уровень шума, дБ (A)
+      weight: 7.4, // Вес, кг
+      size: "729x200x292", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 20.2, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Midea MSAG1-09N8C2U-I / MSAG1-09N8C2U-O ------
+  {
+    article: "midea-msag1-09n8c2u-i",
+    title: "Midea Paramount MSAG1-09N8C2U-I/MSAG1-09N8C2U-O",
+    type: "split-system",
+    company: "Midea",
+    series: "Paramount",
+    link: "midea-msag1-09n8c2u-i.html",
+    imgSrc: imagesMideaParamountInverter,
+    price: pricesMideaParamountInverter.midea_msag1_09n8c2u_i, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.78, // Мощность охлаждения, кВт
+    noise: 23.5, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsMideaParamountInverter,
+    description: descriptionMideaParamountInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2780, // Производительность, Вт
+      powerConsumption: 860, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3370, // Производительность, Вт
+      powerConsumption: 930, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 23.5, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "729x200x292", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 20.2, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+];
+
 const dataDahatsu = [
   DAHATSU_DA_H,
   DAHATSU_DA_I,
@@ -4646,13 +4958,15 @@ const dataLG = [
 ];
 
 const dataMidea = [
-  MIDEA_MSAG1,
+  MIDEA_PARAMOUNT,
+  MIDEA_PARAMOUNT_INVERTER,
 ]
 
 const dataDaichi = [
-  DAICHI_AIR20AVQ1,
-  DAICHI_AIR25AVQS1R_1,
-  DAICHI_ICE20AVQ1_1,
+  DAICHI_ICE,
+  DAICHI_ICE_INVERTER,
+  DAICHI_AIR,
+  DAICHI_AIR_INVERTER,
 ]
 
 // Общий массив всех товаров
@@ -4868,15 +5182,6 @@ function handlerCart () {
         sumValue.textContent = cardPriceString;
         formPopup.classList.add("js-popup-active");
         blockScrollBody();
-
-        // --- Закрытие свайпом вниз ---
-        // if (formPopup.classList.contains('js-popup-active')) {
-        //   let mc = new Hammer(formPopup);
-        //   mc.get('swipe').set({
-        //     direction: Hammer.DIRECTION_ALL,
-        //   });
-        //   mc.on('swipedown', closePopupForm);
-        // };
 
 
         // Добавление в поп-ап для карточки профиля (внутрення страница) ед.изм. "м²"
@@ -5212,7 +5517,9 @@ function filterTabsCards () {
   const tabsListArea = filterTabsBlock.querySelector(".filter-tabs__list--area");
 
   // Динамическое добавление табов компаний
-  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))];
+  const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))].sort((a, b) => {
+    return a.localeCompare(b);
+  });
 
   uniqueCompanyNames.forEach(companyName => {
     const tagLi = document.createElement("li");
@@ -5760,9 +6067,7 @@ function createProductProfile (products) {
   const productProfile = document.querySelector('.product-profile');
 
   if (productProfile) {
-    setTimeout(() => {
-      createProductProfileSlider(productProfile)
-    }, 100);
+    setTimeout(() => createProductProfileSlider(productProfile), 100);
 
     const descText = productProfile.querySelector(".product-profile__desc-text");
     const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
@@ -5772,7 +6077,7 @@ function createProductProfile (products) {
       descText.classList.add("js-show-more");
     });
   }
-  handlerCart ();
+  handlerCart();
 };
 
 
@@ -5868,13 +6173,12 @@ const blockCassette = document.querySelector(".products.products--cassette");
 const blockColumn = document.querySelector(".products.products--column");
 const blockMultiSplitSystems = document.querySelector(".products.products--multi-split-systems");
 
-// Массивы товаров (объектов) по соответствующим категорям
-const splitSystems_Products = renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
-const floorCeiling_Products = renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
-const ducted_Products = renderProductsOfCategory(blockDucted, "ducted"); // Канальные
-const cassettes_Products = renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
-const column_Products = renderProductsOfCategory(blockColumn, "column"); // Колонные
-const multiSplitSystems_Products = renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
+renderProductsOfCategory(blockSplitSystems, "split-system"); // Сплит-системы
+renderProductsOfCategory(blockFloorCeiling, "floor-ceiling"); // Напольно-потолочные
+renderProductsOfCategory(blockDucted, "ducted"); // Канальные
+renderProductsOfCategory(blockCassette, "cassette"); // Кассетные
+renderProductsOfCategory(blockColumn, "column"); // Колонные
+renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Мульти сплит-системы
 
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {

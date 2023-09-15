@@ -28,14 +28,21 @@ const dataLG = [
 const dataMidea = [
   MIDEA_PARAMOUNT,
   MIDEA_PARAMOUNT_INVERTER,
-]
+  MIDEA_UNLIMITED,
+];
 
 const dataDaichi = [
   DAICHI_ICE,
   DAICHI_ICE_INVERTER,
   DAICHI_AIR,
   DAICHI_AIR_INVERTER,
-]
+];
+
+const dataBosch = [
+  BOSCH_CLIMATE_LINE_2000,
+];
+
+
 
 // Общий массив всех товаров
 const productsArr = [
@@ -45,6 +52,7 @@ const productsArr = [
   dataLG,
   dataMidea,
   dataDaichi,
+  dataBosch,
 
 ].flat().flat();
 

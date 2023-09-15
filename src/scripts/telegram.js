@@ -14,6 +14,7 @@ if (forms) {
     const formPopup = evt.target.closest(".form-popup");
     const alertSuccess = document.querySelector(".alert.alert--success");
     const alertError = document.querySelector(".alert.alert--error");
+    const title = evt.target.parentNode.querySelector(".feedback__title");
 
     function alertActive (blockAlert) {
       blockAlert.classList.add("js-alert-active");
@@ -27,27 +28,32 @@ if (forms) {
     };
 
     let message = `<b>Заявка Элит Климат</b>\n`;
+    message += `<b>Форма: ${title ? title.textContent : "Заявка"} </b>\n`;
     message += `<b>Имя: ${this.name.value} </b>\n`;
     message += `<b>Телефон: ${this.tel.value} </b>\n`;
 
+
     if (formPopup) {
-      const formPopup = evt.target.closest(".form-popup");
       const productName = formPopup.querySelector(".form-popup-orders__name").textContent;
       const productPrice = formPopup.querySelector(".form-popup-orders__price-value").textContent;
-      const productQuantity = formPopup.querySelector(".form-popup__quantity-input").value;
+      const productQuantity = formPopup.querySelector(".form-popup__quantity-input").dataset.value;
 
       message += `<b>Товар: ${productName} </b>\n`;
       message += `<b>Цена: ${productPrice} </b>\n`;
       message += `<b>Кол-во: ${productQuantity} </b>\n`;
+    }
+
+    if (this.text) {
       message += `<b>Текст: ${this.text.value} </b>\n`;
     }
+
 
     axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: "html",
       text: message,
     })
-      .then(res => {
+      .then( () => {
         console.log("Заявка отправлена");
         alertActive(alertSuccess);
       })
@@ -58,6 +64,5 @@ if (forms) {
       .finally(() => {
         console.log("Конец");
       });
-
     this.reset();
   };

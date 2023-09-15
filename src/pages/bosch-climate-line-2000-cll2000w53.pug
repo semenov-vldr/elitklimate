@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Bosch Climate Line 2000 CLL2000 W 53/CLL2000 53"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Бытовые сплит-системы", url: "split-systems.html"}, {text: title}])
+
+  include ../components/popular/popular
+
+
+
+

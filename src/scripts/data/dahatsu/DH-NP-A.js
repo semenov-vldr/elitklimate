@@ -14,7 +14,17 @@ const imagesDahatsu_DH_NP_A =
     "./assets/img/catalog/dahatsu/DH-NP-A/04.png"
   ];
 
-const descriptionDahatsu_DH_NP_A = "Напольно-потолочная сплит-система DH-NP-A идеально подходит для \n создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта. \n Универсальный монтаж.Внутренний блок может быть установлен горизонтально у потолка или вертикально на стене. \n Функция iClean благодаря которой устройство автоматически сушится и очищается от пыли, что повышает эффективность охлаждения и нагрева."
+
+const pricesDahatsu_DH_NP_A = {
+  "dahatsu_dh_np_18a": 72000,
+  "dahatsu_dh_np_24a": 90900,
+  "dahatsu_dh_np_36a": 123000,
+  "dahatsu_dh_np_48a": 148900,
+  "dahatsu_dh_np_60a": 157000,
+
+}
+
+const descriptionDahatsu_DH_NP_A = "Напольно-потолочная сплит-система DH-NP-A идеально подходит для создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта. \n Универсальный монтаж.Внутренний блок может быть установлен горизонтально у потолка или вертикально на стене. \n Функция iClean благодаря которой устройство автоматически сушится и очищается от пыли, что повышает эффективность охлаждения и нагрева."
 
 
 const DAHATSU_DH_NP_A = [
@@ -27,9 +37,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-18a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 72000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_18a, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 5.2, // Мощность охлаждения, кВт
     noise: 43, // Уровень шума, дБ (A)
@@ -77,9 +87,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-24a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 90900, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_24a, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 49, // Уровень шума, дБ (A)
@@ -127,9 +137,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-36a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 123000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_36a, // Цена
     area: 110, // На площадь, м²
     coolingCapacity: 10.5, // Мощность охлаждения, кВт
     noise: 50, // Уровень шума, дБ (A)
@@ -177,9 +187,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-48a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 148900, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_48a, // Цена
     area: 150, // На площадь, м²
     coolingCapacity: 14, // Мощность охлаждения, кВт
     noise: 51, // Уровень шума, дБ (A)
@@ -227,9 +237,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-60a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 157000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_60a, // Цена
     area: 180, // На площадь, м²
     coolingCapacity: 16.1, // Мощность охлаждения, кВт
     noise: 51, // Уровень шума, дБ (A)

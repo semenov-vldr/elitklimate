@@ -16,11 +16,13 @@ class InputPlusMinus extends HTMLElement {
     const count_textbox = this.shadowRoot.querySelector("#countInput");
 
     this.setAttribute("value", "1");
+    this.setAttribute("data-value", "1");
 
     plus_button.addEventListener("click", () => {
       const current = +count_textbox.value;
       count_textbox.value = current + 1;
       this.setAttribute("value", count_textbox.value);
+      this.setAttribute("data-value", count_textbox.value);
     });
 
     minus_button.addEventListener("click", () => {
@@ -28,6 +30,7 @@ class InputPlusMinus extends HTMLElement {
       if (current > 1) {
         count_textbox.value = current - 1;
         this.setAttribute("value", count_textbox.value);
+        this.setAttribute("data-value", count_textbox.value);
       }
     });
 

@@ -78,6 +78,20 @@
             </div>
           </div>
         </section>
+        <section class="feedback feedback--contacts" id="feedback--contacts">
+          <div class="feedback__container container">
+            <h2 class="title-section feedback__title">Напишите нам</h2>
+            <!--p.feedback__info Мы ответим на все ваши вопросы, поможем с выбором модели-->
+            <form class="form" action="">
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <label class="visually-hidden" for="tel">Ваш телефон</label>
+              <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
+              <input class="form__field" type="tel" id="tel" name="tel" data-tel-input placeholder="Телефон*" required>
+              <textarea class="form__field" placeholder="Ваш текст" name="text"></textarea>
+              <button class="button button--accent form__button" type="submit">Отправить вопрос</button>
+            </form><img class="feedback__img" src="./assets/img/write-to-us.jpg">
+          </div>
+        </section>
       </main>
       <footer class="footer" id="footer" itemscope itemtype="http://schema.org/Organization">
         <div class="footer__container container">
@@ -202,6 +216,7 @@
               <div class="product-profile__properties">
                 <h2 class="product-profile__properties-heading">Характеристики</h2>
                 <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Серия:</span><span class="product-profile__property-value series"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">На площадь, м²</span><span class="product-profile__property-value area-value"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Инвертер</span><span class="product-profile__property-value inverter"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (охлаждение),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value cooling-performance"></span></li>
@@ -225,7 +240,7 @@
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value outdoorUnit-noise"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value outdoorUnit-weight"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value outdoorUnit-size"></span></li>
-                  <li class="product-profile__property-item"><span class="product-profile__property-title">Модель компрессора</span><span class="product-profile__property-value"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Модель компрессора</span><span class="product-profile__property-value outdoorUnit-compressorModel"></span></li>
                   <li class="product-profile__property-item"><span class="product-profile__property-title">Фреон</span><span class="product-profile__property-value outdoorUnit-freon"></span></li>
                 </ul>
               </div>

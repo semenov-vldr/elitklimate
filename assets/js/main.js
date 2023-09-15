@@ -114,6 +114,7 @@ if (forms) {
     const formPopup = evt.target.closest(".form-popup");
     const alertSuccess = document.querySelector(".alert.alert--success");
     const alertError = document.querySelector(".alert.alert--error");
+    const title = evt.target.parentNode.querySelector(".feedback__title");
 
     function alertActive (blockAlert) {
       blockAlert.classList.add("js-alert-active");
@@ -127,27 +128,32 @@ if (forms) {
     };
 
     let message = `<b>Заявка Элит Климат</b>\n`;
+    message += `<b>Форма: ${title ? title.textContent : "Заявка"} </b>\n`;
     message += `<b>Имя: ${this.name.value} </b>\n`;
     message += `<b>Телефон: ${this.tel.value} </b>\n`;
 
+
     if (formPopup) {
-      const formPopup = evt.target.closest(".form-popup");
       const productName = formPopup.querySelector(".form-popup-orders__name").textContent;
       const productPrice = formPopup.querySelector(".form-popup-orders__price-value").textContent;
-      const productQuantity = formPopup.querySelector(".form-popup__quantity-input").value;
+      const productQuantity = formPopup.querySelector(".form-popup__quantity-input").dataset.value;
 
       message += `<b>Товар: ${productName} </b>\n`;
       message += `<b>Цена: ${productPrice} </b>\n`;
       message += `<b>Кол-во: ${productQuantity} </b>\n`;
+    }
+
+    if (this.text) {
       message += `<b>Текст: ${this.text.value} </b>\n`;
     }
+
 
     axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: "html",
       text: message,
     })
-      .then(res => {
+      .then( () => {
         console.log("Заявка отправлена");
         alertActive(alertSuccess);
       })
@@ -158,13 +164,185 @@ if (forms) {
       .finally(() => {
         console.log("Конец");
       });
-
     this.reset();
   };
 
 const powerSupply = "220-240V,50HZ";
 const powerSupplyOnePhase = "1 ФАЗА 220-240V,50HZ";
 const powerSupplyThreePhase = "3 ФАЗА 380-415V,50HZ";
+
+// ----- Bosch Climate Line 2000 (CLL2000) -----
+
+const functionsBoschClimateLine2000 = ["Wi-Fi контроллер (опция)", "Фильтр высокой степени плотности", "Автоматическая очистка i-Clean", "Цифровой дисплей",
+                                        "Самодиагностика", "Осушение", "Обнаружение утечки хладагента", "Подготовка к теплому пуску"];
+
+const imagesBoschClimateLine2000 =
+  ["./assets/img/catalog/bosch/climate-line-2000/01.jpg",
+    "./assets/img/catalog/bosch/climate-line-2000/02.jpg",
+    "./assets/img/catalog/bosch/climate-line-2000/03.jpg",
+    "./assets/img/catalog/bosch/climate-line-2000/04.jpg"
+  ];
+
+const descriptionBoschClimateLine2000 = "Кондиционер настенный (сплит-система) Bosch серии Climate Line 2000 просто незаменим для создания подходящего микроклимата в домашних или офисных помещениях. Представленная модель функционирует в нескольких режимах, в том числе охлаждения и увеличения температуры воздушного потока. С активацией ночного режима значительно понижаются затраты на энергоснабжение и уменьшается уровень производимого шума.\n" +
+  "Производительности кондиционера настенного (сплит-системы) Bosch серии Climate Line 2000 достаточно для полноценной работы в помещениях площадью от 23 до 70 м². Используя приложение App Daichi Comfort, вы получите доступ к функционалу устройства с экрана смартфона. Скрытый дисплей оперативно проинформирует о выбранном режиме."
+
+const pricesBoschClimateLine2000 = {
+  "bosch_climate_line_2000_cll2000w23": 34900,
+  "bosch_climate_line_2000_cll2000w26": 38900,
+  "bosch_climate_line_2000_cll2000w53": 72900,
+}
+
+const BOSCH_CLIMATE_LINE_2000 = [
+
+  // ------ Bosch Climate Line 2000 CLL2000 W 23/CLL2000 23 ------
+  {
+    article: "bosch-climate-line-2000-cll2000w23",
+    title: "Bosch Climate Line 2000 CLL2000 W 23/CLL2000 23",
+    type: "split-system",
+    company: "Bosch",
+    series: "Climate Line 2000",
+    link: "bosch-climate-line-2000-cll2000w23.html",
+    imgSrc: imagesBoschClimateLine2000,
+    price: pricesBoschClimateLine2000.bosch_climate_line_2000_cll2000w23, // Цена
+    area: 20 , // На площадь, м²
+    coolingCapacity: 2.3, // Мощность охлаждения, кВт
+    noise: 26.5, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsBoschClimateLine2000,
+    description: descriptionBoschClimateLine2000, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2300, // Производительность, Вт
+      powerConsumption: 711, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2300, // Производительность, Вт
+      powerConsumption: 634, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 26.5, // Уровень шума, дБ (A)
+      weight: 7.4, // Вес, кг
+      size: "729x200x292", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 48, // Уровень шума, дБ (A)
+      weight: 24.6, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Bosch Climate Line 2000 CLL2000 W 26/CLL2000 26 ------
+  {
+    article: "bosch-climate-line-2000-cll2000w26",
+    title: "Bosch Climate Line 2000 CLL2000 W 26/CLL2000 26",
+    type: "split-system",
+    company: "Bosch",
+    series: "Climate Line 2000",
+    link: "bosch-climate-line-2000-cll2000w26.html",
+    imgSrc: imagesBoschClimateLine2000,
+    price: pricesBoschClimateLine2000.bosch_climate_line_2000_cll2000w26, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 31.5, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsBoschClimateLine2000,
+    description: descriptionBoschClimateLine2000, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2600, // Производительность, Вт
+      powerConsumption: 776, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2600, // Производительность, Вт
+      powerConsumption: 694, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31.5, // Уровень шума, дБ (A)
+      weight: 8.5, // Вес, кг
+      size: "729x200x292", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 48, // Уровень шума, дБ (A)
+      weight: 26.6, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Bosch Climate Line 2000 CLL2000 W 53/CLL2000 53 ------
+  {
+    article: "bosch-climate-line-2000-cll2000w53",
+    title: "Bosch Climate Line 2000 CLL2000 W 53/CLL2000 53",
+    type: "split-system",
+    company: "Bosch",
+    series: "Climate Line 2000",
+    link: "bosch-climate-line-2000-cll2000w53.html",
+    imgSrc: imagesBoschClimateLine2000,
+    price: pricesBoschClimateLine2000.bosch_climate_line_2000_cll2000w53, // Цена
+    area: 50 , // На площадь, м²
+    coolingCapacity: 5.3, // Мощность охлаждения, кВт
+    noise: 30, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsBoschClimateLine2000,
+    description: descriptionBoschClimateLine2000, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1643, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1460, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 30, // Уровень шума, дБ (A)
+      weight: 12.3, // Вес, кг
+      size: "971x228x321", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 34.8, // Вес, кг
+      size: "765x303x555", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+];
 
 // ----- Dahatsu Legend (DA-H) -----
 
@@ -1561,7 +1739,17 @@ const imagesDahatsu_DH_NP_A =
     "./assets/img/catalog/dahatsu/DH-NP-A/04.png"
   ];
 
-const descriptionDahatsu_DH_NP_A = "Напольно-потолочная сплит-система DH-NP-A идеально подходит для \n создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта. \n Универсальный монтаж.Внутренний блок может быть установлен горизонтально у потолка или вертикально на стене. \n Функция iClean благодаря которой устройство автоматически сушится и очищается от пыли, что повышает эффективность охлаждения и нагрева."
+
+const pricesDahatsu_DH_NP_A = {
+  "dahatsu_dh_np_18a": 72000,
+  "dahatsu_dh_np_24a": 90900,
+  "dahatsu_dh_np_36a": 123000,
+  "dahatsu_dh_np_48a": 148900,
+  "dahatsu_dh_np_60a": 157000,
+
+}
+
+const descriptionDahatsu_DH_NP_A = "Напольно-потолочная сплит-система DH-NP-A идеально подходит для создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта. \n Универсальный монтаж.Внутренний блок может быть установлен горизонтально у потолка или вертикально на стене. \n Функция iClean благодаря которой устройство автоматически сушится и очищается от пыли, что повышает эффективность охлаждения и нагрева."
 
 
 const DAHATSU_DH_NP_A = [
@@ -1574,9 +1762,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-18a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 72000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_18a, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 5.2, // Мощность охлаждения, кВт
     noise: 43, // Уровень шума, дБ (A)
@@ -1624,9 +1812,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-24a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 90900, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_24a, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 49, // Уровень шума, дБ (A)
@@ -1674,9 +1862,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-36a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 123000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_36a, // Цена
     area: 110, // На площадь, м²
     coolingCapacity: 10.5, // Мощность охлаждения, кВт
     noise: 50, // Уровень шума, дБ (A)
@@ -1724,9 +1912,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-48a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 148900, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_48a, // Цена
     area: 150, // На площадь, м²
     coolingCapacity: 14, // Мощность охлаждения, кВт
     noise: 51, // Уровень шума, дБ (A)
@@ -1774,9 +1962,9 @@ const DAHATSU_DH_NP_A = [
     company: "Dahatsu",
     series: "DH-NP-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-np-60a.html",
     imgSrc: imagesDahatsu_DH_NP_A,
-    price: 157000, // Цена
+    price: pricesDahatsu_DH_NP_A.dahatsu_dh_np_60a, // Цена
     area: 180, // На площадь, м²
     coolingCapacity: 16.1, // Мощность охлаждения, кВт
     noise: 51, // Уровень шума, дБ (A)
@@ -4930,6 +5118,135 @@ const MIDEA_PARAMOUNT_INVERTER = [
 
 ];
 
+// ----- Midea Unlimited (MSAG2) -----
+
+const functionsMideaUnlimited = ["Wi-Fi-контроллер (опция)", "Цифровой дисплей", "I-Remote", "Самоочистка внутреннего блока", "Турбо охлаждение", "Локальный комфорт Follow Me",
+                                  "Управление кондиционером без пульта", "Таймер", "Самодиагностика", "Запоминание положения жалюзи", "Технология Golden Fin", "Обнаружение утечки хладагента"];
+
+
+const srcToFolderMideaUnlimited = "./assets/img/catalog/midea/unlimited";
+
+const imagesMideaUnlimited =
+  [ `${srcToFolderMideaUnlimited}/01.jpg`,
+    `${srcToFolderMideaUnlimited}/02.jpg`,
+    `${srcToFolderMideaUnlimited}/03.jpg`,
+    `${srcToFolderMideaUnlimited}/04.jpg`,
+  ];
+
+const pricesMideaUnlimited = {
+  "midea_msag2_07hrn1_i": 29900,
+  "midea_msag2_09hrn1_i": 32600,
+}
+
+
+const descriptionMideaUnlimited = "Сплит-система Midea серии Paramount заправляется озонобезопасным хладагентом R410a, который способствует повышению сезонной энергоэффективности техники. Помимо основного фильтра высокой плотности, здесь установлен фотокаталитический фильтр, который активно уничтожает любые органические соединения и устраняет неприятные запахи. Благодаря функции «Любимые настройки» кондиционер можно запустить в удобном для себя режиме работы нажатием одной кнопки. Заслонки двигаются в автоматическом режиме, обеспечивая равномерное распределение воздушных потоков по всему внутреннему пространству. При этом предусмотрено запоминание положения жалюзи. Тёплый запуск, самоочистка и самодиагностика гарантируют длительную и безаварийную работу техники, независимо от условий эксплуатации."
+
+
+const MIDEA_UNLIMITED = [
+
+  // ------ Midea MSAG2-07HRN1-I/MSAG2-07HRN1-O ------
+  {
+    article: "midea-msag2-07hrn1-i",
+    title: "Midea Unlimited MSAG2-07HRN1-I/MSAG2-07HRN1-O",
+    type: "split-system",
+    company: "Midea",
+    series: "Unlimited",
+    link: "midea-msag2-07hrn1-i.html",
+    imgSrc: imagesMideaUnlimited,
+    price: pricesMideaUnlimited.midea_msag2_07hrn1_i, // Цена
+    area: 20 , // На площадь, м²
+    coolingCapacity: 2.34, // Мощность охлаждения, кВт
+    noise: 26.5, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsMideaUnlimited,
+    description: descriptionMideaUnlimited, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2340, // Производительность, Вт
+      powerConsumption: 710, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2340, // Производительность, Вт
+      powerConsumption: 630, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 26.5, // Уровень шума, дБ (A)
+      weight: 7.4, // Вес, кг
+      size: "726x210x291", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: "", // Уровень шума, дБ (A)
+      weight: 24.6, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Midea MSAG2-09HRN1-I/MSAG2-09HRN1-O ------
+  {
+    article: "midea-msag2-09hrn1-i",
+    title: "Midea Unlimited MSAG2-09HRN1-I/MSAG2-09HRN1-O",
+    type: "split-system",
+    company: "Midea",
+    series: "Unlimited",
+    link: "midea-msag2-09hrn1-i.html",
+    imgSrc: imagesMideaUnlimited,
+    price: pricesMideaUnlimited.midea_msag2_09hrn1_i, // Цена
+    area: 25 , // На площадь, м²
+    coolingCapacity: 2.64, // Мощность охлаждения, кВт
+    noise: 29.5, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsMideaUnlimited,
+    description: descriptionMideaUnlimited, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2640, // Производительность, Вт
+      powerConsumption: 820, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2780, // Производительность, Вт
+      powerConsumption: 770, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 29.5, // Уровень шума, дБ (A)
+      weight: 8.5, // Вес, кг
+      size: "726x210x291", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: "", // Уровень шума, дБ (A)
+      weight: 24.9, // Вес, кг
+      size: "720x270x495", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+
+
+
+];
+
 const dataDahatsu = [
   DAHATSU_DA_H,
   DAHATSU_DA_I,
@@ -4960,14 +5277,21 @@ const dataLG = [
 const dataMidea = [
   MIDEA_PARAMOUNT,
   MIDEA_PARAMOUNT_INVERTER,
-]
+  MIDEA_UNLIMITED,
+];
 
 const dataDaichi = [
   DAICHI_ICE,
   DAICHI_ICE_INVERTER,
   DAICHI_AIR,
   DAICHI_AIR_INVERTER,
-]
+];
+
+const dataBosch = [
+  BOSCH_CLIMATE_LINE_2000,
+];
+
+
 
 // Общий массив всех товаров
 const productsArr = [
@@ -4977,6 +5301,7 @@ const productsArr = [
   dataLG,
   dataMidea,
   dataDaichi,
+  dataBosch,
 
 ].flat().flat();
 
@@ -5763,11 +6088,13 @@ class InputPlusMinus extends HTMLElement {
     const count_textbox = this.shadowRoot.querySelector("#countInput");
 
     this.setAttribute("value", "1");
+    this.setAttribute("data-value", "1");
 
     plus_button.addEventListener("click", () => {
       const current = +count_textbox.value;
       count_textbox.value = current + 1;
       this.setAttribute("value", count_textbox.value);
+      this.setAttribute("data-value", count_textbox.value);
     });
 
     minus_button.addEventListener("click", () => {
@@ -5775,6 +6102,7 @@ class InputPlusMinus extends HTMLElement {
       if (current > 1) {
         count_textbox.value = current - 1;
         this.setAttribute("value", count_textbox.value);
+        this.setAttribute("data-value", count_textbox.value);
       }
     });
 
@@ -5996,19 +6324,6 @@ function createProductProfile (products) {
 
     profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
 
-    // product.imgSrc.forEach((src, i) => {
-    //   const tagImg = document.createElement("img");
-    //   tagImg.classList.add("swiper-slide");
-    //   tagImg.src = src;
-    //   tagImg.setAttribute("data-src", tagImg.src);
-    //   tagImg.setAttribute('data-fancybox', "images-index");
-    //   swiperTopWrapper.appendChild(tagImg);
-    //   if (i === 0) {
-    //     tagImg.classList.add("product-img");
-    //   }
-    // });
-
-
     product.imgSrc.forEach((src, i) => {
       const tagImg = document.createElement("img");
       const divSwiperSlide = document.createElement("div");
@@ -6032,34 +6347,35 @@ function createProductProfile (products) {
 
     // Характеристики
     const properties = profileItem.querySelector('.product-profile__properties');
-    properties.querySelector('.area-value').textContent = product.area;
+    properties.querySelector('.series').textContent = product.series || "-";
+    properties.querySelector('.area-value').textContent = product.area || "-";
     properties.querySelector('.inverter').textContent = `${product.inverter ? "Да" : "Нет"}`;
-    properties.querySelector('.cooling-performance').textContent = product.cooling.performance;
-    properties.querySelector('.cooling-powerConsumption').textContent = product.cooling.powerConsumption;
-    properties.querySelector('.heating-performance').textContent = product.heating.performance;
-    properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption;
-    properties.querySelector('.powerSupply').textContent = product.powerSupply;
-    properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength;
-    properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference;
-    properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter;
-    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter;
-    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter;
-    // ---Вставить Модель компрессора---
+    properties.querySelector('.cooling-performance').textContent = product.cooling.performance || "-";
+    properties.querySelector('.cooling-powerConsumption').textContent = product.cooling.powerConsumption || "-";
+    properties.querySelector('.heating-performance').textContent = product.heating.performance || "-";
+    properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption || "-";
+    properties.querySelector('.powerSupply').textContent = product.powerSupply || "-";
+    properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
+    properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+    properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter || "-";
+    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
+    properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
 
     // Внутренний блок
-    properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise;
-    properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight;
-    properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size;
+    properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise || "-";
+    properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight || "-";
+    properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size || "-";
 
     // Внешний блок
-    properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise;
-    properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight;
-    properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size;
-    properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon;
+    properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise || "-";
+    properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight || "-";
+    properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size || "-";
+    properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon || "-";
+    properties.querySelector('.outdoorUnit-compressorModel').textContent = product.outdoorUnit.compressorModel || "-";
 
     profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
-    profileItem.querySelector('.product-profile__desc-text').textContent = product.description;
-    profileItem.querySelector(".meta-price").content = product.price;
+    profileItem.querySelector('.product-profile__desc-text').textContent = product.description || "-";
+    profileItem.querySelector(".meta-price").content = product.price || "-";
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
   });
@@ -6072,7 +6388,7 @@ function createProductProfile (products) {
     const descText = productProfile.querySelector(".product-profile__desc-text");
     const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
 
-// Кнопка "Показать больше" для описания
+    // Кнопка "Показать больше" для описания
     showMoreBtn.addEventListener("click", () => {
       descText.classList.add("js-show-more");
     });

@@ -44,6 +44,8 @@ const dataBosch = [
 
 const dataKentatsu = [
   KENTATSU_ICHI,
+  KENTATSU_KANAMI,
+  KENTATSU_KANAMI_INVERTER,
 ]
 
 

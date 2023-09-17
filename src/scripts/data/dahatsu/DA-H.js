@@ -4,12 +4,14 @@ const functionsDahatsuLegend = ["Компрессор GMCC Toshiba", "Режим
   "Режим 'Антиплесень'", "Компактный дизайн", "HEALTH - режим здоровье", "Самоочистка внутреннего блока", "Режим I Feel", "Автоматический перезапуск",
   "Запоминание положения жалюзи", "Таймер"];
 
-const imagesDahatsuLegend =
-  ["./assets/img/catalog/dahatsu/DA-H/01.png",
-    "./assets/img/catalog/dahatsu/DA-H/02-2.png",
-    "./assets/img/catalog/dahatsu/DA-H/03.png",
-    "./assets/img/catalog/dahatsu/DA-H/04.png"
-  ];
+const srcToFolderDahatsuLegend = "./assets/img/catalog/dahatsu/DA-H/";
+
+const imagesDahatsuLegend = [
+  `${srcToFolderDahatsuLegend}01.png`,
+  `${srcToFolderDahatsuLegend}02-2.png`,
+  `${srcToFolderDahatsuLegend}03.png`,
+  `${srcToFolderDahatsuLegend}04.png`,
+]
 
 const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера. Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
 

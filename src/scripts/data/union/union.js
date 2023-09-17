@@ -42,6 +42,10 @@ const dataBosch = [
   BOSCH_CLIMATE_LINE_2000,
 ];
 
+const dataKentatsu = [
+  KENTATSU_ICHI,
+]
+
 
 
 // Общий массив всех товаров
@@ -53,6 +57,7 @@ const productsArr = [
   dataMidea,
   dataDaichi,
   dataBosch,
+  dataKentatsu,
 
 ].flat().flat();
 

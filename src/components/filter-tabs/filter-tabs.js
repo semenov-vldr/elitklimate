@@ -42,7 +42,7 @@ function filterTabsCards () {
 
 
   // Счетчик общего кол-ва карточек нак странице
-  filterTabsBlock.querySelector(".filter-tabs__count").textContent = listOfRenderedCards.length;
+  document.querySelector(".products__title-count").textContent = listOfRenderedCards.length;
   const classFilterActive = "js-filter-active";
 
   // Добавление активного класса к табам для их активации

@@ -180,6 +180,33 @@
     text-decoration: underline
     opacity: 0.8
 
+  &__other-areas
+    margin: 0 0 24px
+    @media (max-width: $width-tablet)
+      margin: 24px 0 0
+    select
+      height: 48px
+      padding: 0 40px 0 24px
+      background-color: #F4F4F8
+      vertical-align: middle
+      border-radius: 6px
+      border: none
+      cursor: pointer
+      transition: $transition
+      width: 100%
+      color: $black
+      @media (max-width: $width-tablet)
+        max-width: 50%
+      @media (max-width: $width-mobile)
+        max-width: initial
+
+    span
+      margin: 0 0 6px 0
+      display: block
+      font-size: 12px
+      color: #94A0B1
+
+
 
 
 

@@ -119,7 +119,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "lg-p12sp",
+    link: "lg-p12sp.html",
     imgSrc: imagesLGDual,
     price: 78400, // Цена
     area: 35, // На площадь, м²

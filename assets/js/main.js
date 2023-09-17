@@ -5465,7 +5465,7 @@ const LG_Dual = [
     type: "split-system",
     company: "LG",
     series: "Mega Dual Inverter",
-    link: "lg-p12sp",
+    link: "lg-p12sp.html",
     imgSrc: imagesLGDual,
     price: 78400, // Цена
     area: 35, // На площадь, м²
@@ -7164,7 +7164,7 @@ function createProductProfile (products) {
   const breadcrumbsValue = breadcrumbs.querySelector("span.breadcrumbs__item")?.textContent;
   const productProfileTemplate = document.querySelector('#product-profile-template')?.content.querySelector('.product-profile');
 
-  products.forEach(product => {
+  products.forEach((product, i, productsArr) => {
 
     if (product.title !== breadcrumbsValue) return;
 
@@ -7228,6 +7228,38 @@ function createProductProfile (products) {
     profileItem.querySelector(".meta-price").content = product.price || "-";
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
+
+
+    // Добавление других моделей с другой квадратурой
+    const otherAreasSelect = document.querySelector(".product-profile__other-areas select");
+
+    productsArr.forEach(productsItem => {
+      if (productsItem.series === product.series && productsItem.company === product.company) {
+        const option = document.createElement("option");
+        option.text = productsItem.area;
+        option.value = productsItem.area;
+        option.dataset.src = productsItem.link;
+        otherAreasSelect.appendChild(option);
+
+        if (+option.value === product.area) {
+          option.selected = true;
+        }
+      }
+
+
+    })
+
+
+
+    otherAreasSelect.addEventListener("change", (evt) => {
+
+      const selectedOption = evt.target.options[evt.target.selectedIndex];
+      console.log(selectedOption)
+      document.location.href = selectedOption.dataset.src;
+    })
+
+
+
   });
 
   const productProfile = document.querySelector('.product-profile');
@@ -7244,6 +7276,8 @@ function createProductProfile (products) {
     });
   }
   handlerCart();
+
+
 };
 
 

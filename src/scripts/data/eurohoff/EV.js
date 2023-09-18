@@ -77,7 +77,7 @@ const EUROHOFF_EV = [
     type: "split-system",
     company: "Eurohoff",
     series: "ON/OFF",
-    link: "eurohoff-ev-07.html",
+    link: "eurohoff-ev-09.html",
     imgSrc: images_Eurohoff_EV,
     price: prices_Eurohoff_EV.eurohoff_ev_09, // Цена
     area: 28 , // На площадь, м²

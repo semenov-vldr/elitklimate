@@ -26,7 +26,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-12a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 56000, // Цена
     area: 35, // На площадь, м²
@@ -48,8 +48,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1280, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -64,7 +64,7 @@ const DENKO_DCS_A = [
       weight: 28, // Вес, кг
       size: "780x285x545", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
 
@@ -76,7 +76,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-18a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 63200, // Цена
     area: 55, // На площадь, м²
@@ -98,8 +98,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1550, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -114,7 +114,7 @@ const DENKO_DCS_A = [
       weight: 36, // Вес, кг
       size: "800x315x545", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
 
@@ -126,7 +126,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-24a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 78000, // Цена
     area: 75, // На площадь, м²
@@ -148,8 +148,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -164,10 +164,7 @@ const DENKO_DCS_A = [
       weight: 48, // Вес, кг
       size: "825x310x655", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
-
-
-
 ]

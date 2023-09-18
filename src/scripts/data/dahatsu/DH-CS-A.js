@@ -34,7 +34,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-12a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 57000, // Цена
     area: 35, // На площадь, м²
@@ -56,8 +56,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1280, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -84,7 +84,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-18a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 64800, // Цена
     area: 55, // На площадь, м²
@@ -106,8 +106,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1550, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -134,7 +134,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-24a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 79400, // Цена
     area: 75, // На площадь, м²
@@ -156,8 +156,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -185,7 +185,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-36a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 100000, // Цена
     area: 90, // На площадь, м²
@@ -207,8 +207,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 3340, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "30м", // Макс. длина трассы, м
-    maxHeightDifference: "20м", // Макс. перепад высот, м
+    maxTrackLength: 30, // Макс. длина трассы, м
+    maxHeightDifference: 20, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -235,7 +235,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-48a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 126800, // Цена
     area: 140, // На площадь, м²
@@ -257,8 +257,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 4600, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "30м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 30, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -285,7 +285,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-60a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 135000, // Цена
     area: 180, // На площадь, м²
@@ -307,8 +307,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 5570, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "30м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 30, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок

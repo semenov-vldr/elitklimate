@@ -76,7 +76,6 @@ function createProductProfile (products) {
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
 
-
     // Добавление других моделей с другой квадратурой
     const otherAreasSelect = document.querySelector(".product-profile__other-areas select");
 
@@ -87,26 +86,14 @@ function createProductProfile (products) {
         option.value = productsItem.area;
         option.dataset.src = productsItem.link;
         otherAreasSelect.appendChild(option);
-
-        if (+option.value === product.area) {
-          option.selected = true;
-        }
+        if (+option.value === product.area) option.selected = true;
       }
-
-
-    })
-
-
+    });
 
     otherAreasSelect.addEventListener("change", (evt) => {
-
       const selectedOption = evt.target.options[evt.target.selectedIndex];
-      console.log(selectedOption)
       document.location.href = selectedOption.dataset.src;
-    })
-
-
-
+    });
   });
 
   const productProfile = document.querySelector('.product-profile');

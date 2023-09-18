@@ -1,0 +1,269 @@
+
+<!-- Плитки каталога-->
+<!-- Хлебные крошки--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Dahatsu DH-CS-60A</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content=""><!--favicon-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--favicon end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+<!-- Yandex map script -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__container container" itemscope itemtype="http://schema.org/Organization"><a class="header__logo" href="index.html" itemprop="url">Элит Климат</a>
+          <!--a.header__logo(href="index.html")-->
+          <!--  img(src="./assets/img/logo.png")--><a class="header__tel" href="tel:+79884093099" itemprop="telephone" content="+79884093099">+7 (988) 409-30-99</a>
+          <button class="header__burger">
+            <svg fill="1C1B1F" width="18" height="12">
+              <use href="./assets/img/sprite.svg#burger"></use>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <button class="header__nav-close">
+              <svg fill="1C1B1F" width="14" height="14">
+                <use href="./assets/img/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item--desktop-hidden"><a class="header__nav-link" href="index.html">Главная</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#feedback--call">Заказать звонок</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="installation.html">Заказать установку</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#about">О нас</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#reviews">Отзывы</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <!--a.header__cart(href="cart.html")-->
+          <!--  include ../../img/icons/basket.svg-->
+          <!--  span.header__cart-count-->
+        </div>
+      </header>
+      <main>
+        <div class="breadcrumbs" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Каталог</a><a class="breadcrumbs__item" href="cassette.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Кассетные</a><span class="breadcrumbs__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Dahatsu DH-CS-60A</span>
+          </div>
+        </div>
+        <section class="popular">
+          <div class="popular__container container">
+            <h2 class="title-section">Популярное</h2>
+            <div class="swiper popular__slider">
+              <div class="swiper-wrapper">
+                <template id="template-card-popular">
+                  <div class="card-popular swiper-slide" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card-popular__link" href="" itemprop="url"><img class="card-popular__img product-img" src="" itemprop="image">
+                      <h3 class="card-popular__title product-title" itemprop="name"></h3></a><span class="card-popular__price product-price"></span>
+                    <ul class="card-popular__data" itemprop="description">
+                      <li class="card-popular__data-item">Площадь, до:<span class="card-popular__data-item-value card-popular__data-item-value--area area-value"></span></li>
+                      <li class="card-popular__data-item">Инвертор:<span class="card-popular__data-item-value card-popular__data-item-value--inverter"></span></li>
+                      <li class="card-popular__data-item">Охлаждение:<span class="card-popular__data-item-value card-popular__data-item-value--coolingCapacity"></span></li>
+                      <li class="card-popular__data-item">Уровень шума:<span class="card-popular__data-item-value card-popular__data-item-value--noise"></span></li>
+                    </ul>
+                    <button class="button button--accent card-popular__button cart-btn">Купить</button>
+                  </div>
+                </template>
+              </div>
+              <button class="swiper-button-prev swiper-button"></button>
+              <button class="swiper-button-next swiper-button"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer" itemscope itemtype="http://schema.org/Organization">
+        <div class="footer__container container">
+          <div class="footer__top"><a class="footer__logo" href="index.html" itemprop="url">Элит Климат
+              <!--img(src="./assets/img/logo.png")--></a>
+            <p class="footer__sublogo">Официальный представитель ТМ Dahatsu, Denko в&nbsp;г.&nbsp;Сочи</p>
+          </div>
+          <div class="footer__contacts">
+            <h3 class="footer__title">Контакты</h3>
+            <div class="footer__contacts-section"><span class="footer__contacts-section-title">г. Сочи</span><meta itemprop="location" content="Сочи">
+              <ul class="footer__contacts-list">
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="Центральный район Сочи, Дагомыс, Лоо">Центральный район, Дагомыс, Лоо</span><a class="footer__contacts-tel" href="tel:+79884093099">+7 (988) 409-30-99</a></li>
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="р-н Адлер, пгт Сириус, с. Веселое">р-н Адлер, пгт Сириус, с. Веселое</span><a class="footer__contacts-tel" href="tel:+79884092983">+7 (988) 409-29-83</a></li>
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="пгт. Красная поляна, с. Эсто-Садок, с. Галицыно">пгт. Красная поляна, с. Эсто-Садок, с. Галицыно</span><a class="footer__contacts-tel" href="tel:+79884092983" itemprop="telephone" content="+79884092983">+7 (988) 409-29-83</a></li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <ul class="footer__social-list">
+                <li class="footer__social-item"><a class="footer__social-link footer__social-link--telegram" href="##">Telegram</a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__social-link--whatsapp" href="##">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <h3 class="footer__title">Кондиционеры</h3>
+            <ul class="footer__nav-list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="split-systems.html" itemprop="url">Бытовые сплит-системы</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="floor-ceiling.html" itemprop="url">Напольно-потолочные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="ducted.html" itemprop="url">Канальные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="cassette.html" itemprop="url">Кассетные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="column.html" itemprop="url">Колонные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="multi-split-systems.html" itemprop="url">Мульти сплит-системы</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__nav">
+            <h3 class="footer__title">Услуги</h3>
+            <ul class="footer__nav-list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Установка</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Ремонт</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Чистка</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Заправка</a></li>
+            </ul>
+          </nav>
+          <div class="footer__copyright"><a class="footer__politics" href="##">Политика конфиденциальности</a><span>© 2023 ЭЛИТ КЛИМАТ</span></div>
+        </div>
+      </footer>
+      <div class="loader">
+        <div class="loader__container">
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+        </div>
+      </div>
+      <template id="card-template">
+        <article class="card" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card__link" href="" itemprop="url"><img class="card__img product-img" src="" itemprop="image">
+            <h3 class="card__title product-title" itemprop="name"></h3></a><span class="card__price product-price"></span>
+          <ul class="card__data" itemprop="description">
+            <li class="card__data-item">Площадь, до:<span class="card__data-item-value card__data-item-value--area area-value"></span></li>
+            <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
+            <li class="card__data-item">Охлаждение:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
+            <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
+          </ul>
+          <button class="button button--accent card__button cart-btn">Купить</button>
+        </article>
+      </template>
+      <div class="form-popup">
+        <template id="input-plus-minus-template">
+          <div id="container">
+            <button id="minus"><img src="./assets/img/icons/minus.svg"></button>
+            <input id="countInput" value="1" readonly>
+            <button id="plus"><img src="./assets/img/icons/plus.svg"></button>
+          </div><style> #container img { width: 70% };
+</style>
+        </template>
+        <div class="form-popup__container">
+          <div class="form-popup__header">
+            <h3 class="form-popup__title">Оформление заявки</h3>
+            <button class="form-popup__close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00005 8.39999L2.10005 13.3C1.91672 13.4833 1.68338 13.575 1.40005 13.575C1.11672 13.575 0.883382 13.4833 0.700049 13.3C0.516715 13.1167 0.425049 12.8833 0.425049 12.6C0.425049 12.3167 0.516715 12.0833 0.700049 11.9L5.60005 6.99999L0.700049 2.09999C0.516715 1.91665 0.425049 1.68332 0.425049 1.39999C0.425049 1.11665 0.516715 0.883321 0.700049 0.699988C0.883382 0.516654 1.11672 0.424988 1.40005 0.424988C1.68338 0.424988 1.91672 0.516654 2.10005 0.699988L7.00005 5.59999L11.9 0.699988C12.0834 0.516654 12.3167 0.424988 12.6 0.424988C12.8834 0.424988 13.1167 0.516654 13.3 0.699988C13.4834 0.883321 13.575 1.11665 13.575 1.39999C13.575 1.68332 13.4834 1.91665 13.3 2.09999L8.40005 6.99999L13.3 11.9C13.4834 12.0833 13.575 12.3167 13.575 12.6C13.575 12.8833 13.4834 13.1167 13.3 13.3C13.1167 13.4833 12.8834 13.575 12.6 13.575C12.3167 13.575 12.0834 13.4833 11.9 13.3L7.00005 8.39999Z" fill="#1C1B1F"/>
+</svg>
+
+            </button>
+          </div>
+          <ul class="form-popup__orders form-popup-orders">
+            <li class="form-popup-orders__item"><img class="form-popup-orders__img" src="">
+              <div class="form-popup-orders__info">
+                <h4 class="form-popup-orders__name"></h4>
+                <p class="form-popup-orders__area">Площадь:&nbsp;<span class="form-popup-orders__area-value"></span></p>
+                <p class="form-popup-orders__price">Цена:&nbsp;<span class="form-popup-orders__price-value"></span></p>
+              </div>
+            </li>
+          </ul>
+          <div class="form-popup__quantity"><span class="form-popup__quantity-label">Количество:</span>
+            <input-plus-minus class="form-popup__quantity-input"></input-plus-minus>
+          </div>
+          <div class="form-popup__sum">Сумма заказа:&nbsp;<span class="form-popup__sum-value"></span></div>
+          <form class="form form-popup__form" action="">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <label class="visually-hidden" for="tel">Телефон</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
+            <input class="form__field" type="tel" id="tel" name="tel" data-tel-input maxlength="18" placeholder="Телефон*" required>
+            <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения"></textarea>
+            <button class="button button--accent form__button form-popup__button" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+      <template id="product-profile-template">
+        <section class="product-profile" itemscope itemtype="https://schema.org/Product">
+          <div class="product-profile__container container">
+            <h1 class="product-profile__title product-title mobile-hidden" itemprop="name"></h1>
+            <div class="product-profile__columns">
+              <div class="product-profile__images">
+                <div class="swiper-top">
+                  <div class="swiper-wrapper"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-thumbs">
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+              <div class="product-profile__properties">
+                <h2 class="product-profile__properties-heading">Характеристики</h2>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Серия:</span><span class="product-profile__property-value series"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">На площадь, м²</span><span class="product-profile__property-value area-value"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Инвертер</span><span class="product-profile__property-value inverter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (охлаждение),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value cooling-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (охлаждение),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value cooling-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (обогрев),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value heating-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (обогрев),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value heating-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Электропитание, V/PH/HZ</span><span class="product-profile__property-value powerSupply"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. длина трассы,&nbsp;м</span><span class="product-profile__property-value maxTrackLength"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. перепад высот,&nbsp;м</span><span class="product-profile__property-value maxHeightDifference"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр жидкостной трубы,&nbsp;мм</span><span class="product-profile__property-value liquidPipeDiameter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр газовой трубы,&nbsp;мм</span><span class="product-profile__property-value gasPipeDiameter"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading">Внутренний блок</h3>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value indoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value indoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value indoorUnit-size"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading">Внешний блок</h3>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value outdoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value outdoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value outdoorUnit-size"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Модель компрессора</span><span class="product-profile__property-value outdoorUnit-compressorModel"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Фреон</span><span class="product-profile__property-value outdoorUnit-freon"></span></li>
+                </ul>
+              </div>
+              <div class="product-profile__desc" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <h1 class="product-profile__title tablet-hidden" itemprop="name"></h1>
+                <meta class="meta-price" itemprop="price" content="">
+                <meta itemprop="priceCurrency" content="RUB">
+                <link itemprop="availability" href="https://schema.org/InStock"><span class="product-profile__price product-price product-price--desktop-hidden"></span>
+                <div class="product-profile__actions"><span class="product-profile__price product-price"></span>
+                  <button class="product-profile__button button button--accent cart-btn">Купить</button>
+                </div>
+                <div class="product-profile__other-areas"><span>Для помещения площадью, м²</span>
+                  <select></select>
+                </div>
+                <div class="product-profile__desc-content">
+                  <h2 class="product-profile__desc-heading">Описание</h2>
+                  <p class="product-profile__desc-text" itemprop="description"></p>
+                  <button class="product-profile__desc-show-more-btn">Показать еще</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
+      <button class="go-top">
+        <svg fill="#FFF" width="19" height="11">
+          <use href="./assets/img/sprite.svg#arrow-filter"></use>
+        </svg>
+      </button>
+      <div class="alert alert--error">
+        <h2>Что-то пошло не так.</h2><span>Свяжитесь пожалуйста с нами по номеру</span><br><a href="tel:+79884093099">+7 (988) 409-30-99</a>
+      </div>
+      <div class="alert alert--success">
+        <h2>Заявка отправлена успешно</h2><span>Менеджер свяжется с вами в течение 15 минут.</span>
+      </div>
+    </div>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>

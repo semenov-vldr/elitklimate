@@ -974,7 +974,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-12a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 57000, // Цена
     area: 35, // На площадь, м²
@@ -996,8 +996,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1280, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1024,7 +1024,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-18a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 64800, // Цена
     area: 55, // На площадь, м²
@@ -1046,8 +1046,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1550, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1074,7 +1074,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-24a.html",
     imgSrc: imagesDahatsuDH_CS_A,
     price: 79400, // Цена
     area: 75, // На площадь, м²
@@ -1096,8 +1096,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 1820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1125,7 +1125,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-36a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 100000, // Цена
     area: 90, // На площадь, м²
@@ -1147,8 +1147,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 3340, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "30м", // Макс. длина трассы, м
-    maxHeightDifference: "20м", // Макс. перепад высот, м
+    maxTrackLength: 30, // Макс. длина трассы, м
+    maxHeightDifference: 20, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1175,7 +1175,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-48a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 126800, // Цена
     area: 140, // На площадь, м²
@@ -1197,8 +1197,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 4600, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "30м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 30, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1225,7 +1225,7 @@ const DAHATSU_DH_CS_A = [
     company: "Dahatsu",
     series: "DH-CS-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-cs-60a.html",
     imgSrc: imagesDahatsuDH_CS_A_2,
     price: 135000, // Цена
     area: 180, // На площадь, м²
@@ -1247,8 +1247,8 @@ const DAHATSU_DH_CS_A = [
       powerConsumption: 5570, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "30м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 30, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3480,7 +3480,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-12a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 56000, // Цена
     area: 35, // На площадь, м²
@@ -3502,8 +3502,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1280, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3518,7 +3518,7 @@ const DENKO_DCS_A = [
       weight: 28, // Вес, кг
       size: "780x285x545", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
 
@@ -3530,7 +3530,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-18a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 63200, // Цена
     area: 55, // На площадь, м²
@@ -3552,8 +3552,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1550, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3568,7 +3568,7 @@ const DENKO_DCS_A = [
       weight: 36, // Вес, кг
       size: "800x315x545", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
 
@@ -3580,7 +3580,7 @@ const DENKO_DCS_A = [
     company: "Denko",
     series: "DCS-A",
     factory: "GREE",
-    link: "##",
+    link: "denko-dcs-24a.html",
     imgSrc: imagesDenkoDCS_A,
     price: 78000, // Цена
     area: 75, // На площадь, м²
@@ -3602,8 +3602,8 @@ const DENKO_DCS_A = [
       powerConsumption: 1820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyOnePhase, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3618,12 +3618,9 @@ const DENKO_DCS_A = [
       weight: 48, // Вес, кг
       size: "825x310x655", // Размеры
       freon: "R410A", // Фреон
-      //compressorModel: "GREE",
+      compressorModel: "GREE",
     }
   },
-
-
-
 ]
 
 // -----Denko Legend (DU) -----
@@ -4312,7 +4309,7 @@ const EUROHOFF_EV = [
     type: "split-system",
     company: "Eurohoff",
     series: "ON/OFF",
-    link: "eurohoff-ev-07.html",
+    link: "eurohoff-ev-09.html",
     imgSrc: images_Eurohoff_EV,
     price: prices_Eurohoff_EV.eurohoff_ev_09, // Цена
     area: 28 , // На площадь, м²
@@ -7229,7 +7226,6 @@ function createProductProfile (products) {
 
     breadcrumbs.insertAdjacentElement('afterEnd', profileItem);
 
-
     // Добавление других моделей с другой квадратурой
     const otherAreasSelect = document.querySelector(".product-profile__other-areas select");
 
@@ -7240,26 +7236,14 @@ function createProductProfile (products) {
         option.value = productsItem.area;
         option.dataset.src = productsItem.link;
         otherAreasSelect.appendChild(option);
-
-        if (+option.value === product.area) {
-          option.selected = true;
-        }
+        if (+option.value === product.area) option.selected = true;
       }
-
-
-    })
-
-
+    });
 
     otherAreasSelect.addEventListener("change", (evt) => {
-
       const selectedOption = evt.target.options[evt.target.selectedIndex];
-      console.log(selectedOption)
       document.location.href = selectedOption.dataset.src;
-    })
-
-
-
+    });
   });
 
   const productProfile = document.querySelector('.product-profile');

@@ -1286,7 +1286,7 @@ const images_Dahatsu_DH_KL_A =
   ];
 
 
-const description_Dahatsu_DH_KL_A = "Сплит-система Dahatsu DH-KL-A колонного типа благодаря своей конструкцииь кондиционер обеспечивает оптимальное распространение охлажденных/ нагретых воздушных потоков, а также ликвидацию холодных и теплых зон. \n Колонна - это эффективное и современное приспособление, которое имеет расширенный функционал для обеспечения благоприятный условий. \n С панели управления на внутреннем блоке можно осуществлять следующие действия: включение и выключение кондиционера, блокировка режима, выбор скорости вращения вентилятора, выбор режима работы, установка заданной температуры, установка времени и таймера, включение покачивания заслонками."
+const description_Dahatsu_DH_KL_A = "Сплит-система Dahatsu DH-KL-A колонного типа благодаря своей конструкции обеспечивает оптимальное распространение охлажденных/ нагретых воздушных потоков, а также ликвидацию холодных и теплых зон. Колонна - это эффективное и современное приспособление, которое имеет расширенный функционал для обеспечения благоприятный условий. С панели управления на внутреннем блоке можно осуществлять следующие действия: включение и выключение кондиционера, блокировка режима, выбор скорости вращения вентилятора, выбор режима работы, установка заданной температуры, установка времени и таймера, включение покачивания заслонками."
 
 
 const DAHATSU_DH_KL_A = [
@@ -1299,7 +1299,7 @@ const DAHATSU_DH_KL_A = [
     company: "Dahatsu",
     series: "DH-KL-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-kl-48ch.html",
     imgSrc: images_Dahatsu_DH_KL_A,
     price: 145900, // Цена
     area: 150, // На площадь, м²
@@ -1321,8 +1321,8 @@ const DAHATSU_DH_KL_A = [
       powerConsumption: 4800, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1349,7 +1349,7 @@ const DAHATSU_DH_KL_A = [
     company: "Dahatsu",
     series: "DH-KL-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dkl-60gr.html",
     imgSrc: images_Dahatsu_DH_KL_A,
     price: 168700, // Цена
     area: 190, // На площадь, м²
@@ -1371,8 +1371,8 @@ const DAHATSU_DH_KL_A = [
       powerConsumption: 4986, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "15м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -1399,7 +1399,7 @@ const DAHATSU_DH_KL_A = [
     company: "Dahatsu",
     series: "DH-KL-A",
     factory: "AUX",
-    link: "##",
+    link: "dahatsu-dh-kl-100a.html",
     imgSrc: images_Dahatsu_DH_KL_A,
     price: 337900, // Цена
     area: 250, // На площадь, м²
@@ -1421,8 +1421,8 @@ const DAHATSU_DH_KL_A = [
       powerConsumption: 10130, // Потребл. мощность, Вт
     },
     powerSupply: powerSupplyThreePhase, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "20м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 20, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8) x 2",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "19,05мм(3/4) x 2", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2558,6 +2558,15 @@ const imagesDahatsuClassicInverter =
     "./assets/img/catalog/dahatsu/GW-H/04.png"
   ];
 
+const pricesDahatsuClassicInverter = {
+  "dahatsu_gw_07h": 34600,
+  "dahatsu_gw_09h": 37300,
+  "dahatsu_gw_12h": 43900,
+  "dahatsu_gw_18h": 69800,
+  "dahatsu_gw_24h": 83600,
+
+}
+
 const descriptionDahatsuClassicInverter = "Сплит-системы Dahatsu серии Classic DC Inverter - надежная классическая инверторная модель, выполненная из высококачественных материалов. Благодаря компактному дизайну, режиму комфортного сна и низкому уровню шума данную модель можно установить в любом помещении, даже в детской комнате. Модель снабжена всеми стандартными функциями сплит-системы: теплообменник Golden fin, скрытый дисплей, два направления воздушного потока, режим ECO. Дизайн в классическом стиле станет украшением любого интерьера, а новейшие технологии позволят наслаждаться идеальным микроклиматом в любое время года."
 
 const DAHATSU_GW_H = [
@@ -2569,9 +2578,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-07h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 34600, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_07h, // Цена
     area: 22, // На площадь, м²
     coolingCapacity: 2.1, // Мощность охлаждения, кВт
     noise: 20, // Уровень шума, дБ (A)
@@ -2591,8 +2600,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 610, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "9м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 9, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2618,9 +2627,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-09h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 37300, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_09h, // Цена
     area: 28, // На площадь, м²
     coolingCapacity: 2.5, // Мощность охлаждения, кВт
     noise: 20, // Уровень шума, дБ (A)
@@ -2640,8 +2649,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 730, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "10м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2667,9 +2676,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-12h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 43900, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_12h, // Цена
     area: 35, // На площадь, м²
     coolingCapacity: 3.4, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -2689,8 +2698,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1000, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "10м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2716,9 +2725,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-18h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 69800, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_18h, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 4.9, // Мощность охлаждения, кВт
     noise: 28, // Уровень шума, дБ (A)
@@ -2738,8 +2747,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1390, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2765,9 +2774,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-24h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 83600, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_24h, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 6.8, // Мощность охлаждения, кВт
     noise: 30, // Уровень шума, дБ (A)
@@ -2787,8 +2796,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1940, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -4232,7 +4241,8 @@ const DENKO_KR = [
 
 // ----- Eurohoff On/Off (EV) -----
 
-const functions_Eurohoff_EV = ["Завод-изготовитель Haier", "Бесшумная работа", "Режим 'Комфортный сон'", "Самодиагностика"];
+const functions_Eurohoff_EV = ["Завод-изготовитель Haier", "Бесшумная работа", "Режим Turbo производительности", "Легко моющаяся панель",
+                              "HEALTH - режим здоровье", "Режим 'Комфортный сон'", "Самодиагностика"];
 
 const images_Eurohoff_EV =
   ["./assets/img/catalog/eurohoff/ev/01.jpg",
@@ -4298,7 +4308,7 @@ const EUROHOFF_EV = [
       weight: 20, // Вес, кг
       size: "696x256x432", // Размеры
       freon: "R32", // Фреон
-      compressorModel: "RECHI",
+      compressorModel: "Qingan",
     }
   },
 
@@ -4347,7 +4357,7 @@ const EUROHOFF_EV = [
       weight: 20.8, // Вес, кг
       size: "696x256x432", // Размеры
       freon: "R32", // Фреон
-      compressorModel: "RECHI",
+      compressorModel: "Qingan",
     }
   },
 
@@ -4396,7 +4406,7 @@ const EUROHOFF_EV = [
       weight: 23.9, // Вес, кг
       size: "700x245x544", // Размеры
       freon: "R32", // Фреон
-      compressorModel: "RECHI",
+      compressorModel: "Qingan",
     }
   },
 
@@ -4445,7 +4455,7 @@ const EUROHOFF_EV = [
       weight: 32.7, // Вес, кг
       size: "800x275x533", // Размеры
       freon: "R32", // Фреон
-      compressorModel: "RECHI",
+      compressorModel: "Qingan",
     }
   },
 
@@ -4494,9 +4504,281 @@ const EUROHOFF_EV = [
       weight: 47.3, // Вес, кг
       size: "890x353x697", // Размеры
       freon: "R32", // Фреон
-      compressorModel: "RECHI",
+      compressorModel: "Qingan",
     }
   },
+
+];
+
+// ----- Eurohoff DC INVERTER (EVR-I) -----
+
+const functions_Eurohoff_EVR_I = ["Завод-изготовитель Haier", "Бесшумная работа", "Режим Turbo производительности", "Легко моющаяся панель",
+                              "HEALTH - режим здоровье", "Антибактериальный фильтр", "Режим 'Комфортный сон'", "Самодиагностика"];
+
+const images_Eurohoff_EVR_I =
+  ["./assets/img/catalog/eurohoff/evr-i/01.jpg",
+    "./assets/img/catalog/eurohoff/evr-i/02.jpg",
+    "./assets/img/catalog/eurohoff/evr-i/03.jpg",
+    "./assets/img/catalog/eurohoff/evr-i/04.jpg"
+  ];
+
+const description_Eurohoff_EVR_I = "Сплит-системы EUROHOFF DC INVERTER- сочетающие в себе современные технологии: инвертор, высочайший класс энергоэффективности, озонобезопасный хладагент R32. Система управления изменяет производительность кондиционера, отслеживая даже самые незначительные изменения температуры воздуха в помещении. На основании данных температурных датчиков вычисляется оптимальная производительность для комфортного поддержания температуры воздуха. Отсутствие температурных колебаний создает благоприятные условия в помещении, а работа компрессора с частичной нагрузкой позволяет значительно экономить потребление электроэнергии."
+
+const prices_Eurohoff_EVR_I = {
+  "eurohoff_evr_07i": 35600,
+  "eurohoff_evr_09i": 38000,
+  "eurohoff_evr_12i": 44300,
+  "eurohoff_evr_18i": 70400,
+  "eurohoff_evr_24i": 84200,
+}
+
+const EUROHOFF_EVR_I= [
+
+  // ------ Eurohoff EVR-07i ------
+  {
+    article: "eurohoff-evr-07i",
+    title: "Eurohoff EVR-07i",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "DC INVERTER",
+    link: "eurohoff-evr-07i.html",
+    imgSrc: images_Eurohoff_EVR_I,
+    price: prices_Eurohoff_EVR_I.eurohoff_evr_07i, // Цена
+    area: 22 , // На площадь, м²
+    coolingCapacity: 2.05, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EVR_I,
+    description: description_Eurohoff_EVR_I, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2050, // Производительность, Вт
+      powerConsumption: 639, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2100, // Производительность, Вт
+      powerConsumption: 582, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.3, // Вес, кг
+      size: "708x190x263", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 20, // Вес, кг
+      size: "696x256x432", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "Qingan",
+    }
+  },
+
+  // ------ Eurohoff EVR-09i ------
+  {
+    article: "eurohoff-evr-09i",
+    title: "Eurohoff EVR-09i",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "DC INVERTER",
+    link: "eurohoff-evr-09i.html",
+    imgSrc: images_Eurohoff_EVR_I,
+    price: prices_Eurohoff_EVR_I.eurohoff_evr_09i, // Цена
+    area: 28 , // На площадь, м²
+    coolingCapacity: 2.6, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EVR_I,
+    description: description_Eurohoff_EVR_I, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2600, // Производительность, Вт
+      powerConsumption: 810, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 750, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.3, // Вес, кг
+      size: "708x190x263", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 20.8, // Вес, кг
+      size: "696x256x432", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "Qingan",
+    }
+  },
+
+  // ------ Eurohoff EVR-12i ------
+  {
+    article: "eurohoff-evr-12i",
+    title: "Eurohoff EVR-12i",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "DC INVERTER",
+    link: "eurohoff-evr-12i.html",
+    imgSrc: images_Eurohoff_EVR_I,
+    price: prices_Eurohoff_EVR_I.eurohoff_evr_12i, // Цена
+    area: 35 , // На площадь, м²
+    coolingCapacity: 3.4, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EVR_I,
+    description: description_Eurohoff_EVR_I, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3400, // Производительность, Вт
+      powerConsumption: 1060, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3900, // Производительность, Вт
+      powerConsumption: 1055, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 15, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 9.1, // Вес, кг
+      size: "865x200x290", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 23.9, // Вес, кг
+      size: "700x245x544", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "Qingan",
+    }
+  },
+
+  // ------ Eurohoff EVR-18i ------
+  {
+    article: "eurohoff-evr-18i",
+    title: "Eurohoff EVR-18i",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "DC INVERTER",
+    link: "eurohoff-evr-18i.html",
+    imgSrc: images_Eurohoff_EVR_I,
+    price: prices_Eurohoff_EVR_I.eurohoff_evr_18i, // Цена
+    area: 50 , // На площадь, м²
+    coolingCapacity: 4.8, // Мощность охлаждения, кВт
+    noise: 28, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EVR_I,
+    description: description_Eurohoff_EVR_I, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1495, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1330, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 28, // Уровень шума, дБ (A)
+      weight: 8.7, // Вес, кг
+      size: "865x200x290", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 54, // Уровень шума, дБ (A)
+      weight: 29.2, // Вес, кг
+      size: "800x275x553", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "Qingan",
+    }
+  },
+
+  // ------ Eurohoff EVR-24i ------
+  {
+    article: "eurohoff-evr-24i",
+    title: "Eurohoff EVR-24i",
+    type: "split-system",
+    company: "Eurohoff",
+    series: "DC INVERTER",
+    link: "eurohoff-evr-24i.html",
+    imgSrc: images_Eurohoff_EVR_I,
+    price: prices_Eurohoff_EVR_I.eurohoff_evr_24i, // Цена
+    area: 70 , // На площадь, м²
+    coolingCapacity: 6.5, // Мощность охлаждения, кВт
+    noise: 33, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functions_Eurohoff_EVR_I,
+    description: description_Eurohoff_EVR_I, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6500, // Производительность, Вт
+      powerConsumption: 2025, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6800, // Производительность, Вт
+      powerConsumption: 1880, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 33, // Уровень шума, дБ (A)
+      weight: 11.6, // Вес, кг
+      size: "1008x225x318", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 57, // Уровень шума, дБ (A)
+      weight: 32.7, // Вес, кг
+      size: "800x275x553", // Размеры
+      freon: "R32", // Фреон
+      compressorModel: "Qingan",
+    }
+  },
+
 
 ];
 
@@ -6108,6 +6390,7 @@ const dataDenko = [
 
 const dataEurohoff = [
   EUROHOFF_EV,
+  EUROHOFF_EVR_I,
 ];
 
 const dataLG = [

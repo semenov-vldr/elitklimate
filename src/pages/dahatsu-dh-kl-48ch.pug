@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Dahatsu DH-KL-48CH"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Колонные кондиционеры", url: "column.html"}, {text: title}])
+
+  include ../components/popular/popular
+
+
+
+

@@ -12,6 +12,15 @@ const imagesDahatsuClassicInverter =
     "./assets/img/catalog/dahatsu/GW-H/04.png"
   ];
 
+const pricesDahatsuClassicInverter = {
+  "dahatsu_gw_07h": 34600,
+  "dahatsu_gw_09h": 37300,
+  "dahatsu_gw_12h": 43900,
+  "dahatsu_gw_18h": 69800,
+  "dahatsu_gw_24h": 83600,
+
+}
+
 const descriptionDahatsuClassicInverter = "Сплит-системы Dahatsu серии Classic DC Inverter - надежная классическая инверторная модель, выполненная из высококачественных материалов. Благодаря компактному дизайну, режиму комфортного сна и низкому уровню шума данную модель можно установить в любом помещении, даже в детской комнате. Модель снабжена всеми стандартными функциями сплит-системы: теплообменник Golden fin, скрытый дисплей, два направления воздушного потока, режим ECO. Дизайн в классическом стиле станет украшением любого интерьера, а новейшие технологии позволят наслаждаться идеальным микроклиматом в любое время года."
 
 const DAHATSU_GW_H = [
@@ -23,9 +32,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-07h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 34600, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_07h, // Цена
     area: 22, // На площадь, м²
     coolingCapacity: 2.1, // Мощность охлаждения, кВт
     noise: 20, // Уровень шума, дБ (A)
@@ -45,8 +54,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 610, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "9м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 9, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -72,9 +81,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-09h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 37300, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_09h, // Цена
     area: 28, // На площадь, м²
     coolingCapacity: 2.5, // Мощность охлаждения, кВт
     noise: 20, // Уровень шума, дБ (A)
@@ -94,8 +103,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 730, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "10м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -121,9 +130,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-12h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 43900, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_12h, // Цена
     area: 35, // На площадь, м²
     coolingCapacity: 3.4, // Мощность охлаждения, кВт
     noise: 24, // Уровень шума, дБ (A)
@@ -143,8 +152,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1000, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "10м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -170,9 +179,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-18h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 69800, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_18h, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 4.9, // Мощность охлаждения, кВт
     noise: 28, // Уровень шума, дБ (A)
@@ -192,8 +201,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1390, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "5м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -219,9 +228,9 @@ const DAHATSU_GW_H = [
     type: "split-system",
     company: "Dahatsu",
     series: "Classic DC Inverter",
-    link: "##",
+    link: "dahatsu-gw-24h.html",
     imgSrc: imagesDahatsuClassicInverter,
-    price: 83600, // Цена
+    price: pricesDahatsuClassicInverter.dahatsu_gw_24h, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 6.8, // Мощность охлаждения, кВт
     noise: 30, // Уровень шума, дБ (A)
@@ -241,8 +250,8 @@ const DAHATSU_GW_H = [
       powerConsumption: 1940, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок

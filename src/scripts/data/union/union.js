@@ -19,6 +19,7 @@ const dataDenko = [
 
 const dataEurohoff = [
   EUROHOFF_EV,
+  EUROHOFF_EVR_I,
 ];
 
 const dataLG = [

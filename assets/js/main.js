@@ -353,10 +353,10 @@ const functionsDahatsuLegend = ["Компрессор GMCC Toshiba", "Режим
 const srcToFolderDahatsuLegend = "./assets/img/catalog/dahatsu/DA-H/";
 
 const imagesDahatsuLegend = [
-  `${srcToFolderDahatsuLegend}01.png`,
-  `${srcToFolderDahatsuLegend}02-2.png`,
-  `${srcToFolderDahatsuLegend}03.png`,
-  `${srcToFolderDahatsuLegend}04.png`,
+  `${srcToFolderDahatsuLegend}01.jpg`,
+  `${srcToFolderDahatsuLegend}02-2.jpg`,
+  `${srcToFolderDahatsuLegend}03.jpg`,
+  `${srcToFolderDahatsuLegend}04.jpg`,
 ]
 
 const descriptionDahatsuLegend = "Сплит-системы Dahatsu серии Legend это легендарное возвращение модели, которая отвечает всем стандартам современного качества. Лаконичный, обтекаемый дизайн впишется в помещение любого типа и интерьера. Новейшие технологии позволят вам комфортно использовать сплит-систему, быстро охлаждать и обогревать помещение, а интеллектуальное управление и энергосбережение создадут идеальную среду жизненного пространства. В кондиционере присутствуют такие функции, как: авто-рестарт, самоочистка, режим i feel, тихий и турбо режим, антиплесень, горизонтальный автоповорот жалюзи, программируемый таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и другие функции."
@@ -948,14 +948,14 @@ const functionsDahatsuDH_CS_A = ["ON/OFF", "Инфракрасный пульт 
   "Панель с круговым распределением воздушного потока", "HEALTH", "Движение жалюзи по горизонтали и вертикали", "Анти-F. Предотвращение образования неприятного запаха"];
 
 const imagesDahatsuDH_CS_A =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01.png",
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/03.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
   ];
 
 const imagesDahatsuDH_CS_A_2 =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.png",
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/03-3.JPG",
     "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
@@ -2008,6 +2008,495 @@ const DAHATSU_DH_NP_A = [
 
 ]
 
+// ----- Мульти-сплит-система (внутрненние блоки) Dahatsu  (DHMULT) -----
+
+const functionsDahatsuDHMULT_In = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
+
+const imagesDahatsuDHMULT_In =
+  ["./assets/img/catalog/dahatsu/DHMULT/indoor/01.jpg",
+  ];
+
+const pricesDahatsuDHMULT_In = {
+  "dahatsu_dhmult_07": 16700,
+  "dahatsu_dhmult_09": 17400,
+  "dahatsu_dhmult_12": 18900,
+  "dahatsu_dhmult_18": 26700,
+
+}
+
+const descriptionDahatsuDHMULT_In = "Серия DHMULT DC INVERTER бренда DAHATSU 2023 года - это комплекс современных высокотехнологичных мульти-сплит систем, оснащенных наилучшими комплектующими и представленных в современных высококачественных корпусах.\n" +
+  "Возможность одновременного подключения к одному внешнему блоку сразу нескольких внутренних блоков позволяет с минимальными затратами и нарушением внешнего вида зданий задать комфортный климат сразу в нескольких помещениях. Данная серия является одной из лучших вариантов обладающих высокой энергоэффективностью, низким уровнем шума, компактными размерами. Серия DHMULT может стать идеальным вариантом для установки, например, в загородном доме или многокомнатной квартире."
+
+const DAHATSU_DHMULT_IN = [
+
+  // ------ Dahatsu DHMULT-07 ------
+  {
+    article: "dahatsu-dhmult-07",
+    title: "Внутренний блок Dahatsu DHMULT-07",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Indoor)",
+    link: "dahatsu-dhmult-07.html",
+    imgSrc: imagesDahatsuDHMULT_In,
+    price: pricesDahatsuDHMULT_In.dahatsu_dhmult_07, // Цена
+    area: 30, // На площадь, м²
+    coolingCapacity: 2.05, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_In,
+    description: descriptionDahatsuDHMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2050, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2150, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Dahatsu DHMULT-09 ------
+  {
+    article: "dahatsu-dhmult-09",
+    title: "Внутренний блок Dahatsu DHMULT-09",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Indoor)",
+    link: "dahatsu-dhmult-09.html",
+    imgSrc: imagesDahatsuDHMULT_In,
+    price: pricesDahatsuDHMULT_In.dahatsu_dhmult_09, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 2.58, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_In,
+    description: descriptionDahatsuDHMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2580, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Dahatsu DHMULT-12 ------
+  {
+    article: "dahatsu-dhmult-12",
+    title: "Внутренний блок Dahatsu DHMULT-12",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Indoor)",
+    link: "dahatsu-dhmult-12.html",
+    imgSrc: imagesDahatsuDHMULT_In,
+    price: pricesDahatsuDHMULT_In.dahatsu_dhmult_12, // Цена
+    area: 40, // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 33, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_In,
+    description: descriptionDahatsuDHMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 33, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Dahatsu DHMULT-18 ------
+  {
+    article: "dahatsu-dhmult-18",
+    title: "Внутренний блок Dahatsu DHMULT-18",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Indoor)",
+    link: "dahatsu-dhmult-18.html",
+    imgSrc: imagesDahatsuDHMULT_In,
+    price: pricesDahatsuDHMULT_In.dahatsu_dhmult_18, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.27, // Мощность охлаждения, кВт
+    noise: 35, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_In,
+    description: descriptionDahatsuDHMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5270, // Производительность, Вт
+      powerConsumption: 63, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5370, // Производительность, Вт
+      powerConsumption: 63, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 35, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x310x225", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+
+];
+
+// ----- Мульти-сплит-система (наружные блоки) Dahatsu  (DHMULT) -----
+
+const functionsDahatsuDHMULT_Out = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
+
+const imagesDahatsuDHMULT_Out =
+  ["./assets/img/catalog/dahatsu/DHMULT/outdoor/01.jpg",
+  ];
+
+const pricesDahatsuDHMULT_Out = {
+  "dahatsu_dhmult_out_18_2": 82600,
+  "dahatsu_dhmult_out_24_3": 102400,
+  "dahatsu_dhmult_out_30_3": 126000,
+  "dahatsu_dhmult_out_42_4": 189000,
+  "dahatsu_dhmult_out_42_5": 212000,
+
+}
+
+const descriptionDahatsuDHMULT_Out = "Серия DHMULT DC INVERTER бренда DAHATSU 2023 года - это комплекс современных высокотехнологичных мульти-сплит систем, оснащенных наилучшими комплектующими и представленных в современных высококачественных корпусах.\n" +
+  "Возможность одновременного подключения к одному внешнему блоку сразу нескольких внутренних блоков позволяет с минимальными затратами и нарушением внешнего вида зданий задать комфортный климат сразу в нескольких помещениях. Данная серия является одной из лучших вариантов обладающих высокой энергоэффективностью, низким уровнем шума, компактными размерами. Серия DHMULT может стать идеальным вариантом для установки, например, в загородном доме или многокомнатной квартире."
+
+const DAHATSU_DHMULT_OUT = [
+
+  // ------ Dahatsu DHMULT-18/2 ------
+  {
+    article: "dahatsu-dhmult-18-2",
+    title: "Наружный блок Dahatsu DHMULT-18/2",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Outdoor)",
+    link: "dahatsu-dhmult-18-2.html",
+    imgSrc: imagesDahatsuDHMULT_Out,
+    price: pricesDahatsuDHMULT_Out.dahatsu_dhmult_out_18_2, // Цена
+    area: 50, // На площадь, м²
+    coolingCapacity: 4.1, // Мощность охлаждения, кВт
+    noise: 54, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_Out,
+    description: descriptionDahatsuDHMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4100, // Производительность, Вт
+      powerConsumption: 1240, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1150, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 40, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "2x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "2x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 54, // Уровень шума, дБ (A)
+      weight: 34, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Dahatsu DHMULT-24/3 ------
+  {
+    article: "dahatsu-dhmult-24-3",
+    title: "Наружный блок Dahatsu DHMULT-24/3",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Outdoor)",
+    link: "dahatsu-dhmult-24-3.html",
+    imgSrc: imagesDahatsuDHMULT_Out,
+    price: pricesDahatsuDHMULT_Out.dahatsu_dhmult_out_24_3, // Цена
+    area: 70, // На площадь, м²
+    coolingCapacity: 6.2, // Мощность охлаждения, кВт
+    noise: 56, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_Out,
+    description: descriptionDahatsuDHMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6200, // Производительность, Вт
+      powerConsumption: 1920, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6600, // Производительность, Вт
+      powerConsumption: 1780, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 60, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "3x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "3x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "834x328x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Dahatsu DHMULT-30/3 ------
+  {
+    article: "dahatsu-dhmult-30-3",
+    title: "Наружный блок Dahatsu DHMULT-30/3",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Outdoor)",
+    link: "dahatsu-dhmult-30-3.html",
+    imgSrc: imagesDahatsuDHMULT_Out,
+    price: pricesDahatsuDHMULT_Out.dahatsu_dhmult_out_30_3, // Цена
+    area: 80, // На площадь, м²
+    coolingCapacity: 7.9, // Мощность охлаждения, кВт
+    noise: 58, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_Out,
+    description: descriptionDahatsuDHMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7900, // Производительность, Вт
+      powerConsumption: 2460, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 8200, // Производительность, Вт
+      powerConsumption: 2270, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 60, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "3x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "3x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 46, // Вес, кг
+      size: "834x328x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Dahatsu DHMULT-42/4 ------
+  {
+    article: "dahatsu-dhmult-42-4",
+    title: "Наружный блок Dahatsu DHMULT-42/4",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Outdoor)",
+    link: "dahatsu-dhmult-42-4.html",
+    imgSrc: imagesDahatsuDHMULT_Out,
+    price: pricesDahatsuDHMULT_Out.dahatsu_dhmult_out_42_4, // Цена
+    area: 110, // На площадь, м²
+    coolingCapacity: 10.5, // Мощность охлаждения, кВт
+    noise: 61, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_Out,
+    description: descriptionDahatsuDHMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 10500, // Производительность, Вт
+      powerConsumption: 3600, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 11000, // Производительность, Вт
+      powerConsumption: 3400, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 80, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "4x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "4x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 61, // Уровень шума, дБ (A)
+      weight: 76.5, // Вес, кг
+      size: "985x395x808", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Dahatsu DHMULT-42/5 ------
+  {
+    article: "dahatsu-dhmult-42-5",
+    title: "Наружный блок Dahatsu DHMULT-42/5",
+    type: "multi-split-systems",
+    company: "Dahatsu",
+    series: "DHMULT DC INVERTER (Outdoor)",
+    link: "dahatsu-dhmult-42-5.html",
+    imgSrc: imagesDahatsuDHMULT_Out,
+    price: pricesDahatsuDHMULT_Out.dahatsu_dhmult_out_42_5, // Цена
+    area: 130, // На площадь, м²
+    coolingCapacity: 12.1, // Мощность охлаждения, кВт
+    noise: 61, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsuDHMULT_Out,
+    description: descriptionDahatsuDHMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 12100, // Производительность, Вт
+      powerConsumption: 4450, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 13000, // Производительность, Вт
+      powerConsumption: 3800, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 80, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "5x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "5x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 61, // Уровень шума, дБ (A)
+      weight: 78.5, // Вес, кг
+      size: "985x395x808", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+];
+
 // ----- Dahatsu Dragon (DHP) -----
 
 const functionsDahatsuDragon = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A",
@@ -2062,8 +2551,8 @@ const DAHATSU_DHP = [
       powerConsumption: 670, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2111,8 +2600,8 @@ const DAHATSU_DHP = [
       powerConsumption: 690, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2160,8 +2649,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1015, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2209,8 +2698,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1542, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2258,8 +2747,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1948, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -3630,6 +4119,284 @@ const DENKO_DCS_A = [
       compressorModel: "GREE",
     }
   },
+]
+
+// -----Denko Legend DC INVERTER (DU-I) -----
+
+const functionsDenkoLegendDCInverter = ["Компрессор GMCC Toshiba", "Режим Turbo производительности", "Автоматическое качание заслонок", "Режим комфортного сна", "Режим 'Антиплесень'",
+  "HEALTH - режим здоровье", "Компактный дизайн", "Самоочистка внутреннего блока", "Режим I Feel",
+  "Golden fin", "Автоматический перезапуск", "Запоминание положения жалюзи", "Таймер"];
+
+const imagesDenkoLegendDCInverter =
+  ["./assets/img/catalog/Denko/du-i/01.jpg",
+    "./assets/img/catalog/Denko/du-i/02.jpg",
+    "./assets/img/catalog/Denko/du-i/03.jpg",
+    "./assets/img/catalog/Denko/du-i/04.jpg"
+  ];
+
+const pricesDenkoLegendDCInverter = {
+  "denko_du_07i": 30900,
+  "denko_du_09i": 33700,
+  "denko_du_12i": 36900,
+  "denko_du_18i": 61600,
+  "denko_du_24i": 75600,
+}
+
+const descriptionDenkoLegendDCInverter = "Сплит-системы Denko серии Legend DC INVERTER - лаконичная модель с дизайном в классическом стиле. Данная модель станет дополнением любого интерьера, а новейшие технологии и инверторные технологии позволят наслаждаться идеальным микроклиматом в любое время года. Легендарная модель, соответствующая всем стандартам современного качества, включает в себя такие функции как: тихий и турбо режим, авторестарт, самоочистка, режим i feel, режим здоровья, защищающий от вредных бактерий и вирусов, антиплесень, горизонтальный автоповорот жалюзи, удобный 24-часовой таймер, самодиагностика при включении и работе, независимое осушение, саморазморозка и прочие функции."
+
+
+const DENKO_DU_I = [
+
+  // ------ Denko DU-07i ------
+  {
+    article: "denko-du-07i",
+    title: "Denko DU-07i",
+    type: "split-system",
+    company: "Denko",
+    series: "Legend DC Inverter",
+    factory: "AUX",
+    link: "denko-du-07i.html",
+    imgSrc: imagesDenkoLegendDCInverter,
+    price: pricesDenkoLegendDCInverter.denko_du_07i, // Цена
+    area: 22, // На площадь, м²
+    coolingCapacity: 2.2, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoLegendDCInverter,
+    description: descriptionDenkoLegendDCInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 685, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2350, // Производительность, Вт
+      powerConsumption: 650, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.5, // Вес, кг
+      size: "690x199x283", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 21, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DU-09i ------
+  {
+    article: "denko-du-09i",
+    title: "Denko DU-09i",
+    type: "split-system",
+    company: "Denko",
+    series: "Legend DC Inverter",
+    factory: "AUX",
+    link: "denko-du-09i.html",
+    imgSrc: imagesDenkoLegendDCInverter,
+    price: pricesDenkoLegendDCInverter.denko_du_09i, // Цена
+    area: 28, // На площадь, м²
+    coolingCapacity: 2.65, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoLegendDCInverter,
+    description: descriptionDenkoLegendDCInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2650, // Производительность, Вт
+      powerConsumption: 825, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 747, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7.7, // Вес, кг
+      size: "690x199x283", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 22, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DU-12i ------
+  {
+    article: "denko-du-12i",
+    title: "Denko DU-12i",
+    type: "split-system",
+    company: "Denko",
+    series: "Legend DC Inverter",
+    factory: "AUX",
+    link: "denko-du-12i.html",
+    imgSrc: imagesDenkoLegendDCInverter,
+    price: pricesDenkoLegendDCInverter.denko_du_12i, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoLegendDCInverter,
+    description: descriptionDenkoLegendDCInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 1090, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3650, // Производительность, Вт
+      powerConsumption: 1010, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x200x285", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 22.5, // Вес, кг
+      size: "727x278x455", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DU-18i ------
+  {
+    article: "denko-du-18i",
+    title: "Denko DU-18i",
+    type: "split-system",
+    company: "Denko",
+    series: "Legend DC Inverter",
+    factory: "AUX",
+    link: "denko-du-18i.html",
+    imgSrc: imagesDenkoLegendDCInverter,
+    price: pricesDenkoLegendDCInverter.denko_du_18i, // Цена
+    area: 50, // На площадь, м²
+    coolingCapacity: 5.1, // Мощность охлаждения, кВт
+    noise: 29, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoLegendDCInverter,
+    description: descriptionDenkoLegendDCInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5100, // Производительность, Вт
+      powerConsumption: 1590, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5300, // Производительность, Вт
+      powerConsumption: 1470, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 29, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x225x310", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 53, // Уровень шума, дБ (A)
+      weight: 25, // Вес, кг
+      size: "709x281x537", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DU-24i ------
+  {
+    article: "denko-du-24i",
+    title: "Denko DU-24i",
+    type: "split-system",
+    company: "Denko",
+    series: "Legend DC Inverter",
+    factory: "AUX",
+    link: "denko-du-24i.html",
+    imgSrc: imagesDenkoLegendDCInverter,
+    price: pricesDenkoLegendDCInverter.denko_du_24i, // Цена
+    area: 70, // На площадь, м²
+    coolingCapacity: 6.7, // Мощность охлаждения, кВт
+    noise: 31, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoLegendDCInverter,
+    description: descriptionDenkoLegendDCInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6700, // Производительность, Вт
+      powerConsumption: 2090, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6800, // Производительность, Вт
+      powerConsumption: 1880, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 15, // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 31, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x225x310", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 38.5, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
 ]
 
 // -----Denko Legend (DU) -----
@@ -6380,11 +7147,15 @@ const dataDahatsu = [
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
   DAHATSU_DH_KN_CH,
+
+  DAHATSU_DHMULT_OUT,
+  DAHATSU_DHMULT_IN,
 ];
 
 const dataDenko = [
   DENKO_KR,
   DENKO_DU,
+  DENKO_DU_I,
   DENKO_DCS_A,
 ];
 
@@ -7485,23 +8256,45 @@ function createProductProfile (products) {
     properties.querySelector('.heating-performance').textContent = product.heating.performance || "-";
     properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption || "-";
     properties.querySelector('.powerSupply').textContent = product.powerSupply || "-";
-    properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
-    properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+
+    if (product.maxTrackLength) {
+      properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
+    } else {
+      properties.querySelector('.maxTrackLength').parentNode.style.display = "none";
+    }
+
+    if (product.maxHeightDifference) {
+      properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+    } else {
+      properties.querySelector('.maxHeightDifference').parentNode.style.display = "none";
+    }
+
     properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
 
+
     // Внутренний блок
-    properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise || "-";
-    properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight || "-";
-    properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size || "-";
+    if (product.indoorUnit) {
+      properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise || "-";
+      properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight || "-";
+      properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size || "-";
+    } else {
+      properties.querySelector('.product-profile__properties-heading--inner').style.display = "none";
+      properties.querySelector('.product-profile__property-list--inner').style.display = "none";
+    }
 
     // Внешний блок
-    properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise || "-";
-    properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight || "-";
-    properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size || "-";
-    properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon || "-";
-    properties.querySelector('.outdoorUnit-compressorModel').textContent = product.outdoorUnit.compressorModel || "-";
+    if (product.outdoorUnit) {
+      properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise || "-";
+      properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight || "-";
+      properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size || "-";
+      properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon || "-";
+      properties.querySelector('.outdoorUnit-compressorModel').textContent = product.outdoorUnit.compressorModel || "-";
+    } else {
+      properties.querySelector('.product-profile__properties-heading--out').style.display = "none";
+      properties.querySelector('.product-profile__property-list--out').style.display = "none";
+    }
 
     profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description || "-";

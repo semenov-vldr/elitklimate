@@ -8,14 +8,14 @@ const functionsDahatsuDH_CS_A = ["ON/OFF", "Инфракрасный пульт 
   "Панель с круговым распределением воздушного потока", "HEALTH", "Движение жалюзи по горизонтали и вертикали", "Анти-F. Предотвращение образования неприятного запаха"];
 
 const imagesDahatsuDH_CS_A =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01.png",
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/03.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
   ];
 
 const imagesDahatsuDH_CS_A_2 =
-  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.png",
+  ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
     "./assets/img/catalog/dahatsu/dh-cs-a/03-3.JPG",
     "./assets/img/catalog/dahatsu/dh-cs-a/04.png"

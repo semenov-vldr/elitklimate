@@ -52,23 +52,45 @@ function createProductProfile (products) {
     properties.querySelector('.heating-performance').textContent = product.heating.performance || "-";
     properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption || "-";
     properties.querySelector('.powerSupply').textContent = product.powerSupply || "-";
-    properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
-    properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+
+    if (product.maxTrackLength) {
+      properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
+    } else {
+      properties.querySelector('.maxTrackLength').parentNode.style.display = "none";
+    }
+
+    if (product.maxHeightDifference) {
+      properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+    } else {
+      properties.querySelector('.maxHeightDifference').parentNode.style.display = "none";
+    }
+
     properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
 
+
     // Внутренний блок
-    properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise || "-";
-    properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight || "-";
-    properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size || "-";
+    if (product.indoorUnit) {
+      properties.querySelector('.indoorUnit-noise').textContent = product.indoorUnit.noise || "-";
+      properties.querySelector('.indoorUnit-weight').textContent = product.indoorUnit.weight || "-";
+      properties.querySelector('.indoorUnit-size').textContent = product.indoorUnit.size || "-";
+    } else {
+      properties.querySelector('.product-profile__properties-heading--inner').style.display = "none";
+      properties.querySelector('.product-profile__property-list--inner').style.display = "none";
+    }
 
     // Внешний блок
-    properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise || "-";
-    properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight || "-";
-    properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size || "-";
-    properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon || "-";
-    properties.querySelector('.outdoorUnit-compressorModel').textContent = product.outdoorUnit.compressorModel || "-";
+    if (product.outdoorUnit) {
+      properties.querySelector('.outdoorUnit-noise').textContent = product.outdoorUnit.noise || "-";
+      properties.querySelector('.outdoorUnit-weight').textContent = product.outdoorUnit.weight || "-";
+      properties.querySelector('.outdoorUnit-size').textContent = product.outdoorUnit.size || "-";
+      properties.querySelector('.outdoorUnit-freon').textContent = product.outdoorUnit.freon || "-";
+      properties.querySelector('.outdoorUnit-compressorModel').textContent = product.outdoorUnit.compressorModel || "-";
+    } else {
+      properties.querySelector('.product-profile__properties-heading--out').style.display = "none";
+      properties.querySelector('.product-profile__property-list--out').style.display = "none";
+    }
 
     profileItem.querySelectorAll('.product-price').forEach(price => price.textContent = `${product.price.toLocaleString("ru")} ₽`)
     profileItem.querySelector('.product-profile__desc-text').textContent = product.description || "-";

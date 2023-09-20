@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Наружный блок Dahatsu DHMULT-18/2"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Мульти сплит-системы", url: "multi-split-systems.html"}, {text: title}])
+
+  include ../components/popular/popular
+
+
+
+

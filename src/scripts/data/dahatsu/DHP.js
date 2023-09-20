@@ -52,8 +52,8 @@ const DAHATSU_DHP = [
       powerConsumption: 670, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -101,8 +101,8 @@ const DAHATSU_DHP = [
       powerConsumption: 690, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -150,8 +150,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1015, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "20м", // Макс. длина трассы, м
-    maxHeightDifference: "8м", // Макс. перепад высот, м
+    maxTrackLength: 20, // Макс. длина трассы, м
+    maxHeightDifference: 8, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -199,8 +199,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1542, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -248,8 +248,8 @@ const DAHATSU_DHP = [
       powerConsumption: 1948, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок

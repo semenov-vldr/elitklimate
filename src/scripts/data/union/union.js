@@ -9,11 +9,15 @@ const dataDahatsu = [
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
   DAHATSU_DH_KN_CH,
+
+  DAHATSU_DHMULT_OUT,
+  DAHATSU_DHMULT_IN,
 ];
 
 const dataDenko = [
   DENKO_KR,
   DENKO_DU,
+  DENKO_DU_I,
   DENKO_DCS_A,
 ];
 

@@ -293,10 +293,42 @@
                   <button class="product-profile__desc-show-more-btn">Показать еще</button>
                 </div>
               </div>
+              <div class="services">
+                <h2 class="services__title">Услуги</h2>
+                <ul class="services__list">
+                  <li class="services__item"><a class="services__link" href="installation.html">Установка</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Ремонт</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Чистка</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Заправка</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
       </template>
+      <section class="similar">
+        <div class="similar__container container">
+          <h2 class="title-section">Похожие товары</h2>
+          <div class="swiper similar__slider">
+            <div class="swiper-wrapper">
+              <template id="template-card-similar">
+                <div class="card-popular swiper-slide" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card-popular__link" href="" itemprop="url"><img class="card-popular__img product-img" src="" itemprop="image">
+                    <h3 class="card-popular__title product-title" itemprop="name"></h3></a><span class="card-popular__price product-price"></span>
+                  <ul class="card-popular__data" itemprop="description">
+                    <li class="card-popular__data-item">Площадь, до:<span class="card-popular__data-item-value card-popular__data-item-value--area area-value"></span></li>
+                    <li class="card-popular__data-item">Инвертор:<span class="card-popular__data-item-value card-popular__data-item-value--inverter"></span></li>
+                    <li class="card-popular__data-item">Охлаждение:<span class="card-popular__data-item-value card-popular__data-item-value--coolingCapacity"></span></li>
+                    <li class="card-popular__data-item">Уровень шума:<span class="card-popular__data-item-value card-popular__data-item-value--noise"></span></li>
+                  </ul>
+                  <button class="button button--accent card-popular__button cart-btn">Купить</button>
+                </div>
+              </template>
+            </div>
+            <button class="swiper-button-prev swiper-button"></button>
+            <button class="swiper-button-next swiper-button"></button>
+          </div>
+        </div>
+      </section>
       <button class="go-top">
         <svg fill="#FFF" width="19" height="11">
           <use href="./assets/img/sprite.svg#arrow-filter"></use>

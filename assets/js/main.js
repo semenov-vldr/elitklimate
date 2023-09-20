@@ -15,6 +15,19 @@ function unblockScrollBody () {
   }
 };
 
+function fillingSliderCard (cardItem, product, swiperWrapper) {
+
+  cardItem.querySelector('.card-popular__link').href = product.link;
+  cardItem.querySelector('.card-popular__img').src = product.imgSrc[0];
+  cardItem.querySelector('.card-popular__title').textContent = product.title;
+  cardItem.querySelector('.card-popular__price').textContent = `${product.price.toLocaleString("ru")} ₽`;
+  cardItem.querySelector('.card-popular__data-item-value--area').textContent = `${product.area} м²`;
+  cardItem.querySelector('.card-popular__data-item-value--coolingCapacity').textContent = `${product.coolingCapacity} кВт`;
+  cardItem.querySelector('.card-popular__data-item-value--noise').textContent = `${product.noise} дБ`;
+  cardItem.querySelector('.card-popular__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
+  swiperWrapper.appendChild(cardItem);
+}
+
 const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
 const getInputNumbersValue = (input) => {
@@ -2782,6 +2795,14 @@ const imagesDahatsuBrilliant =
     "./assets/img/catalog/dahatsu/DS-I/04.png"
   ];
 
+const pricesDahatsuBrilliant = {
+  "dahatsu_ds_07i": 37200,
+  "dahatsu_ds_09i": 39500,
+  "dahatsu_ds_12i": 46900,
+  "dahatsu_ds_18i": 70600,
+  "dahatsu_ds_24i": 83300,
+}
+
 
 const descriptionDahatsuBrilliant = "Сплит-системы Dahatsu серии Brilliant сочетающие в себе современные технологии: инвертор, высочайший класс энергоэффективности, озонобезопасный хладагент R410A. Система управления изменяет производительность кондиционера, отслеживая даже самые незначительные изменения температуры воздуха в помещении. На основании данных температурных датчиков вычисляется оптимальная производительность для комфортного поддержания температуры воздуха. Отсутствие температурных колебаний создает благоприятные условия в помещении, а работа компрессора с частичной нагрузкой позволяет значительно экономить потребление электроэнергии."
 
@@ -2794,9 +2815,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-07i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 37200, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_07i, // Цена
     area: 22, // На площадь, м²
     coolingCapacity: 2.4, // Мощность охлаждения, кВт
     noise: 21, // Уровень шума, дБ (A)
@@ -2816,8 +2837,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 678, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2843,9 +2864,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-09i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 39500, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_09i, // Цена
     area: 28, // На площадь, м²
     coolingCapacity: 2.8, // Мощность охлаждения, кВт
     noise: 21, // Уровень шума, дБ (A)
@@ -2865,8 +2886,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2892,9 +2913,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-12i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 46900, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_12i, // Цена
     area: 35, // На площадь, м²
     coolingCapacity: 3.4, // Мощность охлаждения, кВт
     noise: 26, // Уровень шума, дБ (A)
@@ -2914,8 +2935,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 1039, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2941,9 +2962,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-18i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 70600, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_18i, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 5.2, // Мощность охлаждения, кВт
     noise: 27, // Уровень шума, дБ (A)
@@ -2963,8 +2984,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 1505, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "30м", // Макс. длина трассы, м
-    maxHeightDifference: "20м", // Макс. перепад высот, м
+    maxTrackLength: 30, // Макс. длина трассы, м
+    maxHeightDifference: 20, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -2990,9 +3011,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-24i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 83300, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_24i, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 29, // Уровень шума, дБ (A)
@@ -3012,8 +3033,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 2440, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "25м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 25, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -8168,8 +8189,6 @@ if (popular) {
   const cardPopularTemplate = document.querySelector('#template-card-popular').content.querySelector('.card-popular.swiper-slide');
   const swiperWrapperPopular = document.querySelector('.popular__slider .swiper-wrapper');
 
-
-
   // Создание карточек товара для блока "Популярное", используется общий массив данных товара.
   // Для выбора карточек в функцию передается массив с артикулами товара
   function createCardPopular (products, articles) {
@@ -8179,36 +8198,36 @@ if (popular) {
       articles.forEach(article => {
         if (product.article === article) {
           const popularItem = cardPopularTemplate.cloneNode(true);
-
-          popularItem.dataset.article = article;
-          popularItem.querySelector('.card-popular__link').href = product.link;
-          popularItem.querySelector('.card-popular__img').src = product.imgSrc[0];
-          popularItem.querySelector('.card-popular__title').textContent = product.title;
-          popularItem.querySelector('.card-popular__price').textContent = `${product.price.toLocaleString("ru")} ₽`;
-          popularItem.querySelector('.card-popular__data-item-value--area').textContent = `${product.area} м²`;
-          popularItem.querySelector('.card-popular__data-item-value--coolingCapacity').textContent = `${product.coolingCapacity} кВт`;
-          popularItem.querySelector('.card-popular__data-item-value--noise').textContent = `${product.noise} дБ`;
-          popularItem.querySelector('.card-popular__data-item-value--inverter').textContent = `${product.inverter ? "Есть" : "Нет"}`;
-          swiperWrapperPopular.appendChild(popularItem);
+          fillingSliderCard(popularItem, product, swiperWrapperPopular);
           handlerCart();
         }
-      })
+      });
     });
   };
 
   createCardPopular(productsArr, articlesPopularCards);
-
 }
-
-
 
 window.addEventListener("load", () => {
   createProductProfile(productsArr);
+  createCardSimilar(productsArr);
 });
+
+function createOption (productsItem) {
+  const option = document.createElement("option");
+  option.text = productsItem.area;
+  option.value = productsItem.area;
+  option.dataset.src = productsItem.link;
+  return option;
+};
+
+function handleOptionChange(evt) {
+  const selectedOption = evt.target.options[evt.target.selectedIndex];
+  document.location.href = selectedOption.dataset.src;
+};
 
 
 function createProductProfile (products) {
-
   const breadcrumbs = document.querySelector(".breadcrumbs");
   if (!breadcrumbs) return;
 
@@ -8223,8 +8242,13 @@ function createProductProfile (products) {
     const swiperTopWrapper = profileItem.querySelector('.product-profile__images .swiper-top .swiper-wrapper');
     const swiperThumbsWrapper = profileItem.querySelector('.product-profile__images .swiper-thumbs .swiper-wrapper');
 
+    profileItem.dataset.area = product.area;
+    profileItem.dataset.type = product.type;
+    profileItem.dataset.title = product.title;
+    profileItem.dataset.inverter = product.inverter;
     profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
 
+    // Добавление картинок в слайдер (верхний)
     product.imgSrc.forEach((src, i) => {
       const tagImg = document.createElement("img");
       const divSwiperSlide = document.createElement("div");
@@ -8238,7 +8262,7 @@ function createProductProfile (products) {
         tagImg.classList.add("product-img");
       }
     });
-
+    // Добавление картинок в слайдер (миниатюры)
     product.imgSrc.forEach((src) => {
       const tagImg = document.createElement("img");
       tagImg.classList.add("swiper-slide");
@@ -8257,22 +8281,24 @@ function createProductProfile (products) {
     properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption || "-";
     properties.querySelector('.powerSupply').textContent = product.powerSupply || "-";
 
+
+    const maxTrackLength = properties.querySelector('.maxTrackLength');
     if (product.maxTrackLength) {
-      properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
+      maxTrackLength.textContent = product.maxTrackLength || "-";
     } else {
-      properties.querySelector('.maxTrackLength').parentNode.style.display = "none";
+      maxTrackLength.parentNode.style.display = "none";
     }
 
+    const maxHeightDifference = properties.querySelector('.maxHeightDifference');
     if (product.maxHeightDifference) {
-      properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+      maxHeightDifference.textContent = product.maxHeightDifference || "-";
     } else {
-      properties.querySelector('.maxHeightDifference').parentNode.style.display = "none";
+      maxHeightDifference.parentNode.style.display = "none";
     }
 
     properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
-
 
     // Внутренний блок
     if (product.indoorUnit) {
@@ -8307,20 +8333,15 @@ function createProductProfile (products) {
 
     productsArr.forEach(productsItem => {
       if (productsItem.series === product.series && productsItem.company === product.company) {
-        const option = document.createElement("option");
-        option.text = productsItem.area;
-        option.value = productsItem.area;
-        option.dataset.src = productsItem.link;
+        const option = createOption(productsItem);
         otherAreasSelect.appendChild(option);
         if (+option.value === product.area) option.selected = true;
       }
     });
-
-    otherAreasSelect.addEventListener("change", (evt) => {
-      const selectedOption = evt.target.options[evt.target.selectedIndex];
-      document.location.href = selectedOption.dataset.src;
-    });
+    otherAreasSelect.addEventListener("change", handleOptionChange);
   });
+
+
 
   const productProfile = document.querySelector('.product-profile');
 
@@ -8336,8 +8357,6 @@ function createProductProfile (products) {
     });
   }
   handlerCart();
-
-
 };
 
 
@@ -8678,6 +8697,84 @@ class Quiz {
 // });
 
 
+
+function createSimilarSlider () {
+  const swiperSimilar = document.querySelector('.similar__slider');
+  const mySwiper = new Swiper(swiperSimilar, {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Откл функционала, если слайдов меньше, чем нужно
+    watchOverflow: true,
+
+    // Ширина экрана
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+      },
+      380: {
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+      },
+      480: {
+        slidesPerView: 2.2,
+        spaceBetween: 16,
+      },
+
+      640: {
+        slidesPerView: 2.8,
+        spaceBetween: 16,
+      },
+
+      768: {
+        slidesPerView: 3.3,
+        spaceBetween: 16,
+      },
+
+      1100: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    }
+  });
+}
+
+
+function createCardSimilar (products) {
+  const similar = document.querySelector('.similar');
+  const productProfile = document.querySelector(".product-profile");
+  if (similar && productProfile) {
+    productProfile.insertAdjacentElement('afterEnd', similar);
+
+    const cardSimilarTemplate = document.querySelector('#template-card-similar').content.querySelector('.card-popular.swiper-slide');
+    const swiperWrapperSimilar = document.querySelector('.similar__slider .swiper-wrapper');
+    const area = +productProfile.dataset.area;
+    const type = productProfile.dataset.type;
+    const title = productProfile.dataset.title;
+    const isInverter = productProfile.dataset.inverter === "true";
+    const coeff = 0.2;
+
+    products.forEach(product => {
+      const typeMatching = type === product.type;
+      const minProductArea = product.area - product.area*coeff;
+      const maxProductArea = product.area + product.area*coeff;
+
+      if (area >= minProductArea && area <= maxProductArea && typeMatching && title !== product.title && isInverter === product.inverter) {
+        const similarItem = cardSimilarTemplate.cloneNode(true);
+        fillingSliderCard(similarItem, product, swiperWrapperSimilar);
+        handlerCart();
+      }
+    });
+    createSimilarSlider();
+
+    const hasSimilarProducts = similar.querySelectorAll(".card-popular");
+    if (!hasSimilarProducts.length) similar.hidden = true;
+  };
+
+}
 
 const gotTopButton = document.querySelector('.go-top');
 

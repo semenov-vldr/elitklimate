@@ -12,6 +12,14 @@ const imagesDahatsuBrilliant =
     "./assets/img/catalog/dahatsu/DS-I/04.png"
   ];
 
+const pricesDahatsuBrilliant = {
+  "dahatsu_ds_07i": 37200,
+  "dahatsu_ds_09i": 39500,
+  "dahatsu_ds_12i": 46900,
+  "dahatsu_ds_18i": 70600,
+  "dahatsu_ds_24i": 83300,
+}
+
 
 const descriptionDahatsuBrilliant = "Сплит-системы Dahatsu серии Brilliant сочетающие в себе современные технологии: инвертор, высочайший класс энергоэффективности, озонобезопасный хладагент R410A. Система управления изменяет производительность кондиционера, отслеживая даже самые незначительные изменения температуры воздуха в помещении. На основании данных температурных датчиков вычисляется оптимальная производительность для комфортного поддержания температуры воздуха. Отсутствие температурных колебаний создает благоприятные условия в помещении, а работа компрессора с частичной нагрузкой позволяет значительно экономить потребление электроэнергии."
 
@@ -24,9 +32,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-07i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 37200, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_07i, // Цена
     area: 22, // На площадь, м²
     coolingCapacity: 2.4, // Мощность охлаждения, кВт
     noise: 21, // Уровень шума, дБ (A)
@@ -46,8 +54,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 678, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -73,9 +81,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-09i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 39500, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_09i, // Цена
     area: 28, // На площадь, м²
     coolingCapacity: 2.8, // Мощность охлаждения, кВт
     noise: 21, // Уровень шума, дБ (A)
@@ -95,8 +103,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 820, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -122,9 +130,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-12i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 46900, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_12i, // Цена
     area: 35, // На площадь, м²
     coolingCapacity: 3.4, // Мощность охлаждения, кВт
     noise: 26, // Уровень шума, дБ (A)
@@ -144,8 +152,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 1039, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "25м", // Макс. длина трассы, м
-    maxHeightDifference: "10м", // Макс. перепад высот, м
+    maxTrackLength: 25, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -171,9 +179,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-18i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 70600, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_18i, // Цена
     area: 55, // На площадь, м²
     coolingCapacity: 5.2, // Мощность охлаждения, кВт
     noise: 27, // Уровень шума, дБ (A)
@@ -193,8 +201,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 1505, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "30м", // Макс. длина трассы, м
-    maxHeightDifference: "20м", // Макс. перепад высот, м
+    maxTrackLength: 30, // Макс. длина трассы, м
+    maxHeightDifference: 20, // Макс. перепад высот, м
     liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
     // Внутренний блок
@@ -220,9 +228,9 @@ const DAHATSU_DS_I = [
     type: "split-system",
     company: "Dahatsu",
     series: "Brilliant",
-    link: "##",
+    link: "dahatsu-ds-24i.html",
     imgSrc: imagesDahatsuBrilliant,
-    price: 83300, // Цена
+    price: pricesDahatsuBrilliant.dahatsu_ds_24i, // Цена
     area: 75, // На площадь, м²
     coolingCapacity: 7, // Мощность охлаждения, кВт
     noise: 29, // Уровень шума, дБ (A)
@@ -242,8 +250,8 @@ const DAHATSU_DS_I = [
       powerConsumption: 2440, // Потребл. мощность, Вт
     },
     powerSupply: powerSupply, // Электропитание
-    maxTrackLength: "50м", // Макс. длина трассы, м
-    maxHeightDifference: "25м", // Макс. перепад высот, м
+    maxTrackLength: 50, // Макс. длина трассы, м
+    maxHeightDifference: 25, // Макс. перепад высот, м
     liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
     gasPipeDiameter: "15,9мм(5/8)", // Диаметр газовой трубы, мм
     // Внутренний блок

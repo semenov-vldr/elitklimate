@@ -1,0 +1,18 @@
+template#template-card-similar
+  .card-popular.swiper-slide(data-article="" itemscope itemtype="https://schema.org/Product")
+    a.card-popular__link(href="" itemprop="url")
+      img.card-popular__img.product-img(src="" itemprop="image")
+      h3.card-popular__title.product-title(itemprop="name")
+    span.card-popular__price.product-price
+
+    ul.card-popular__data(itemprop="description")
+      li.card-popular__data-item Площадь, до:
+        span.card-popular__data-item-value.card-popular__data-item-value--area.area-value
+      li.card-popular__data-item Инвертор:
+        span.card-popular__data-item-value.card-popular__data-item-value--inverter
+      li.card-popular__data-item Охлаждение:
+        span.card-popular__data-item-value.card-popular__data-item-value--coolingCapacity
+      li.card-popular__data-item Уровень шума:
+        span.card-popular__data-item-value.card-popular__data-item-value--noise
+
+    button.button.button--accent.card-popular__button.cart-btn Купить

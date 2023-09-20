@@ -1,10 +1,23 @@
 window.addEventListener("load", () => {
   createProductProfile(productsArr);
+  createCardSimilar(productsArr);
 });
+
+function createOption (productsItem) {
+  const option = document.createElement("option");
+  option.text = productsItem.area;
+  option.value = productsItem.area;
+  option.dataset.src = productsItem.link;
+  return option;
+};
+
+function handleOptionChange(evt) {
+  const selectedOption = evt.target.options[evt.target.selectedIndex];
+  document.location.href = selectedOption.dataset.src;
+};
 
 
 function createProductProfile (products) {
-
   const breadcrumbs = document.querySelector(".breadcrumbs");
   if (!breadcrumbs) return;
 
@@ -19,8 +32,13 @@ function createProductProfile (products) {
     const swiperTopWrapper = profileItem.querySelector('.product-profile__images .swiper-top .swiper-wrapper');
     const swiperThumbsWrapper = profileItem.querySelector('.product-profile__images .swiper-thumbs .swiper-wrapper');
 
+    profileItem.dataset.area = product.area;
+    profileItem.dataset.type = product.type;
+    profileItem.dataset.title = product.title;
+    profileItem.dataset.inverter = product.inverter;
     profileItem.querySelectorAll('.product-profile__title').forEach(title => title.textContent = product.title);
 
+    // Добавление картинок в слайдер (верхний)
     product.imgSrc.forEach((src, i) => {
       const tagImg = document.createElement("img");
       const divSwiperSlide = document.createElement("div");
@@ -34,7 +52,7 @@ function createProductProfile (products) {
         tagImg.classList.add("product-img");
       }
     });
-
+    // Добавление картинок в слайдер (миниатюры)
     product.imgSrc.forEach((src) => {
       const tagImg = document.createElement("img");
       tagImg.classList.add("swiper-slide");
@@ -53,22 +71,24 @@ function createProductProfile (products) {
     properties.querySelector('.heating-powerConsumption').textContent = product.heating.powerConsumption || "-";
     properties.querySelector('.powerSupply').textContent = product.powerSupply || "-";
 
+
+    const maxTrackLength = properties.querySelector('.maxTrackLength');
     if (product.maxTrackLength) {
-      properties.querySelector('.maxTrackLength').textContent = product.maxTrackLength || "-";
+      maxTrackLength.textContent = product.maxTrackLength || "-";
     } else {
-      properties.querySelector('.maxTrackLength').parentNode.style.display = "none";
+      maxTrackLength.parentNode.style.display = "none";
     }
 
+    const maxHeightDifference = properties.querySelector('.maxHeightDifference');
     if (product.maxHeightDifference) {
-      properties.querySelector('.maxHeightDifference').textContent = product.maxHeightDifference || "-";
+      maxHeightDifference.textContent = product.maxHeightDifference || "-";
     } else {
-      properties.querySelector('.maxHeightDifference').parentNode.style.display = "none";
+      maxHeightDifference.parentNode.style.display = "none";
     }
 
     properties.querySelector('.liquidPipeDiameter').textContent = product.liquidPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
     properties.querySelector('.gasPipeDiameter').textContent = product.gasPipeDiameter || "-";
-
 
     // Внутренний блок
     if (product.indoorUnit) {
@@ -103,20 +123,15 @@ function createProductProfile (products) {
 
     productsArr.forEach(productsItem => {
       if (productsItem.series === product.series && productsItem.company === product.company) {
-        const option = document.createElement("option");
-        option.text = productsItem.area;
-        option.value = productsItem.area;
-        option.dataset.src = productsItem.link;
+        const option = createOption(productsItem);
         otherAreasSelect.appendChild(option);
         if (+option.value === product.area) option.selected = true;
       }
     });
-
-    otherAreasSelect.addEventListener("change", (evt) => {
-      const selectedOption = evt.target.options[evt.target.selectedIndex];
-      document.location.href = selectedOption.dataset.src;
-    });
+    otherAreasSelect.addEventListener("change", handleOptionChange);
   });
+
+
 
   const productProfile = document.querySelector('.product-profile');
 
@@ -132,8 +147,6 @@ function createProductProfile (products) {
     });
   }
   handlerCart();
-
-
 };
 
 

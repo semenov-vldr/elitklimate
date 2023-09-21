@@ -33,6 +33,8 @@ if (header) {
     navLink.addEventListener("click", closeMobileMenu)
   });
 
+  window.addEventListener('scroll', () => scrollHeader (header) );
+
 }
 
 

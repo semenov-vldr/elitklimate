@@ -7,7 +7,5 @@ function scrollHeader (header) {
   } else {
     header.classList.add('js-scroll');
   }
-
   previousPosition = currentPosition;
-
 }

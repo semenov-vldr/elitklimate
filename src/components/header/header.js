@@ -18,7 +18,6 @@ if (header) {
     blockScrollBody();
 
     if (menu.classList.contains(menuActiveClass)) {
-      console.log('open menu')
       let mc = new Hammer(menu);
       mc.get('swipe').set({
         direction: Hammer.DIRECTION_ALL,

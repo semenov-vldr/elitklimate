@@ -1,6 +1,8 @@
 .header
   position: sticky
   top: 0
+  left: 0
+  width: 100%
   z-index: 5
   box-shadow: 0 0 20px 10px rgba(#BBBBBB, 0.4)
   padding: 25px 0
@@ -8,24 +10,23 @@
   background-color: white
   margin-bottom: 32px
   transition: 0.4s ease
+  &.js-scroll
+    opacity: 0
+    visibility: hidden
   @media (max-width: $width-mobile)
     min-height: 50px
     padding: 12px 0
-    z-index: 5
     margin-bottom: 20px
     box-shadow: 0 0 10px 5px rgba(#BBBBBB, 0.2)
     &.header--index
       position: absolute
       background-color: transparent
-      width: 100%
-      border-bottom: none
       box-shadow: none
   &.header--index
     margin-bottom: 0
     .header__tel
       background-color: #e8e8e8
-  &.js-scroll
-    transform: translateY(-100%)
+
 
   &__container
     display: flex

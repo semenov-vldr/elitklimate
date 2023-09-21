@@ -111,6 +111,20 @@ phoneInputs.forEach(input => {
   input.addEventListener("paste", onPhonePaste);
 });
 
+let previousPosition = document.documentElement.scrollTop;
+function scrollHeader (header) {
+  let currentPosition = document.documentElement.scrollTop;
+
+  if (previousPosition > currentPosition || window.scrollY < 100) {
+    header.classList.remove('js-scroll');
+  } else {
+    header.classList.add('js-scroll');
+  }
+
+  previousPosition = currentPosition;
+
+}
+
 // Отправка данных формы в Телеграм
 const TOKEN = "6642495645:AAH-ok6fz2lzVfvqxbQgNyeKS6OTx3jc0uQ";
 const CHAT_ID = "-1001965199100";
@@ -7982,6 +7996,8 @@ if (header) {
   navLinks.forEach(navLink => {
     navLink.addEventListener("click", closeMobileMenu)
   });
+
+  window.addEventListener('scroll', () => scrollHeader (header) );
 
 }
 

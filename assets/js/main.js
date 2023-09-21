@@ -8747,6 +8747,7 @@ function createCardSimilar (products) {
   const similar = document.querySelector('.similar');
   const productProfile = document.querySelector(".product-profile");
   if (similar && productProfile) {
+    console.log(productProfile)
     productProfile.insertAdjacentElement('afterEnd', similar);
 
     const cardSimilarTemplate = document.querySelector('#template-card-similar').content.querySelector('.card-popular.swiper-slide');
@@ -8772,9 +8773,10 @@ function createCardSimilar (products) {
 
     const hasSimilarProducts = similar.querySelectorAll(".card-popular");
     if (!hasSimilarProducts.length) similar.hidden = true;
-  };
-
-}
+  } else {
+    similar.hidden = true;
+  }
+};
 
 const gotTopButton = document.querySelector('.go-top');
 

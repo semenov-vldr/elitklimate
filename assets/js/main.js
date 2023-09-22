@@ -4154,6 +4154,777 @@ const DENKO_DCS_A = [
   },
 ]
 
+// ----- Мульти-сплит-система (внутрненние блоки) Denko  (DNMULT) -----
+
+const functionsDenkoDNMULT_In = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
+
+const imagesDenkoDNMULT_In =
+  ["./assets/img/catalog/denko/DNMULT/indoor/01.jpg",
+    "./assets/img/catalog/denko/DNMULT/indoor/02.jpg"
+  ];
+
+const pricesDenkoDNMULT_In = {
+  "denko_dnmult_07": 13500,
+  "denko_dnmult_09": 14500,
+  "denko_dnmult_12": 16200,
+  "denko_dnmult_18": 21000,
+}
+
+const descriptionDenkoDNMULT_In = "Серия DNMULT DC INVERTER бренда Denko 2023 года - это комплекс современных высокотехнологичных мульти-сплит систем, оснащенных наилучшими комплектующими и представленных в современных высококачественных корпусах.\n" +
+  "Возможность одновременного подключения к одному внешнему блоку сразу нескольких внутренних блоков позволяет с минимальными затратами и нарушением внешнего вида зданий задать комфортный климат сразу в нескольких помещениях. Данная серия является одной из лучших вариантов обладающих высокой энергоэффективностью, низким уровнем шума, компактными размерами. Серия DHMULT может стать идеальным вариантом для установки, например, в загородном доме или многокомнатной квартире."
+
+const DENKO_DNMULT_IN = [
+
+  // ------ Denko DNMULT-07 ------
+  {
+    article: "denko-dnmult-07",
+    title: "Внутренний блок Denko DNMULT-07",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Indoor)",
+    link: "denko-dnmult-07.html",
+    imgSrc: imagesDenkoDNMULT_In,
+    price: pricesDenkoDNMULT_In.denko_dnmult_07, // Цена
+    area: 30, // На площадь, м²
+    coolingCapacity: 2.05, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_In,
+    description: descriptionDenkoDNMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2050, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2150, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Dahatsu DHMULT-09 ------
+  {
+    article: "denko-dnmult-09",
+    title: "Внутренний блок Denko DNMULT-09",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Indoor)",
+    link: "denko-dnmult-09.html",
+    imgSrc: imagesDenkoDNMULT_In,
+    price: pricesDenkoDNMULT_In.denko_dnmult_09, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 2.58, // Мощность охлаждения, кВт
+    noise: 22, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_In,
+    description: descriptionDenkoDNMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2580, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2700, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 22, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Ddenko DNMULT-12 ------
+  {
+    article: "denko-dnmult-12",
+    title: "Внутренний блок Denko DNMULT-12",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DHMULT DC INVERTER (Indoor)",
+    link: "denko-dnmult-12.html",
+    imgSrc: imagesDenkoDNMULT_In,
+    price: pricesDenkoDNMULT_In.denko_dnmult_12, // Цена
+    area: 40, // На площадь, м²
+    coolingCapacity: 3.5, // Мощность охлаждения, кВт
+    noise: 33, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_In,
+    description: descriptionDenkoDNMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3500, // Производительность, Вт
+      powerConsumption: 40, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 33, // Уровень шума, дБ (A)
+      weight: 8, // Вес, кг
+      size: "750x285x200", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+  // ------ Dahatsu DHMULT-18 ------
+  {
+    article: "denko-dnmult-18",
+    title: "Внутренний блок Denko DNMULT-18",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Indoor)",
+    link: "denko-dnmult-18.html",
+    imgSrc: imagesDenkoDNMULT_In,
+    price: pricesDenkoDNMULT_In.denko_dnmult_18, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.27, // Мощность охлаждения, кВт
+    noise: 35, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_In,
+    description: descriptionDenkoDNMULT_In, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5270, // Производительность, Вт
+      powerConsumption: 63, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5370, // Производительность, Вт
+      powerConsumption: 63, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    //maxTrackLength: 40, // Макс. длина трассы, м
+    //maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 35, // Уровень шума, дБ (A)
+      weight: 11, // Вес, кг
+      size: "900x310x225", // Размеры
+    },
+    // Внешний блок
+    // outdoorUnit: {
+    //   noise: 54, // Уровень шума, дБ (A)
+    //   weight: 34, // Вес, кг
+    //   size: "800x315x545", // Размеры
+    //   freon: "R410A", // Фреон
+    //   compressorModel: "GMCC",
+    // }
+  },
+
+
+];
+
+// ----- Мульти-сплит-система (наружные блоки) Denko  (DNMULT) -----
+
+const functionsDenkoDNMULT_Out = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
+
+const imagesDenkoDNMULT_Out =
+  ["./assets/img/catalog/denko/DNMULT/outdoor/01.jpg",
+  ];
+
+const pricesDenkoDNMULT_Out = {
+  "denko_dnmult_out_18_2": 68500,
+  "denko_dnmult_out_24_3": 80000,
+  "denko_dnmult_out_30_3": 102000,
+  "denko_dnmult_out_42_4": 145200,
+  //"denko_dnmult_out_42_5": 212000,
+
+}
+
+const descriptionDenkoDNMULT_Out = "Серия DHMULT DC INVERTER бренда DAHATSU 2023 года - это комплекс современных высокотехнологичных мульти-сплит систем, оснащенных наилучшими комплектующими и представленных в современных высококачественных корпусах.\n" +
+  "Возможность одновременного подключения к одному внешнему блоку сразу нескольких внутренних блоков позволяет с минимальными затратами и нарушением внешнего вида зданий задать комфортный климат сразу в нескольких помещениях. Данная серия является одной из лучших вариантов обладающих высокой энергоэффективностью, низким уровнем шума, компактными размерами. Серия DHMULT может стать идеальным вариантом для установки, например, в загородном доме или многокомнатной квартире."
+
+const DENKO_DNMULT_OUT = [
+
+  // ------ Denko DNMULT-18/2 ------
+  {
+    article: "denko-dnmult-18-2",
+    title: "Наружный блок Denko DNMULT-18/2",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Outdoor)",
+    link: "denko-dnmult-18-2.html",
+    imgSrc: imagesDenkoDNMULT_Out,
+    price: pricesDenkoDNMULT_Out.denko_dnmult_out_18_2, // Цена
+    area: 50, // На площадь, м²
+    coolingCapacity: 4.1, // Мощность охлаждения, кВт
+    noise: 54, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_Out,
+    description: descriptionDenkoDNMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 4100, // Производительность, Вт
+      powerConsumption: 1240, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 4800, // Производительность, Вт
+      powerConsumption: 1150, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 40, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "2x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "2x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 54, // Уровень шума, дБ (A)
+      weight: 34, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DNMULT-24/3 ------
+  {
+    article: "denko-dnmult-24-3",
+    title: "Наружный блок Denko DNMULT-24/3",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Outdoor)",
+    link: "denko-dnmult-24-3.html",
+    imgSrc: imagesDenkoDNMULT_Out,
+    price: pricesDenkoDNMULT_Out.denko_dnmult_out_24_3, // Цена
+    area: 70, // На площадь, м²
+    coolingCapacity: 6.2, // Мощность охлаждения, кВт
+    noise: 56, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_Out,
+    description: descriptionDenkoDNMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 6200, // Производительность, Вт
+      powerConsumption: 1920, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 6600, // Производительность, Вт
+      powerConsumption: 1780, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 60, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "3x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "3x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 56, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "834x328x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DNMULT-30/3 ------
+  {
+    article: "denko-dnmult-30-3",
+    title: "Наружный блок Denko DNMULT-30/3",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Outdoor)",
+    link: "denko-dnmult-30-3.html",
+    imgSrc: imagesDenkoDNMULT_Out,
+    price: pricesDenkoDNMULT_Out.denko_dnmult_out_30_3, // Цена
+    area: 80, // На площадь, м²
+    coolingCapacity: 7.9, // Мощность охлаждения, кВт
+    noise: 58, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_Out,
+    description: descriptionDenkoDNMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7900, // Производительность, Вт
+      powerConsumption: 2460, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 8200, // Производительность, Вт
+      powerConsumption: 2270, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 60, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "3x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "3x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 46, // Вес, кг
+      size: "834x328x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DNMULT-42/4 ------
+  {
+    article: "denko-dnmult-42-4",
+    title: "Наружный блок Denko DNMULT-42/4",
+    type: "multi-split-systems",
+    company: "Denko",
+    series: "DNMULT DC INVERTER (Outdoor)",
+    link: "denko-dnmult-42-4.html",
+    imgSrc: imagesDenkoDNMULT_Out,
+    price: pricesDenkoDNMULT_Out.denko_dnmult_out_42_4, // Цена
+    area: 110, // На площадь, м²
+    coolingCapacity: 10.5, // Мощность охлаждения, кВт
+    noise: 61, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoDNMULT_Out,
+    description: descriptionDenkoDNMULT_Out, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 10500, // Производительность, Вт
+      powerConsumption: 3600, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 11000, // Производительность, Вт
+      powerConsumption: 3400, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 80, // Макс. длина трассы, м
+    maxHeightDifference: 10, // Макс. перепад высот, м
+    liquidPipeDiameter: "4x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "4x9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    // indoorUnit: {
+    //   noise: "-", // Уровень шума, дБ (A)
+    //   weight: "-", // Вес, кг
+    //   size: "-", // Размеры
+    // },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 61, // Уровень шума, дБ (A)
+      weight: 76.5, // Вес, кг
+      size: "985x395x808", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko DNMULT-42/5 ------
+  // {
+  //   article: "denko-dnmult-42-5",
+  //   title: "Наружный блок Denko DNMULT-42/5",
+  //   type: "multi-split-systems",
+  //   company: "Denko",
+  //   series: "DNMULT DC INVERTER (Outdoor)",
+  //   link: "denko-dnmult-42-5.html",
+  //   imgSrc: imagesDenkoDNMULT_Out,
+  //   price: pricesDenkoDNMULT_Out.denko_dnmult_out_42_5, // Цена
+  //   area: 130, // На площадь, м²
+  //   coolingCapacity: 12.1, // Мощность охлаждения, кВт
+  //   noise: 61, // Уровень шума, дБ (A)
+  //   inverter: true, // Наличие инвертора (да/нет)
+  //
+  //   functions: functionsDenkoDNMULT_Out,
+  //   description: descriptionDenkoDNMULT_Out, // Описание
+  //
+  //   // Охлаждение
+  //   cooling: {
+  //     performance: 12100, // Производительность, Вт
+  //     powerConsumption: 4450, // Потребл. мощность, Вт
+  //   },
+  //   // Обогрев
+  //   heating: {
+  //     performance: 13000, // Производительность, Вт
+  //     powerConsumption: 3800, // Потребл. мощность, Вт
+  //   },
+  //   powerSupply: powerSupply, // Электропитание
+  //   maxTrackLength: 80, // Макс. длина трассы, м
+  //   maxHeightDifference: 10, // Макс. перепад высот, м
+  //   liquidPipeDiameter: "5x6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+  //   gasPipeDiameter: "5x9,52мм(3/8)", // Диаметр газовой трубы, мм
+  //   // Внутренний блок
+  //   // indoorUnit: {
+  //   //   noise: "-", // Уровень шума, дБ (A)
+  //   //   weight: "-", // Вес, кг
+  //   //   size: "-", // Размеры
+  //   // },
+  //   // Внешний блок
+  //   outdoorUnit: {
+  //     noise: 61, // Уровень шума, дБ (A)
+  //     weight: 78.5, // Вес, кг
+  //     size: "985x395x808", // Размеры
+  //     freon: "R410A", // Фреон
+  //     compressorModel: "GMCC",
+  //   }
+  // },
+
+];
+
+// -----Denko Напольно-потолочный тип (DNP-A) -----
+
+const functionsDenko_DNP_A = ["ON/OFF", "Инфракрасный пульт (в комплекте)", "Режим энергосбережения",
+  "Самоочистка ICLEAN", "Объемное воздухо-распределение", "Турборежим", "Спящий режим", "Движение жалюзи по горизонтали и вертикали",
+  "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -15°C",
+  "Работа в режиме обогрева до -15°C", "Самодиагностика", "Низкотемпературный комплект",
+  "HEALTH", "Анти-F. Предотвращение образования неприятного запаха"];
+
+
+const imagesDenko_DNP_A =
+  ["./assets/img/catalog/Denko/DNP-A/01.jpg",
+    "./assets/img/catalog/Denko/DNP-A/02.jpg",
+    "./assets/img/catalog/Denko/DNP-A/03.jpg",
+    "./assets/img/catalog/Denko/DNP-A/04.jpg"
+  ];
+
+
+const pricesDenko_DNP_A = {
+  "denko_dnp_18a": 70000,
+  "denko_dnp_24a": 89200,
+  "denko_dnp_36a": 120800,
+  "denko_dnp_48a": 146800,
+  "denko_dnp_60a": 156500,
+}
+
+const descriptionDenko_DNP_A = "Напольно-потолочная сплит-система Denko DNP-A идеально подходит для создания комфортного микроклимата в ресторанах, гостиницах, офисных помещениях. Прибор имеет элегантный дизайн, на передней панели расположены индикаторы режимов работы и цифровой дисплей с указанием температуры. Управление производится с помощью беспроводного пульта."
+
+
+const DENKO_DNP_A = [
+
+  // Denko DNP-18A
+  {
+    article: "denko-dnp-18a",
+    title: "Denko DNP-18A",
+    type: "floor-ceiling",
+    company: "Denko",
+    series: "DNP-A",
+    factory: "AUX",
+    link: "denko-dnp-18a.html",
+    imgSrc: imagesDenko_DNP_A,
+    price: pricesDenko_DNP_A.denko_dnp_18a, // Цена
+    area: 55, // На площадь, м²
+    coolingCapacity: 5.2, // Мощность охлаждения, кВт
+    noise: 43, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenko_DNP_A,
+    description: descriptionDenko_DNP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 5280, // Производительность, Вт
+      powerConsumption: 1700, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 5600, // Производительность, Вт
+      powerConsumption: 1550, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "15м", // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "12,7мм(1/2)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 43, // Уровень шума, дБ (A)
+      weight: 28, // Вес, кг
+      size: "1000x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 55, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "800x315x545", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Denko DH-NP-24A
+  {
+    article: "denko-dnp-24a",
+    title: "Denko DNP-24A",
+    type: "floor-ceiling",
+    company: "Denko",
+    series: "DNP-A",
+    factory: "AUX",
+    link: "denko-dnp-24a.html",
+    imgSrc: imagesDenko_DNP_A,
+    price: pricesDenko_DNP_A.denko_dnp_24a, // Цена
+    area: 75, // На площадь, м²
+    coolingCapacity: 7, // Мощность охлаждения, кВт
+    noise: 49, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenko_DNP_A,
+    description: descriptionDenko_DNP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 7030, // Производительность, Вт
+      powerConsumption: 2150, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 7600, // Производительность, Вт
+      powerConsumption: 1920, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyOnePhase, // Электропитание
+    maxTrackLength: "20м", // Макс. длина трассы, м
+    maxHeightDifference: "15м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 49, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "1280x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 57, // Уровень шума, дБ (A)
+      weight: 48, // Вес, кг
+      size: "825x310x655", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Denko DNP-36A
+  {
+    article: "denko-dnp-36a",
+    title: "Denko DNP-36A",
+    type: "floor-ceiling",
+    company: "Denko",
+    series: "DNP-A",
+    factory: "AUX",
+    link: "denko-dnp-36a.html",
+    imgSrc: imagesDenko_DNP_A,
+    price: pricesDenko_DNP_A.denko_dnp_36a, // Цена
+    area: 110, // На площадь, м²
+    coolingCapacity: 10.5, // Мощность охлаждения, кВт
+    noise: 50, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenko_DNP_A,
+    description: descriptionDenko_DNP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 10550, // Производительность, Вт
+      powerConsumption: 3500, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 11700, // Производительность, Вт
+      powerConsumption: 3240, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "30м", // Макс. длина трассы, м
+    maxHeightDifference: "20м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "15,88мм(5/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 36, // Вес, кг
+      size: "1280x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 64, // Вес, кг
+      size: "970x395x805", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Denko DNP-48A
+  {
+    article: "denko-dnp-48a",
+    title: "Denko DNP-48A",
+    type: "floor-ceiling",
+    company: "Denko",
+    series: "DNP-A",
+    factory: "AUX",
+    link: "denko-dnp-48a.html",
+    imgSrc: imagesDenko_DNP_A,
+    price: pricesDenko_DNP_A.denko_dnp_48a, // Цена
+    area: 150, // На площадь, м²
+    coolingCapacity: 14, // Мощность охлаждения, кВт
+    noise: 51, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDenko_DNP_A,
+    description: descriptionDenko_DNP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 14070, // Производительность, Вт
+      powerConsumption: 4680, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 15240, // Производительность, Вт
+      powerConsumption: 4420, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "50м", // Макс. длина трассы, м
+    maxHeightDifference: "30м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 51, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1600x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 58, // Уровень шума, дБ (A)
+      weight: 95, // Вес, кг
+      size: "940x370x1325", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // Denko DNP-60A
+  {
+    article: "denko-dnp-60a",
+    title: "Denko DNP-60A",
+    type: "floor-ceiling",
+    company: "Denko",
+    series: "DNP-A",
+    factory: "AUX",
+    link: "denko-dnp-60a.html",
+    imgSrc: imagesDenko_DNP_A,
+    price: pricesDenko_DNP_A.denko_dnp_60a, // Цена
+    area: 180, // На площадь, м²
+    coolingCapacity: 16.1, // Мощность охлаждения, кВт
+    noise: 51, // Уровень шума, дБ (A)
+    inverter: false, // Наличие инвертора (да/нет)
+
+    functions: functionsDahatsu_DH_NP_A,
+    description: descriptionDenko_DNP_A, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 16120, // Производительность, Вт
+      powerConsumption: 5550, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 17600, // Производительность, Вт
+      powerConsumption: 5010, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupplyThreePhase, // Электропитание
+    maxTrackLength: "50м", // Макс. длина трассы, м
+    maxHeightDifference: "30м", // Макс. перепад высот, м
+    liquidPipeDiameter: "9,52мм(3/8)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "19,05мм(3/4)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 51, // Уровень шума, дБ (A)
+      weight: 44, // Вес, кг
+      size: "1600x690x235", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 60, // Уровень шума, дБ (A)
+      weight: 99, // Вес, кг
+      size: "940x370x1325", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+]
+
 // -----Denko Legend DC INVERTER (DU-I) -----
 
 const functionsDenkoLegendDCInverter = ["Компрессор GMCC Toshiba", "Режим Turbo производительности", "Автоматическое качание заслонок", "Режим комфортного сна", "Режим 'Антиплесень'",
@@ -4756,6 +5527,179 @@ const DENKO_DU = [
       size: "900x350x700", // Размеры
       freon: "R410A", // Фреон
       compressorModel: "HIGHLY",
+    }
+  },
+
+]
+
+// ----- Denko Sakura DC INVERTER (GW-I) -----
+
+const functionsDenkoSakuraInverter = ["Компрессор GMCC Toshiba", "Класс энергоэффективности A",
+  "Автоматическое качание заслонок", "Режим комфортного сна", "Зеленый фильтр высокой плотности",
+  "Компактный дизайн", "Режим Turbo производительности", "Самоочистка внутреннего блока",
+  "Golden fin", "Автоматический перезапуск", "Запоминание положения жалюзи", "Защитная крышка патрубов"];
+
+const imagesDenkoSakuraInverter =
+  ["./assets/img/catalog/Denko/gw-i/01.jpg",
+    "./assets/img/catalog/Denko/gw-i/02.jpg",
+    "./assets/img/catalog/Denko/gw-i/03.jpg",
+    "./assets/img/catalog/Denko/gw-i/04.jpg"
+  ];
+
+const pricesDenkoSakuraInverter = {
+  "denko_gw_07i": 39200,
+  "denko_gw_09i": 41500,
+  "denko_gw_12i": 44700,
+}
+
+const descriptionDenkoSakuraInverter = "Сплит-системы Denko серии Sakura DC Inverter - инверторный кондиционер сочетающий в себе не только стандартные функции современных инверторов, но и такие сверхтехнологичные технологии как: антиковидная ультрафиолетовая лампа UVC + 58 С, 2 анитвирусных фильтра, самоочистка и защита от плесени, а также встроенная WI-FI функция ( WI-FI комплект + USB). Ультрафиолетовая лампа размещается непосредственно за декоративной панелью во внутреннем блоке кондиционера. Такое обеззараживание ультрафиолетом особенно эффективно защитит ваш дом от всего спектра вредоносных бактерий и различных типов коронавирусов, в то числе и COVID 19."
+
+const DENKO_GW_I = [
+
+  // ------ Denko GW-07i ------
+  {
+    article: "denko-gw-07h",
+    title: "Denko GW-07i",
+    type: "split-system",
+    company: "Denko",
+    series: "Sakura DC Inverter",
+    link: "denko-gw-07i.html",
+    imgSrc: imagesDenkoSakuraInverter,
+    price: pricesDenkoSakuraInverter.denko_gw_07i, // Цена
+    area: 22, // На площадь, м²
+    coolingCapacity: 2.1, // Мощность охлаждения, кВт
+    noise: 20, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoSakuraInverter,
+    description: descriptionDenkoSakuraInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2100, // Производительность, Вт
+      powerConsumption: 655, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2200, // Производительность, Вт
+      powerConsumption: 610, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 9, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 20, // Уровень шума, дБ (A)
+      weight: 6.5, // Вес, кг
+      size: "720x201x270", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 21.5, // Вес, кг
+      size: "660x530x240", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko GW-09i ------
+  {
+    article: "denko-gw-09i",
+    title: "Denko GW-09i",
+    type: "split-system",
+    company: "Denko",
+    series: "Sakura DC Inverter",
+    link: "denko-gw-09i.html",
+    imgSrc: imagesDenkoSakuraInverter,
+    price: pricesDenkoSakuraInverter.denko_gw_09i, // Цена
+    area: 28, // На площадь, м²
+    coolingCapacity: 2.5, // Мощность охлаждения, кВт
+    noise: 20, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoSakuraInverter,
+    description: descriptionDenkoSakuraInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 2550, // Производительность, Вт
+      powerConsumption: 795, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 2650, // Производительность, Вт
+      powerConsumption: 730, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 20, // Уровень шума, дБ (A)
+      weight: 6.7, // Вес, кг
+      size: "720x201x270", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 50, // Уровень шума, дБ (A)
+      weight: 21.5, // Вес, кг
+      size: "630x530x240", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
+    }
+  },
+
+  // ------ Denko GW-12i ------
+  {
+    article: "denko-gw-12i",
+    title: "Denko GW-12i",
+    type: "split-system",
+    company: "Denko",
+    series: "Sakura DC Inverter",
+    link: "denko-gw-12i.html",
+    imgSrc: imagesDenkoSakuraInverter,
+    price: pricesDenkoSakuraInverter.denko_gw_12i, // Цена
+    area: 35, // На площадь, м²
+    coolingCapacity: 3.4, // Мощность охлаждения, кВт
+    noise: 24, // Уровень шума, дБ (A)
+    inverter: true, // Наличие инвертора (да/нет)
+
+    functions: functionsDenkoSakuraInverter,
+    description: descriptionDenkoSakuraInverter, // Описание
+
+    // Охлаждение
+    cooling: {
+      performance: 3450, // Производительность, Вт
+      powerConsumption: 1075, // Потребл. мощность, Вт
+    },
+    // Обогрев
+    heating: {
+      performance: 3600, // Производительность, Вт
+      powerConsumption: 1000, // Потребл. мощность, Вт
+    },
+    powerSupply: powerSupply, // Электропитание
+    maxTrackLength: 10, // Макс. длина трассы, м
+    maxHeightDifference: 5, // Макс. перепад высот, м
+    liquidPipeDiameter: "6,35мм(1/4)",  // Диаметр жидкостной трубы, мм
+    gasPipeDiameter: "9,52мм(3/8)", // Диаметр газовой трубы, мм
+    // Внутренний блок
+    indoorUnit: {
+      noise: 24, // Уровень шума, дБ (A)
+      weight: 7, // Вес, кг
+      size: "790x199x270", // Размеры
+    },
+    // Внешний блок
+    outdoorUnit: {
+      noise: 52, // Уровень шума, дБ (A)
+      weight: 23, // Вес, кг
+      size: "660x530x240", // Размеры
+      freon: "R410A", // Фреон
+      compressorModel: "GMCC",
     }
   },
 
@@ -7175,12 +8119,10 @@ const dataDahatsu = [
   DAHATSU_GW_H,
   DAHATSU_DHP,
   DAHATSU_DS_I,
-
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
   DAHATSU_DH_KN_CH,
-
   DAHATSU_DHMULT_OUT,
   DAHATSU_DHMULT_IN,
 ];
@@ -7189,7 +8131,11 @@ const dataDenko = [
   DENKO_KR,
   DENKO_DU,
   DENKO_DU_I,
+  DENKO_GW_I,
   DENKO_DCS_A,
+  DENKO_DNP_A,
+  DENKO_DNMULT_IN,
+  DENKO_DNMULT_OUT,
 ];
 
 const dataEurohoff = [
@@ -7775,7 +8721,7 @@ function filterTabsCards () {
   const filterTabsTitle = filterTabsBlock.querySelectorAll(".filter-tabs__title");
   const tabsListArea = filterTabsBlock.querySelector(".filter-tabs__list--area");
 
-  // Динамическое добавление табов компаний
+  // Динамическое добавление табов компаний и сортировка их по алфавиту
   const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))].sort((a, b) => {
     return a.localeCompare(b);
   });
@@ -7788,14 +8734,13 @@ function filterTabsCards () {
     tabsListCompany.appendChild(tagLi);
   });
 
-
   // Динамическое добавление табов площади помещения
   const uniqueAreaValues = [...new Set(listOfRenderedCards.map(renderedCard => +renderedCard.dataset.area))].sort((a, b) => a - b);
-  const tabsListAreaMinMax = Array.from( tabsListArea.querySelectorAll(".filter-tabs__item[data-area-min]") );
+  const tabsAreaMinMax = Array.from( tabsListArea.querySelectorAll(".filter-tabs__item[data-area-min]") );
 
   let uniqueAreaTabs = new Set();
   uniqueAreaValues.forEach(areaValue => {
-    tabsListAreaMinMax.forEach(tabAreaMinMax => {
+    tabsAreaMinMax.forEach(tabAreaMinMax => {
       const dataMinArea = +tabAreaMinMax.dataset.areaMin;
       const dataMaxArea = +tabAreaMinMax.dataset.areaMax;
       if (areaValue >= dataMinArea && areaValue <= dataMaxArea) {
@@ -7808,9 +8753,9 @@ function filterTabsCards () {
 
   // Счетчик общего кол-ва карточек нак странице
   document.querySelector(".products__title-count").textContent = listOfRenderedCards.length;
-  const classFilterActive = "js-filter-active";
 
   // Добавление активного класса к табам для их активации
+  const classFilterActive = "js-filter-active";
   filterTabsList.forEach(tabList => {
     const filterTabs = tabList.querySelectorAll(".filter-tabs__item");
     filterTabs[0].classList.add(classFilterActive);
@@ -7834,14 +8779,12 @@ function filterTabsCards () {
   });
 
 
-
   const companyTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-company]");
   const classHiddenCompany = 'js-hidden-company';
   const typeTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
   const classTypeHidden = 'js-hidden-type';
   const areaTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-area]");
   const classAreaHidden = 'js-hidden-area';
-
 
 
   // Фильтр по компаниям
@@ -7876,7 +8819,7 @@ function filterTabsCards () {
   });
 
 
-  // Фильтр по площади помещения
+    // Фильтр по площади помещения
     areaTabs.forEach(areaTab => {
       areaTab.addEventListener("click",() => {
         const tabAreaMinTarget = +areaTab.dataset.areaMin;
@@ -7896,32 +8839,115 @@ function filterTabsCards () {
     });
 
 
+  //---------------
+
+  // const filterTabsItems = filterTabsBlock.querySelectorAll(".filter-tabs__item");
+  // filterTabsItems.forEach(filterTab => {
+  //   filterTab.addEventListener("click", ft);
+  // });
+  //
+  // function ft (evt) {
+  //   let selectedCompany = filterTabsBlock.querySelector(".filter-tabs__list--company .filter-tabs__item.js-filter-active").dataset.company;
+  //   let selectedArea = filterTabsBlock.querySelector(".filter-tabs__list--area .filter-tabs__item.js-filter-active").dataset.area;
+  //   let isInverterSelected = filterTabsBlock.querySelector(".filter-tabs__list--inverter .filter-tabs__item.js-filter-active").dataset.type === "true";
+  //
+  //   listOfRenderedCards.forEach(card => card.classList.add("js-hidden"));
+  //   let filteredCards = productGrid.querySelectorAll(`.card[data-company="${selectedCompany}"][data-type="${isInverterSelected}"]`);
+  //
+  //   if (evt.target.dataset.company === "all") {
+  //     filteredCards = productGrid.querySelectorAll(`.card[data-type="${isInverterSelected}"]`);
+  //   }
+  //
+  //   if (evt.target.dataset.type === "all") {
+  //     filteredCards = productGrid.querySelectorAll(`.card[data-company="${selectedCompany}"]`);
+  //   }
+  //
+  //   const isAllCompany = Array.from(filterTabsItems).some(tab => tab.dataset.company === "all" && tab.classList.contains("js-filter-active"));
+  //   const isAllInverter = Array.from(filterTabsItems).some(tab => tab.dataset.type === "all" && tab.classList.contains("js-filter-active"));
+  //
+  //   if (isAllCompany && isAllInverter) {
+  //     filteredCards = productGrid.querySelectorAll(`.card`);
+  //   }
+  //
+  //   filteredCards.forEach(card => card.classList.remove("js-hidden"));
+  //
+  //   emptyCardCheck();
+  // }
+
+//------------
 
   // Проверка на пустой список карточек по причине несоответствия фильтру
   function emptyCardCheck () {
-    const isHasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
+    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
                                                       || card.classList.contains(classTypeHidden)
-                                                      || card.classList.contains(classAreaHidden) );
-    if (isHasCards) {
-      const spanEmptyCards = document.createElement("span");
-      spanEmptyCards.classList.add("message-empty");
-      spanEmptyCards.textContent = "По указанным параметрам товар не найден.";
+                                                      || card.classList.contains(classAreaHidden)
+                                                      //|| card.classList.contains("js-hidden")
+                                                                                                );
+    if (hasCards) {
+      const messageAboutEmptiness = document.createElement("span");
+      messageAboutEmptiness.classList.add("message-empty");
+      messageAboutEmptiness.textContent = "По указанным параметрам товар не найден.";
       if (!productGrid.querySelector(".message-empty")) {
-        productGrid.appendChild(spanEmptyCards);
+        productGrid.appendChild(messageAboutEmptiness);
       }
     } else {
       productGrid.querySelectorAll(".message-empty").forEach(el => el.remove());
     }
   };
 
-  // -- <sorting cards> --
+  // Сортировка
   const filterSortingSelect = filterTabsBlock.querySelector(".filter-tabs__sorting select");
   filterSortingSelect.addEventListener("change", () => sortingCards(filterSortingSelect) );
 
   if (filterSortingSelect) window.addEventListener("load", () => sortingCards(filterSortingSelect) );
-  // -- </sorting cards> --
 
 };
+
+// Получаем вкладки фильтров и показываем кнопку "Дополнительно"
+const filterTabs = document.querySelectorAll('.filter-tab');
+const showMoreButton = document.querySelector('.show-more-button');
+
+// Добавляем обработчик события клика на каждую вкладку фильтра
+//filterTabs.forEach(tab => tab.addEventListener('click', filterCards));
+
+// Добавляем обработчик события клика к кнопке «Показать больше»
+//showMoreButton.addEventListener('click', showMoreCards);
+
+// Функция для фильтрации карточек товаров на основе выбранных фильтров
+function filterCards() {
+  const selectedCompany = document.querySelector('.company-filter-tab.selected').dataset.company;
+  const selectedArea = document.querySelector('.area-filter-tab.selected').dataset.area;
+  const isInverterSelected = document.querySelector('.inverter-filter-tab.selected').dataset.inverter === 'true';
+
+  // Скрываем все карточки
+  const card = document.querySelectorAll('.product-card');
+  card.forEach(card => {
+    card.style.display = 'нет';
+  });
+
+  // Показ карточек, соответствующих выбранным фильтрам
+  const filteredCards = document.querySelectorAll(`.product-card[data-company="${selectedCompany}"][data-area="${selectedArea}"][data-inverter="${isInverterSelected}"]`) ;
+  filteredCards.forEach(card => {
+    card.style.display = 'блок';
+  });
+}
+
+// Функция для отображения большего количества карточек при нажатии кнопки «показать больше»
+function showMoreCards() {
+  const displayCards = document.querySelectorAll('.product-card:not([style*="display: none"])');
+  const hiddenCards = document.querySelectorAll('.product-card[style*="display: none"]');
+
+  // Показываем следующие 5 скрытых карточек или все, если их осталось меньше 5
+  const cardToShow = hiddenCards.length >= 5? 5: hiddenCards.length;
+  for (let i = 0; i <cardToShow; i++) {
+    displayCards[displayCards.length - 1].style.display = 'block';
+  }
+
+  // Скрываем кнопку «показать больше», если больше карточек не скрыто
+  if (hiddenCards.length - cardToShow === 0) {
+    showMoreButton.style.display = 'нет';
+  }
+}
 
 function sortingCards (filterSortingSelect) {
   const productsGrid = document.querySelector(".products__grid");
@@ -8412,6 +9438,7 @@ function createProductProfileSlider (productProfile) {
 
 function createShowMoreBtn () {
   const productsGrid = document.querySelector(".products__grid");
+  if (!productsGrid) return;
   const showMoreBtn = document.createElement("button");
   showMoreBtn.textContent = "Показать еще";
   showMoreBtn.classList.add("show-more");
@@ -8419,16 +9446,31 @@ function createShowMoreBtn () {
   return showMoreBtn;
 };
 
+function handleShowMoreBtn () {
+  const productsGrid = document.querySelector(".products__grid");
+  if (!productsGrid) return;
+
+  const showMoreBtn = createShowMoreBtn();
+  const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
+  let startItems = 6;
+  showMoreBtn.addEventListener("click", () => {
+    startItems += 3;
+    const array = Array.from( productsGrid.querySelectorAll(".card") );
+    const visibleItems = array.slice(0, startItems);
+    visibleItems.forEach(el => el.classList.add("is-visible"));
+
+    if (startItems.length === productsLength) showMoreBtn.hidden = true;
+  });
+};
+
+
 // Создание массива карточек товара в соответствии с данными из массива объектов
 function renderCard (products) {
   const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
-
   if (!productsGrid && !cardTemplate) return;
 
     productsGrid.replaceChildren();
-
-    //const showMoreBtn =  createShowMoreBtn();
 
     products.forEach(product => {
       const cardItem = cardTemplate.cloneNode(true);
@@ -8450,8 +9492,13 @@ function renderCard (products) {
     });
     handlerCart();
     filterTabsCards();
+
 };
 //---------------
+
+
+//handleShowMoreBtn ();
+
 
 // Отрисовать все карточки товара на главной странице каталога
 const productsMain = document.querySelector(".products.products--main");
@@ -8475,10 +9522,10 @@ renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Му
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {
   if (blockCategory) {
-    const categoryArray = productsArr.filter(card => card.type === category);
-    renderCard(categoryArray);
+    const productsOfCategory = productsArr.filter(card => card.type === category);
+    renderCard(productsOfCategory);
     blockCategory.setAttribute("data-category", category);
-    return categoryArray;
+    //return categoryArray;
   }
 };
 

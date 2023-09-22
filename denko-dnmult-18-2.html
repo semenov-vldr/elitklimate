@@ -4,7 +4,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Кассетные</title><!--[if IE]>
+    <title>Наружный блок Denko DNMULT-18/2</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content=""><!--favicon-->
@@ -52,57 +52,32 @@
       </header>
       <main>
         <div class="breadcrumbs" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Каталог</a><span class="breadcrumbs__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Кассетные</span>
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Каталог</a><a class="breadcrumbs__item" href="multi-split-systems.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Мульти сплит-системы</a><span class="breadcrumbs__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Наружный блок Denko DNMULT-18/2</span>
           </div>
         </div>
-        <div class="products products--cassette">
-          <div class="products__container container">
-            <h1 class="products__title">Кассетные кондиционеры<span class="products__title-count"></span></h1>
-            <!--include ../filter/filter-->
-            <div class="filter-tabs">
-              <div class="filter-tabs__container">
-                <div class="filter-tabs__box">
-                  <h2 class="filter-tabs__title filter-tabs__title--company">Выбор бренда</h2>
-                  <ul class="filter-tabs__list filter-tabs__list--company">
-                    <li class="filter-tabs__item" data-company="all">Все<span class="filter-tabs__count"></span></li>
-                    <!--li.filter-tabs__item(data-company="Dahatsu") Dahatsu-->
-                  </ul>
-                </div>
-                <div class="filter-tabs__box">
-                  <h2 class="filter-tabs__title">Площадь помещения</h2>
-                  <ul class="filter-tabs__list filter-tabs__list--area">
-                    <li class="filter-tabs__item" data-area="all">Все</li>
-                    <li class="filter-tabs__item" data-area-min="20" data-area-max="30" data-area>20-30 м²</li>
-                    <li class="filter-tabs__item" data-area-min="31" data-area-max="50" data-area>31-50 м²</li>
-                    <li class="filter-tabs__item" data-area-min="51" data-area-max="70" data-area>51-70 м²</li>
-                    <li class="filter-tabs__item" data-area-min="71" data-area-max="90" data-area>71-90 м²</li>
-                    <li class="filter-tabs__item" data-area-min="91" data-area-max="110" data-area>91-110 м²</li>
-                    <li class="filter-tabs__item" data-area-min="111" data-area-max="150" data-area>111-150 м²</li>
-                    <li class="filter-tabs__item" data-area-min="151" data-area-max="250" data-area>151-250 м²</li>
-                  </ul>
-                </div>
-                <div class="filter-tabs__box">
-                  <h2 class="filter-tabs__title">Тип компрессора</h2>
-                  <ul class="filter-tabs__list filter-tabs__list--inverter">
-                    <li class="filter-tabs__item" data-type="all">Любой</li>
-                    <li class="filter-tabs__item" data-type="false">On/Off</li>
-                    <li class="filter-tabs__item" data-type="true">Inverter</li>
-                  </ul>
-                </div>
-                <div class="filter-tabs__sorting"><span>Соритровка:</span>
-                  <select name="Соритровка">
-                    <option value="initial" selected>По алфавиту</option>
-                    <option value="cheaper">Сначала дешевле</option>
-                    <option value="expensive">Сначала дороже</option>
-                  </select>
-                </div>
+        <section class="popular">
+          <div class="popular__container container">
+            <h2 class="title-section">Популярное</h2>
+            <div class="swiper popular__slider">
+              <div class="swiper-wrapper">
+                <template id="template-card-popular">
+                  <div class="card-popular swiper-slide" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card-popular__link" href="" itemprop="url"><img class="card-popular__img product-img" src="" itemprop="image">
+                      <h3 class="card-popular__title product-title" itemprop="name"></h3></a><span class="card-popular__price product-price"></span>
+                    <ul class="card-popular__data" itemprop="description">
+                      <li class="card-popular__data-item">Площадь, до:<span class="card-popular__data-item-value card-popular__data-item-value--area area-value"></span></li>
+                      <li class="card-popular__data-item">Инвертор:<span class="card-popular__data-item-value card-popular__data-item-value--inverter"></span></li>
+                      <li class="card-popular__data-item">Охлаждение:<span class="card-popular__data-item-value card-popular__data-item-value--coolingCapacity"></span></li>
+                      <li class="card-popular__data-item">Уровень шума:<span class="card-popular__data-item-value card-popular__data-item-value--noise"></span></li>
+                    </ul>
+                    <button class="button button--accent card-popular__button cart-btn">Купить</button>
+                  </div>
+                </template>
               </div>
-            </div>
-            <div class="products__grid">
-              <!-- Сюда отрисовываются карточки из объекта-->
+              <button class="swiper-button-prev swiper-button"></button>
+              <button class="swiper-button-next swiper-button"></button>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer" id="footer" itemscope itemtype="http://schema.org/Organization">
         <div class="footer__container container">

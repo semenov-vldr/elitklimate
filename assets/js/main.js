@@ -4653,10 +4653,10 @@ const functionsDenko_DNP_A = ["ON/OFF", "Инфракрасный пульт (в
 
 
 const imagesDenko_DNP_A =
-  ["./assets/img/catalog/Denko/DNP-A/01.jpg",
-    "./assets/img/catalog/Denko/DNP-A/02.jpg",
-    "./assets/img/catalog/Denko/DNP-A/03.jpg",
-    "./assets/img/catalog/Denko/DNP-A/04.jpg"
+  ["./assets/img/catalog/Denko/dnp-a/01.jpg",
+    "./assets/img/catalog/Denko/dnp-a/02.jpg",
+    "./assets/img/catalog/Denko/dnp-a/03.jpg",
+    "./assets/img/catalog/Denko/dnp-a/04.jpg"
   ];
 
 

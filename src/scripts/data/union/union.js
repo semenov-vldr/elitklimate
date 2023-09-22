@@ -4,12 +4,10 @@ const dataDahatsu = [
   DAHATSU_GW_H,
   DAHATSU_DHP,
   DAHATSU_DS_I,
-
   DAHATSU_DH_CS_A,
   DAHATSU_DH_NP_A,
   DAHATSU_DH_KL_A,
   DAHATSU_DH_KN_CH,
-
   DAHATSU_DHMULT_OUT,
   DAHATSU_DHMULT_IN,
 ];
@@ -18,7 +16,11 @@ const dataDenko = [
   DENKO_KR,
   DENKO_DU,
   DENKO_DU_I,
+  DENKO_GW_I,
   DENKO_DCS_A,
+  DENKO_DNP_A,
+  DENKO_DNMULT_IN,
+  DENKO_DNMULT_OUT,
 ];
 
 const dataEurohoff = [

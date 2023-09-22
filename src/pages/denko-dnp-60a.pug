@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Denko DNP-60A"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+
+  +breadcrumbs([{text: "Каталог", url: "catalog.html"}, {text: "Напольно-потолочные кондиционеры", url: "floor-ceiling.html"}, {text: title}])
+
+  include ../components/popular/popular
+
+
+
+

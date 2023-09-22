@@ -10,7 +10,7 @@ function filterTabsCards () {
   const filterTabsTitle = filterTabsBlock.querySelectorAll(".filter-tabs__title");
   const tabsListArea = filterTabsBlock.querySelector(".filter-tabs__list--area");
 
-  // Динамическое добавление табов компаний
+  // Динамическое добавление табов компаний и сортировка их по алфавиту
   const uniqueCompanyNames = [...new Set(listOfRenderedCards.map(renderedCard => renderedCard.dataset.company))].sort((a, b) => {
     return a.localeCompare(b);
   });
@@ -23,14 +23,13 @@ function filterTabsCards () {
     tabsListCompany.appendChild(tagLi);
   });
 
-
   // Динамическое добавление табов площади помещения
   const uniqueAreaValues = [...new Set(listOfRenderedCards.map(renderedCard => +renderedCard.dataset.area))].sort((a, b) => a - b);
-  const tabsListAreaMinMax = Array.from( tabsListArea.querySelectorAll(".filter-tabs__item[data-area-min]") );
+  const tabsAreaMinMax = Array.from( tabsListArea.querySelectorAll(".filter-tabs__item[data-area-min]") );
 
   let uniqueAreaTabs = new Set();
   uniqueAreaValues.forEach(areaValue => {
-    tabsListAreaMinMax.forEach(tabAreaMinMax => {
+    tabsAreaMinMax.forEach(tabAreaMinMax => {
       const dataMinArea = +tabAreaMinMax.dataset.areaMin;
       const dataMaxArea = +tabAreaMinMax.dataset.areaMax;
       if (areaValue >= dataMinArea && areaValue <= dataMaxArea) {
@@ -43,9 +42,9 @@ function filterTabsCards () {
 
   // Счетчик общего кол-ва карточек нак странице
   document.querySelector(".products__title-count").textContent = listOfRenderedCards.length;
-  const classFilterActive = "js-filter-active";
 
   // Добавление активного класса к табам для их активации
+  const classFilterActive = "js-filter-active";
   filterTabsList.forEach(tabList => {
     const filterTabs = tabList.querySelectorAll(".filter-tabs__item");
     filterTabs[0].classList.add(classFilterActive);
@@ -69,14 +68,12 @@ function filterTabsCards () {
   });
 
 
-
   const companyTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-company]");
   const classHiddenCompany = 'js-hidden-company';
   const typeTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
   const classTypeHidden = 'js-hidden-type';
   const areaTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-area]");
   const classAreaHidden = 'js-hidden-area';
-
 
 
   // Фильтр по компаниям
@@ -111,7 +108,7 @@ function filterTabsCards () {
   });
 
 
-  // Фильтр по площади помещения
+    // Фильтр по площади помещения
     areaTabs.forEach(areaTab => {
       areaTab.addEventListener("click",() => {
         const tabAreaMinTarget = +areaTab.dataset.areaMin;
@@ -131,29 +128,66 @@ function filterTabsCards () {
     });
 
 
+  //---------------
+
+  // const filterTabsItems = filterTabsBlock.querySelectorAll(".filter-tabs__item");
+  // filterTabsItems.forEach(filterTab => {
+  //   filterTab.addEventListener("click", ft);
+  // });
+  //
+  // function ft (evt) {
+  //   let selectedCompany = filterTabsBlock.querySelector(".filter-tabs__list--company .filter-tabs__item.js-filter-active").dataset.company;
+  //   let selectedArea = filterTabsBlock.querySelector(".filter-tabs__list--area .filter-tabs__item.js-filter-active").dataset.area;
+  //   let isInverterSelected = filterTabsBlock.querySelector(".filter-tabs__list--inverter .filter-tabs__item.js-filter-active").dataset.type === "true";
+  //
+  //   listOfRenderedCards.forEach(card => card.classList.add("js-hidden"));
+  //   let filteredCards = productGrid.querySelectorAll(`.card[data-company="${selectedCompany}"][data-type="${isInverterSelected}"]`);
+  //
+  //   if (evt.target.dataset.company === "all") {
+  //     filteredCards = productGrid.querySelectorAll(`.card[data-type="${isInverterSelected}"]`);
+  //   }
+  //
+  //   if (evt.target.dataset.type === "all") {
+  //     filteredCards = productGrid.querySelectorAll(`.card[data-company="${selectedCompany}"]`);
+  //   }
+  //
+  //   const isAllCompany = Array.from(filterTabsItems).some(tab => tab.dataset.company === "all" && tab.classList.contains("js-filter-active"));
+  //   const isAllInverter = Array.from(filterTabsItems).some(tab => tab.dataset.type === "all" && tab.classList.contains("js-filter-active"));
+  //
+  //   if (isAllCompany && isAllInverter) {
+  //     filteredCards = productGrid.querySelectorAll(`.card`);
+  //   }
+  //
+  //   filteredCards.forEach(card => card.classList.remove("js-hidden"));
+  //
+  //   emptyCardCheck();
+  // }
+
+//------------
 
   // Проверка на пустой список карточек по причине несоответствия фильтру
   function emptyCardCheck () {
-    const isHasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
+    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
                                                       || card.classList.contains(classTypeHidden)
-                                                      || card.classList.contains(classAreaHidden) );
-    if (isHasCards) {
-      const spanEmptyCards = document.createElement("span");
-      spanEmptyCards.classList.add("message-empty");
-      spanEmptyCards.textContent = "По указанным параметрам товар не найден.";
+                                                      || card.classList.contains(classAreaHidden)
+                                                      //|| card.classList.contains("js-hidden")
+                                                                                                );
+    if (hasCards) {
+      const messageAboutEmptiness = document.createElement("span");
+      messageAboutEmptiness.classList.add("message-empty");
+      messageAboutEmptiness.textContent = "По указанным параметрам товар не найден.";
       if (!productGrid.querySelector(".message-empty")) {
-        productGrid.appendChild(spanEmptyCards);
+        productGrid.appendChild(messageAboutEmptiness);
       }
     } else {
       productGrid.querySelectorAll(".message-empty").forEach(el => el.remove());
     }
   };
 
-  // -- <sorting cards> --
+  // Сортировка
   const filterSortingSelect = filterTabsBlock.querySelector(".filter-tabs__sorting select");
   filterSortingSelect.addEventListener("change", () => sortingCards(filterSortingSelect) );
 
   if (filterSortingSelect) window.addEventListener("load", () => sortingCards(filterSortingSelect) );
-  // -- </sorting cards> --
 
 };

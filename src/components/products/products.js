@@ -1,5 +1,6 @@
 function createShowMoreBtn () {
   const productsGrid = document.querySelector(".products__grid");
+  if (!productsGrid) return;
   const showMoreBtn = document.createElement("button");
   showMoreBtn.textContent = "Показать еще";
   showMoreBtn.classList.add("show-more");
@@ -7,16 +8,31 @@ function createShowMoreBtn () {
   return showMoreBtn;
 };
 
+function handleShowMoreBtn () {
+  const productsGrid = document.querySelector(".products__grid");
+  if (!productsGrid) return;
+
+  const showMoreBtn = createShowMoreBtn();
+  const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
+  let startItems = 6;
+  showMoreBtn.addEventListener("click", () => {
+    startItems += 3;
+    const array = Array.from( productsGrid.querySelectorAll(".card") );
+    const visibleItems = array.slice(0, startItems);
+    visibleItems.forEach(el => el.classList.add("is-visible"));
+
+    if (startItems.length === productsLength) showMoreBtn.hidden = true;
+  });
+};
+
+
 // Создание массива карточек товара в соответствии с данными из массива объектов
 function renderCard (products) {
   const productsGrid = document.querySelector(".products__grid");
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
-
   if (!productsGrid && !cardTemplate) return;
 
     productsGrid.replaceChildren();
-
-    //const showMoreBtn =  createShowMoreBtn();
 
     products.forEach(product => {
       const cardItem = cardTemplate.cloneNode(true);
@@ -38,8 +54,13 @@ function renderCard (products) {
     });
     handlerCart();
     filterTabsCards();
+
 };
 //---------------
+
+
+//handleShowMoreBtn ();
+
 
 // Отрисовать все карточки товара на главной странице каталога
 const productsMain = document.querySelector(".products.products--main");
@@ -63,10 +84,10 @@ renderProductsOfCategory(blockMultiSplitSystems, "multi-split-systems"); // Му
 // Отрисовка карточек на странице выбранной категории в соответствии с категорией
 function renderProductsOfCategory (blockCategory, category) {
   if (blockCategory) {
-    const categoryArray = productsArr.filter(card => card.type === category);
-    renderCard(categoryArray);
+    const productsOfCategory = productsArr.filter(card => card.type === category);
+    renderCard(productsOfCategory);
     blockCategory.setAttribute("data-category", category);
-    return categoryArray;
+    //return categoryArray;
   }
 };
 

@@ -28,23 +28,23 @@
     @media (max-width: 370px)
       grid-template-columns: 1fr
 
-  .card.slice-cards:nth-child(n + 7)
-    display: none
+    .card:nth-child(n + 7)
+      //display: none
+    .card.is-visible
+      display: flex
 
 
 .show-more
   display: block
   background-color: #fff
-  border: 1px solid $accent
-  padding: 6px
-  border-radius: 8px
+  border: 1px solid rgba($black, 0.5)
+  padding: 12px 6px
+  border-radius: 4px
   color: #000
   font-weight: 500
   grid-column: 1/-1
-  max-width: 300px
   width: 100%
-  margin: 0 auto
+  margin: 32px auto 0
   transition: $transition
   &:hover
-    background-color: $accent
-    color: #fff
+    border-color: $black

@@ -11,9 +11,12 @@ if (header) {
   function closeMobileMenu () {
     menu.classList.remove(menuActiveClass);
     unblockScrollBody();
+    header.classList.remove(menuActiveClass);
   };
 
   burger.addEventListener('click', () => {
+
+    header.classList.add(menuActiveClass);
     menu.classList.add(menuActiveClass);
     blockScrollBody();
 

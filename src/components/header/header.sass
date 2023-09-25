@@ -13,6 +13,8 @@
   &.js-scroll
     opacity: 0
     visibility: hidden
+  &.js-menu-open
+    z-index: 6
   @media (max-width: $width-mobile)
     min-height: 50px
     padding: 12px 0
@@ -54,7 +56,9 @@
     //    width: 120px
 
   &__nav
+    overflow: scroll
     @media (max-width: $width-mobile)
+      overflow: initial
       position: fixed
       top: 0
       left: 0

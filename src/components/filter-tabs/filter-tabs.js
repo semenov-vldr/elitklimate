@@ -119,17 +119,17 @@ function filterTabsCards () {
 
   // Фильтр по компаниям
   companyTabs.forEach(companyTab => {
-    //companyTab.addEventListener("click",() => handlerCompanyTabs(companyTab));
+    companyTab.addEventListener("click",() => handlerCompanyTabs(companyTab));
   });
 
   // Фильтр по типу компрессора
   inverterTabs.forEach(inverterTab => {
-    //inverterTab.addEventListener("click", () => handlerInverterTabs(inverterTab));
+    inverterTab.addEventListener("click", () => handlerInverterTabs(inverterTab));
   });
 
   // Фильтр по площади помещения
   areaTabs.forEach(areaTab => {
-    //areaTab.addEventListener("click",() => handlerAreaTabs(areaTab));
+    areaTab.addEventListener("click",() => handlerAreaTabs(areaTab));
   });
 
 

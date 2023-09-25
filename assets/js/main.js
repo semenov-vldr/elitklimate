@@ -1479,25 +1479,24 @@ const DAHATSU_DH_KL_A = [
 
 // -----Dahatsu Кассетный (DH-KN-CH) -----
 
-
 const functionsDahatsu_DH_KN_CH = ["ON/OFF", "Проводной пульт (в комплекте)", "Инфракрасный пульт (опция)", "Режим энергосбережения",
   "Самоочистка внутреннего блока", "Объемное воздухо-распределение", "Турборежим", "Тихий режим", "Горячий запуск",
   "24-часовой таймер", "Режим I FEEL", "Автоматический режим выбора", "Автоматическая разморозка", "Работа в режиме охлаждения до -20°C (опция)",
   "Работа в режиме обогрева до -15°C (опция)", "Дренажный насос (опция)", "Самодиагностика", "Низкотемпературный комплект",
   "Моющийся фильтр", "Индикатор загрязнения фильтра", "Режим комфортного сна", "Блокировка кнопок пульта"];
 
+const srcToFolderDahatsu_DH_KN_CH = "./assets/img/catalog/dahatsu/DH-KN-A/";
+
 const imagesDahatsu_DH_KN_CH =
-  ["./assets/img/catalog/dahatsu/DH-KN-A/01.png",
-    "./assets/img/catalog/dahatsu/DH-KN-A/02.png",
-    //"./assets/img/catalog/dahatsu/DH-KN-A/03.png",
-    //"./assets/img/catalog/dahatsu/DH-KN-A/04.png"
+  [
+    `${srcToFolderDahatsu_DH_KN_CH}01.png`,
+    `${srcToFolderDahatsu_DH_KN_CH}02.png`,
   ];
 
 const imagesDahatsu_DH_KN_CH_2 =
-  ["./assets/img/catalog/dahatsu/DH-KN-A/01-1.png",
-    "./assets/img/catalog/dahatsu/DH-KN-A/02-2.jpg",
-    //"./assets/img/catalog/dahatsu/DH-KN-A/03-3.JPG",
-    //"./assets/img/catalog/dahatsu/DH-KN-A/04.png"
+  [
+    `${srcToFolderDahatsu_DH_KN_CH}01-1.png`,
+    `${srcToFolderDahatsu_DH_KN_CH}02-2.jpg`,
   ];
 
 const descriptionDahatsu_DH_KN_CH = "Не всегда в дизайн интерьера хорошо вписывается внутренний блок классической сплит-системы. Идеальным решением в таких ситуациях станут канальные кондиционеры DH-KN-CH. \n Кондиционер самостоятельно выполняет диагностику неполадок. Сигналы о возникших неисправностях отображаются на световых индикаторах внутреннего блока сплит-системы. \n От состояния фильтра зависит бесперебойность и качество функционирования кондиционера. Но, как и в любом другом механизме, фильтры со временем загрязняются, поэтому нужно внимательно следить за их чистотой. Индикатор загрязнения фильтра своевременно оповестит Вас о необходимости проведения технического обслуживания."
@@ -8509,8 +8508,13 @@ function handlerCart () {
 //   addCartItemToPage ( getDataCartFromLocalStorage() );
 // });
 
-const chat = document.querySelector(".chat");
-if (chat) {
+
+
+handlerChat();
+
+function handlerChat () {
+  const chat = document.querySelector(".chat");
+  if (!chat) return;
   const chatIcon = chat.querySelector(".chat__icon");
   const chatWrapper = chat.querySelector(".chat__wrapper");
   //const chatBody = chat.querySelector(".chat__body");
@@ -8519,29 +8523,31 @@ if (chat) {
   const mobileWidthMediaQuery = window.matchMedia('(max-width: 768px)');
 
   chatIcon.addEventListener("click", () => {
-    chatWrapper.classList.toggle("js-chat-open");
-    toggleBlockScrollBody();
+    if (mobileWidthMediaQuery.matches) {
+      chatWrapper.classList.toggle("js-chat-open");
+      toggleBlockScrollBody();
+    }
+
   });
 
   if (mobileWidthMediaQuery.matches) {
-
 
     closeBtn.addEventListener("click", () => {
       chatWrapper.classList.remove("js-chat-open");
       unblockScrollBody();
     });
 
-      document.body.addEventListener("click", (evt) => {
+    document.body.addEventListener("click", (evt) => {
 
-        if ( chatWrapper.classList.contains("js-chat-open") && evt.target === chatWrapper ) {
-          chatWrapper.classList.remove("js-chat-open");
-          unblockScrollBody();
-        }
-      });
-
+      if ( chatWrapper.classList.contains("js-chat-open") && evt.target === chatWrapper ) {
+        chatWrapper.classList.remove("js-chat-open");
+        unblockScrollBody();
+      }
+    });
   }
+};
 
-}
+
 
 
 const mapContacts = document.querySelector('#map-contacts');
@@ -8873,17 +8879,17 @@ function filterTabsCards () {
 
   // Фильтр по компаниям
   companyTabs.forEach(companyTab => {
-    //companyTab.addEventListener("click",() => handlerCompanyTabs(companyTab));
+    companyTab.addEventListener("click",() => handlerCompanyTabs(companyTab));
   });
 
   // Фильтр по типу компрессора
   inverterTabs.forEach(inverterTab => {
-    //inverterTab.addEventListener("click", () => handlerInverterTabs(inverterTab));
+    inverterTab.addEventListener("click", () => handlerInverterTabs(inverterTab));
   });
 
   // Фильтр по площади помещения
   areaTabs.forEach(areaTab => {
-    //areaTab.addEventListener("click",() => handlerAreaTabs(areaTab));
+    areaTab.addEventListener("click",() => handlerAreaTabs(areaTab));
   });
 
 
@@ -9020,9 +9026,12 @@ if (header) {
   function closeMobileMenu () {
     menu.classList.remove(menuActiveClass);
     unblockScrollBody();
+    header.classList.remove(menuActiveClass);
   };
 
   burger.addEventListener('click', () => {
+
+    header.classList.add(menuActiveClass);
     menu.classList.add(menuActiveClass);
     blockScrollBody();
 

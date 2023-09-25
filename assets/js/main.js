@@ -8828,56 +8828,9 @@ function filterTabsCards () {
   });
 
 
-  const companyTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-company]");
-  //const classHiddenCompany = 'js-hidden-company';
-  const inverterTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
-  //const classTypeHidden = 'js-hidden-type';
-  const areaTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-area]");
-  //const classAreaHidden = 'js-hidden-area';
+  // Отрисовка отфильтрованных карточек
+  const filterTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item");
   const classHiddenCard = "js-card-hidden";
-
-
-  // function handlerCompanyTabs (companyTab) {
-  //   const tabCompanyTarget = companyTab.dataset.company;
-  //   listOfRenderedCards.forEach(renderedCard => {
-  //     if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
-  //       renderedCard.classList.remove(classHiddenCompany);
-  //     } else {
-  //       renderedCard.classList.add(classHiddenCompany);
-  //     }
-  //   });
-  //   emptyCardCheck();
-  // };
-  //
-  // function handlerInverterTabs (inverterTab) {
-  //   const tabInverterTarget = inverterTab.dataset.type;
-  //   listOfRenderedCards.forEach(renderedCard => {
-  //     if (renderedCard.dataset.type === tabInverterTarget || tabInverterTarget === "all") {
-  //       renderedCard.classList.remove(classTypeHidden);
-  //     } else {
-  //       renderedCard.classList.add(classTypeHidden);
-  //     }
-  //   });
-  //   emptyCardCheck();
-  // };
-  //
-  // function handlerAreaTabs (areaTab) {
-  //   const tabAreaMinTarget = +areaTab.dataset.areaMin;
-  //   const tabAreaMaxTarget = +areaTab.dataset.areaMax;
-  //   listOfRenderedCards.forEach(renderedCard => {
-  //     const dataAreaRenderedCard = +renderedCard.dataset.area;
-  //     if (dataAreaRenderedCard >= tabAreaMinTarget && dataAreaRenderedCard <= tabAreaMaxTarget
-  //       || areaTab.dataset.area === "all" ) {
-  //       renderedCard.classList.remove(classAreaHidden);
-  //     }
-  //     else {
-  //       renderedCard.classList.add(classAreaHidden);
-  //     }
-  //   });
-  //   emptyCardCheck();
-  // };
-
-  //-------------------------------------------------
 
   function handlerFilterTabs () {
     const tabCompanyTarget = filterTabsBlock.querySelector(".filter-tabs__item[data-company].js-filter-active").dataset.company;
@@ -8889,10 +8842,12 @@ function filterTabsCards () {
     listOfRenderedCards.forEach(renderedCard => {
       const dataAreaRenderedCard = +renderedCard.dataset.area;
 
-      const checkCompliance = (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all")
+      const checkCompliance = (
+        (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all")
         && (renderedCard.dataset.type === tabInverterTarget || tabInverterTarget === "all")
         && (dataAreaRenderedCard >= tabAMinAreaTarget && dataAreaRenderedCard <= tabAMaxAreaTarget
-          || tabAreaTarget.dataset.area === "all");
+        || tabAreaTarget.dataset.area === "all")
+        );
 
       if ( checkCompliance) {
         renderedCard.classList.remove(classHiddenCard);
@@ -8903,25 +8858,7 @@ function filterTabsCards () {
     emptyCardCheck();
   };
 
-  //-------------------------------------------------
-
-
-  // Фильтр по компаниям
-  companyTabs.forEach(companyTab => {
-    companyTab.addEventListener("click", handlerFilterTabs);
-  });
-
-  // Фильтр по типу компрессора
-  inverterTabs.forEach(inverterTab => {
-    inverterTab.addEventListener("click", handlerFilterTabs);
-  });
-
-  // Фильтр по площади помещения
-  areaTabs.forEach(areaTab => {
-    areaTab.addEventListener("click", handlerFilterTabs);
-  });
-
-
+  filterTabs.forEach(filterTab => filterTab.addEventListener("click", handlerFilterTabs));
 
 
   // Проверка на пустой список карточек по причине несоответствия фильтру

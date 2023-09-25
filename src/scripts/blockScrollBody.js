@@ -14,3 +14,11 @@ function unblockScrollBody () {
     html.classList.remove(classBlockScroll);
   }
 };
+
+function toggleBlockScrollBody () {
+  if ( html.classList.contains(classBlockScroll) ) {
+    html.classList.remove(classBlockScroll);
+  } else {
+    html.classList.add(classBlockScroll);
+  }
+};

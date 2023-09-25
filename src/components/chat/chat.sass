@@ -1,0 +1,100 @@
+.chat
+  position: fixed
+  right: 40px
+  bottom: 15%
+  z-index: 100
+  transition: $transition
+  @media (max-width: $width-mobile)
+    bottom: 20%
+    right: 16px
+  @media (min-width: $width-mobile)
+    &:hover .chat__wrapper
+      display: block
+    &:hover::before
+      display: block
+  &::before
+    display: none
+    position: absolute
+    content: ""
+    width: 20px
+    height: 100%
+    left: 0
+    transform: translateX(-100%)
+  &__icon
+    position: relative
+    cursor: pointer
+    opacity: 0.8
+    svg
+      width: 40px
+      height: 40px
+      fill: #2AABEE
+    &:hover
+      opacity: 1
+
+  &__wrapper
+    display: none
+    position: fixed
+    right: 100px
+    bottom: 15%
+    &.js-chat-open
+      display: block
+    @media (max-width: $width-mobile)
+      bottom: 20px
+      left: 0
+      width: 100vw
+      height: 100vh
+      align-items: flex-end
+      justify-content: center
+      background-color: rgba(#000, 0.1)
+      &.js-chat-open
+        display: flex
+
+  &__body
+    width: 280px
+    box-shadow: rgba(#000, 0.1) 0 1px 17px 1px, rgba(#000, 0.16) 0 0 4px
+    border-radius: 16px
+    padding: 16px 0
+    background-color: #fff
+    @media (max-width: $width-mobile)
+      width: 90vw
+
+  &__list
+    display: flex
+    flex-direction: column
+    //gap: 8px
+
+  &__item--header
+    font-size: 12px
+    text-align: center
+    padding: 0 16px 8px
+    border-bottom: 1px solid rgba(#000,0.1)
+
+  &__item
+
+  &__link
+    display: inline-block
+    width: 100%
+    padding: 8px 16px 8px
+    transition: $transition
+    border-bottom: 1px solid rgba(#000,0.1)
+    &:hover
+      background-color: rgba(#000,0.1)
+    @media (min-width: $width-mobile)
+      &:nth-last-child
+        border-bottom: none
+        padding-bottom: 0
+
+
+  &__cancel
+    display: none
+    width: 90%
+    padding: 8px
+    border-radius: 8px
+    color: blue
+    background-color: rgba(#000,0.1)
+    cursor: pointer
+    margin: 8px auto 0
+    &:hover
+      background-color: rgba(#000,0.15)
+    @media (max-width: $width-mobile)
+      display: block

@@ -69,87 +69,104 @@ function filterTabsCards () {
 
 
   const companyTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-company]");
-  const classHiddenCompany = 'js-hidden-company';
+  //const classHiddenCompany = 'js-hidden-company';
   const inverterTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-type]");
-  const classTypeHidden = 'js-hidden-type';
+  //const classTypeHidden = 'js-hidden-type';
   const areaTabs = filterTabsBlock.querySelectorAll(".filter-tabs__item[data-area]");
-  const classAreaHidden = 'js-hidden-area';
+  //const classAreaHidden = 'js-hidden-area';
+  const classHiddenCard = "js-card-hidden";
 
 
-  function handlerCompanyTabs (companyTab) {
-    const tabCompanyTarget = companyTab.dataset.company;
-    listOfRenderedCards.forEach(renderedCard => {
-      if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
-        renderedCard.classList.remove(classHiddenCompany);
-      } else {
-        renderedCard.classList.add(classHiddenCompany);
-      }
-    });
-    emptyCardCheck();
-  };
+  // function handlerCompanyTabs (companyTab) {
+  //   const tabCompanyTarget = companyTab.dataset.company;
+  //   listOfRenderedCards.forEach(renderedCard => {
+  //     if (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all") {
+  //       renderedCard.classList.remove(classHiddenCompany);
+  //     } else {
+  //       renderedCard.classList.add(classHiddenCompany);
+  //     }
+  //   });
+  //   emptyCardCheck();
+  // };
+  //
+  // function handlerInverterTabs (inverterTab) {
+  //   const tabInverterTarget = inverterTab.dataset.type;
+  //   listOfRenderedCards.forEach(renderedCard => {
+  //     if (renderedCard.dataset.type === tabInverterTarget || tabInverterTarget === "all") {
+  //       renderedCard.classList.remove(classTypeHidden);
+  //     } else {
+  //       renderedCard.classList.add(classTypeHidden);
+  //     }
+  //   });
+  //   emptyCardCheck();
+  // };
+  //
+  // function handlerAreaTabs (areaTab) {
+  //   const tabAreaMinTarget = +areaTab.dataset.areaMin;
+  //   const tabAreaMaxTarget = +areaTab.dataset.areaMax;
+  //   listOfRenderedCards.forEach(renderedCard => {
+  //     const dataAreaRenderedCard = +renderedCard.dataset.area;
+  //     if (dataAreaRenderedCard >= tabAreaMinTarget && dataAreaRenderedCard <= tabAreaMaxTarget
+  //       || areaTab.dataset.area === "all" ) {
+  //       renderedCard.classList.remove(classAreaHidden);
+  //     }
+  //     else {
+  //       renderedCard.classList.add(classAreaHidden);
+  //     }
+  //   });
+  //   emptyCardCheck();
+  // };
 
-  function handlerInverterTabs (inverterTab) {
-    const tabInverterTarget = inverterTab.dataset.type;
-    listOfRenderedCards.forEach(renderedCard => {
-      if (renderedCard.dataset.type === tabInverterTarget || tabInverterTarget === "all") {
-        renderedCard.classList.remove(classTypeHidden);
-      } else {
-        renderedCard.classList.add(classTypeHidden);
-      }
-    });
-    emptyCardCheck();
-  };
+  //-------------------------------------------------
 
-  function handlerAreaTabs (areaTab) {
-    const tabAreaMinTarget = +areaTab.dataset.areaMin;
-    const tabAreaMaxTarget = +areaTab.dataset.areaMax;
+  function handlerFilterTabs () {
+    const tabCompanyTarget = filterTabsBlock.querySelector(".filter-tabs__item[data-company].js-filter-active").dataset.company;
+    const tabInverterTarget = filterTabsBlock.querySelector(".filter-tabs__item[data-type].js-filter-active").dataset.type;
+    const tabAreaTarget = filterTabsBlock.querySelector(".filter-tabs__item[data-area].js-filter-active");
+    const tabAMinAreaTarget = +tabAreaTarget.dataset.areaMin;
+    const tabAMaxAreaTarget = +tabAreaTarget.dataset.areaMax;
+
     listOfRenderedCards.forEach(renderedCard => {
       const dataAreaRenderedCard = +renderedCard.dataset.area;
-      if (dataAreaRenderedCard >= tabAreaMinTarget && dataAreaRenderedCard <= tabAreaMaxTarget
-        || areaTab.dataset.area === "all" ) {
-        renderedCard.classList.remove(classAreaHidden);
-      }
-      else {
-        renderedCard.classList.add(classAreaHidden);
+
+      const checkCompliance = (renderedCard.dataset.company === tabCompanyTarget || tabCompanyTarget === "all")
+        && (renderedCard.dataset.type === tabInverterTarget || tabInverterTarget === "all")
+        && (dataAreaRenderedCard >= tabAMinAreaTarget && dataAreaRenderedCard <= tabAMaxAreaTarget
+          || tabAreaTarget.dataset.area === "all");
+
+      if ( checkCompliance) {
+        renderedCard.classList.remove(classHiddenCard);
+      } else {
+        renderedCard.classList.add(classHiddenCard);
       }
     });
     emptyCardCheck();
   };
+
+  //-------------------------------------------------
 
 
   // Фильтр по компаниям
   companyTabs.forEach(companyTab => {
-    companyTab.addEventListener("click",() => handlerCompanyTabs(companyTab));
+    companyTab.addEventListener("click", handlerFilterTabs);
   });
 
   // Фильтр по типу компрессора
   inverterTabs.forEach(inverterTab => {
-    inverterTab.addEventListener("click", () => handlerInverterTabs(inverterTab));
+    inverterTab.addEventListener("click", handlerFilterTabs);
   });
 
   // Фильтр по площади помещения
   areaTabs.forEach(areaTab => {
-    areaTab.addEventListener("click",() => handlerAreaTabs(areaTab));
+    areaTab.addEventListener("click", handlerFilterTabs);
   });
 
 
-  //---------------
 
-
-function filterProductCards () {
-  const companyFilterValue = filterTabsBlock.querySelector(".filter-tabs__item[data-company].js-filter-active");
-  const inverterFilterValue = filterTabsBlock.querySelector(".filter-tabs__item[data-type].js-filter-active");
-}
-
-
-//------------
 
   // Проверка на пустой список карточек по причине несоответствия фильтру
   function emptyCardCheck () {
-    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCompany)
-                                                      || card.classList.contains(classTypeHidden)
-                                                      || card.classList.contains(classAreaHidden)
-                                                                                                );
+    const hasCards = listOfRenderedCards.every(card => card.classList.contains(classHiddenCard));
     if (hasCards) {
       const messageAboutEmptiness = document.createElement("span");
       messageAboutEmptiness.classList.add("message-empty");

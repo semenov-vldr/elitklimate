@@ -8517,7 +8517,6 @@ function handlerChat () {
   if (!chat) return;
   const chatIcon = chat.querySelector(".chat__icon");
   const chatWrapper = chat.querySelector(".chat__wrapper");
-  //const chatBody = chat.querySelector(".chat__body");
   const closeBtn = chat.querySelector(".chat__cancel");
 
   const mobileWidthMediaQuery = window.matchMedia('(max-width: 768px)');
@@ -8527,7 +8526,6 @@ function handlerChat () {
       chatWrapper.classList.toggle("js-chat-open");
       toggleBlockScrollBody();
     }
-
   });
 
   if (mobileWidthMediaQuery.matches) {

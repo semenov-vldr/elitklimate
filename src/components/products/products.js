@@ -58,10 +58,6 @@ function renderCard (products) {
 };
 //---------------
 
-
-//handleShowMoreBtn ();
-
-
 // Отрисовать все карточки товара на главной странице каталога
 const productsMain = document.querySelector(".products.products--main");
 if (productsMain) renderCard(productsArr);

@@ -19,7 +19,7 @@ function sortingCards (filterSortingSelect) {
 
   switch (filterSortingSelect.value) {
     // Алфавиту
-    case "initial":
+    case "alphabet":
       sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
       break;
     // Дешевле

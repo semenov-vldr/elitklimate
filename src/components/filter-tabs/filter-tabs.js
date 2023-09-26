@@ -122,4 +122,5 @@ function filterTabsCards () {
 
   if (filterSortingSelect) window.addEventListener("load", () => sortingCards(filterSortingSelect) );
 
+
 };

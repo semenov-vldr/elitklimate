@@ -8882,6 +8882,7 @@ function filterTabsCards () {
 
   if (filterSortingSelect) window.addEventListener("load", () => sortingCards(filterSortingSelect) );
 
+
 };
 
 // Получаем вкладки фильтров и показываем кнопку "Дополнительно"
@@ -8951,7 +8952,7 @@ function sortingCards (filterSortingSelect) {
 
   switch (filterSortingSelect.value) {
     // Алфавиту
-    case "initial":
+    case "alphabet":
       sortingAlphabetProductCards.forEach(card => productsGrid.appendChild(card));
       break;
     // Дешевле
@@ -9486,10 +9487,6 @@ function renderCard (products) {
 
 };
 //---------------
-
-
-//handleShowMoreBtn ();
-
 
 // Отрисовать все карточки товара на главной странице каталога
 const productsMain = document.querySelector(".products.products--main");

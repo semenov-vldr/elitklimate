@@ -4166,8 +4166,8 @@ const DENKO_DCS_A = [
 const functionsDenkoDNMULT_In = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
 
 const imagesDenkoDNMULT_In =
-  ["./assets/img/catalog/denko/DNMULT/indoor/01.jpg",
-    "./assets/img/catalog/denko/DNMULT/indoor/02.jpg"
+  ["./assets/img/catalog/Denko/DNMULT/indoor/01.jpg",
+    "./assets/img/catalog/Denko/DNMULT/indoor/02.jpg"
   ];
 
 const pricesDenkoDNMULT_In = {
@@ -4386,7 +4386,7 @@ const DENKO_DNMULT_IN = [
 const functionsDenkoDNMULT_Out = ["Компрессор GMCC Toshiba", "Golden fin", "Класс энергоэффективности A", "Уровень шума от 22dB", "Фреон R410A"];
 
 const imagesDenkoDNMULT_Out =
-  ["./assets/img/catalog/denko/DNMULT/outdoor/01.jpg",
+  ["./assets/img/catalog/Denko/DNMULT/outdoor/01.jpg",
   ];
 
 const pricesDenkoDNMULT_Out = {

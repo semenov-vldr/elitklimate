@@ -17,6 +17,7 @@ const dataDenko = [
   DENKO_DU,
   DENKO_DU_I,
   DENKO_GW_I,
+  DENKO_DNI,
   DENKO_DCS_A,
   DENKO_DNP_A,
   DENKO_DNMULT_IN,

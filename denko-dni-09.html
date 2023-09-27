@@ -1,0 +1,349 @@
+
+<!-- Плитки каталога-->
+<!-- Хлебные крошки--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Denko DNI-09/DNHI-09</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content=""><!--favicon-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--favicon end-->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+<!-- Yandex map script -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__container container" itemscope itemtype="http://schema.org/Organization"><a class="header__logo" href="index.html" itemprop="url">Элит Климат</a>
+          <!--a.header__logo(href="index.html")-->
+          <!--  img(src="./assets/img/logo.png")--><a class="header__tel" href="tel:+79884093099" itemprop="telephone" content="+79884093099">+7 (988) 409-30-99</a>
+          <button class="header__burger">
+            <svg fill="1C1B1F" width="18" height="12">
+              <use href="./assets/img/sprite.svg#burger"></use>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <button class="header__nav-close">
+              <svg fill="1C1B1F" width="14" height="14">
+                <use href="./assets/img/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item--desktop-hidden"><a class="header__nav-link" href="index.html">Главная</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#feedback--call">Заказать звонок</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="installation.html">Заказать установку</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#about">О нас</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="index.html#reviews">Отзывы</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <!--a.header__cart(href="cart.html")-->
+          <!--  include ../../img/icons/basket.svg-->
+          <!--  span.header__cart-count-->
+        </div>
+      </header>
+      <main>
+        <div class="breadcrumbs" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+          <div class="container breadcrumbs__container"><a class="breadcrumbs__item" href="catalog.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Каталог</a><a class="breadcrumbs__item" href="split-systems.html" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Бытовые сплит-системы</a><span class="breadcrumbs__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">Denko DNI-09/DNHI-09</span>
+          </div>
+        </div>
+        <section class="popular">
+          <div class="popular__container container">
+            <h2 class="title-section">Популярное</h2>
+            <div class="swiper popular__slider">
+              <div class="swiper-wrapper">
+                <template id="template-card-popular">
+                  <div class="card-popular swiper-slide" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card-popular__link" href="" itemprop="url"><img class="card-popular__img product-img" src="" itemprop="image">
+                      <h3 class="card-popular__title product-title" itemprop="name"></h3></a><span class="card-popular__price product-price"></span>
+                    <ul class="card-popular__data" itemprop="description">
+                      <li class="card-popular__data-item">Площадь, до:<span class="card-popular__data-item-value card-popular__data-item-value--area area-value"></span></li>
+                      <li class="card-popular__data-item">Инвертор:<span class="card-popular__data-item-value card-popular__data-item-value--inverter"></span></li>
+                      <li class="card-popular__data-item">Охлаждение:<span class="card-popular__data-item-value card-popular__data-item-value--coolingCapacity"></span></li>
+                      <li class="card-popular__data-item">Уровень шума:<span class="card-popular__data-item-value card-popular__data-item-value--noise"></span></li>
+                    </ul>
+                    <button class="button button--accent card-popular__button cart-btn">Купить</button>
+                  </div>
+                </template>
+              </div>
+              <button class="swiper-button-prev swiper-button"></button>
+              <button class="swiper-button-next swiper-button"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer" itemscope itemtype="http://schema.org/Organization">
+        <div class="footer__container container">
+          <div class="footer__top"><a class="footer__logo" href="index.html" itemprop="url">Элит Климат
+              <!--img(src="./assets/img/logo.png")--></a>
+            <p class="footer__sublogo">Официальный представитель ТМ Dahatsu, Denko в&nbsp;г.&nbsp;Сочи</p>
+          </div>
+          <div class="footer__contacts">
+            <h3 class="footer__title">Контакты</h3>
+            <div class="footer__contacts-section"><span class="footer__contacts-section-title">г. Сочи</span><meta itemprop="location" content="Сочи">
+              <ul class="footer__contacts-list">
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="Центральный район Сочи, Дагомыс, Лоо">Центральный район, Дагомыс, Лоо</span><a class="footer__contacts-tel" href="tel:+79884093099">+7 (988) 409-30-99</a></li>
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="р-н Адлер, пгт Сириус, с. Веселое">р-н Адлер, пгт Сириус, с. Веселое</span><a class="footer__contacts-tel" href="tel:+79884092983">+7 (988) 409-29-83</a></li>
+                <li class="footer__contacts-item"><span class="footer__contacts-address" itemprop="address" content="пгт. Красная поляна, с. Эсто-Садок, с. Галицыно">пгт. Красная поляна, с. Эсто-Садок, с. Галицыно</span><a class="footer__contacts-tel" href="tel:+79884092983" itemprop="telephone" content="+79884092983">+7 (988) 409-29-83</a></li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <ul class="footer__social-list">
+                <li class="footer__social-item"><a class="footer__social-link footer__social-link--telegram" href="https://t.me/+79884092983">Telegram</a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__social-link--whatsapp" href="https://wa.me/79884092983">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <h3 class="footer__title">Кондиционеры</h3>
+            <ul class="footer__nav-list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="split-systems.html" itemprop="url">Бытовые сплит-системы</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="floor-ceiling.html" itemprop="url">Напольно-потолочные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="ducted.html" itemprop="url">Канальные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="cassette.html" itemprop="url">Кассетные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="column.html" itemprop="url">Колонные</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="multi-split-systems.html" itemprop="url">Мульти сплит-системы</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__nav">
+            <h3 class="footer__title">Услуги</h3>
+            <ul class="footer__nav-list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Установка</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Ремонт</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Чистка</a></li>
+              <li class="footer__nav-item" itemprop="name"><a class="footer__nav-link" href="installation.html" itemprop="url">Заправка</a></li>
+            </ul>
+          </nav>
+          <div class="footer__copyright"><a class="footer__politics" href="##">Политика конфиденциальности</a><span>© 2023 ЭЛИТ КЛИМАТ</span></div>
+        </div>
+      </footer>
+      <div class="loader">
+        <div class="loader__container">
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+          <div class="loader__ball"></div>
+        </div>
+      </div>
+      <template id="card-template">
+        <article class="card" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card__link" href="" itemprop="url"><img class="card__img product-img" src="" itemprop="image">
+            <h3 class="card__title product-title" itemprop="name"></h3></a><span class="card__price product-price"></span>
+          <ul class="card__data" itemprop="description">
+            <li class="card__data-item">Площадь, до:<span class="card__data-item-value card__data-item-value--area area-value"></span></li>
+            <li class="card__data-item">Инвертор:<span class="card__data-item-value card__data-item-value--inverter"></span></li>
+            <li class="card__data-item">Охлаждение:<span class="card__data-item-value card__data-item-value--coolingCapacity"></span></li>
+            <li class="card__data-item">Уровень шума:<span class="card__data-item-value card__data-item-value--noise"></span></li>
+          </ul>
+          <button class="button button--accent card__button cart-btn">Купить</button>
+        </article>
+      </template>
+      <div class="form-popup">
+        <template id="input-plus-minus-template">
+          <div id="container">
+            <button id="minus"><img src="./assets/img/icons/minus.svg"></button>
+            <input id="countInput" value="1" readonly>
+            <button id="plus"><img src="./assets/img/icons/plus.svg"></button>
+          </div><style> #container img { width: 70% };
+</style>
+        </template>
+        <div class="form-popup__container">
+          <div class="form-popup__header">
+            <h3 class="form-popup__title">Оформление заявки</h3>
+            <button class="form-popup__close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00005 8.39999L2.10005 13.3C1.91672 13.4833 1.68338 13.575 1.40005 13.575C1.11672 13.575 0.883382 13.4833 0.700049 13.3C0.516715 13.1167 0.425049 12.8833 0.425049 12.6C0.425049 12.3167 0.516715 12.0833 0.700049 11.9L5.60005 6.99999L0.700049 2.09999C0.516715 1.91665 0.425049 1.68332 0.425049 1.39999C0.425049 1.11665 0.516715 0.883321 0.700049 0.699988C0.883382 0.516654 1.11672 0.424988 1.40005 0.424988C1.68338 0.424988 1.91672 0.516654 2.10005 0.699988L7.00005 5.59999L11.9 0.699988C12.0834 0.516654 12.3167 0.424988 12.6 0.424988C12.8834 0.424988 13.1167 0.516654 13.3 0.699988C13.4834 0.883321 13.575 1.11665 13.575 1.39999C13.575 1.68332 13.4834 1.91665 13.3 2.09999L8.40005 6.99999L13.3 11.9C13.4834 12.0833 13.575 12.3167 13.575 12.6C13.575 12.8833 13.4834 13.1167 13.3 13.3C13.1167 13.4833 12.8834 13.575 12.6 13.575C12.3167 13.575 12.0834 13.4833 11.9 13.3L7.00005 8.39999Z" fill="#1C1B1F"/>
+</svg>
+
+            </button>
+          </div>
+          <ul class="form-popup__orders form-popup-orders">
+            <li class="form-popup-orders__item"><img class="form-popup-orders__img" src="">
+              <div class="form-popup-orders__info">
+                <h4 class="form-popup-orders__name"></h4>
+                <p class="form-popup-orders__area">Площадь:&nbsp;<span class="form-popup-orders__area-value"></span></p>
+                <p class="form-popup-orders__price">Цена:&nbsp;<span class="form-popup-orders__price-value"></span></p>
+              </div>
+            </li>
+          </ul>
+          <div class="form-popup__quantity"><span class="form-popup__quantity-label">Количество:</span>
+            <input-plus-minus class="form-popup__quantity-input"></input-plus-minus>
+          </div>
+          <div class="form-popup__sum">Сумма заказа:&nbsp;<span class="form-popup__sum-value"></span></div>
+          <form class="form form-popup__form" action="">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <label class="visually-hidden" for="tel">Телефон</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
+            <input class="form__field" type="tel" id="tel" name="tel" data-tel-input maxlength="18" placeholder="Телефон*" required>
+            <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения"></textarea>
+            <button class="button button--accent form__button form-popup__button" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+      <template id="product-profile-template">
+        <section class="product-profile" itemscope itemtype="https://schema.org/Product">
+          <div class="product-profile__container container">
+            <h1 class="product-profile__title product-title mobile-hidden" itemprop="name"></h1>
+            <div class="product-profile__columns">
+              <div class="product-profile__images">
+                <div class="swiper-top">
+                  <div class="swiper-wrapper"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-thumbs">
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+              <div class="product-profile__properties">
+                <h2 class="product-profile__properties-heading">Характеристики</h2>
+                <ul class="product-profile__property-list">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Серия:</span><span class="product-profile__property-value series"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">На площадь, м²</span><span class="product-profile__property-value area-value"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Инвертер</span><span class="product-profile__property-value inverter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (охлаждение),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value cooling-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (охлаждение),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value cooling-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Производительность (обогрев),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value heating-performance"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Потребляемая мощность (обогрев),&nbsp;Вт,&nbsp;ном.</span><span class="product-profile__property-value heating-powerConsumption"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Электропитание, V/PH/HZ</span><span class="product-profile__property-value powerSupply"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. длина трассы,&nbsp;м</span><span class="product-profile__property-value maxTrackLength"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Макс. перепад высот,&nbsp;м</span><span class="product-profile__property-value maxHeightDifference"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр жидкостной трубы,&nbsp;мм</span><span class="product-profile__property-value liquidPipeDiameter"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Диаметр газовой трубы,&nbsp;мм</span><span class="product-profile__property-value gasPipeDiameter"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading product-profile__properties-heading--inner">Внутренний блок</h3>
+                <ul class="product-profile__property-list product-profile__property-list--inner">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value indoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value indoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value indoorUnit-size"></span></li>
+                </ul>
+                <h3 class="product-profile__properties-heading product-profile__properties-heading--out">Внешний блок</h3>
+                <ul class="product-profile__property-list product-profile__property-list--out">
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Уровень шума, дБ (А)</span><span class="product-profile__property-value outdoorUnit-noise"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Вес, кг</span><span class="product-profile__property-value outdoorUnit-weight"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Размер, мм (д*ш*в)</span><span class="product-profile__property-value outdoorUnit-size"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Модель компрессора</span><span class="product-profile__property-value outdoorUnit-compressorModel"></span></li>
+                  <li class="product-profile__property-item"><span class="product-profile__property-title">Фреон</span><span class="product-profile__property-value outdoorUnit-freon"></span></li>
+                </ul>
+              </div>
+              <div class="product-profile__desc" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <h1 class="product-profile__title tablet-hidden" itemprop="name"></h1>
+                <meta class="meta-price" itemprop="price" content="">
+                <meta itemprop="priceCurrency" content="RUB">
+                <link itemprop="availability" href="https://schema.org/InStock"><span class="product-profile__price product-price product-price--desktop-hidden"></span>
+                <div class="product-profile__actions"><span class="product-profile__price product-price"></span>
+                  <button class="product-profile__button button button--accent cart-btn">Купить</button>
+                </div>
+                <div class="product-profile__other-areas"><span>Для помещения площадью, м²</span>
+                  <select></select>
+                </div>
+                <div class="product-profile__desc-content">
+                  <h2 class="product-profile__desc-heading">Описание</h2>
+                  <p class="product-profile__desc-text" itemprop="description"></p>
+                  <button class="product-profile__desc-show-more-btn">Показать еще</button>
+                </div>
+              </div>
+              <div class="services">
+                <h2 class="services__title">Услуги</h2>
+                <ul class="services__list">
+                  <li class="services__item"><a class="services__link" href="installation.html">Установка</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Ремонт</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Чистка</a></li>
+                  <li class="services__item"><a class="services__link" href="installation.html">Заправка</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
+      <section class="similar">
+        <div class="similar__container container">
+          <h2 class="title-section">Похожие товары</h2>
+          <div class="swiper similar__slider">
+            <div class="swiper-wrapper">
+              <template id="template-card-similar">
+                <div class="card-popular swiper-slide" data-article="" itemscope itemtype="https://schema.org/Product"><a class="card-popular__link" href="" itemprop="url"><img class="card-popular__img product-img" src="" itemprop="image">
+                    <h3 class="card-popular__title product-title" itemprop="name"></h3></a><span class="card-popular__price product-price"></span>
+                  <ul class="card-popular__data" itemprop="description">
+                    <li class="card-popular__data-item">Площадь, до:<span class="card-popular__data-item-value card-popular__data-item-value--area area-value"></span></li>
+                    <li class="card-popular__data-item">Инвертор:<span class="card-popular__data-item-value card-popular__data-item-value--inverter"></span></li>
+                    <li class="card-popular__data-item">Охлаждение:<span class="card-popular__data-item-value card-popular__data-item-value--coolingCapacity"></span></li>
+                    <li class="card-popular__data-item">Уровень шума:<span class="card-popular__data-item-value card-popular__data-item-value--noise"></span></li>
+                  </ul>
+                  <button class="button button--accent card-popular__button cart-btn">Купить</button>
+                </div>
+              </template>
+            </div>
+            <button class="swiper-button-prev swiper-button"></button>
+            <button class="swiper-button-next swiper-button"></button>
+          </div>
+        </div>
+      </section>
+      <button class="go-top">
+        <svg fill="#FFF" width="19" height="11">
+          <use href="./assets/img/sprite.svg#arrow-filter"></use>
+        </svg>
+      </button>
+      <div class="alert alert--error">
+        <h2>Что-то пошло не так.</h2><span>Свяжитесь пожалуйста с нами по номеру</span><br><a href="tel:+79884093099">+7 (988) 409-30-99</a>
+      </div>
+      <div class="alert alert--success">
+        <h2>Заявка отправлена успешно</h2><span>Менеджер свяжется с вами в течение 15 минут.</span>
+      </div>
+      <div class="chat"><span class="chat__icon" title="Chat Online"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <circle cx="16" cy="16" r="16" fill="#1C98F7"/> <path fill="#FFF" d="M16.28 23.325a11.45 11.45 0 002.084-.34 5.696 5.696 0 002.602.17.627.627 0 01.104-.008c.31 0 .717.18 1.31.56v-.625a.61.61 0 01.311-.531c.258-.146.498-.314.717-.499.864-.732 1.352-1.708 1.352-2.742 0-.347-.055-.684-.159-1.006.261-.487.472-.999.627-1.53A4.59 4.59 0 0126 19.31c0 1.405-.654 2.715-1.785 3.673a5.843 5.843 0 01-.595.442v1.461c0 .503-.58.792-.989.493a15.032 15.032 0 00-1.2-.81 2.986 2.986 0 00-.368-.187c-.34.051-.688.077-1.039.077-1.412 0-2.716-.423-3.743-1.134zm-7.466-2.922C7.03 18.89 6 16.829 6 14.62c0-4.513 4.258-8.12 9.457-8.12 5.2 0 9.458 3.607 9.458 8.12 0 4.514-4.259 8.121-9.458 8.121-.584 0-1.162-.045-1.728-.135-.245.058-1.224.64-2.635 1.67-.511.374-1.236.013-1.236-.616v-2.492a9.27 9.27 0 01-1.044-.765zm4.949.666c.043 0 .087.003.13.01.51.086 1.034.13 1.564.13 4.392 0 7.907-2.978 7.907-6.589 0-3.61-3.515-6.588-7.907-6.588-4.39 0-7.907 2.978-7.907 6.588 0 1.746.821 3.39 2.273 4.62.365.308.766.588 1.196.832.241.136.39.39.39.664v1.437c1.116-.749 1.85-1.104 2.354-1.104zm-2.337-4.916c-.685 0-1.24-.55-1.24-1.226 0-.677.555-1.226 1.24-1.226.685 0 1.24.549 1.24 1.226 0 .677-.555 1.226-1.24 1.226zm4.031 0c-.685 0-1.24-.55-1.24-1.226 0-.677.555-1.226 1.24-1.226.685 0 1.24.549 1.24 1.226 0 .677-.555 1.226-1.24 1.226zm4.031 0c-.685 0-1.24-.55-1.24-1.226 0-.677.555-1.226 1.24-1.226.685 0 1.24.549 1.24 1.226 0 .677-.555 1.226-1.24 1.226z"/> </g> </g>
+</svg></span>
+        <div class="chat__wrapper">
+          <div class="chat__body">
+            <ul class="chat__list">
+              <li class="chat__item chat__item--header">Как вам удобнее с нами связаться?</li>
+              <li class="chat__item"><a class="chat__link chat__link--telegram" href="https://t.me/+79884092983">
+                  Telegram<svg fill="#fff" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g id="SVGRepo_bgCarrier" stroke-width="0">
+
+  </g>
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+
+  </g>
+  <g id="SVGRepo_iconCarrier">
+    <path d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z">
+
+    </path>
+  </g>
+</svg>
+</a></li>
+              <li class="chat__item"><a class="chat__link chat__link--whatsapp" href="https://wa.me/79884092983">
+                  WhatsApp<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp" role="img" viewBox="0 0 512 512" width="64px" height="64px" fill="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<rect width="512" height="512" rx="15%" fill="#25d366"/>
+<path fill="#25d366" stroke="#ffffff" stroke-width="26" d="M123 393l14-65a138 138 0 1150 47z"/>
+<path fill="#ffffff" d="M308 273c-3-2-6-3-9 1l-12 16c-3 2-5 3-9 1-15-8-36-17-54-47-1-4 1-6 3-8l9-14c2-2 1-4 0-6l-12-29c-3-8-6-7-9-7h-8c-2 0-6 1-10 5-22 22-13 53 3 73 3 4 23 40 66 59 32 14 39 12 48 10 11-1 22-10 27-19 1-3 6-16 2-18"/>
+</g>
+</svg></a></li>
+              <li class="chat__item"><a class="chat__link chat__link--phone" href="tel:+79884093099">
+                  Позвонить +7 (988) 409-30-99<svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.16215 1H3.10526C1.94256 1 1 1.94256 1 3.10526C1 12.9883 9.01175 21 18.8947 21C20.0574 21 21 20.0574 21 18.8947V15.8379C21 14.9292 20.4468 14.112 19.6031 13.7746L16.6746 12.6032C15.9167 12.3 15.0537 12.4367 14.4266 12.9593L13.6701 13.5897C12.7872 14.3255 11.4888 14.2666 10.6761 13.4539L8.54609 11.3239C7.73338 10.5112 7.67449 9.21284 8.41028 8.32989L9.04071 7.57337C9.56325 6.94632 9.69998 6.08328 9.39684 5.32542L8.22543 2.39691C7.88796 1.55322 7.07083 1 6.16215 1Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a></li>
+            </ul>
+            <button class="chat__cancel" type="button">Отмена</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>

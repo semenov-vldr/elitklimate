@@ -1,9 +1,9 @@
 const mapContacts = document.querySelector('#map-contacts');
 
-if (mapContacts) ymaps.ready(init);
+if (mapContacts) ymaps.ready(initYaMap);
 
 
-function init() {
+function initYaMap() {
   const pointAddress = [43.422676, 39.937175];
   let myMap = new ymaps.Map('map-contacts', {
 
@@ -24,42 +24,30 @@ function init() {
 
 
 
-// function init() {
+// function initYaMap() {
 //   const point = [55.76, 37.64];
 //   let myMap = new ymaps.Map("map-contacts", {
 //     center: point,
-//     zoom: 10
+//     zoom: 12
 //   });
 //
 //   ymaps.route([
-//     'Москва',
-//     'Химки'
+//     'Санкт-Петербург, Петропавловская крепость',
+//     'Санкт-Петербург, Стрелка Валильевского острова',
+//     'Санкт-Петербург, Кунтскамера',
+//     'Санкт-Петербург, Медный всадник',
+//     'Санкт-Петербург, Адмиралтейство',
+//     'Санкт-Петербург, Михайловский замок',
+//     'Санкт-Петербург, Невский проспект',
+//
 //   ]).then((route) => {
-//     myMap.geoObjects.add(route);
+//     let routePoints = route.getWayPoints();
+//     // добавляем маркеры на карту
+//     myMap.geoObjects.add(routePoints);
+//     myMap.setBounds(myMap.geoObjects.getBounds());
+//     //myMap.setZoom(myMap.getZoom() - 1);
 //   });
 //
-//   let marker = new ymaps.Placemark(point);
-//   myMap.geoObjects.add(marker);
-
-
-
-  // let animation = ymaps.animation.animate(
-  //   'point',
-  //   function (fraction) {
-  //     return ymaps.coordSystem.geo.solveDirectProblem(
-  //       route.getWayPoints().get(0).geometry.getCoordinates(),
-  //       route.getWayPoints().get(1).geometry.getCoordinates(),
-  //       fraction
-  //     )
-  //   },
-  //   {
-  //     duration: 2000
-  //   }
-  // );
-  //
-  // marker.addAnimation(animation);
-
-
-//}
+// };
 
 

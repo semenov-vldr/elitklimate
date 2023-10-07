@@ -9663,7 +9663,6 @@ function createProductProfile (products) {
   });
 
 
-
   const productProfile = document.querySelector('.product-profile');
 
   if (productProfile) {

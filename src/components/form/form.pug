@@ -3,7 +3,7 @@ form.form(action="")
   label.visually-hidden(for="name") Ваше имя
   label.visually-hidden(for="tel") Ваш телефон
 
-  input.form__field(type="text" id="name" name="name" placeholder="Ваше имя*" required)
-  input.form__field(type="tel" id="tel" name="tel" data-tel-input placeholder="Телефон*" required)
+  input.form__field(type="text" id="name" name="name" placeholder="Ваше имя*" pattern='^[A-Za-zА-Яа-яЁё\\s]+$' minlength="3" maxlength='40' autocomplete='off' required)
+  input.form__field(type="tel" id="tel" name="tel" data-tel-input placeholder="Телефон*" pattern='.{17,20}' autocomplete='off' required)
 
   button.button.button--accent.form__button(type="submit") Отправить заявку

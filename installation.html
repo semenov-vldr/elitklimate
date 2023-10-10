@@ -62,8 +62,8 @@
             <form class="form" action="">
               <label class="visually-hidden" for="name">Ваше имя</label>
               <label class="visually-hidden" for="tel">Ваш телефон</label>
-              <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
-              <input class="form__field" type="tel" id="tel" name="tel" data-tel-input placeholder="Телефон*" required>
+              <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" pattern="^[A-Za-zА-Яа-яЁё\s]+$" minlength="3" maxlength="40" autocomplete="off" required>
+              <input class="form__field" type="tel" id="tel" name="tel" data-tel-input placeholder="Телефон*" pattern=".{17,20}" autocomplete="off" required>
               <button class="button button--accent form__button" type="submit">Отправить заявку</button>
             </form><img class="feedback__img feedback__img--desktop" src="./assets/img/installation.jpg">
           </div>
@@ -184,9 +184,9 @@
           <form class="form form-popup__form" action="">
             <label class="visually-hidden" for="name">Ваше имя</label>
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input class="form__field" type="text" id="name" name="name" placeholder="Ваше имя*" required>
-            <input class="form__field" type="tel" id="tel" name="tel" data-tel-input maxlength="18" placeholder="Телефон*" required>
-            <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения"></textarea>
+            <input class="form__field" type="text" id="name" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" minlength="3" maxlength="40" autocomplete="off" placeholder="Ваше имя*" required>
+            <input class="form__field" type="tel" id="tel" name="tel" data-tel-input pattern=".{17,20}" autocomplete="off" placeholder="Телефон*" required>
+            <textarea class="form__field" id="text" name="text" placeholder="Укажите квадратные метры вашего помещения" autocomplete="off"></textarea>
             <button class="button button--accent form__button form-popup__button" type="submit">Отправить заявку</button>
           </form>
         </div>

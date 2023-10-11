@@ -5,13 +5,14 @@
     display: flex
     flex-wrap: wrap
     row-gap: 8px
+    @media (max-width: $width-mobile)
+      row-gap: 4px
 
   &__item
     position: relative
     display: flex
     align-items: center
-    @include fontSize(16, 20)
-    //white-space: nowrap
+    @include fontSize(14, 20)
   &__item:not(:last-child)
     color: $grey
     &::after
@@ -26,4 +27,6 @@
       margin: 0 16px
       @media (max-width: $width-mobile)
         margin: 0 8px
+        width: 4px
+        height: 10px
 

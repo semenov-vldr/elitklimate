@@ -17,7 +17,7 @@ const imagesDahatsuDH_CS_A =
 const imagesDahatsuDH_CS_A_2 =
   ["./assets/img/catalog/dahatsu/dh-cs-a/01-1.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/02.png",
-    "./assets/img/catalog/dahatsu/dh-cs-a/03-3.JPG",
+    "./assets/img/catalog/dahatsu/dh-cs-a/03-3.jpg",
     "./assets/img/catalog/dahatsu/dh-cs-a/04.png"
   ];
 

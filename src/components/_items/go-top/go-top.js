@@ -16,7 +16,7 @@ if (gotTopButton) {
   function trackScroll () {
     const offset = window.scrollY;
     const coords = document.documentElement.clientHeight;
-    gotTopButton.classList.toggle('js-scroll-show', offset > 2 * coords);
+    gotTopButton.classList.toggle('js-scroll-show', offset > 5 * coords);
   };
 
 }

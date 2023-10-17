@@ -9,10 +9,10 @@ mixin catalog(data)
 
 // Хлебные крошки
 mixin breadcrumbs(links)
-  .breadcrumbs(itemscope itemtype="http://schema.org/BreadcrumbList")
+  .breadcrumbs(itemscope itemtype="https://schema.org/BreadcrumbList")
     .container.breadcrumbs__container
       each link in links
         if link.url
-          a.breadcrumbs__item(href=link.url itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")= link.text
+          a.breadcrumbs__item(href=link.url itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")= link.text
         else
-          span.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")= link.text
+          span.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")= link.text

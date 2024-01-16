@@ -8460,12 +8460,11 @@ const dataKentatsu = [
   KENTATSU_ICHI,
   KENTATSU_KANAMI,
   KENTATSU_KANAMI_INVERTER,
-]
-
+];
 
 
 // Общий массив всех товаров
-const productsArr = [
+let productsArr = [
   dataDahatsu,
   dataDenko,
   dataEurohoff,
@@ -8475,10 +8474,7 @@ const productsArr = [
   dataBosch,
   dataKentatsu,
 
-].flat().flat();
-
-//productsArr = productsArr.flat()
-
+].flat(Infinity);
 
 
 {
@@ -8839,7 +8835,8 @@ if (mapContacts) ymaps.ready(initYaMap);
 
 
 function initYaMap() {
-  const pointAddress = [43.422676, 39.937175];
+  //const pointAddress = [43.422676, 39.937175]; // Бывший офис
+  const pointAddress = [43.405898, 39.987130];
   let myMap = new ymaps.Map('map-contacts', {
 
     center: pointAddress,
@@ -9674,14 +9671,12 @@ function createProductProfile (products) {
     const showMoreBtn = productProfile.querySelector(".product-profile__desc-show-more-btn");
 
     // Кнопка "Показать больше" для описания
-    showMoreBtn.addEventListener("click", () => {
+    showMoreBtn.addEventListener("click",() => {
       descText.classList.add("js-show-more");
     });
   }
   handlerCart();
 };
-
-
 
 // Слайдер с миниатюрами
 function createProductProfileSlider (productProfile) {
@@ -9718,33 +9713,32 @@ function createProductProfileSlider (productProfile) {
   });
 };
 
+// function createShowMoreBtn () {
+//   const productsGrid = document.querySelector(".products__grid");
+//   if (!productsGrid) return;
+//   const showMoreBtn = document.createElement("button");
+//   showMoreBtn.textContent = "Показать еще";
+//   showMoreBtn.classList.add("show-more");
+//   productsGrid.parentNode.appendChild(showMoreBtn);
+//   return showMoreBtn;
+// };
 
-function createShowMoreBtn () {
-  const productsGrid = document.querySelector(".products__grid");
-  if (!productsGrid) return;
-  const showMoreBtn = document.createElement("button");
-  showMoreBtn.textContent = "Показать еще";
-  showMoreBtn.classList.add("show-more");
-  productsGrid.parentNode.appendChild(showMoreBtn);
-  return showMoreBtn;
-};
-
-function handleShowMoreBtn () {
-  const productsGrid = document.querySelector(".products__grid");
-  if (!productsGrid) return;
-
-  const showMoreBtn = createShowMoreBtn();
-  const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
-  let startItems = 6;
-  showMoreBtn.addEventListener("click", () => {
-    startItems += 3;
-    const array = Array.from( productsGrid.querySelectorAll(".card") );
-    const visibleItems = array.slice(0, startItems);
-    visibleItems.forEach(el => el.classList.add("is-visible"));
-
-    if (startItems.length === productsLength) showMoreBtn.hidden = true;
-  });
-};
+// function handleShowMoreBtn () {
+//   const productsGrid = document.querySelector(".products__grid");
+//   if (!productsGrid) return;
+//
+//   const showMoreBtn = createShowMoreBtn();
+//   const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
+//   let startItems = 6;
+//   showMoreBtn.addEventListener("click", () => {
+//     startItems += 3;
+//     const array = Array.from( productsGrid.querySelectorAll(".card") );
+//     const visibleItems = array.slice(0, startItems);
+//     visibleItems.forEach(el => el.classList.add("is-visible"));
+//
+//     if (startItems.length === productsLength) showMoreBtn.hidden = true;
+//   });
+// };
 
 
 // Создание массива карточек товара в соответствии с данными из массива объектов

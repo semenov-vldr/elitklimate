@@ -18,13 +18,12 @@
 
   &__logo
     @include fontSize(18, 24)
-
-  //&__logo img
-  //  width: 200px
-  //  @media (max-width: $width-tablet)
-  //    width: 150px
-  //  @media (max-width: 900px)
-  //    width: 120px
+    width: fit-content
+    font-weight: 500
+    padding: 2px 8px
+    border-radius: 6px
+    background-color: $accent
+    text-shadow: 1px 1px 2px black
 
   &__title
     font-weight: 500
@@ -38,14 +37,12 @@
     flex-direction: column
     grid-column: 1/-1
     margin-bottom: 40px
-    //width: 60%
+    row-gap: 8px
     @media (max-width: $width-mobile)
       margin-bottom: 0
-      //width: initial
 
   &__sublogo
     @include fontSize(14, 18)
-
 
   &__contacts
     display: flex
@@ -159,9 +156,13 @@
   &__dev
     font-size: 14px
     display: flex
+    flex-direction: column
+    gap: 4px
     grid-column: 3/4
     grid-row: 3/4
     margin-top: auto
     color: rgba($white, 0.7)
     a:hover
       text-decoration: underline
+    li
+      display: flex

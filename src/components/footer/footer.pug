@@ -1,27 +1,31 @@
 footer.footer#footer(itemscope itemtype="https://schema.org/Organization")
   .footer__container.container
     .footer__top
-      a.footer__logo(href="/" itemprop="url") Элит Климат
+      a.footer__logo(href="/" itemprop="url") Элит&nbsp;Климат
         //img(src="./assets/img/logo.png")
       p.footer__sublogo Официальный представитель Dahatsu, Denko, Eurohoff в&nbsp;г.&nbsp;Сочи
 
     .footer__contacts
       h3.footer__title Контакты
 
+
       .footer__contacts-section
-        span.footer__contacts-section-title г. Сочи
+        //span.footer__contacts-section-title г. Сочи
         <meta itemprop="location" content="Сочи">
 
         ul.footer__contacts-list
           li.footer__contacts-item
-            span.footer__contacts-address(itemprop="address" content="Центральный район Сочи, Дагомыс, Лоо") Центральный район, Дагомыс, Лоо
+            a.footer__contacts-address(href="contacts.html" itemprop="address" content="город Сочи пгт. Сириус ул.Веселая, 46") г.&nbsp;Сочи пгт&nbsp;Сириус ул.Веселая,&nbsp;46
             a.footer__contacts-tel(href="tel:+79884093099") +7 (988) 409-30-99
-          li.footer__contacts-item
-            span.footer__contacts-address(itemprop="address" content="р-н Адлер, пгт Сириус, с. Веселое") р-н Адлер, пгт Сириус, с. Веселое
-            a.footer__contacts-tel(href="tel:+79884092983") +7 (988) 409-29-83
-          li.footer__contacts-item
-            span.footer__contacts-address(itemprop="address" content="пгт. Красная поляна, с. Эсто-Садок, с. Галицыно") пгт. Красная поляна, с. Эсто-Садок, с. Галицыно
-            a.footer__contacts-tel(href="tel:+79884092983" itemprop="telephone" content="+79884092983") +7 (988) 409-29-83
+          //li.footer__contacts-item
+          //  span.footer__contacts-address(itemprop="address" content="Центральный район Сочи, Дагомыс, Лоо") Центральный район, Дагомыс, Лоо
+          //  a.footer__contacts-tel(href="tel:+79884093099") +7 (988) 409-30-99
+          //li.footer__contacts-item
+          //  span.footer__contacts-address(itemprop="address" content="р-н Адлер, пгт Сириус, с. Веселое") р-н Адлер, пгт Сириус, с. Веселое
+          //  a.footer__contacts-tel(href="tel:+79884092983") +7 (988) 409-29-83
+          //li.footer__contacts-item
+          //  span.footer__contacts-address(itemprop="address" content="пгт. Красная поляна, с. Эсто-Садок, с. Галицыно") пгт. Красная поляна, с. Эсто-Садок, с. Галицыно
+          //  a.footer__contacts-tel(href="tel:+79884092983" itemprop="telephone" content="+79884092983") +7 (988) 409-29-83
 
       .footer__social
         ul.footer__social-list
@@ -61,11 +65,16 @@ footer.footer#footer(itemscope itemtype="https://schema.org/Organization")
 
     .footer__copyright
       a.footer__politics(href="##") Политика конфиденциальности
-      span © 2023 ЭЛИТ КЛИМАТ
+      span © 2024 ЭЛИТ КЛИМАТ
 
-    .footer__dev
-      span Разработано&nbsp;
-      a(href="https://t.me/sinceresv") semenov.v
+    ul.footer__dev
+      li
+        span Разработка:&nbsp;
+        a(href="https://t.me/sinceresv") semenov.v
+      li
+        span Дизайн:&nbsp;
+        a(href="https://t.me/Str8zh1") ivanov.r
+
 
 include ../loader/loader
 include ../_items/card/card

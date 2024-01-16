@@ -4,6 +4,7 @@ const
   sourcemaps = require('gulp-sourcemaps'),
   concatCss = require('gulp-concat-css'),
   csso = require('gulp-csso');
+  changed = require("gulp-changed");
 
   module.exports = function() {
 
@@ -18,7 +19,9 @@ const
     })
 
     $.gulp.task('style:dev', function() {
-      return $.gulp.src($.path.src + '/styles/main.sass')
+      return $.gulp
+        .src($.path.src + '/styles/main.sass')
+        .pipe(changed($.path.assets + '/css/'))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({

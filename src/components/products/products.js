@@ -1,29 +1,29 @@
-function createShowMoreBtn () {
-  const productsGrid = document.querySelector(".products__grid");
-  if (!productsGrid) return;
-  const showMoreBtn = document.createElement("button");
-  showMoreBtn.textContent = "Показать еще";
-  showMoreBtn.classList.add("show-more");
-  productsGrid.parentNode.appendChild(showMoreBtn);
-  return showMoreBtn;
-};
+// function createShowMoreBtn () {
+//   const productsGrid = document.querySelector(".products__grid");
+//   if (!productsGrid) return;
+//   const showMoreBtn = document.createElement("button");
+//   showMoreBtn.textContent = "Показать еще";
+//   showMoreBtn.classList.add("show-more");
+//   productsGrid.parentNode.appendChild(showMoreBtn);
+//   return showMoreBtn;
+// };
 
-function handleShowMoreBtn () {
-  const productsGrid = document.querySelector(".products__grid");
-  if (!productsGrid) return;
-
-  const showMoreBtn = createShowMoreBtn();
-  const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
-  let startItems = 6;
-  showMoreBtn.addEventListener("click", () => {
-    startItems += 3;
-    const array = Array.from( productsGrid.querySelectorAll(".card") );
-    const visibleItems = array.slice(0, startItems);
-    visibleItems.forEach(el => el.classList.add("is-visible"));
-
-    if (startItems.length === productsLength) showMoreBtn.hidden = true;
-  });
-};
+// function handleShowMoreBtn () {
+//   const productsGrid = document.querySelector(".products__grid");
+//   if (!productsGrid) return;
+//
+//   const showMoreBtn = createShowMoreBtn();
+//   const productsLength = productsGrid.querySelectorAll(".card:not(.js-hidden-company)").length;
+//   let startItems = 6;
+//   showMoreBtn.addEventListener("click", () => {
+//     startItems += 3;
+//     const array = Array.from( productsGrid.querySelectorAll(".card") );
+//     const visibleItems = array.slice(0, startItems);
+//     visibleItems.forEach(el => el.classList.add("is-visible"));
+//
+//     if (startItems.length === productsLength) showMoreBtn.hidden = true;
+//   });
+// };
 
 
 // Создание массива карточек товара в соответствии с данными из массива объектов

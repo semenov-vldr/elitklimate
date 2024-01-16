@@ -54,12 +54,11 @@ const dataKentatsu = [
   KENTATSU_ICHI,
   KENTATSU_KANAMI,
   KENTATSU_KANAMI_INVERTER,
-]
-
+];
 
 
 // Общий массив всех товаров
-const productsArr = [
+let productsArr = [
   dataDahatsu,
   dataDenko,
   dataEurohoff,
@@ -69,7 +68,4 @@ const productsArr = [
   dataBosch,
   dataKentatsu,
 
-].flat().flat();
-
-//productsArr = productsArr.flat()
-
+].flat(Infinity);

@@ -4,7 +4,8 @@ if (mapContacts) ymaps.ready(initYaMap);
 
 
 function initYaMap() {
-  const pointAddress = [43.422676, 39.937175];
+  //const pointAddress = [43.422676, 39.937175]; // Бывший офис
+  const pointAddress = [43.405898, 39.987130];
   let myMap = new ymaps.Map('map-contacts', {
 
     center: pointAddress,

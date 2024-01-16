@@ -1,3 +1,5 @@
+const changed = require("gulp-changed");
+
 module.exports = function () {
   $.gulp.task("script:libs:dev", function () {
     return $.gulp
@@ -19,6 +21,7 @@ module.exports = function () {
         $.path.src + "/components/**/*.js",
 
       ])
+      .pipe(changed($.path.assets + "/js/"))
       .pipe($.concat("main.js"))
       .pipe($.gulp.dest($.path.assets + "/js/"))
       // .pipe(
